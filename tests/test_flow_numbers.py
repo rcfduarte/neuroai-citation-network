@@ -1,8 +1,9 @@
 """The citation-flow numbers quoted in the supplements, pinned to the committed CSVs.
 
 The literals below were read from the data bundles of Figures 1 and 2 of 2026-10-06
-(``article-fig1-v3-20261006/`` and ``figure2-raw-20261006/``), not from the repository files, so editing
-``results/flow/*.csv`` makes these tests fail. Integers are compared exactly, floats with rtol 1e-9.
+(``article-fig1-v3-20261006/`` and ``figure2-raw-20261006/``; the yearly values and the slopes of
+panels B and C there are identical to those of the published Figure 1), not from the repository
+files, so editing ``results/flow/*.csv`` makes these tests fail. Integers are compared exactly, floats with rtol 1e-9.
 """
 
 from __future__ import annotations
@@ -178,6 +179,59 @@ def test_era_slopes(df):
 
 
 def test_era_slopes_agree_with_figure_bundle(flow_dir, df):
-    b = pd.read_csv(flow_dir / "fig1B_era_slopes.csv").set_index(["direction", "era"])
+    b = pd.read_csv(flow_dir / "figure1_article_panelB.csv").set_index(["direction", "era"])
     e = fn.era_slopes(df).set_index(["direction", "era"])
     assert np.allclose(b["slope"], e.loc[b.index, "slope_per_year"], rtol=1e-9, atol=0)
+
+
+def test_article_figure1_thick_line(flow_dir, df):
+    # thick line of panel A: centered 5-year mean of the yearly values within 1995-2025 only
+    a = pd.read_csv(flow_dir / "figure1_article_panelA.csv").set_index(["direction", "year"])
+    assert len(a) == 62
+    o = df.set_index(["direction", "year"])["or_restricted"]
+    for (d, y), r in a.iterrows():
+        win = [k for k in range(y - 2, y + 3) if 1995 <= k <= 2025]
+        assert r["thick_line_n_years_averaged"] == len(win)
+        assert r["thick_line_5yr_centred_mean"] == pytest.approx(
+            np.mean([o[(d, k)] for k in win]), rel=RTOL
+        )
+        assert r["odds_ratio_yearly"] == pytest.approx(o[(d, y)], rel=RTOL)
+    assert a.loc[("ai_to_neuro", 1995), "thick_line_5yr_centred_mean"] == pytest.approx(
+        0.03022659251546753, rel=RTOL
+    )
+    assert a.loc[("ai_to_neuro", 2023), "thick_line_5yr_centred_mean"] == pytest.approx(
+        0.06048749411417973, rel=RTOL
+    )
+
+
+def test_article_figure1_circles(flow_dir, df):
+    # open circles: May 2026 re-download sample, odds ratio against the snapshot's expected share
+    c = pd.read_csv(flow_dir / "figure1_article_circles.csv").set_index(["direction", "year"])
+    assert sorted(c.index) == [(d, y) for d in ("ai_to_neuro", "neuro_to_ai") for y in (2024, 2025)]
+    cells = pd.read_csv(flow_dir.parent / "crosssource" / "openalex_live_extended.csv")
+    cells = cells.set_index(["direction", "year"])
+    null = df.set_index(["direction", "year"])["rho_null_restricted"]
+    for key, r in c.iterrows():
+        p = cells.loc[key, "target"] / (cells.loc[key, "within"] + cells.loc[key, "target"])
+        q = null[key]
+        assert r["circle_odds_ratio"] == pytest.approx((p / (1 - p)) / (q / (1 - q)), rel=RTOL)
+    assert c.loc[("ai_to_neuro", 2025), "circle_odds_ratio"] == pytest.approx(
+        0.04750550023585155, rel=RTOL
+    )
+
+
+def test_article_figure1_bundle_is_current(flow_dir, tmp_path):
+    # the committed bundle is exactly what the figure module writes from the committed inputs
+    from neuroai_cn.figures import figure1_main_v2 as f1
+    from neuroai_cn.figures.cross_source import detect_all_changepoints, load_all_sources_or
+
+    d = load_all_sources_or()
+    cps = detect_all_changepoints(d, *f1.CP_DETECTION_WINDOW, max_breakpoints=2).attrs[
+        "changepoints"
+    ]
+    assert cps[("snapshot", "neuro_to_ai")] == [2002, 2006]
+    assert cps[("snapshot", "ai_to_neuro")] == [2006, 2020]
+    for p in f1.write_article_bundle(d, cps, out_dir=tmp_path).values():
+        pd.testing.assert_frame_equal(
+            pd.read_csv(p), pd.read_csv(flow_dir / p.name), check_exact=False, rtol=1e-12
+        )

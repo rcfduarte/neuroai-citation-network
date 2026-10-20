@@ -1,26 +1,21 @@
-"""Figure 1 (main, v2) — Transmitter NeuroAI piece, post-verdict revision.
+"""Figure 1 of the article (metric "or") and its per-1,000 and combined variants.
 
-Two-panel layout:
+`python -m neuroai_cn.figures.figure1_main_v2` (default argument `or`) draws the article's
+Figure 1, "Three decades of asymmetric citation", to `figures/figure1_article.png/.svg` and
+writes the plotted values to `results/flow/figure1_article_*.csv` (see `write_article_bundle`).
+Other arguments: `per1000` (raw-share variant, `figures/figure1_main_v2.*`) and `combined`.
 
-    Panel A (top, ~62%) — Cross-field references per 1,000, 1990-2025
-        * 6 lines: 3 sources (snapshot, OA-live May, S2) x 2 directions
-            color  = direction  (gold = AI->neuro, teal = neuro->AI)
-            linestyle = source  (solid = snapshot, dashed = OA-live, dotted = S2)
-        * Wilson 95% CI ribbon on snapshot lines
-        * Per-(source, direction) changepoints as vertical dashed lines
-          colored by direction; year labels at the top of the panel
-        * 2024-25 region: light gray axvspan, aligned to (2023.5, 2025.5)
-          single italic note: "2024-25: numbers still shift as databases keep
-                              adding papers"
+Layout of the article figure:
 
-    Panel B (bottom, ~38%) — Era OLS slopes per (source, direction, era)
-        * Eras = snapshot-derived changepoint segments (canonical era partition
-          for the period)
-        * Grouped bar chart: era on x; bars colored by direction, hatch by source
-        * Error bars from OLS SE
-
-Spec:    ContentLab/.../neuroai-cross-pollination/fig1-construction-brief-20260528.md
-Verdict: Assets/claude/outputs/research/openalex-spike-verification-20260528.md
+    Panel A (top) — yearly odds ratio of cross-field citation, March 2026 snapshot, 1995-2025
+        * pale band = Wilson 95% CI of the yearly odds ratio
+        * thick line = centered 5-year rolling mean (min. 3 points) over 1995-2025
+        * open circles 2024-25 = the same quantity from the May 2026 re-download
+        * hatched band 2023-25 labelled "2024-25: unstable"
+        * dashed verticals = snapshot changepoints (piecewise-linear OLS, 1995-2023)
+        * era shading (style.CANONICAL_ERAS), thin verticals = style.TIER1_BRIDGES
+    Panel B (bottom left) — OLS slope per year within the four eras, bootstrap CI
+    Panel C (bottom right) — OLS slope per year within the changepoint segments
 """
 
 from __future__ import annotations
@@ -34,10 +29,12 @@ import pandas as pd
 
 from .. import config
 from .cross_source import (
+    CROSS_DIR,
     consensus_changepoints,
     detect_all_changepoints,
     load_all_sources,
     load_all_sources_or,
+    load_snapshot_table,
     rolling_mean,
 )
 from .style import (
@@ -652,9 +649,221 @@ METRIC_CONFIG = {
         "ylim": (0.005, 0.3),
         "yscale": "log",
         "panel_b_ylabel": "OLS slope per year\n(OR / yr)",
-        "out_stem": "figure1_main_v2_or",
+        "out_stem": "figure1_article",
     },
 }
+
+ARTICLE_BUNDLE_DIR = config.RESULTS_DIR / "flow"
+ARTICLE_BUNDLE_STEM = "figure1_article"
+
+
+# ---------------------------------------------------------------------------
+# Data bundle of the article figure (metric "or")
+# ---------------------------------------------------------------------------
+
+
+def _panel_a_table(df_all: pd.DataFrame) -> pd.DataFrame:
+    """Panel A as plotted: band, thick line (same window and smoothing as `_plot_traces`)."""
+    snap = load_snapshot_table()
+    rows = []
+    for direction in DIRECTIONS:
+        sub = df_all[
+            (df_all["source"] == "snapshot")
+            & (df_all["direction"] == direction)
+            & (df_all["year"] >= X_MIN)
+            & (df_all["year"] <= X_MAX)
+        ].sort_values("year")
+        years = sub["year"].to_numpy(dtype=int)
+        y = sub["per1000"].to_numpy(dtype=float)
+        ma = rolling_mean(y, window=5)
+        n_in = pd.Series(y).rolling(window=5, center=True, min_periods=3).count().to_numpy()
+        s = snap[snap["direction"] == direction].set_index("year")
+        for i, yr in enumerate(years):
+            r = s.loc[yr]
+            rows.append(
+                {
+                    "year": int(yr),
+                    "direction": direction,
+                    "line_in_figure": DISPLAY_LABELS_PLAIN[direction],
+                    "colour": "teal" if direction == "ai_to_neuro" else "gold",
+                    "odds_ratio_yearly": y[i],
+                    "band_wilson95_lo": float(sub["ci_lo"].iloc[i]),
+                    "band_wilson95_hi": float(sub["ci_hi"].iloc[i]),
+                    "thick_line_5yr_centred_mean": ma[i],
+                    "thick_line_n_years_averaged": int(n_in[i]),
+                    "refs_to_own_field": int(r["n_to_within"]),
+                    "refs_to_other_field": int(r["n_to_target"]),
+                    "refs_to_third_fields": int(r["n_to_other"]),
+                    "observed_share": float(r["rho_restricted"]),
+                    "expected_share": float(r["rho_null_restricted"]),
+                    "citing_field_papers": int(r["n_works_source"]),
+                    "cited_field_papers": int(r["n_works_target"]),
+                    "provisional_year": bool(yr >= 2024),
+                }
+            )
+    return pd.DataFrame(rows)
+
+
+def _circles_table(df_all: pd.DataFrame, panel_a: pd.DataFrame) -> pd.DataFrame:
+    """Open circles of panel A: the May 2026 re-download in 2024-25, next to the snapshot."""
+    cells = pd.read_csv(CROSS_DIR / "openalex_live_extended.csv", float_precision="round_trip")
+    snap = load_snapshot_table().set_index(["year", "direction"])
+    pa = panel_a.set_index(["year", "direction"])
+    rows = []
+    for direction in DIRECTIONS:
+        sub = df_all[
+            (df_all["source"] == "oa_live")
+            & (df_all["direction"] == direction)
+            & (df_all["year"] >= 2024)
+            & (df_all["year"] <= RECENT_OVERLAY_HI)
+        ].sort_values("year")
+        for _, c in sub.iterrows():
+            yr = int(c["year"])
+            cell = cells[(cells["direction"] == direction) & (cells["year"] == yr)].iloc[0]
+            s = snap.loc[(yr, direction)]
+            rows.append(
+                {
+                    "year": yr,
+                    "direction": direction,
+                    "line_in_figure": DISPLAY_LABELS_PLAIN[direction],
+                    "circle_odds_ratio": float(c["per1000"]),
+                    "circle_wilson95_lo_not_drawn": float(c["ci_lo"]),
+                    "circle_wilson95_hi_not_drawn": float(c["ci_hi"]),
+                    "sample_papers": int(cell["n_papers"]),
+                    "sample_refs_to_own_field": int(cell["within"]),
+                    "sample_refs_to_other_field": int(cell["target"]),
+                    "sample_observed_share": cell["target"] / (cell["within"] + cell["target"]),
+                    "expected_share_from_snapshot": float(s["rho_null_restricted"]),
+                    "snapshot_odds_ratio_yearly": float(s["or_restricted"]),
+                    "snapshot_thick_line": float(
+                        pa.loc[(yr, direction), "thick_line_5yr_centred_mean"]
+                    ),
+                    "circle_over_snapshot_yearly": float(c["per1000"]) / float(s["or_restricted"]),
+                    "sample_per1000_classified": float(cell["per1000"]),
+                    "sample_per1000_bootstrap95_lo": float(cell["ci_lo"]),
+                    "sample_per1000_bootstrap95_hi": float(cell["ci_hi"]),
+                    "snapshot_per1000_classified": 1000.0
+                    * float(s["n_to_target"])
+                    / float(s["n_to_within"] + s["n_to_target"] + s["n_to_other"]),
+                }
+            )
+    return pd.DataFrame(rows)
+
+
+def _with_markers(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()
+    df["marker_in_figure"] = [
+        _sig_marker(p, n) for p, n in zip(df["frac_pos"], df["frac_neg"], strict=True)
+    ]
+    df["line_in_figure"] = df["direction"].map(DISPLAY_LABELS_PLAIN)
+    return df
+
+
+def _markers_table(cp_index: dict[tuple[str, str], list[int]]) -> pd.DataFrame:
+    """Vertical marks and shaded spans of panel A, with the x-range each covers as drawn."""
+    rows = [
+        {
+            "type": "era (shaded)",
+            "label": lbl,
+            "first_year": max(lo, X_MIN),
+            "last_year": min(hi, X_MAX),
+            "x_from": max(lo, X_MIN),
+            "x_to": min(hi, X_MAX) + 1,
+        }
+        for lbl, lo, hi in CANONICAL_ERAS
+        if hi >= X_MIN and lo <= X_MAX
+    ]
+    for d in DIRECTIONS:
+        for cp in cp_index.get(("snapshot", d), []):
+            rows.append(
+                {
+                    "type": "changepoint (dashed, first year of new segment)",
+                    "label": DISPLAY_LABELS_PLAIN[d],
+                    "first_year": cp,
+                    "last_year": cp,
+                    "x_from": cp,
+                    "x_to": cp,
+                }
+            )
+    for label, year in TIER1_BRIDGES.items():
+        rows.append(
+            {
+                "type": "milestone paper (thin grey vertical)",
+                "label": label,
+                "first_year": year,
+                "last_year": year,
+                "x_from": year,
+                "x_to": year,
+            }
+        )
+    rows.append(
+        {
+            "type": "hatched band",
+            "label": "2024–25: unstable (database still adding papers; ○ = re-download)",
+            "first_year": 2024,
+            "last_year": 2025,
+            "x_from": SETTLING_LO,
+            "x_to": SETTLING_HI,
+        }
+    )
+    return pd.DataFrame(rows)
+
+
+def _companion_table() -> pd.DataFrame:
+    """Counts, raw shares and field sizes per year (quoted in supplement S3)."""
+    d = load_snapshot_table()
+    n = d[d.direction == "neuro_to_ai"].set_index("year").sort_index()
+    a = d[d.direction == "ai_to_neuro"].set_index("year").sort_index()
+    return pd.DataFrame(
+        {
+            "neuroscience_papers": n.n_works_source,
+            "ai_papers": a.n_works_source,
+            "citations_neuroscience_citing_ai": n.n_to_target,
+            "citations_ai_citing_neuroscience": a.n_to_target,
+            "cross_refs_per_1000_refs_neuroscience_citing_ai": n.rho_population * 1000,
+            "cross_refs_per_1000_refs_ai_citing_neuroscience": a.rho_population * 1000,
+            "refs_per_neuroscience_paper": (n.n_to_within + n.n_to_target + n.n_to_other)
+            / n.n_works_source,
+            "refs_per_ai_paper": (a.n_to_within + a.n_to_target + a.n_to_other) / a.n_works_source,
+        }
+    ).reset_index()
+
+
+def write_article_bundle(
+    df_all: pd.DataFrame, cp_index: dict[tuple[str, str], list[int]], out_dir: Path | None = None
+) -> dict[str, Path]:
+    """Write the values plotted in the article's Figure 1 to `results/flow/figure1_article_*.csv`.
+
+    panelA: one row per year (1995-2025) and line; circles: the four open circles;
+    panelB / panelC: the bars, whiskers and markers; markers: shaded spans and vertical lines.
+    Also rewrites `companion_counts_shares_sizes.csv` (S3), which is derived from the same table.
+    """
+    out_dir = out_dir or ARTICLE_BUNDLE_DIR
+    out_dir.mkdir(parents=True, exist_ok=True)
+    era_windows = [
+        (lbl, max(lo, X_MIN), min(hi, X_MAX - 2))
+        for lbl, lo, hi in CANONICAL_ERAS
+        if hi >= X_MIN and lo <= X_MAX - 2
+    ]
+    panel_a_df = _panel_a_table(df_all)
+    tables = {
+        "panelA": panel_a_df,
+        "circles": _circles_table(df_all, panel_a_df),
+        "panelB": _with_markers(_era_slopes(df_all, era_windows, sources=("snapshot",))),
+        "panelC": _with_markers(
+            _segment_slopes(df_all, cp_index, source="snapshot", year_min=X_MIN, year_max=X_MAX - 2)
+        ),
+        "markers": _markers_table(cp_index),
+    }
+    paths = {}
+    for key, table in tables.items():
+        p = out_dir / f"{ARTICLE_BUNDLE_STEM}_{key}.csv"
+        table.to_csv(p, index=False)
+        paths[key] = p
+    p = out_dir / "companion_counts_shares_sizes.csv"
+    _companion_table().to_csv(p, index=False)
+    paths["companion"] = p
+    return paths
 
 
 def panel_b_canonical(
@@ -933,6 +1142,9 @@ def build(metric: str = "per1000") -> Path:
     fig.savefig(out_svg)
     plt.close(fig)
     logger.info("Wrote %s and %s", out_png, out_svg)
+    if metric == "or":
+        paths = write_article_bundle(df_all, cp_index)
+        logger.info("Wrote data bundle: %s", ", ".join(str(p) for p in paths.values()))
     return out_png
 
 

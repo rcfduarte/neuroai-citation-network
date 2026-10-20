@@ -43,7 +43,7 @@ check() {
 figures() {
   need_venv
   # Article figures (read results/flow and results/bridge).
-  $PY -m neuroai_cn.figures.figure1_article_v3   # Figure 1: odds ratio, panels A to C
+  $PY -m neuroai_cn.figures.figure1_main_v2 or   # Figure 1: odds ratio, panels A to C (figure1_article)
   $PY -m neuroai_cn.figures.figure2_raw_v2       # Figure 2: raw counts and shares
   $PY -m neuroai_cn.figures.figure2_bridges_v3   # Figure 3: bridge papers, authors, institutions
   # Supplement figures that can be drawn from results/.

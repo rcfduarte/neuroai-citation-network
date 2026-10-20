@@ -4,7 +4,7 @@ Four panels, no figure title, panel labels A/B/C/D in upper-left of each axis.
 Shares x-axis [1989, 2026]. Uses corrections/20260508/ parquets (Scheme 1
 extended). Adds the trend-analysis panels (rolling OLS slopes, YoY deltas,
 piecewise-linear change-point segmentation) that exist in the parquets but
-were never plotted in the v3 figure.
+are not plotted in the article figure.
 
 Panels:
   A — OR_restricted per-year (both directions) with Wilson 95% CI ribbons,

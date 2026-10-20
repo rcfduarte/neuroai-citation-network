@@ -612,17 +612,17 @@
   expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[7,'B']
 - id: s5x-t1-8-neuro
   file: docs/supplements/S5-bridge-builders.md
-  context: '| 8 | Segmentation of brain MR images by hidden Markov random field and EM, Zhang et al. | 2001 | 2,111 | 1,335 | 1,636 | 0.61 | tool |'
+  context: '| 8 | Segmentation of brain MR images through a hidden Markov random field model and the expectation-maximization algorithm, Zhang et al. | 2001 | 2,111 | 1,335 | 1,636 | 0.61 | tool |'
   shown: 2,111
   expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[8,'c_neuro']
 - id: s5x-t1-8-ai
   file: docs/supplements/S5-bridge-builders.md
-  context: '| 8 | Segmentation of brain MR images by hidden Markov random field and EM, Zhang et al. | 2001 | 2,111 | 1,335 | 1,636 | 0.61 | tool |'
+  context: '| 8 | Segmentation of brain MR images through a hidden Markov random field model and the expectation-maximization algorithm, Zhang et al. | 2001 | 2,111 | 1,335 | 1,636 | 0.61 | tool |'
   shown: 1,335
   expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[8,'c_ai']
 - id: s5x-t1-8-b
   file: docs/supplements/S5-bridge-builders.md
-  context: '| 8 | Segmentation of brain MR images by hidden Markov random field and EM, Zhang et al. | 2001 | 2,111 | 1,335 | 1,636 | 0.61 | tool |'
+  context: '| 8 | Segmentation of brain MR images through a hidden Markov random field model and the expectation-maximization algorithm, Zhang et al. | 2001 | 2,111 | 1,335 | 1,636 | 0.61 | tool |'
   shown: 1,636
   expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[8,'B']
 - id: s5x-t1-9-neuro
@@ -1941,3 +1941,173 @@
   context: "has a median of 2002 and 3 papers from 2020 onward"
   shown: "3"
   expr: "int((pd.read_csv(RESULTS/'citation_age/ranking_orig_top100.csv').publication_year>=2020).sum())"
+- id: s5f3-ax-p-top
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'runs from 2,210 at the left to 0 at the right'
+  shown: '2,210'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s1_papers.csv'').B.max()'
+- id: s5f3-ax-p-t2
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'with ticks at 1,473 and 737'
+  shown: '1,473'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s1_papers.csv'').B.max()*2/3'
+- id: s5f3-ax-p-t1
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'with ticks at 1,473 and 737'
+  shown: '737'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s1_papers.csv'').B.max()/3'
+- id: s5f3-ax-a-top
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'runs to 9,937, with ticks at 3,312 and 6,625'
+  shown: '9,937'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B.max()'
+- id: s5f3-ax-a-t1
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'runs to 9,937, with ticks at 3,312 and 6,625'
+  shown: '3,312'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B.max()/3'
+- id: s5f3-ax-a-t2
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'runs to 9,937, with ticks at 3,312 and 6,625'
+  shown: '6,625'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B.max()*2/3'
+- id: s5f3-ax-i-top
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'runs to 63,142, with ticks at 21,047 and 42,094'
+  shown: '63,142'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s3_institutions_consolidated.csv'').head(15).total_B.max()'
+- id: s5f3-ax-i-t1
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'runs to 63,142, with ticks at 21,047 and 42,094'
+  shown: '21,047'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s3_institutions_consolidated.csv'').head(15).total_B.max()/3'
+- id: s5f3-ax-i-t2
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'runs to 63,142, with ticks at 21,047 and 42,094'
+  shown: '42,094'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s3_institutions_consolidated.csv'').head(15).total_B.max()*2/3'
+- id: s5f3-floor-pct
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'a minimum drawn length of 55 percent of the longest author bar (5,465'
+  shown: '55'
+  expr: '100*float(__import__(''re'').search(r''X_AUTHORS_BAR_MAX \* ([0-9.]+)'',(RESULTS.parent/''src/neuroai_cn/figures/figure2_bridges_v3.py'').read_text()).group(1))'
+- id: s5f3-floor-val
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'a minimum drawn length of 55 percent of the longest author bar (5,465'
+  shown: '5,465'
+  expr: '0.55*pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B.max()'
+- id: s5f3-floor-val2
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'which is 5,465 on the ∑B scale of Figure 3'
+  shown: '5,465'
+  expr: '0.55*pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B.max()'
+- id: s5f3-floor-pct2
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'I set a minimum drawn length for the bars of the authors column, 55 percent of the longest author bar'
+  shown: '55'
+  expr: '100*float(__import__(''re'').search(r''X_AUTHORS_BAR_MAX \* ([0-9.]+)'',(RESULTS.parent/''src/neuroai_cn/figures/figure2_bridges_v3.py'').read_text()).group(1))'
+- id: s5f3-floor-itti
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'Itti at 5,386, Markram 5,378, Fischl 5,338, Avants 5,226 and Olshausen 5,076'
+  shown: '5,386'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B[10]'
+- id: s5f3-floor-markram
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'Itti at 5,386, Markram 5,378, Fischl 5,338, Avants 5,226 and Olshausen 5,076'
+  shown: '5,378'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B[11]'
+- id: s5f3-floor-fischl
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'Itti at 5,386, Markram 5,378, Fischl 5,338, Avants 5,226 and Olshausen 5,076'
+  shown: '5,338'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B[12]'
+- id: s5f3-floor-avants
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'Itti at 5,386, Markram 5,378, Fischl 5,338, Avants 5,226 and Olshausen 5,076'
+  shown: '5,226'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B[13]'
+- id: s5f3-floor-olshausen
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'Itti at 5,386, Markram 5,378, Fischl 5,338, Avants 5,226 and Olshausen 5,076'
+  shown: '5,076'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B[14]'
+- id: s5f3-floor-first
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'ranks 11 to 15, with Itti at 5,386'
+  shown: '11'
+  expr: '1+(pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B[:15]>0.55*pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B.max()).sum()'
+- id: s5f3-floor-last
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'ranks 11 to 15, with Itti at 5,386'
+  shown: '15'
+  expr: '10+(pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B[:15]<=0.55*pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B.max()).sum()'
+- id: s5f3-floor-scale
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'Ranks 1 to 10 are drawn to scale'
+  shown: '10'
+  expr: '(pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B[:15]>0.55*pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').total_B.max()).sum()'
+- id: s5f3-badge-edu
+  file: docs/supplements/S5-bridge-builders.md
+  context: '12 are EDU, 2 are IND (Alphabet and Microsoft) and 1 is FAC'
+  shown: '12'
+  expr: '(pd.read_csv(RESULTS/''bridge/table_s3_institutions_consolidated.csv'').head(15).inst_type==''education'').sum()'
+- id: s5f3-badge-ind
+  file: docs/supplements/S5-bridge-builders.md
+  context: '12 are EDU, 2 are IND (Alphabet and Microsoft) and 1 is FAC'
+  shown: '2'
+  expr: '(pd.read_csv(RESULTS/''bridge/table_s3_institutions_consolidated.csv'').head(15).inst_type==''company'').sum()'
+- id: s5f3-badge-fac
+  file: docs/supplements/S5-bridge-builders.md
+  context: '12 are EDU, 2 are IND (Alphabet and Microsoft) and 1 is FAC'
+  shown: '1'
+  expr: '(pd.read_csv(RESULTS/''bridge/table_s3_institutions_consolidated.csv'').head(15).inst_type==''facility'').sum()'
+- id: s5f3-ms-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'Microsoft (neuro_share about 0.05)'
+  shown: '0.05'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s3_institutions_consolidated.csv'').head(15).set_index(''inst_name'').loc[''Microsoft'',''neuro_share'']'
+- id: s5f3-alpha-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'Alphabet (about 0.09) is the second most AI-leaning institution'
+  shown: '0.09'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s3_institutions_consolidated.csv'').head(15).set_index(''inst_name'').loc[''Alphabet (Google + DeepMind)'',''neuro_share'']'
+- id: s5f3-alpha-rank2
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'Alphabet (about 0.09) is the second most AI-leaning institution'
+  shown: '0.09'
+  expr: 'np.sort(pd.read_csv(RESULTS/''bridge/table_s3_institutions_consolidated.csv'').head(15).neuro_share.values)[1]'
+- id: s5f3-within
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'lie within 0.0055 of one another'
+  shown: '0.0055'
+  expr: 'max(pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').neuro_share[[0,2]].max(),pd.read_csv(RESULTS/''bridge/table_s3_institutions_consolidated.csv'').head(15).neuro_share[0])-min(pd.read_csv(RESULTS/''bridge/table_s2_authors.csv'').neuro_share[[0,2]].min(),pd.read_csv(RESULTS/''bridge/table_s3_institutions_consolidated.csv'').head(15).neuro_share[0])'
+- id: s5f3-links-papers
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'come from 6 papers, as I count them: only papers 1'
+  shown: '6'
+  expr: 'pd.read_csv(RESULTS/''bridge/paper_author_links.csv'').paper_rank.nunique()'
+- id: s5f3-links-nolines
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'so the other 9 papers'
+  shown: '9'
+  expr: '15-pd.read_csv(RESULTS/''bridge/paper_author_links.csv'').paper_rank.nunique()'
+- id: s5f3-tools-recode
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'would make 10 of the 15 papers tools instead of 7'
+  shown: '10'
+  expr: '(pd.read_csv(RESULTS/''bridge/table_s1_papers.csv'').paper_class==''tool'').sum()+3'
+- id: s5f3-tools-now
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'would make 10 of the 15 papers tools instead of 7'
+  shown: '7'
+  expr: '(pd.read_csv(RESULTS/''bridge/table_s1_papers.csv'').paper_class==''tool'').sum()'
+- id: s5f3-trunc-keep
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'cut to 51 characters'
+  shown: '51'
+  expr: 'len(mod(''figures.figure2_bridges_v3'')._truncate(''x''*80,52))-1'
+- id: s5f3-trunc-max
+  file: docs/supplements/S5-bridge-builders.md
+  context: 'followed by an ellipsis when it is longer than 52'
+  shown: '52'
+  expr: '(lambda m: next(n for n in range(1,200) if m._truncate(''x''*n,52)!=''x''*n)-1)(mod(''figures.figure2_bridges_v3''))'

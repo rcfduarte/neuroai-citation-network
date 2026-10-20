@@ -131,49 +131,44 @@
   expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).query('year<=1992').n_to_target.max()
 - id: s2-lvl-teal-growth
   file: docs/supplements/S2-citation-flow.md
-  context: the yearly teal value is 1.88 times its 1995 value
+  context: the yearly teal value of 2023 is 1.88 times its 1995 value
   shown: '1.88'
   expr: mod('analysis.flow_numbers').odds_ratio_growth(1995, 2023)['ai_to_neuro']
-- id: s2-lvl-teal-growth-smooth
-  file: docs/supplements/S2-citation-flow.md
-  context: the plotted 5-year mean 1.79 times
-  shown: '1.79'
-  expr: '(lambda a: a.loc[2023,''ai_to_neuro'']/a.loc[1995,''ai_to_neuro''])(pd.read_csv(RESULTS/''flow/fig1A_timeseries.csv'').pivot(index=''year'',columns=''direction'',values=''odds_ratio_5yr_centred_mean_PLOTTED''))'
 - id: s2-era-pre-teal
   file: docs/supplements/S2-citation-flow.md
   context: '| Before deep learning, 1995-2011 | +0.00117 |'
   shown: '+0.00117'
-  expr: pd.read_csv(RESULTS/'flow/fig1B_era_slopes.csv').set_index(['direction','era']).loc[('ai_to_neuro','Pre-DL'),'slope']
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelB.csv').set_index(['direction','era']).loc[('ai_to_neuro','Pre-DL'),'slope']
 - id: s2-era-pre-gold
   file: docs/supplements/S2-citation-flow.md
   context: '| ** | −0.00059 | −0.00089 to −0.00032 | ** |'
   shown: −0.00059
-  expr: pd.read_csv(RESULTS/'flow/fig1B_era_slopes.csv').set_index(['direction','era']).loc[('neuro_to_ai','Pre-DL'),'slope']
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelB.csv').set_index(['direction','era']).loc[('neuro_to_ai','Pre-DL'),'slope']
 - id: s2-era-exp-gold
   file: docs/supplements/S2-citation-flow.md
   context: '| n.s. | +0.00084 | +0.00030 to +0.00137 | ** |'
   shown: '+0.00084'
-  expr: pd.read_csv(RESULTS/'flow/fig1B_era_slopes.csv').set_index(['direction','era']).loc[('neuro_to_ai','DL expansion'),'slope']
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelB.csv').set_index(['direction','era']).loc[('neuro_to_ai','DL expansion'),'slope']
 - id: s2-era-neuroai-teal
   file: docs/supplements/S2-citation-flow.md
   context: '| NeuroAI era, 2020-2023 | +0.00493 | +0.00133 to +0.00903 | ** |'
   shown: '+0.00493'
-  expr: pd.read_csv(RESULTS/'flow/fig1B_era_slopes.csv').set_index(['direction','era']).loc[('ai_to_neuro','NeuroAI era'),'slope']
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelB.csv').set_index(['direction','era']).loc[('ai_to_neuro','NeuroAI era'),'slope']
 - id: s2-era-neuroai-teal-lo
   file: docs/supplements/S2-citation-flow.md
   context: '| NeuroAI era, 2020-2023 | +0.00493 | +0.00133 to +0.00903 | ** |'
   shown: '+0.00133'
-  expr: pd.read_csv(RESULTS/'flow/fig1B_era_slopes.csv').set_index(['direction','era']).loc[('ai_to_neuro','NeuroAI era'),'ci95_lo']
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelB.csv').set_index(['direction','era']).loc[('ai_to_neuro','NeuroAI era'),'ci95_lo']
 - id: s2-era-emerg-teal
   file: docs/supplements/S2-citation-flow.md
   context: '| Deep-learning emergence, 2012-2015 | −0.00113 |'
   shown: −0.00113
-  expr: pd.read_csv(RESULTS/'flow/fig1B_era_slopes.csv').set_index(['direction','era']).loc[('ai_to_neuro','DL emergence'),'slope']
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelB.csv').set_index(['direction','era']).loc[('ai_to_neuro','DL emergence'),'slope']
 - id: s2-seg-gold-2006
   file: docs/supplements/S2-citation-flow.md
   context: '| Gold | 2006-2023 | +0.00065 | +0.00057 to +0.00073 | +0.00057 to +0.00072 | 0.96 |'
   shown: '+0.00065'
-  expr: pd.read_csv(RESULTS/'flow/fig1C_segment_slopes.csv').set_index(['direction','year_start']).loc[('neuro_to_ai',2006),'slope']
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelC.csv').set_index(['direction','year_start']).loc[('neuro_to_ai',2006),'slope']
 - id: s2-seg-gold-2006-r2
   file: docs/supplements/S2-citation-flow.md
   context: '| Gold | 2006-2023 | +0.00065 | +0.00057 to +0.00073 | +0.00057 to +0.00072 | 0.96 |'
@@ -183,17 +178,17 @@
   file: docs/supplements/S2-citation-flow.md
   context: '| Teal | 2006-2019 | −0.00074 | −0.00099 to −0.00046 |'
   shown: −0.00074
-  expr: pd.read_csv(RESULTS/'flow/fig1C_segment_slopes.csv').set_index(['direction','year_start']).loc[('ai_to_neuro',2006),'slope']
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelC.csv').set_index(['direction','year_start']).loc[('ai_to_neuro',2006),'slope']
 - id: s2-seg-teal-1995
   file: docs/supplements/S2-citation-flow.md
   context: '| Teal | 1995-2005 | +0.00140 |'
   shown: '+0.00140'
-  expr: pd.read_csv(RESULTS/'flow/fig1C_segment_slopes.csv').set_index(['direction','year_start']).loc[('ai_to_neuro',1995),'slope']
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelC.csv').set_index(['direction','year_start']).loc[('ai_to_neuro',1995),'slope']
 - id: s2-seg-gold-1995
   file: docs/supplements/S2-citation-flow.md
   context: '| Gold | 1995-2001 | −0.00130 |'
   shown: −0.00130
-  expr: pd.read_csv(RESULTS/'flow/fig1C_segment_slopes.csv').set_index(['direction','year_start']).loc[('neuro_to_ai',1995),'slope']
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelC.csv').set_index(['direction','year_start']).loc[('neuro_to_ai',1995),'slope']
 - id: s2-seg-teal-2020-tlo
   file: docs/supplements/S2-citation-flow.md
   context: the ordinary t interval, −0.00032 to +0.01018, includes zero
@@ -266,7 +261,7 @@
   expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2024,'ai_to_neuro'),'rho_null_restricted']
 - id: s2-art-live-2025
   file: docs/supplements/S2-citation-flow.md
-  context: gives 13.09 cross-field references per 1,000
+  context: the re-download gives 13.09 for 2025
   shown: '13.09'
   expr: pd.read_csv(RESULTS/'crosssource/openalex_live_extended.csv').pivot(index='year',columns='direction',values='per1000').loc[2025,'ai_to_neuro']
 - id: s2-art-snap-2025
@@ -460,27 +455,27 @@
   file: docs/supplements/S2-citation-flow.md
   context: then rose at +0.00065 per year (bootstrap 95 percent interval +0.00057 to +0.00073)
   shown: '+0.00057'
-  expr: pd.read_csv(RESULTS/'flow/fig1C_segment_slopes.csv').set_index(['direction','year_start']).loc[('neuro_to_ai',2006),'ci95_lo']
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelC.csv').set_index(['direction','year_start']).loc[('neuro_to_ai',2006),'ci95_lo']
 - id: s2-gold-seg-hi
   file: docs/supplements/S2-citation-flow.md
   context: then rose at +0.00065 per year (bootstrap 95 percent interval +0.00057 to +0.00073)
   shown: '+0.00073'
-  expr: pd.read_csv(RESULTS/'flow/fig1C_segment_slopes.csv').set_index(['direction','year_start']).loc[('neuro_to_ai',2006),'ci95_hi']
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelC.csv').set_index(['direction','year_start']).loc[('neuro_to_ai',2006),'ci95_hi']
 - id: s2-gold-exp-lo
   file: docs/supplements/S2-citation-flow.md
   context: the 2016-2019 era slope is +0.00084 (interval +0.00030 to +0.00137)
   shown: '+0.00030'
-  expr: pd.read_csv(RESULTS/'flow/fig1B_era_slopes.csv').set_index(['direction','era']).loc[('neuro_to_ai','DL expansion'),'ci95_lo']
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelB.csv').set_index(['direction','era']).loc[('neuro_to_ai','DL expansion'),'ci95_lo']
 - id: s2-gold-exp-hi
   file: docs/supplements/S2-citation-flow.md
   context: the 2016-2019 era slope is +0.00084 (interval +0.00030 to +0.00137)
   shown: '+0.00137'
-  expr: pd.read_csv(RESULTS/'flow/fig1B_era_slopes.csv').set_index(['direction','era']).loc[('neuro_to_ai','DL expansion'),'ci95_hi']
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelB.csv').set_index(['direction','era']).loc[('neuro_to_ai','DL expansion'),'ci95_hi']
 - id: s2-gold-emerg
   file: docs/supplements/S2-citation-flow.md
   context: The 2012-2015 era slope (+0.00081)
   shown: '+0.00081'
-  expr: pd.read_csv(RESULTS/'flow/fig1B_era_slopes.csv').set_index(['direction','era']).loc[('neuro_to_ai','DL emergence'),'slope']
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelB.csv').set_index(['direction','era']).loc[('neuro_to_ai','DL emergence'),'slope']
 - id: s2-gold-plateau-slope
   file: docs/supplements/S2-citation-flow.md
   context: has a slope of +0.00012 per year with an R2 of 0.12
@@ -556,3 +551,193 @@
   context: "not significant (+0.00011 per year, p = 0.29), and neuroscience citing AI comes out higher than AI citing neuroscience in 26 of the 31 years"
   shown: "26"
   expr: "(lambda p: int((p.ai_to_neuro<p.neuro_to_ai).loc[1995:2025].sum()))(pd.read_csv(RESULTS/'flow/sensitivity_strict_or_by_year.csv').pivot(index='year',columns='direction',values='or_restricted'))"
+- id: s2-fig-ylim-lo
+  file: docs/supplements/S2-citation-flow.md
+  context: The axis of panel A runs from 0.005 to 0.3
+  shown: '0.005'
+  expr: mod('figures.figure1_main_v2').METRIC_CONFIG['or']['ylim'][0]
+- id: s2-fig-ylim-hi
+  file: docs/supplements/S2-citation-flow.md
+  context: The axis of panel A runs from 0.005 to 0.3
+  shown: '0.3'
+  expr: mod('figures.figure1_main_v2').METRIC_CONFIG['or']['ylim'][1]
+- id: s2-thick-teal-1995
+  file: docs/supplements/S2-citation-flow.md
+  context: The thick teal line stands at 0.0302 in 1995 and 0.0605 in 2023, 2.00 times as high
+  shown: '0.0302'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelA.csv').set_index(['direction','year']).loc[('ai_to_neuro',1995),'thick_line_5yr_centred_mean']
+- id: s2-thick-teal-2023
+  file: docs/supplements/S2-citation-flow.md
+  context: The thick teal line stands at 0.0302 in 1995 and 0.0605 in 2023, 2.00 times as high
+  shown: '0.0605'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_panelA.csv').set_index(['direction','year']).loc[('ai_to_neuro',2023),'thick_line_5yr_centred_mean']
+- id: s2-thick-teal-growth
+  file: docs/supplements/S2-citation-flow.md
+  context: The thick teal line stands at 0.0302 in 1995 and 0.0605 in 2023, 2.00 times as high
+  shown: '2.00'
+  expr: '(lambda a: a.loc[(''ai_to_neuro'',2023),''thick_line_5yr_centred_mean'']/a.loc[(''ai_to_neuro'',1995),''thick_line_5yr_centred_mean''])(pd.read_csv(RESULTS/''flow/figure1_article_panelA.csv'').set_index([''direction'',''year'']))'
+- id: s2-circ-teal-2024-circle
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2024 | teal | 0.0594 | 0.0770 | 0.77 | 0.0654 |'
+  shown: '0.0594'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2024),'circle_odds_ratio']
+- id: s2-circ-teal-2024-snap
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2024 | teal | 0.0594 | 0.0770 | 0.77 | 0.0654 |'
+  shown: '0.0770'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2024),'snapshot_odds_ratio_yearly']
+- id: s2-circ-teal-2024-ratio
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2024 | teal | 0.0594 | 0.0770 | 0.77 | 0.0654 |'
+  shown: '0.77'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2024),'circle_over_snapshot_yearly']
+- id: s2-circ-teal-2024-thick
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2024 | teal | 0.0594 | 0.0770 | 0.77 | 0.0654 |'
+  shown: '0.0654'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2024),'snapshot_thick_line']
+- id: s2-circ-teal-2025-circle
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2025 | teal | 0.0475 | 0.0849 | 0.56 | 0.0721 |'
+  shown: '0.0475'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2025),'circle_odds_ratio']
+- id: s2-circ-teal-2025-snap
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2025 | teal | 0.0475 | 0.0849 | 0.56 | 0.0721 |'
+  shown: '0.0849'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2025),'snapshot_odds_ratio_yearly']
+- id: s2-circ-teal-2025-ratio
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2025 | teal | 0.0475 | 0.0849 | 0.56 | 0.0721 |'
+  shown: '0.56'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2025),'circle_over_snapshot_yearly']
+- id: s2-circ-teal-2025-thick
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2025 | teal | 0.0475 | 0.0849 | 0.56 | 0.0721 |'
+  shown: '0.0721'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2025),'snapshot_thick_line']
+- id: s2-circ-gold-2024-circle
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2024 | gold | 0.0208 | 0.0209 | 0.99 | 0.0213 |'
+  shown: '0.0208'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('neuro_to_ai',2024),'circle_odds_ratio']
+- id: s2-circ-gold-2024-snap
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2024 | gold | 0.0208 | 0.0209 | 0.99 | 0.0213 |'
+  shown: '0.0209'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('neuro_to_ai',2024),'snapshot_odds_ratio_yearly']
+- id: s2-circ-gold-2024-ratio
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2024 | gold | 0.0208 | 0.0209 | 0.99 | 0.0213 |'
+  shown: '0.99'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('neuro_to_ai',2024),'circle_over_snapshot_yearly']
+- id: s2-circ-gold-2024-thick
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2024 | gold | 0.0208 | 0.0209 | 0.99 | 0.0213 |'
+  shown: '0.0213'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('neuro_to_ai',2024),'snapshot_thick_line']
+- id: s2-circ-gold-2025-circle
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2025 | gold | 0.0233 | 0.0235 | 0.99 | 0.0213 |'
+  shown: '0.0233'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('neuro_to_ai',2025),'circle_odds_ratio']
+- id: s2-circ-gold-2025-snap
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2025 | gold | 0.0233 | 0.0235 | 0.99 | 0.0213 |'
+  shown: '0.0235'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('neuro_to_ai',2025),'snapshot_odds_ratio_yearly']
+- id: s2-circ-gold-2025-ratio
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2025 | gold | 0.0233 | 0.0235 | 0.99 | 0.0213 |'
+  shown: '0.99'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('neuro_to_ai',2025),'circle_over_snapshot_yearly']
+- id: s2-circ-gold-2025-thick
+  file: docs/supplements/S2-citation-flow.md
+  context: '| 2025 | gold | 0.0233 | 0.0235 | 0.99 | 0.0213 |'
+  shown: '0.0213'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('neuro_to_ai',2025),'snapshot_thick_line']
+- id: s2-art-circle-2025
+  file: docs/supplements/S2-citation-flow.md
+  context: the May 2026 re-download gives an odds ratio of 0.0475 for 2025, where the snapshot gives 0.0849
+  shown: '0.0475'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2025),'circle_odds_ratio']
+- id: s2-art-circle-snap-2025
+  file: docs/supplements/S2-citation-flow.md
+  context: the May 2026 re-download gives an odds ratio of 0.0475 for 2025, where the snapshot gives 0.0849
+  shown: '0.0849'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2025),'snapshot_odds_ratio_yearly']
+- id: s2-circ-gold-within
+  file: docs/supplements/S2-citation-flow.md
+  context: the circles fall within 1 percent of the snapshot's yearly values
+  shown: '1'
+  expr: 100*(1-pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc['neuro_to_ai','circle_over_snapshot_yearly']).abs().max()
+- id: s2-circ-teal-2024-pct
+  file: docs/supplements/S2-citation-flow.md
+  context: 23 percent lower in 2024 and 44 percent lower in 2025
+  shown: '23'
+  expr: 100*(1-pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2024),'circle_over_snapshot_yearly'])
+- id: s2-circ-teal-2025-pct
+  file: docs/supplements/S2-citation-flow.md
+  context: 23 percent lower in 2024 and 44 percent lower in 2025
+  shown: '44'
+  expr: 100*(1-pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2025),'circle_over_snapshot_yearly'])
+- id: s2-circ-per1000-2025-lo
+  file: docs/supplements/S2-citation-flow.md
+  context: its bootstrap 95 percent interval, 9.14 to 17.58, excludes the snapshot's 21.37
+  shown: '9.14'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2025),'sample_per1000_bootstrap95_lo']
+- id: s2-circ-per1000-2025-hi
+  file: docs/supplements/S2-citation-flow.md
+  context: its bootstrap 95 percent interval, 9.14 to 17.58, excludes the snapshot's 21.37
+  shown: '17.58'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2025),'sample_per1000_bootstrap95_hi']
+- id: s2-circ-per1000-2025-snap
+  file: docs/supplements/S2-citation-flow.md
+  context: its bootstrap 95 percent interval, 9.14 to 17.58, excludes the snapshot's 21.37
+  shown: '21.37'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2025),'snapshot_per1000_classified']
+- id: s2-circ-per1000-2024-lo
+  file: docs/supplements/S2-citation-flow.md
+  context: in 2024 the interval (10.18 to 21.54) still contains the snapshot's 19.16
+  shown: '10.18'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2024),'sample_per1000_bootstrap95_lo']
+- id: s2-circ-per1000-2024-hi
+  file: docs/supplements/S2-citation-flow.md
+  context: in 2024 the interval (10.18 to 21.54) still contains the snapshot's 19.16
+  shown: '21.54'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2024),'sample_per1000_bootstrap95_hi']
+- id: s2-circ-per1000-2024-snap
+  file: docs/supplements/S2-citation-flow.md
+  context: in 2024 the interval (10.18 to 21.54) still contains the snapshot's 19.16
+  shown: '19.16'
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).loc[('ai_to_neuro',2024),'snapshot_per1000_classified']
+- id: s2-circ-earlier-below
+  file: docs/supplements/S2-citation-flow.md
+  context: its odds ratio is below the snapshot's in 11 of the 14 years from 2010 to 2023, with a median ratio of 0.80
+  shown: '11'
+  expr: '((lambda d: (d[d.source==''oa_live''].set_index([''direction'',''year'']).per1000/d[d.source==''snapshot''].set_index([''direction'',''year'']).per1000).sort_index().loc[''ai_to_neuro''].loc[2010:2023])(mod(''figures.cross_source'').load_all_sources_or())<1).sum()'
+- id: s2-circ-earlier-n
+  file: docs/supplements/S2-citation-flow.md
+  context: its odds ratio is below the snapshot's in 11 of the 14 years from 2010 to 2023, with a median ratio of 0.80
+  shown: '14'
+  expr: '(lambda d: (d[d.source==''oa_live''].set_index([''direction'',''year'']).per1000/d[d.source==''snapshot''].set_index([''direction'',''year'']).per1000).sort_index().loc[''ai_to_neuro''].loc[2010:2023])(mod(''figures.cross_source'').load_all_sources_or()).notna().sum()'
+- id: s2-circ-earlier-median
+  file: docs/supplements/S2-citation-flow.md
+  context: its odds ratio is below the snapshot's in 11 of the 14 years from 2010 to 2023, with a median ratio of 0.80
+  shown: '0.80'
+  expr: '(lambda d: (d[d.source==''oa_live''].set_index([''direction'',''year'']).per1000/d[d.source==''snapshot''].set_index([''direction'',''year'']).per1000).sort_index().loc[''ai_to_neuro''].loc[2010:2023])(mod(''figures.cross_source'').load_all_sources_or()).median()'
+- id: s2-circ-earlier-min
+  file: docs/supplements/S2-citation-flow.md
+  context: Only one earlier year, 2012 (ratio 0.54), shows a larger offset than 2025
+  shown: '0.54'
+  expr: '(lambda d: (d[d.source==''oa_live''].set_index([''direction'',''year'']).per1000/d[d.source==''snapshot''].set_index([''direction'',''year'']).per1000).sort_index().loc[''ai_to_neuro''].loc[2010:2023])(mod(''figures.cross_source'').load_all_sources_or()).min()'
+- id: s2-circ-sample-n
+  file: docs/supplements/S2-citation-flow.md
+  context: For each field and year the sample holds 1,500 papers
+  shown: 1,500
+  expr: pd.read_csv(RESULTS/'flow/figure1_article_circles.csv').set_index(['direction','year']).sample_papers.max()
+- id: s2-circ-earlier-min-year
+  file: docs/supplements/S2-citation-flow.md
+  context: Only one earlier year, 2012 (ratio 0.54), shows a larger offset than 2025
+  shown: '2012'
+  expr: '(lambda r, c: int(r[r < c].index[0]) if (r < c).sum() == 1 else float(''nan''))((lambda d: (d[d.source==''oa_live''].set_index([''direction'',''year'']).per1000/d[d.source==''snapshot''].set_index([''direction'',''year'']).per1000).sort_index().loc[''ai_to_neuro''].loc[2010:2023])(mod(''figures.cross_source'').load_all_sources_or()), pd.read_csv(RESULTS/''flow/figure1_article_circles.csv'').set_index([''direction'',''year'']).loc[(''ai_to_neuro'',2025),''circle_over_snapshot_yearly''])'

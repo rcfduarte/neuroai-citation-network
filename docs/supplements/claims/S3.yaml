@@ -955,3 +955,113 @@
   shown: '61'
   expr: 100*pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2025,'refs_per_ai_paper']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_ai_paper']
 # S5 bridge builders
+- id: s3-e9-peak-year
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 'reaches its highest solid-year value in 2023, 72,841 references'
+  shown: '2023'
+  expr: 'mod(''analysis.flow_numbers'').cross_field_citations_per_year().loc[:2023,''ai_to_neuro''].idxmax()'
+- id: s3-e9-peak-val
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 'reaches its highest solid-year value in 2023, 72,841 references'
+  shown: '72,841'
+  expr: 'mod(''analysis.flow_numbers'').cross_field_citations_per_year().loc[:2023,''ai_to_neuro''].max()'
+- id: s3-e9-prov24
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 'higher still, 90,282 in 2024 and 97,295 in 2025'
+  shown: '90,282'
+  expr: 'mod(''analysis.flow_numbers'').cross_field_citations_per_year().loc[2024,''ai_to_neuro'']'
+- id: s3-e9-prov25
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 'higher still, 90,282 in 2024 and 97,295 in 2025'
+  shown: '97,295'
+  expr: 'mod(''analysis.flow_numbers'').cross_field_citations_per_year().loc[2025,''ai_to_neuro'']'
+- id: s3-e9-or-year
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 'is also highest in 2023 among the solid years, 0.0544'
+  shown: '2023'
+  expr: 'mod(''analysis.flow_numbers'').odds_ratio_at(tuple(range(1990,2024))).ai_to_neuro.idxmax()'
+- id: s3-e9-or-val
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 'is also highest in 2023 among the solid years, 0.0544'
+  shown: '0.0544'
+  expr: 'mod(''analysis.flow_numbers'').odds_ratio_at(tuple(range(1990,2024))).ai_to_neuro.max()'
+- id: s3-e9-share23
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '2023 stands at 16.51 per 1,000, below its value in 2000, 20.95'
+  shown: '16.51'
+  expr: 'mod(''analysis.flow_numbers'').cross_refs_per_1000().loc[2023,''ai_to_neuro'']'
+- id: s3-e9-share00
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '2023 stands at 16.51 per 1,000, below its value in 2000, 20.95'
+  shown: '20.95'
+  expr: 'mod(''analysis.flow_numbers'').cross_refs_per_1000().loc[2000,''ai_to_neuro'']'
+- id: s3-e11-thick20
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '(the thick 5-year line of the figure rises from 15.89 to 17.66, or 11.2 percent)'
+  shown: '15.89'
+  expr: 'pd.read_csv(RESULTS/''flow/figure2_raw_v2_data.csv'')[lambda d:d.colour==''teal''].set_index(''year'')[''B_per_1000_5yr_centred_mean_PLOTTED''][2020]'
+- id: s3-e11-thick23
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '(the thick 5-year line of the figure rises from 15.89 to 17.66, or 11.2 percent)'
+  shown: '17.66'
+  expr: 'pd.read_csv(RESULTS/''flow/figure2_raw_v2_data.csv'')[lambda d:d.colour==''teal''].set_index(''year'')[''B_per_1000_5yr_centred_mean_PLOTTED''][2023]'
+- id: s3-e11-thick-pct
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '(the thick 5-year line of the figure rises from 15.89 to 17.66, or 11.2 percent)'
+  shown: '11.2'
+  expr: '100*(pd.read_csv(RESULTS/''flow/figure2_raw_v2_data.csv'')[lambda d:d.colour==''teal''].set_index(''year'')[''B_per_1000_5yr_centred_mean_PLOTTED''][2023]/pd.read_csv(RESULTS/''flow/figure2_raw_v2_data.csv'')[lambda d:d.colour==''teal''].set_index(''year'')[''B_per_1000_5yr_centred_mean_PLOTTED''][2020]-1)'
+- id: s3-e11-thick95
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 'so the thick line at 1995 averages 1993 to 1997'
+  shown: '1995'
+  expr: '1995 if abs(pd.read_csv(RESULTS/''flow/figure2_raw_v2_data.csv'').query(''colour=="teal" and year==1995'').B_per_1000_5yr_centred_mean_PLOTTED.iloc[0]-mod(''analysis.flow_numbers'').cross_refs_per_1000().loc[1993:1997,''ai_to_neuro''].mean())<1e-9 else 0'
+- id: s3-e10-share-last
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 'teal above gold in every year from 1995 to 2017, gold above teal from 2018'
+  shown: '2017'
+  expr: '(lambda d: d[d>0].index.max() if (d.loc[:2017]>0).all() else 0)((mod(''analysis.flow_numbers'').cross_refs_per_1000()[''ai_to_neuro'']-mod(''analysis.flow_numbers'').cross_refs_per_1000()[''neuro_to_ai'']).loc[1995:])'
+- id: s3-e10-share-first
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 'teal above gold in every year from 1995 to 2017, gold above teal from 2018'
+  shown: '2018'
+  expr: '(lambda d: d[d<0].index.min() if (d.loc[2018:]<0).all() else 0)((mod(''analysis.flow_numbers'').cross_refs_per_1000()[''ai_to_neuro'']-mod(''analysis.flow_numbers'').cross_refs_per_1000()[''neuro_to_ai'']).loc[1995:])'
+- id: s3-e10-or-first
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 'teal above gold in every year, 1995 to 2025 (smallest ratio 1.25'
+  shown: '1995'
+  expr: '(lambda r: 1995 if (r>1).all() else 0)(mod(''analysis.flow_numbers'').odds_ratio_at(tuple(range(1995,2026))).ai_to_neuro/mod(''analysis.flow_numbers'').odds_ratio_at(tuple(range(1995,2026))).neuro_to_ai)'
+- id: s3-e10-or-last
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 'teal above gold in every year, 1995 to 2025 (smallest ratio 1.25'
+  shown: '2025'
+  expr: '(lambda r: 2025 if (r>1).all() else 0)(mod(''analysis.flow_numbers'').odds_ratio_at(tuple(range(1995,2026))).ai_to_neuro/mod(''analysis.flow_numbers'').odds_ratio_at(tuple(range(1995,2026))).neuro_to_ai)'
+- id: s3-e10-count-first
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 'gold above teal in every year, 1990 to 2025'
+  shown: '1990'
+  expr: '(lambda r: 1990 if (r>0).all() else 0)(mod(''analysis.flow_numbers'').cross_field_citations_per_year()[''neuro_to_ai'']-mod(''analysis.flow_numbers'').cross_field_citations_per_year()[''ai_to_neuro''])'
+- id: s3-e10-count-last
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 'gold above teal in every year, 1990 to 2025'
+  shown: '2025'
+  expr: '(lambda r: 2025 if (r>0).all() and r.index.max()==2025 else 0)(mod(''analysis.flow_numbers'').cross_field_citations_per_year()[''neuro_to_ai'']-mod(''analysis.flow_numbers'').cross_field_citations_per_year()[''ai_to_neuro''])'
+- id: s3-e13-yearly
+  file: docs/methods-note-public.md
+  context: 'the yearly lines at 2017.87'
+  shown: '2017.87'
+  expr: 'mod(''analysis.flow_numbers'').share_crossing()[''crossing_year_interpolated'']'
+- id: s3-e13-thick
+  file: docs/methods-note-public.md
+  context: 'the thick 5-year lines at 2018.04'
+  shown: '2018.04'
+  expr: 'mod(''analysis.flow_numbers'').share_crossing(smoothed=True)[''crossing_year_interpolated'']'
+- id: s3-e14-article-b
+  file: docs/methods/05-bridge-metric.md
+  context: 'cited 1,000 times by AI and twice by neuroscience scores 3.99'
+  shown: '3.99'
+  expr: '2*1000*2/(1000+2)'
+- id: s3-e10-share-start
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 'teal above gold in every year from 1995 to 2017, gold above teal from 2018'
+  shown: '1995'
+  expr: '(lambda d: d.index.min() if (d.loc[:2017]>0).all() else 0)((mod(''analysis.flow_numbers'').cross_refs_per_1000()[''ai_to_neuro'']-mod(''analysis.flow_numbers'').cross_refs_per_1000()[''neuro_to_ai'']).loc[1995:])'

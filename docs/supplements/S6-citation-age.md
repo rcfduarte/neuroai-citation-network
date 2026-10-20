@@ -19,7 +19,7 @@ Paragraph 16 says:
 
 > Citation patterns suggest that AI continues to cite newer neuroscience papers. But these papers do not yet qualify as "bridge works"—foundational discoveries highly cited by both fields.
 
-"These bridge works" in paragraph 12 are the conceptual half of the top 15 of Figure 3: the papers that make a claim about brains or minds, as opposed to the software and benchmarks that make up the other half ([S5](S5-bridge-builders.md), sections 3.6 and 4.1). A reviewer of the draft raised the question I examine here: "it seems like newer papers would struggle to get enough citations to qualify as highly cited compared to papers that have had 25 years to accrue citations". The bridge score adds up every citation a paper ever received, so a paper from 1998 has had 28 years to collect them in this snapshot and a paper from 2020 has had about six. Both sentences are statements about that all-time ranking.
+"These bridge works" in paragraph 12 are the conceptual half of the top 15 of Figure 3: the papers that make a claim about brains or minds, as opposed to the software and benchmarks that make up the other half ([S5](S5-bridge-builders.md), sections 3.6 and 4.1). The question I examine here is whether newer papers would struggle to get enough citations to qualify as highly cited compared with papers that have had 25 years to accrue them. The bridge score adds up every citation a paper ever received, so a paper from 1998 has had 28 years to collect them in this snapshot and a paper from 2020 has had about six. Both statements of the article, in paragraphs 12 and 16, concern that all-time ranking.
 
 ## 2. Data
 
@@ -94,7 +94,7 @@ For recency questions I use the first publication year, which differs from OpenA
 
 ### 4.1 The published ranking: exact, and not blind to recent work
 
-In the published ranking the top 15 holds 8 concepts and 7 tools. Its concepts span Miller's 1956 paper through Izhikevich's spiking-neuron model of 2003, which is the most recent concept at rank 3. It stays the most recent concept through the top 25, and in the top 50 the most recent is a second Izhikevich paper from 2004, at rank 46. No concept published after 2005 is in the top 50, and 6 are in the top 100 (the first is Friston's free-energy principle at rank 51). Hence "the most recent of these bridgeworks is from 2003" is exact for the ranking shown.
+In the published ranking the top 15 holds 8 concepts and 7 tools. Its concepts span Miller's 1956 paper (dated 1994 in Figure 3 and Table S1, a reprint) through Izhikevich's spiking-neuron model of 2003, which is the most recent concept at rank 3. It stays the most recent concept through the top 25, and in the top 50 the most recent is a second Izhikevich paper from 2004, at rank 46. No concept published after 2005 is in the top 50, and 6 are in the top 100 (the first is Friston's free-energy principle at rank 51). Hence "the most recent of these bridgeworks is from 2003" is exact for the ranking shown.
 
 Recent work is not shut out of the same ranking. Five of its top 15 are tools published between 2014 and 2020: the BRATS benchmark (2014), lme4 (2015), XGBoost (2016), the deep-learning survey of Litjens and colleagues (2017) and SciPy 1.0 (2020). Within about six years of appearing, a paper from 2020 reached the top 15, so in my reading age is not an absolute barrier. The question of age concerns concepts, so in the rest of this section I ask about them.
 

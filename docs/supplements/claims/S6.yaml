@@ -929,3 +929,8 @@
   context: Ebbinghaus's *Memory* (43 percent)
   shown: '43'
   expr: '[int(s.split(''% of'')[0].split('': '')[-1]) for s in json.load(open(RESULTS/''citation_age/checks.json''))[''F_prepublication_citation_flags_top100''][''flagged''] if ''Memory'' in s][0]'
+- id: s6-e15-miller
+  file: docs/supplements/S6-citation-age.md
+  context: '(dated 1994 in Figure 3 and Table S1, a reprint)'
+  shown: '1994'
+  expr: 'pd.read_csv(RESULTS/''bridge/table_s1_papers.csv'').year[5]'

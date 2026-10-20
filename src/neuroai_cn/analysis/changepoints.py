@@ -1,7 +1,7 @@
 """Change points of the citation-flow odds ratio, recomputed from ``results/flow/or_by_year.csv`` only.
 
 Two different procedures are run on the same series (``or_restricted``, the yearly odds ratio the
-figure plots; thin line, not the 5-year mean) and everything is written to
+figure plots as the pale band, not the 5-year mean) and everything is written to
 ``results/flow/changepoints.csv`` and ``results/flow/segment_slopes.csv``.
 
 1. ``piecewise-OLS exhaustive``: the search the article figure uses, called through the very function

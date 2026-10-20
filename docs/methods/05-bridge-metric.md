@@ -10,7 +10,7 @@ For each paper *p*, take `c_neuro(p)` and `c_ai(p)`, the counts of citations it 
 B(p) = 2 · c_neuro(p) · c_ai(p) / (c_neuro(p) + c_ai(p))
 ```
 
-Harmonic means punish imbalance brutally, which is exactly the wanted property. Ten thousand citations from AI and two from neuroscience scores 4. One hundred from each side scores 100. Field superstardom buys nothing; only legibility to both audiences does.
+Harmonic means punish imbalance brutally, which is exactly the wanted property. A paper cited 1,000 times by AI and twice by neuroscience scores 3.99, whereas one cited 100 times by each side scores 100. Field superstardom buys nothing; only legibility to both audiences does.
 
 **The score is computed over raw counts, not normalized shares.** The implementation (`materialize_full()` in `src/neuroai_cn/audits/q4_v3_extended.py`, SQL expression `2.0 * c_neuro * c_ai / (c_neuro + c_ai)`) uses raw counts, and every published B value is a raw-count harmonic mean, so the units are citations rather than shares. The normalized variant exists in the code as a separate diagnostic. I did not re-run it for the current supplements, so I quote no agreement between its ordering and the published one ([S5, section 3.1](../supplements/S5-bridge-builders.md)).
 
@@ -58,11 +58,11 @@ An author's bridge weight is the **sum of B over the bridge papers they co-autho
 
 I compute the figure's author and institution columns over the **top 5,000 eligible bridge papers** rather than over the whole pool, which is a computational compromise rather than a principled choice. The one exception is the corporate rows of the consolidated institution table, which were summed over the whole 133,763-paper pool (section 6). The persisted outputs are the top 200 authors and top 100 institutions, each carrying: number of E2-filtered bridge papers, ∑B, mean B, max B, and total citations from each field.
 
-Author identity is OpenAlex's disambiguated `author_id`, with no further consolidation. Institution identity is OpenAlex's `institution_id`, with the single deliberate exception in section 6. `institution.type` (one of `education`, `company`, `facility`, `healthcare`, `government`, `nonprofit`, `funder`, `other`) is carried through and rendered as a three-letter badge in the figure, so industry and private-sector institutions are explicitly visible rather than filtered out.
+Author identity is OpenAlex's disambiguated `author_id`, with no further consolidation. Institution identity is OpenAlex's `institution_id`, with the single deliberate exception in section 6. `institution.type` (one of `education`, `company`, `facility`, `healthcare`, `government`, `nonprofit`, `funder`, `other`) is carried through and drawn as a badge beside each institution bar in the figure (EDU education, IND industry, which is the OpenAlex `company`, FAC facility, GOV government, HC healthcare, NP nonprofit), so industry and private-sector institutions are explicitly visible rather than filtered out.
 
-Institution rank is computed from **paper affiliations**, not from where the named top authors work. An institution can therefore rank highly on brokerage alone while carrying little or no author edge, and two do exactly that in the published figure: the Howard Hughes Medical Institute has no author line at all, and the University of Pennsylvania has only a faded one, from Avants. Readers consistently misread that as a drawing error, so I state it here as loudly as possible.
+Institution rank is computed from **paper affiliations**, not from where the named top authors work. An institution can therefore rank highly on brokerage alone while carrying little or no author edge, and two do exactly that in the published figure: the Howard Hughes Medical Institute has no author line at all, and the University of Pennsylvania has only a faded one, from Avants.
 
-Color encoding everywhere is `neuro_share = c_neuro / (c_neuro + c_ai)`, on a diverging scale from teal at 0, meaning read almost entirely by AI, through a neutral middle, to gold at 1, meaning read almost entirely by neuroscience.
+Color encoding everywhere is `neuro_share = c_neuro / (c_neuro + c_ai)`; for an author or an institution the two counts are first summed over its bridge papers, so the share is the sum of the neuroscience citations over the sum of the citations from both fields. The scale diverges from teal at 0, meaning read almost entirely by AI, through a neutral middle, to gold at 1, meaning read almost entirely by neuroscience.
 
 ## 6. Corporate-group consolidation
 

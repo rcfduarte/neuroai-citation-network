@@ -1,0 +1,16 @@
+type,label,first_year,last_year,x_from,x_to
+era (shaded),Pre-DL,1995,2011,1995.0,2012.0
+era (shaded),DL emergence,2012,2015,2012.0,2016.0
+era (shaded),DL expansion,2016,2019,2016.0,2020.0
+era (shaded),NeuroAI era,2020,2025,2020.0,2026.0
+"changepoint (dashed, first year of new segment)",Neuroscience papers citing AI,2002,2002,2002.0,2002.0
+"changepoint (dashed, first year of new segment)",Neuroscience papers citing AI,2006,2006,2006.0,2006.0
+"changepoint (dashed, first year of new segment)",AI papers citing neuroscience,2006,2006,2006.0,2006.0
+"changepoint (dashed, first year of new segment)",AI papers citing neuroscience,2020,2020,2020.0,2020.0
+milestone paper (thin grey vertical),AlexNet 2012,2012,2012,2012.0,2012.0
+milestone paper (thin grey vertical),Hassabis 2017,2017,2017,2017.0,2017.0
+milestone paper (thin grey vertical),Kriegeskorte 2018,2018,2018,2018.0,2018.0
+milestone paper (thin grey vertical),Richards 2019,2019,2019,2019.0,2019.0
+milestone paper (thin grey vertical),GPT-3 2020,2020,2020,2020.0,2020.0
+milestone paper (thin grey vertical),Zador 2023,2023,2023,2023.0,2023.0
+hatched band,2024–25: unstable (database still adding papers; ○ = re-download),2024,2025,2023.0,2025.5

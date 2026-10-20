@@ -99,7 +99,7 @@ def test_pelt_declared_headline_values(tables):
 
 def test_segment_slopes_match_figure_bundle(flow_dir, tables):
     _, sl = tables
-    fig = pd.read_csv(flow_dir / "fig1C_segment_slopes.csv")
+    fig = pd.read_csv(flow_dir / "figure1_article_panelC.csv")
     s = sl[
         (sl.procedure == "piecewise-OLS exhaustive")
         & sl.setting.str.startswith("figure")
