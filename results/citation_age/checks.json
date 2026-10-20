@@ -1,0 +1,83 @@
+{
+  "pool_size_133763": {
+    "pass": true,
+    "n": 133763
+  },
+  "metadata_covers_pool": {
+    "pass": true,
+    "n_meta": 133763,
+    "n_unique": 133763
+  },
+  "A_per_year_counts_resum_to_published_totals": {
+    "pass": true,
+    "n_works": 133763,
+    "n_mismatch": 0,
+    "examples": []
+  },
+  "G_citing_volume_covers_all_count_rows": {
+    "pass": true,
+    "n_missing": 0
+  },
+  "metadata_year_matches_pool": {
+    "pass": true
+  },
+  "B_top15_reproduces_table_S1": {
+    "pass": true,
+    "failures": []
+  },
+  "B2_top15_matches_pipeline_no_books_parquet": {
+    "pass": true
+  },
+  "C_gate_nonbinding_top100_rate": {
+    "pass": true,
+    "score_at_rank100": 32.15
+  },
+  "C_gate_nonbinding_top100_win8": {
+    "pass": true,
+    "score_at_rank100": 155.09
+  },
+  "C_gate_nonbinding_top100_win7": {
+    "pass": true,
+    "score_at_rank100": 124.21
+  },
+  "C_gate_nonbinding_top100_win5_to2018": {
+    "pass": true,
+    "score_at_rank100": 109.5
+  },
+  "C_gate_nonbinding_top100_rate_noceil": {
+    "pass": true,
+    "score_at_rank100": 37.17
+  },
+  "C_gate_nonbinding_top100_win8_noceil": {
+    "pass": true,
+    "score_at_rank100": 160.28
+  },
+  "D_ceiling_effect_rate_top50_info": {
+    "pass": true,
+    "n_ceiling_works_in_noceil_top15": 11,
+    "n_ceiling_works_in_noceil_top50": 20
+  },
+  "D_ceiling_effect_win8_top50_info": {
+    "pass": true,
+    "n_ceiling_works_in_noceil_top15": 7,
+    "n_ceiling_works_in_noceil_top50": 9
+  },
+  "E_unknown_field_does_not_change_rate_top50": {
+    "pass": true
+  },
+  "info_prepublication_citation_share": {
+    "share": 0.02162
+  },
+  "F_prepublication_citation_flags_top100": {
+    "pass": true,
+    "n_flagged": 6,
+    "flagged": [
+      "Libsvm : A library for support vector machines (2008): 10% of citations predate the record",
+      "Science (2023): 85% of citations predate the record",
+      "1D convolutional neural networks and applications: A survey (2022): 13% of citations predate the record",
+      "The Elements of Statistical Learning: Data Mining, Inference (2010): 13% of citations predate the record",
+      "Sensitivity and False Alarm Rate of a Fall Sensor in Long-Te (2014): 17% of citations predate the record",
+      "Memory: A Contribution to Experimental Psychology (2013): 43% of citations predate the record"
+    ]
+  }
+}

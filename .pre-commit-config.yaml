@@ -1,0 +1,13 @@
+# Formatting only, deliberately.
+#
+# `ruff --fix` is NOT enabled here. Auto-fixes can change semantics in scientific
+# code, and this repository's modules are the record behind published numbers, so
+# a hook must never silently rewrite them on commit. Lint still runs in CI
+# (.github/workflows/lint.yml), where a human sees the result and decides.
+#
+# `ruff-format` is whitespace-only and cannot change behaviour, so it stays.
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.12
+    hooks:
+      - id: ruff-format

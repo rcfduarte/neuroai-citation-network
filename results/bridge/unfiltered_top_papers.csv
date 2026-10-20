@@ -1,0 +1,21 @@
+rank_unfiltered,title,publication_year,bridge_paper_field,c_neuro,c_ai,c_total_classified,B_harmonic,work_id
+1,Deep Residual Learning for Image Recognition,2016,ai,4671,112475,117146,8969.503440151606,https://openalex.org/W2194775991
+2,R: A Language and Environment for Statistical Computing,2000,other,11739,4085,15824,6060.896739130435,https://openalex.org/W2582743722
+3,Deep learning,2015,ai,3099,20569,23668,5386.456903836403,https://openalex.org/W2919115771
+4,Design and Installation of a New Electron Cyclotron Emission Diagnostic Antenna in LHD,2011,other,4062,7656,11718,5307.846390168971,https://openalex.org/W2000536338
+5,Electron cyclotron emission diagnostics on the large helical device,1999,other,4062,7656,11718,5307.846390168971,https://openalex.org/W2007442728
+6,Interferometer Systems on LHD,2010,other,3068,19004,22072,5283.0982239942,https://openalex.org/W567918846
+7,Magnetic Measurements in LHD,2010,other,3065,15063,18128,5093.567409532216,https://openalex.org/W1548179484
+8,Onset of Resistive Interchange Mode in the Large Helical Device,2006,other,3065,15063,18128,5093.567409532216,https://openalex.org/W1978608505
+9,MHD study of the reactor-relevant high-beta regime in the Large Helical Device,2008,other,3065,15063,18128,5093.567409532216,https://openalex.org/W2075537237
+10,U-Net: Convolutional Networks for Biomedical Image Segmentation,2015,other,2696,30538,33234,4954.591562857315,https://openalex.org/W1901129140
+11,LIBSVM,2011,ai,2724,15546,18270,4635.720197044335,https://openalex.org/W2153635508
+12,ImageNet classification with deep convolutional neural networks,2017,ai,2456,38936,41392,4620.545805952841,https://openalex.org/W2163605009
+13,Scikit-learn: Machine Learning in Python,2012,ai,2793,11757,14550,4513.7183505154635,https://openalex.org/W2101234009
+14,Radiation Resistant Camera System for Monitoring Deuterium Plasma Discharges in the Large Helical Device,2020,other,3671,4981,8652,4226.826398520573,https://openalex.org/W3038568908
+15,Long Short-Term Memory,1997,ai,2212,34318,36530,4156.113660005475,https://openalex.org/W2064675550
+16,V -band frequency hopping microwave reflectometer in LHD,2008,other,2431,10109,12540,3919.4543859649125,https://openalex.org/W1969035145
+17,Developments of Electron Cyclotron Emission Spectroscopy and Microwave Reflectometry on LHD,2010,other,2431,10109,12540,3919.4543859649125,https://openalex.org/W384736962
+18,Research and Development Activities on Negative Ion Sources,2010,other,2912,5914,8826,3902.4627237706777,https://openalex.org/W162414353
+19,High Performance of Neutral Beam Injectors for Extension of LHD Operational Regime,2010,other,2912,5914,8826,3902.4627237706777,https://openalex.org/W2271045623
+20,Plasma Initiation by Neutral Beam Injection,2010,other,2912,5914,8826,3902.4627237706777,https://openalex.org/W600558188

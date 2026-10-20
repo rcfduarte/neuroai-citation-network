@@ -1,0 +1,277 @@
+# Hand coding of every work in the ranked heads (see 03_tables_and_figure.py docstring).
+# class: concept = claim about brains or minds; method = new ML model/algorithm/architecture
+# or review of ML methods; tool = software, data, benchmark, analysis method or methods
+# tutorial/survey; book = textbook typed as article; artefact = not a single work (merged or
+# generic record). true_year = first publication year when OpenAlex dates a reprint.
+title_norm,openalex_year,class,true_year,short,note
+intelligence without representation,1991,concept,1991,"Brooks, Intelligence without representation",theory of intelligence (behaviour-based AI); borderline concept
+unified theories of cognition,1991,book,1990,"Newell, Unified theories of cognition",book (review record)
+distributed hierarchical processing in the primate cerebral cortex,1991,concept,1991,"Felleman & Van Essen, cortical hierarchy",
+inference from iterative simulation using multiple sequences,1992,tool,1992,"Gelman & Rubin, MCMC convergence",statistical method
+a training algorithm for optimal margin classifiers,1992,method,1992,"Boser, Guyon & Vapnik, optimal margin classifiers",SVM algorithm
+separate visual pathways for perception and action,1992,concept,1992,"Goodale & Milner, two visual pathways",
+a synaptic model of memory: long-term potentiation in the hippocampus,1993,concept,1993,"Bliss & Collingridge, LTP model of memory",
+introduction to the theory of neural computation,1994,book,1991,"Hertz, Krogh & Palmer, theory of neural computation",textbook typed as article
+guided search 2.0 a revised model of visual search,1994,concept,1994,"Wolfe, Guided Search 2.0",
+"the magical number seven, plus or minus two: some limits on our capacity for processing information.",1994,concept,1956,"Miller, magical number seven",OpenAlex dates the 1994 reprint
+neural networks for pattern recognition,1994,book,1995,"Bishop, Neural networks for pattern recognition",textbook typed as article
+artificial intelligence: a modern approach,1995,book,1995,"Russell & Norvig, AI: a modern approach",textbook typed as article
+neural mechanisms of selective visual attention,1995,concept,1995,"Desimone & Duncan, selective visual attention",
+why there are complementary learning systems in the hippocampus and neocortex: insights from the successes and failures of connectionist models of learning and memory.,1995,concept,1995,"McClelland et al., complementary learning systems",
+speed of processing in the human visual system,1996,concept,1996,"Thorpe et al., speed of visual processing",
+emergence of simple-cell receptive field properties by learning a sparse code for natural images,1996,concept,1996,"Olshausen & Field, sparse coding",
+bagging predictors,1996,method,1996,"Breiman, bagging",ML algorithm
+the handbook of brain theory and neural networks,1996,book,1996,"Arbib (ed.), Handbook of brain theory and neural networks",handbook typed as article
+"a solution to plato's problem: the latent semantic analysis theory of acquisition, induction, and representation of knowledge.",1997,concept,1997,"Landauer & Dumais, latent semantic analysis theory","cognitive theory, also used as a text tool"
+long short-term memory,1997,method,1997,"Hochreiter & Schmidhuber, LSTM",
+regulation of synaptic efficacy by coincidence of postsynaptic aps and epsps,1997,concept,1997,"Markram et al., spike-timing synaptic efficacy",
+sparse coding with an overcomplete basis set: a strategy employed by v1?,1997,concept,1997,"Olshausen & Field, overcomplete sparse coding in V1",
+a neural substrate of prediction and reward,1997,concept,1997,"Schultz, Dayan & Montague, prediction and reward",
+the “independent components” of natural scenes are edge filters,1997,concept,1997,"Bell & Sejnowski, independent components are edge filters",
+"synaptic modifications in cultured hippocampal neurons: dependence on spike timing, synaptic strength, and postsynaptic cell type",1998,concept,1998,"Bi & Poo, spike-timing plasticity",
+linguistic complexity: locality of syntactic dependencies,1998,concept,1998,"Gibson, locality of syntactic dependencies",psycholinguistic theory
+a tutorial on support vector machines for pattern recognition,1998,tool,1998,"Burges, SVM tutorial",methods tutorial
+a model of saliency-based visual attention for rapid scene analysis,1998,concept,1998,"Itti, Koch & Niebur, saliency model",article precedent: concept
+predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects,1999,concept,1999,"Rao & Ballard, predictive coding",
+hierarchical models of object recognition in cortex,1999,concept,1999,"Riesenhuber & Poggio, hierarchical object recognition",
+learning the parts of objects by non-negative matrix factorization,1999,method,1999,"Lee & Seung, non-negative matrix factorization",ML algorithm
+cortical surface-based analysis,1999,tool,1999,"Dale, Fischl & Sereno, cortical surface analysis",neuroimaging software (FreeSurfer)
+least squares support vector machine classifiers,1999,method,1999,"Suykens & Vandewalle, least-squares SVM",
+nonlinear dimensionality reduction by locally linear embedding,2000,method,2000,"Roweis & Saul, locally linear embedding",
+normalized cuts and image segmentation,2000,method,2000,"Shi & Malik, normalized cuts",
+synaptic plasticity: taming the beast,2000,concept,2000,"Abbott & Nelson, synaptic plasticity",
+a global geometric framework for nonlinear dimensionality reduction,2000,method,2000,"Tenenbaum et al., Isomap",
+a saliency-based search mechanism for overt and covert shifts of visual attention,2000,concept,2000,"Itti & Koch, saliency-based search",
+competitive hebbian learning through spike-timing-dependent synaptic plasticity,2000,concept,2000,"Song, Miller & Abbott, competitive Hebbian STDP",
+modeling the shape of the scene: a holistic representation of the spatial envelope,2001,concept,2001,"Oliva & Torralba, spatial envelope of scenes","model of scene perception, also used as the GIST descriptor; borderline"
+segmentation of brain mr images through a hidden markov random field model and the expectation-maximization algorithm,2001,tool,2001,"Zhang, Brady & Smith, HMRF brain MR segmentation",article precedent: tool
+computational modelling of visual attention,2001,concept,2001,"Itti & Koch, computational modelling of visual attention",
+random forests,2001,method,2001,"Breiman, random forests",
+a global optimisation method for robust affine registration of brain images,2001,tool,2001,"Jenkinson & Smith, affine brain registration (FLIRT)",
+synaptic modification by correlated activity: hebb's postulate revisited,2001,concept,2001,"Bi & Poo, Hebb's postulate revisited",
+natural image statistics and neural representation,2001,concept,2001,"Simoncelli & Olshausen, natural image statistics",
+the magical number 4 in short-term memory: a reconsideration of mental storage capacity,2001,concept,2001,"Cowan, magical number 4",
+greedy function approximation: a gradient boosting machine.,2001,method,2001,"Friedman, gradient boosting machine",
+whole brain segmentation,2002,tool,2002,"Fischl et al., whole brain segmentation",
+modeling the role of salience in the allocation of overt visual attention,2002,concept,2002,"Parkhurst, Law & Niebur, salience and overt attention",
+control of goal-directed and stimulus-driven attention in the brain,2002,concept,2002,"Corbetta & Shulman, goal-directed and stimulus-driven attention",
+fast robust automated brain extraction,2002,tool,2002,"Smith, brain extraction (BET)",
+short-term synaptic plasticity,2002,concept,2002,"Zucker & Regehr, short-term synaptic plasticity",
+real-time computing without stable states: a new framework for neural computation based on perturbations,2002,concept,2002,"Maass, Natschläger & Markram, liquid state machines",framework for cortical computation; also the reservoir-computing method
+simple model of spiking neurons,2003,concept,2003,"Izhikevich, simple model of spiking neurons",
+an introduction to variable and feature selection,2003,tool,2003,"Guyon & Elisseeff, feature selection",methods tutorial
+an integrated theory of the mind.,2004,concept,2004,"Anderson et al., integrated theory of the mind (ACT-R)",
+which model to use for cortical spiking neurons?,2004,concept,2004,"Izhikevich, which model for cortical spiking neurons",
+what attributes guide the deployment of visual attention and how do they do it?,2004,concept,2004,"Wolfe & Horowitz, attributes guiding visual attention",
+"information theory, inference, and learning algorithms",2004,book,2003,"MacKay, information theory, inference and learning",textbook typed as article
+synaptic computation,2004,concept,2004,"Abbott & Regehr, synaptic computation",
+regularization and variable selection via the elastic net,2005,tool,2005,"Zou & Hastie, elastic net",statistical method
+an introduction to roc analysis,2005,tool,2005,"Fawcett, ROC analysis",article precedent: tool
+unified segmentation,2005,tool,2005,"Ashburner & Friston, unified segmentation",
+polychronization: computation with spikes,2005,concept,2005,"Izhikevich, polychronization","online Dec 2005, issue 2006"
+the blue brain project,2006,concept,2006,"Markram, the Blue Brain Project",perspective on brain simulation
+user-guided 3d active contour segmentation of anatomical structures: significantly improved efficiency and reliability,2006,tool,2006,"Yushkevich et al., ITK-SNAP segmentation",
+modeling attention to salient proto-objects,2006,concept,2006,"Walther & Koch, salient proto-objects",
+a fast learning algorithm for deep belief nets,2006,method,2006,"Hinton, Osindero & Teh, deep belief nets",
+reducing the dimensionality of data with neural networks,2006,method,2006,"Hinton & Salakhutdinov, deep autoencoders",
+contextual guidance of eye movements and attention in real-world scenes: the role of global features in object search.,2006,concept,2006,"Torralba et al., contextual guidance of eye movements",
+proceedings of the 29th annual conference of the cognitive science society,2007,artefact,2007,Proceedings of CogSci 2007 (whole volume),"proceedings volume record, not a single work"
+a fast diffeomorphic image registration algorithm,2007,tool,2007,"Ashburner, DARTEL registration",
+pattern recognition and machine learning,2007,book,2006,"Bishop, pattern recognition and machine learning",textbook typed as article
+symmetric diffeomorphic image registration with cross-correlation: evaluating automated labeling of elderly and neurodegenerative brain,2007,tool,2007,"Avants et al., SyN image registration",
+matplotlib: a 2d graphics environment,2007,tool,2007,"Hunter, Matplotlib",
+expectation-based syntactic comprehension,2007,concept,2007,"Levy, expectation-based syntactic comprehension",
+a feedforward architecture accounts for rapid categorization,2007,concept,2007,"Serre, Oliva & Poggio, feedforward rapid categorization",
+simulation of networks of spiking neurons: a review of tools and strategies,2007,tool,2007,"Brette et al., spiking-network simulators review",review of simulation tools
+libsvm : a library for support vector machines,2008,tool,2008,"Chang & Lin, LIBSVM (duplicate record)",record carries a wrong venue
+spike timing–dependent plasticity: a hebbian learning rule,2008,concept,2008,"Caporale & Dan, STDP review",
+predicting human brain activity associated with the meanings of nouns,2008,concept,2008,"Mitchell et al., predicting brain activity for nouns",
+liblinear: a library for large linear classification,2008,tool,2008,"Fan et al., LIBLINEAR",
+large-scale model of mammalian thalamocortical systems,2008,concept,2008,"Izhikevich & Edelman, thalamocortical model",
+a practical guide to support vector classication,2008,tool,2008,"Hsu, Chang & Lin, practical guide to SVC",
+visualizing data using t-sne,2008,tool,2008,"van der Maaten & Hinton, t-SNE",visualisation method used as a tool
+a survey on transfer learning,2009,method,2009,"Pan & Yang, transfer learning survey",review of ML methods
+complex brain networks: graph theoretical analysis of structural and functional systems,2009,concept,2009,"Bullmore & Sporns, complex brain networks",
+learning deep architectures for ai,2009,method,2009,"Bengio, learning deep architectures for AI",review of ML methods
+imagenet: a large-scale hierarchical image database,2009,tool,2009,"Deng et al., ImageNet",dataset
+evaluation of 14 nonlinear deformation algorithms applied to human brain mri registration,2009,tool,2009,"Klein et al., evaluation of 14 registration algorithms",
+"the elements of statistical learning: data mining, inference, and prediction",2010,book,2001,"Hastie, Tibshirani & Friedman, elements of statistical learning",textbook typed as article
+regularization paths for generalized linear models via coordinate descent,2010,tool,2010,"Friedman, Hastie & Tibshirani, glmnet",
+data structures for statistical computing in python,2010,tool,2010,"McKinney, pandas",
+a reproducible evaluation of ants similarity metric performance in brain image registration,2010,tool,2010,"Avants et al., ANTs similarity metrics",
+understanding the difficulty of training deep feedforward neural networks,2010,method,2010,"Glorot & Bengio, training deep feedforward nets",
+rectified linear units improve restricted boltzmann machines,2010,method,2010,"Nair & Hinton, rectified linear units",
+the free-energy principle: a unified brain theory?,2010,concept,2010,"Friston, free-energy principle",
+"how to grow a mind: statistics, structure, and abstraction",2011,concept,2011,"Tenenbaum et al., how to grow a mind",
+libsvm,2011,tool,2011,"Chang & Lin, LIBSVM",
+neuromorphic silicon neuron circuits,2011,method,2011,"Indiveri et al., neuromorphic silicon neuron circuits",neuromorphic hardware
+state-of-the-art in visual attention modeling,2012,concept,2012,"Borji & Itti, state of the art in visual attention modelling",survey of saliency models; borderline concept/tool
+how does the brain solve visual object recognition?,2012,concept,2012,"DiCarlo, Zoccolan & Rust, how the brain solves object recognition",
+a large-scale model of the functioning brain,2012,concept,2012,"Eliasmith et al., large-scale model of the functioning brain (Spaun)",
+deep neural networks for acoustic modeling in speech recognition: the shared views of four research groups,2012,method,2012,"Hinton et al., DNNs for acoustic modelling",
+freesurfer,2012,tool,2012,"Fischl, FreeSurfer",
+"norms of valence, arousal, and dominance for 13,915 english lemmas",2013,tool,2013,"Warriner et al., affective norms for English words",dataset
+auto-encoding variational bayes,2013,method,2013,"Kingma & Welling, variational autoencoder",
+speech recognition with deep recurrent neural networks,2013,method,2013,"Graves et al., speech recognition with deep RNNs",
+context-dependent computation by recurrent dynamics in prefrontal cortex,2013,concept,2013,"Mante et al., context-dependent computation in prefrontal cortex",
+the autism brain imaging data exchange: towards a large-scale evaluation of the intrinsic brain architecture in autism,2013,tool,2013,"Di Martino et al., ABIDE autism imaging data",dataset
+the wu-minn human connectome project: an overview,2013,tool,2013,"Van Essen et al., Human Connectome Project overview",dataset
+a survey of mri-based medical image analysis for brain tumor studies,2013,tool,2013,"Bauer et al., MRI analysis for brain tumours survey",
+memory: a contribution to experimental psychology,2013,concept,1885,"Ebbinghaus, Memory",OpenAlex dates a 2013 reprint that absorbed citations to the 1885 original
+"whatever next? predictive brains, situated agents, and the future of cognitive science",2013,concept,2013,"Clark, whatever next? predictive brains",
+representation learning: a review and new perspectives,2013,method,2013,"Bengio et al., representation learning review",review of ML methods
+"deep supervised, but not unsupervised, models may explain it cortical representation",2014,concept,2014,"Khaligh-Razavi & Kriegeskorte, deep supervised models explain IT",
+dropout: a simple way to prevent neural networks from overfitting,2014,method,2014,"Srivastava et al., dropout",
+caffe,2014,tool,2014,"Jia et al., Caffe",software
+deep neural networks rival the representation of primate it cortex for core visual object recognition,2014,concept,2014,"Cadieu et al., DNNs rival primate IT",
+rich feature hierarchies for accurate object detection and semantic segmentation,2014,method,2014,"Girshick et al., R-CNN",
+the multimodal brain tumor image segmentation benchmark (brats),2014,tool,2014,"Menze et al., BRATS benchmark",article precedent: tool
+deep learning in neural networks: an overview,2014,method,2014,"Schmidhuber, deep learning in neural networks: overview",review of ML methods
+glove: global vectors for word representation,2014,method,2014,"Pennington et al., GloVe",
+very deep convolutional networks for large-scale image recognition,2014,method,2014,"Simonyan & Zisserman, VGG",
+deepface: closing the gap to human-level performance in face verification,2014,method,2014,"Taigman et al., DeepFace",
+a million spiking-neuron integrated circuit with a scalable communication network and interface,2014,method,2014,"Merolla et al., TrueNorth chip",neuromorphic hardware
+sensitivity and false alarm rate of a fall sensor in long-term fall detection in the elderly,2014,artefact,2014,"Fall-sensor paper (Gerontology), merged record","18,943 citations, cited before publication: absorbed other works' citations"
+grey wolf optimizer,2014,method,2014,"Mirjalili et al., grey wolf optimizer",
+large-scale video classification with convolutional neural networks,2014,method,2014,"Karpathy et al., large-scale video classification",
+performance-optimized hierarchical models predict neural responses in higher visual cortex,2014,concept,2014,"Yamins et al., performance-optimized models predict higher visual cortex",
+clustering by fast search and find of density peaks,2014,method,2014,"Rodriguez & Laio, density-peak clustering",
+deep learning: methods and applications,2014,method,2014,"Deng & Yu, deep learning methods and applications",review of ML methods
+cnn features off-the-shelf: an astounding baseline for recognition,2014,method,2014,"Razavian et al., CNN features off the shelf",
+how transferable are features in deep neural networks?,2014,method,2014,"Yosinski et al., transferable features",
+principles of neural science,2014,book,2000,"Kandel et al., Principles of Neural Science",textbook typed as article
+"metrics for evaluating 3d medical image segmentation: analysis, selection, and tool",2015,tool,2015,"Taha & Hanbury, 3D segmentation metrics",
+facenet: a unified embedding for face recognition and clustering,2015,method,2015,"Schroff et al., FaceNet",
+going deeper with convolutions,2015,method,2015,"Szegedy et al., GoogLeNet",
+reconstruction and simulation of neocortical microcircuitry,2015,concept,2015,"Markram et al., reconstruction of neocortical microcircuitry",
+"show, attend and tell: neural image caption generation with visual attention",2015,method,2015,"Xu et al., show, attend and tell",
+fitting linear mixed-effects models using <b>lme4</b>,2015,tool,2015,"Bates et al., lme4",article precedent: tool
+human-level control through deep reinforcement learning,2015,method,2015,"Mnih et al., DQN",AI method; heavily cited in neuroscience
+imagenet large scale visual recognition challenge,2015,tool,2015,"Russakovsky et al., ImageNet challenge",benchmark
+human-level concept learning through probabilistic program induction,2015,concept,2015,"Lake, Salakhutdinov & Tenenbaum, human-level concept learning",model of human concept learning tested against people; borderline concept/method
+deep neural networks: a new framework for modeling biological vision and brain information processing,2015,concept,2015,"Kriegeskorte, DNNs as a framework for biological vision",
+deep face recognition,2015,method,2015,"Parkhi et al., deep face recognition",
+the chicago face database: a free stimulus set of faces and norming data,2015,tool,2015,"Ma et al., Chicago face database",dataset
+deep convolutional neural networks for multi-modality isointense infant brain image segmentation,2015,tool,2015,"Zhang et al., CNN infant brain segmentation",applied segmentation method
+"machine learning: trends, perspectives, and prospects",2015,method,2015,"Jordan & Mitchell, machine learning trends",review of ML
+deep neural networks reveal a gradient in the complexity of neural representations across the ventral stream,2015,concept,2015,"Güçlü & van Gerven, DNNs reveal ventral-stream gradient",
+on pixel-wise explanations for non-linear classifier decisions by layer-wise relevance propagation,2015,method,2015,"Bach et al., layer-wise relevance propagation",
+deep learning,2015,method,2015,"LeCun, Bengio & Hinton, deep learning","review of ML methods; borderline, widely read as the deep-learning manifesto"
+delving deep into rectifiers: surpassing human-level performance on imagenet classification,2015,method,2015,"He et al., PReLU / delving deep into rectifiers",
+deep neural networks are easily fooled: high confidence predictions for unrecognizable images,2015,method,2015,"Nguyen et al., DNNs are easily fooled",
+"mri segmentation of the human brain: challenges, methods, and applications",2015,tool,2015,"Despotović et al., MRI brain segmentation review",
+mastering the game of go with deep neural networks and tree search,2016,method,2016,"Silver et al., AlphaGo",
+brain tumor segmentation using convolutional neural networks in mri images,2016,tool,2016,"Pereira et al., CNN brain tumour segmentation",applied segmentation method
+natural speech reveals the semantic maps that tile human cerebral cortex,2016,concept,2016,"Huth et al., semantic maps in cortex",
+toward an integration of deep learning and neuroscience,2016,concept,2016,"Marblestone, Wayne & Kording, integrating deep learning and neuroscience",
+rethinking the inception architecture for computer vision,2016,method,2016,"Szegedy et al., Inception v3",
+efficient multi-scale 3d cnn with fully connected crf for accurate brain lesion segmentation,2016,tool,2016,"Kamnitsas et al., DeepMedic lesion segmentation",
+deep residual learning for image recognition,2016,method,2016,"He et al., ResNet",
+brain tumor segmentation with deep neural networks,2016,tool,2016,"Havaei et al., DNN brain tumour segmentation",
+random synaptic feedback weights support error backpropagation for deep learning,2016,concept,2016,"Lillicrap et al., random feedback weights (feedback alignment)",learning rule offered as biologically plausible; borderline concept/method
+learning deep features for discriminative localization,2016,method,2016,"Zhou et al., class activation maps",
+fully convolutional networks for semantic segmentation,2016,method,2016,"Long et al., fully convolutional networks",
+tensorflow: a system for large-scale machine learning,2016,tool,2016,"Abadi et al., TensorFlow",software
+xgboost,2016,tool,2016,"Chen & Guestrin, XGBoost",article precedent: tool
+image style transfer using convolutional neural networks,2016,method,2016,"Gatys et al., style transfer",
+using goal-driven deep learning models to understand sensory cortex,2016,concept,2016,"Yamins & DiCarlo, goal-driven models of sensory cortex",
+deep learning for brain mri segmentation: state of the art and future directions,2017,tool,2017,"Akkus et al., DL brain MRI segmentation review",
+imagenet classification with deep convolutional neural networks,2017,method,2012,"Krizhevsky et al., AlexNet",OpenAlex dates the 2017 CACM reprint
+a survey on deep learning in medical image analysis,2017,tool,2017,"Litjens et al., DL in medical image analysis survey",article precedent: tool
+xception: deep learning with depthwise separable convolutions,2017,method,2017,"Chollet, Xception",
+automatic differentiation in pytorch,2017,tool,2017,"Paszke et al., PyTorch autodiff",software
+mastering the game of go without human knowledge,2017,method,2017,"Silver et al., AlphaGo Zero",
+neuroscience-inspired artificial intelligence,2017,concept,2017,"Hassabis et al., neuroscience-inspired AI",
+overcoming catastrophic forgetting in neural networks,2017,method,2017,"Kirkpatrick et al., elastic weight consolidation",ML algorithm inspired by synaptic consolidation
+deep learning in medical image analysis,2017,tool,2017,"Shen, Wu & Suk, DL in medical image analysis",
+a deep learning model integrating fcnns and crfs for brain tumor segmentation,2017,tool,2017,"Zhao et al., FCNN+CRF brain tumour segmentation",
+"inception-v4, inception-resnet and the impact of residual connections on learning",2017,method,2017,"Szegedy et al., Inception-v4",
+aggregated residual transformations for deep neural networks,2017,method,2017,"Xie et al., ResNeXt",
+h-denseunet: hybrid densely connected unet for liver and tumor segmentation from ct volumes,2018,tool,2018,"Li et al., H-DenseUNet",
+openface 2.0: facial behavior analysis toolkit,2018,tool,2018,"Baltrusaitis et al., OpenFace 2.0",software
+focal loss for dense object detection,2018,method,2018,"Lin et al., focal loss",
+vector-based navigation using grid-like representations in artificial agents,2018,concept,2018,"Banino et al., grid-like representations in agents",claim about grid cells from AI agents; borderline concept/method
+"graph signal processing: overview, challenges, and applications",2018,tool,2018,"Ortega et al., graph signal processing overview",
+"brian 2, an intuitive and efficient neural simulator",2019,tool,2019,"Stimberg et al., Brian 2",software
+a deep learning framework for neuroscience,2019,concept,2019,"Richards et al., deep learning framework for neuroscience",
+grad-cam: visual explanations from deep networks via gradient-based localization,2019,method,2017,"Selvaraju et al., Grad-CAM","ICCV 2017, journal version 2019"
+a survey on image data augmentation for deep learning,2019,method,2019,"Shorten & Khoshgoftaar, data augmentation survey",
+generative adversarial networks,2020,method,2014,"Goodfellow et al., GANs",OpenAlex dates the 2020 CACM reprint
+a comprehensive survey on graph neural networks,2020,method,2020,"Wu et al., graph neural network survey",
+a comprehensive survey on transfer learning,2020,method,2020,"Zhuang et al., transfer learning survey",
+momentum contrast for unsupervised visual representation learning,2020,method,2020,"He et al., MoCo",
+scipy 1.0: fundamental algorithms for scientific computing in python,2020,tool,2020,"Virtanen et al., SciPy 1.0",article precedent: tool
+array programming with numpy,2020,tool,2020,"Harris et al., NumPy",software
+backpropagation and the brain,2020,concept,2020,"Lillicrap et al., backpropagation and the brain",
+dendritic action potentials and computation in human layer 2/3 cortical neurons,2020,concept,2020,"Gidon et al., dendritic action potentials in human cortex",
+the advantages of the matthews correlation coefficient (mcc) over f1 score and accuracy in binary classification evaluation,2020,tool,2020,"Chicco & Jurman, MCC vs F1",statistics
+nnu-net: a self-configuring method for deep learning-based biomedical image segmentation,2020,tool,2020,"Isensee et al., nnU-Net",
+"review of deep learning: concepts, cnn architectures, challenges, applications, future directions",2021,method,2021,"Alzubaidi et al., review of deep learning",
+swin transformer: hierarchical vision transformer using shifted windows,2021,method,2021,"Liu et al., Swin Transformer",
+high-resolution image synthesis with latent diffusion models,2022,method,2022,"Rombach et al., latent diffusion",
+1d convolutional neural networks and applications: a survey,2022,method,2022,"Kiranyaz et al., 1D CNN survey",
+science,2023,artefact,2023,"Record titled ""Science"" (DOI 10.1126/science)",generic DOI; cited from 2012 though dated 2023
+variational inference: a review for statisticians,2023,tool,2017,"Blei et al., variational inference review",OpenAlex dates a 2023 repository copy
+linguistic data consortium,2023,artefact,2023,Linguistic Data Consortium (Charleston Advisor record),"dated 2023, cited from 2012: absorbs citations to LDC corpora"
+yolov7: trainable bag-of-freebies sets new state-of-the-art for real-time object detectors,2023,method,2022,"Wang et al., YOLOv7",
+spatial registration and normalization of images,1995,tool,1995,"Friston et al., spatial registration and normalization (SPM)",
+statistical parametric maps in functional imaging: a general linear approach,1994,tool,1994,"Friston et al., statistical parametric maps",
+the cognitive neurosciences,2005,book,2005,"Gazzaniga (ed.), The cognitive neurosciences",book (review record)
+dynamic binding in a neural network for shape recognition.,1992,concept,1992,"Hummel & Biederman, dynamic binding for shape recognition",
+could information theory provide an ecological theory of sensory processing?,2011,concept,1992,"Atick, information theory and sensory processing",OpenAlex dates a 2011 reprint of the 1992 paper
+practical nonparametric statistics,2000,book,2000,"Conover, Practical nonparametric statistics",book (review record)
+parallel processing in neural systems and computers,1991,book,1990,"Eckmiller et al. (eds), Parallel processing in neural systems and computers",proceedings book
+preattentive texture discrimination with early vision mechanisms,1990,concept,1990,"Malik & Perona, preattentive texture discrimination",
+forward models: supervised learning with a distal teacher,1992,concept,1992,"Jordan & Rumelhart, forward models",learning scheme framed as a model of motor learning; borderline concept/method
+a network that learns to recognize three-dimensional objects,1990,concept,1990,"Poggio & Edelman, network that learns 3D objects",
+comparing functional (pet) images: the assessment of significant change,1991,tool,1991,"Friston et al., comparing PET images",
+what is the goal of sensory coding?,1994,concept,1994,"Field, goal of sensory coding",
+hebbian synapses: biophysical mechanisms and algorithms,1990,concept,1990,"Brown et al., Hebbian synapses",
+affine structure from motion,1991,concept,1991,"Koenderink & van Doorn, affine structure from motion",perception theory also used in computer vision; borderline
+the lexical nature of syntactic ambiguity resolution.,1994,concept,1994,"MacDonald et al., lexical syntactic ambiguity resolution",
+pattern recognition computation using action potential timing for stimulus representation,1995,concept,1995,"Hopfield, computation with action-potential timing",
+feature linking via synchronization among distributed assemblies: simulations of results from cat visual cortex,1990,concept,1990,"Eckhorn et al., feature linking via synchronization",
+3d statistical neuroanatomical models from 305 mri volumes,2005,tool,1993,"Evans et al., MNI305 statistical neuroanatomical models",brain template; OpenAlex dates a 2005 record of the 1993 paper
+a critical window for cooperation and competition among developing retinotectal synapses,1998,concept,1998,"Zhang et al., critical window for retinotectal synapses",
+a neurobiological model of visual attention and invariant pattern recognition based on dynamic routing of information,1993,concept,1993,"Olshausen, Anderson & Van Essen, dynamic routing",
+state of the art survey on mri brain tumor segmentation,2013,tool,2013,"Işın et al., MRI brain tumour segmentation survey",
+eye guidance in natural vision: reinterpreting salience,2011,concept,2011,"Tatler et al., eye guidance in natural vision",
+five factors that guide attention in visual search,2017,concept,2017,"Wolfe & Horowitz, five factors guiding visual search",
+towards a neurobiological theory of consciousness,1990,concept,1990,"Crick & Koch, neurobiological theory of consciousness",
+priming and human memory systems,1990,concept,1990,"Tulving & Schacter, priming and memory systems",
+advanced neural computers,1991,book,1990,"Eckmiller et al. (eds), Advanced neural computers",proceedings book
+"being there: putting brain, body and world together again.",1998,book,1997,"Clark, Being There",book (review record)
+regularization algorithms for learning that are equivalent to multilayer networks,1990,method,1990,"Poggio & Girosi, regularization algorithms and multilayer networks",learning theory
+redistribution of synaptic efficacy between neocortical pyramidal neurons,1996,concept,1996,"Markram & Tsodyks, redistribution of synaptic efficacy",
+temporal coding in the visual cortex: new vistas on integration in the nervous system,1992,concept,1992,"Engel et al., temporal coding in visual cortex",
+the physiology of perception,1991,concept,1991,"Freeman, the physiology of perception",
+synaptic depression and cortical gain control,1997,concept,1997,"Abbott et al., synaptic depression and cortical gain control",
+art 3: hierarchical search using chemical transmitters in self-organizing pattern recognition architectures,1990,concept,1990,"Carpenter & Grossberg, ART 3",neural model with neurobiological claims; borderline concept/method
+the medial temporal lobe memory system,1991,concept,1991,"Squire & Zola-Morgan, medial temporal lobe memory system",
+a dynamic systems approach to the development of cognition and action,1996,book,1994,"Thelen & Smith, dynamic systems approach to cognition and action",book (review record)
+"a synaptically controlled, associative signal for hebbian plasticity in hippocampal neurons",1997,concept,1997,"Magee & Johnston, associative signal for Hebbian plasticity",
+"neural connections, mental computation",1990,book,1990,"Nadel et al. (eds), Neural connections, mental computation",book (review record)
+proceedings of the fourteenth annual conference of the cognitive science society,1992,artefact,1992,Proceedings of CogSci 1992 (whole volume),"proceedings volume record, not a single work"
+neuronal mechanisms of object recognition,1993,concept,1993,"Tanaka, neuronal mechanisms of object recognition",
+psychophysical support for a two-dimensional view interpolation theory of object recognition.,1992,concept,1992,"Bülthoff & Edelman, view interpolation theory",
+independent component filters of natural images compared with simple cells in primary visual cortex,1998,concept,1998,"van Hateren & van der Schaaf, ICA filters vs simple cells",
+nonlinear spatial normalization using basis functions,1999,tool,1999,"Ashburner & Friston, nonlinear spatial normalization",
+an introduction to neural and electronic networks,1991,book,1991,"Zornetzer et al. (eds), neural and electronic networks",book (review record)
+what does the retina know about natural scenes?,1992,concept,1992,"Atick & Redlich, what the retina knows about natural scenes",
+a neuronal learning rule for sub-millisecond temporal coding,1996,concept,1996,"Gerstner et al., learning rule for sub-millisecond coding",
+information processing in the primate visual system: an integrated systems perspective,1992,concept,1992,"Van Essen et al., information processing in primate vision",
+shape representation in the inferior temporal cortex of monkeys,1995,concept,1995,"Logothetis et al., shape representation in IT",
+a dimension reduction framework for understanding cortical maps,1990,book,1997,"Pinker, How the mind works",book (review record)
+how the mind works,1999,concept,1999,"Durbin & Mitchison, dimension reduction and cortical maps",
+different voltage-dependent thresholds for inducing long-term depression and long-term potentiation in slices of rat visual cortex,1990,concept,1990,"Artola et al., thresholds for LTD and LTP",
+stimulus‐dependent neuronal oscillations in cat visual cortex: inter‐columnar interaction as determined by cross‐correlation analysis,1990,concept,1990,"Engel et al., stimulus-dependent oscillations",
+animate vision,1991,concept,1991,"Ballard, animate vision",theory of active vision; borderline concept
+dynamic link of memory—chaotic memory map in nonequilibrium neural networks,1992,concept,1992,"Tsuda, chaotic memory map",
+"from simple associations to systematic reasoning: a connectionist representation of rules, variables and dynamic bindings using temporal synchrony",1993,concept,1993,"Shastri & Ajjanagadde, connectionist rules and reasoning",
+spike-timing-dependent synaptic modification induced by natural spike trains,2002,concept,2002,"Froemke & Dan, STDP with natural spike trains",
+synchronization of cortical activity and its putative role in information processing and learning,1993,concept,1993,"Singer, synchronization of cortical activity",
+foundations of cognitive science,1990,book,1989,"Posner (ed.), Foundations of cognitive science",book (review record)
+computational neuroscience,1991,book,1990,"Schwartz (ed.), Computational neuroscience",book (review record)
+dynamic patterns: the self-organization of brain and behavior,1997,book,1995,"Kelso, Dynamic patterns",book (review record)
+towards a theory of early visual processing,1990,concept,1990,"Atick & Redlich, theory of early visual processing",
+timing-based ltp and ltd at vertical inputs to layer ii/iii pyramidal cells in rat barrel cortex,2000,concept,2000,"Feldman, timing-based LTP and LTD in barrel cortex",

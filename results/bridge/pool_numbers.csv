@@ -1,0 +1,39 @@
+key,value
+n_gate,133763
+n_other_label_over_ceiling,24
+n_dropped_by_ceiling,67
+n_dropped_by_ceiling_ai,66
+n_dropped_by_ceiling_neuro,1
+n_dropped_above_table_s1_rank15,26
+table_s1_rank15_B,1395.6526663520528
+n_top15_no_ceiling_removed_by_ceiling,15
+unfiltered_top1000_n_other,464
+unfiltered_top1000_n_ai,382
+unfiltered_top1000_n_neuro,154
+n_eligible_B_ge_1000,48
+n_eligible_B_ge_100,2150
+n_eligible_both_sides_ge_100,1108
+max_B_unfiltered,8969.503440151606
+ai_skew_example_title,Probabilistic roadmaps for path planning in high-dimensional configuration spaces
+ai_skew_example_year,1996
+ai_skew_example_c_neuro,6
+ai_skew_example_c_ai,4790
+ai_skew_example_B,11.984987489574646
+neuro_skew_example_title,Autism Diagnostic Interview-Revised: A revised version of a diagnostic interview for caregivers of individuals with possible pervasive developmental disorders
+neuro_skew_example_year,1994
+neuro_skew_example_c_neuro,7379
+neuro_skew_example_c_ai,7
+neuro_skew_example_B,13.986731654481451
+clustered_n,860
+clustered_n_dropped_physics,140
+clustered_median_year,2005.0
+clustered_n_field_other,324
+clustered_n_over_ceiling,76
+clustered_manifesto_1_year,1999
+clustered_manifesto_1_title,Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects
+clustered_manifesto_2_year,2001
+clustered_manifesto_2_title,Theoretical Neuroscience: Computational and Mathematical Modeling of Neural Systems
+clustered_manifesto_3_year,2004
+clustered_manifesto_3_title,The Bayesian brain: the role of uncertainty in neural coding and computation
+clustered_manifesto_4_year,2019
+clustered_manifesto_4_title,A deep learning framework for neuroscience

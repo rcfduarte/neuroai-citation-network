@@ -1,0 +1,9 @@
+paper_rank,openalex_id,author_rank,author_id,author_name,author_position
+1,https://openalex.org/W1641498739,14,https://openalex.org/A5016551394,Brian Avants,middle
+3,https://openalex.org/W2164653071,9,https://openalex.org/A5091804814,Eugene M. Izhikevich,first
+4,https://openalex.org/W2145889472,15,https://openalex.org/A5032674291,Bruno A. Olshausen,first
+5,https://openalex.org/W2144764737,2,https://openalex.org/A5084822308,Christof Koch,last
+5,https://openalex.org/W2144764737,11,https://openalex.org/A5054494771,Laurent Itti,first
+8,https://openalex.org/W2136573752,7,https://openalex.org/A5066553010,Stephen M. Smith,last
+10,https://openalex.org/W2128272608,2,https://openalex.org/A5084822308,Christof Koch,middle
+10,https://openalex.org/W2128272608,11,https://openalex.org/A5054494771,Laurent Itti,first

@@ -1,0 +1,41 @@
+candidate_rank,openalex_id,title,year,B,oa_type,source_type,included,exclusion_reason
+1,https://openalex.org/W1641498739,The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS),2014,2210.1551455879085,review,journal,True,
+2,https://openalex.org/W2147101007,"Synaptic Modifications in Cultured Hippocampal Neurons: Dependence on Spike Timing, Synaptic Strength, and Postsynaptic Cell Type",1998,2185.3899931459905,article,journal,True,
+3,https://openalex.org/W2164653071,Simple model of spiking neurons,2003,1918.16091954023,article,journal,True,
+4,https://openalex.org/W2799061466,Pattern Classification,2012,1915.2703641456583,book-chapter,,False,type book-chapter
+5,https://openalex.org/W2145889472,Emergence of simple-cell receptive field properties by learning a sparse code for natural images,1996,1914.1438998957246,article,journal,True,
+6,https://openalex.org/W2144764737,Computational modelling of visual attention,2001,1843.6992969172525,review,journal,True,
+7,https://openalex.org/W1984314602,"The magical number seven, plus or minus two: Some limits on our capacity for processing information.",1994,1801.5386283545677,article,journal,True,
+8,https://openalex.org/W1951724000,Fitting Linear Mixed-Effects Models Using <b>lme4</b>,2015,1659.0873143101421,article,journal,True,
+9,https://openalex.org/W2136573752,Segmentation of brain MR images through a hidden Markov random field model and the expectation-maximization algorithm,2001,1635.62681369704,article,journal,True,
+10,https://openalex.org/W2592929672,A survey on deep learning in medical image analysis,2017,1590.2366666666667,review,journal,True,
+11,https://openalex.org/W2128272608,A model of saliency-based visual attention for rapid scene analysis,1998,1589.3931260229133,article,journal,True,
+12,https://openalex.org/W3003257820,SciPy 1.0: fundamental algorithms for scientific computing in Python,2020,1553.0379981464318,article,journal,True,
+13,https://openalex.org/W2112927743,Short-Term Synaptic Plasticity,2002,1509.442700156986,review,journal,True,
+14,https://openalex.org/W2158698691,An introduction to ROC analysis,2005,1445.212523325731,article,journal,True,
+15,https://openalex.org/W2149194912,Hierarchical models of object recognition in cortex,1999,1406.873920552677,article,journal,True,
+16,https://openalex.org/W2295598076,XGBoost,2016,1395.6526663520528,article,,True,
+17,https://openalex.org/W4212774754,Advances in neural information processing systems 7,1996,1384.3012552301254,article,journal,False,known book title
+18,https://openalex.org/W2165698076,A Survey on Transfer Learning,2009,1381.7922024903041,article,journal,True,
+19,https://openalex.org/W1986246844,Regulation of Synaptic Efficacy by Coincidence of Postsynaptic APs and EPSPs,1997,1367.4709976798144,article,journal,True,
+20,https://openalex.org/W2011301426,Matplotlib: A 2D Graphics Environment,2007,1321.8502793296088,article,journal,True,
+21,https://openalex.org/W2139212933,A Tutorial on Support Vector Machines for Pattern Recognition,1998,1318.3597916028195,article,journal,True,
+22,https://openalex.org/W2100495367,Reducing the Dimensionality of Data with Neural Networks,2006,1313.410122164049,article,journal,True,
+23,https://openalex.org/W2990138404,Advances in Neural Information Processing Systems 19,2007,1311.4757746478874,book,ebook platform,False,type book
+24,https://openalex.org/W1970928383,Symmetric diffeomorphic image registration with cross-correlation: Evaluating automated labeling of elderly and neurodegenerative brain,2007,1293.4794520547946,article,journal,True,
+25,https://openalex.org/W2122825543,Regularization and Variable Selection Via the Elastic Net,2005,1286.8478726660544,article,journal,True,
+26,https://openalex.org/W1902027874,Learning the parts of objects by non-negative matrix factorization,1999,1283.0195153334762,article,journal,True,
+27,https://openalex.org/W2124776405,Neural Networks: A Comprehensive Foundation,1998,1264.2049916805324,book,,False,type book
+28,https://openalex.org/W2071881327,Fast robust automated brain extraction,2002,1235.543018335684,review,journal,True,
+29,https://openalex.org/W1486852018,Competitive Hebbian learning through spike-timing-dependent synaptic plasticity,2000,1227.4626391096979,article,journal,True,
+30,https://openalex.org/W2054802006,A saliency-based search mechanism for overt and covert shifts of visual attention,2000,1214.3173431734317,article,journal,True,
+31,https://openalex.org/W2397253692,Intelligence without representation,1991,1180.3236897274633,article,journal,True,
+32,https://openalex.org/W2115755118,A Wavelet Tour of Signal Processing,1999,1152.7480190174326,book,ebook platform,False,type book
+33,https://openalex.org/W4238614602,Spiking Neuron Models,2002,1150.1472444257467,book,ebook platform,False,type book
+34,https://openalex.org/W2531409750,Xception: Deep Learning with Depthwise Separable Convolutions,2017,1147.0311016144349,article,,True,
+35,https://openalex.org/W1983578042,"A solution to Plato's problem: The latent semantic analysis theory of acquisition, induction, and representation of knowledge.",1997,1135.1263515600865,article,journal,True,
+36,https://openalex.org/W2103179919,Real-Time Computing Without Stable States: A New Framework for Neural Computation Based on Perturbations,2002,1129.751257685858,article,journal,True,
+37,https://openalex.org/W3106889297,An Introduction to the Bootstrap,1993,1120.758344459279,book,,False,type book
+38,https://openalex.org/W1554663460,Neural networks for pattern recognition,1994,1105.58562735439,article,journal,True,
+39,https://openalex.org/W2133671888,Introduction to the theory of neural computation,1994,1102.3302909298345,article,journal,True,
+40,https://openalex.org/W2076063813,Deep learning in neural networks: An overview,2014,1095.7500897666068,review,journal,True,

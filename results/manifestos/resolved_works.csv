@@ -1,0 +1,7 @@
+doi,work_id,title,year,type,primary_topic,subfield,field,label,cited_by_count,short,resolved
+10.1016/j.neuron.2019.08.034,https://openalex.org/W2975512858,Engineering a Less Artificial Intelligence,2019,review,Anomaly Detection Techniques and Applications,Artificial Intelligence,Computer Science,ai,184,Sinz 2019,True
+10.1016/j.neuron.2017.06.011,https://openalex.org/W2738724892,Neuroscience-Inspired Artificial Intelligence,2017,review,EEG and Brain-Computer Interfaces,Cognitive Neuroscience,Neuroscience,neuro,1522,Hassabis 2017,True
+10.1038/s41593-019-0520-2,https://openalex.org/W2978368159,A deep learning framework for neuroscience,2019,review,Neural dynamics and brain function,Cognitive Neuroscience,Neuroscience,neuro,1063,Richards 2019,True
+10.1038/s41583-020-0277-3,https://openalex.org/W3016391357,Backpropagation and the brain,2020,review,Neural dynamics and brain function,Cognitive Neuroscience,Neuroscience,neuro,897,Lillicrap 2020,True
+10.1038/s41467-023-37180-x,https://openalex.org/W4353091694,Catalyzing next-generation Artificial Intelligence through NeuroAI,2023,review,Reinforcement Learning in Robotics,Artificial Intelligence,Computer Science,ai,268,Zador 2023,True
+10.1016/j.neunet.2021.09.018,https://openalex.org/W3203356073,Natural and Artificial Intelligence: A brief introduction to the interplay between AI and neuroscience research,2021,article,Functional Brain Connectivity Studies,Cognitive Neuroscience,Neuroscience,neuro,138,Macpherson 2021,True

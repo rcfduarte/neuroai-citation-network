@@ -1,0 +1,63 @@
+# Canonical .gitignore (from ~/.claude/templates/python-project/gitignore)
+# Plus project-specific data exclusions.
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+*.egg
+.python-version
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets — NEVER commit
+.env
+.env.*
+!.env.example
+.mcp.json
+.claude/secrets/
+*.key
+*.pem
+credentials.json
+secrets/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project-specific — never commit data or large artefacts.
+# Heavy data lives outside the repository (NEUROAI_DATA); the small tables that figures and
+# supplements are built from are committed under results/ (CSV/JSON).
+/data/
+/logs/
+*.duckdb
+*.duckdb.wal
+*.parquet
+*.jsonl
+*.jsonl.gz
+.local-status
+# results/ is never ignored, whatever the extension
+!/results/
+!/results/**

@@ -1,0 +1,482 @@
+year,definition,n_works,n_with_references,n_article_or_review,description
+1990,all_works,2524458,629854,1898399,every work in the DuckDB index with this publication year
+1991,all_works,2491959,661213,1872907,every work in the DuckDB index with this publication year
+1992,all_works,2639987,692333,1965724,every work in the DuckDB index with this publication year
+1993,all_works,2739630,702194,2070112,every work in the DuckDB index with this publication year
+1994,all_works,2892342,729432,2191231,every work in the DuckDB index with this publication year
+1995,all_works,3099792,765499,2333838,every work in the DuckDB index with this publication year
+1996,all_works,3334145,827781,2536815,every work in the DuckDB index with this publication year
+1997,all_works,3407391,877779,2619829,every work in the DuckDB index with this publication year
+1998,all_works,3628062,938147,2785827,every work in the DuckDB index with this publication year
+1999,all_works,3788830,992975,2895721,every work in the DuckDB index with this publication year
+2000,all_works,4714779,1130357,3447925,every work in the DuckDB index with this publication year
+2001,all_works,4547078,1155107,3476456,every work in the DuckDB index with this publication year
+2002,all_works,5228269,1529564,4075276,every work in the DuckDB index with this publication year
+2003,all_works,5835862,1520654,4273173,every work in the DuckDB index with this publication year
+2004,all_works,6077226,1591611,4560477,every work in the DuckDB index with this publication year
+2005,all_works,6653425,1814126,4958429,every work in the DuckDB index with this publication year
+2006,all_works,10744114,1959065,5434976,every work in the DuckDB index with this publication year
+2007,all_works,7981159,2050383,5738709,every work in the DuckDB index with this publication year
+2008,all_works,8700919,2234763,6334188,every work in the DuckDB index with this publication year
+2009,all_works,9258890,2386481,6601585,every work in the DuckDB index with this publication year
+2010,all_works,10049318,2581832,7060345,every work in the DuckDB index with this publication year
+2011,all_works,11115960,2795614,7467758,every work in the DuckDB index with this publication year
+2012,all_works,12210675,3005368,7760128,every work in the DuckDB index with this publication year
+2013,all_works,12592682,3228336,8466607,every work in the DuckDB index with this publication year
+2014,all_works,14156380,3424838,8738636,every work in the DuckDB index with this publication year
+2015,all_works,15750291,3464511,9302145,every work in the DuckDB index with this publication year
+2016,all_works,16278412,3489838,10266778,every work in the DuckDB index with this publication year
+2017,all_works,15154943,3603955,8655432,every work in the DuckDB index with this publication year
+2018,all_works,14773669,3862014,8367432,every work in the DuckDB index with this publication year
+2019,all_works,16803455,4187288,8784117,every work in the DuckDB index with this publication year
+2020,all_works,16395794,4809099,8940042,every work in the DuckDB index with this publication year
+2021,all_works,17545235,5146552,8617132,every work in the DuckDB index with this publication year
+2022,all_works,16887605,5117089,8155327,every work in the DuckDB index with this publication year
+2023,all_works,21941403,5399949,8741993,every work in the DuckDB index with this publication year
+2024,all_works,29561813,14773270,9215726,every work in the DuckDB index with this publication year
+2025,all_works,45247417,16658333,9775291,every work in the DuckDB index with this publication year
+2026,all_works,11535237,939316,2087609,every work in the DuckDB index with this publication year
+1990,with_primary_topic,2309345,626701,1854786,works that carry an OpenAlex primary topic
+1991,with_primary_topic,2289609,657753,1827650,works that carry an OpenAlex primary topic
+1992,with_primary_topic,2415124,688758,1918754,works that carry an OpenAlex primary topic
+1993,with_primary_topic,2523677,699064,2023494,works that carry an OpenAlex primary topic
+1994,with_primary_topic,2668767,725879,2142453,works that carry an OpenAlex primary topic
+1995,with_primary_topic,2856195,762064,2280365,works that carry an OpenAlex primary topic
+1996,with_primary_topic,3077842,823812,2479918,works that carry an OpenAlex primary topic
+1997,with_primary_topic,3169351,873576,2558518,works that carry an OpenAlex primary topic
+1998,with_primary_topic,3374744,934322,2724508,works that carry an OpenAlex primary topic
+1999,with_primary_topic,3515921,989701,2832026,works that carry an OpenAlex primary topic
+2000,with_primary_topic,4250279,1126430,3376380,works that carry an OpenAlex primary topic
+2001,with_primary_topic,4237944,1149963,3397512,works that carry an OpenAlex primary topic
+2002,with_primary_topic,4901461,1524992,3994353,works that carry an OpenAlex primary topic
+2003,with_primary_topic,5307617,1516104,4187520,works that carry an OpenAlex primary topic
+2004,with_primary_topic,5623460,1584678,4474248,works that carry an OpenAlex primary topic
+2005,with_primary_topic,6152467,1790745,4874526,works that carry an OpenAlex primary topic
+2006,with_primary_topic,7053729,1953976,5349103,works that carry an OpenAlex primary topic
+2007,with_primary_topic,7414803,2044846,5656030,works that carry an OpenAlex primary topic
+2008,with_primary_topic,8105789,2229263,6245734,works that carry an OpenAlex primary topic
+2009,with_primary_topic,8580496,2381589,6515647,works that carry an OpenAlex primary topic
+2010,with_primary_topic,9251497,2572054,6973678,works that carry an OpenAlex primary topic
+2011,with_primary_topic,10145063,2790050,7377856,works that carry an OpenAlex primary topic
+2012,with_primary_topic,10878553,2997723,7675382,works that carry an OpenAlex primary topic
+2013,with_primary_topic,11541893,3221432,8368896,works that carry an OpenAlex primary topic
+2014,with_primary_topic,12375449,3414284,8634440,works that carry an OpenAlex primary topic
+2015,with_primary_topic,13454568,3456992,9169776,works that carry an OpenAlex primary topic
+2016,with_primary_topic,14255531,3477482,10105037,works that carry an OpenAlex primary topic
+2017,with_primary_topic,13087242,3592433,8577815,works that carry an OpenAlex primary topic
+2018,with_primary_topic,12846741,3849125,8277178,works that carry an OpenAlex primary topic
+2019,with_primary_topic,13585047,4172330,8713868,works that carry an OpenAlex primary topic
+2020,with_primary_topic,13977453,4787534,8880047,works that carry an OpenAlex primary topic
+2021,with_primary_topic,13798045,5118004,8555777,works that carry an OpenAlex primary topic
+2022,with_primary_topic,13254158,5075608,8088564,works that carry an OpenAlex primary topic
+2023,with_primary_topic,14467985,5372715,8550642,works that carry an OpenAlex primary topic
+2024,with_primary_topic,15845767,6532402,9137791,works that carry an OpenAlex primary topic
+2025,with_primary_topic,26084790,8253110,9710620,works that carry an OpenAlex primary topic
+2026,with_primary_topic,2620661,932348,2067920,works that carry an OpenAlex primary topic
+1990,unknown,215113,3153,43613,works with no primary topic (field unknown)
+1991,unknown,202350,3460,45257,works with no primary topic (field unknown)
+1992,unknown,224863,3575,46970,works with no primary topic (field unknown)
+1993,unknown,215953,3130,46618,works with no primary topic (field unknown)
+1994,unknown,223575,3553,48778,works with no primary topic (field unknown)
+1995,unknown,243597,3435,53473,works with no primary topic (field unknown)
+1996,unknown,256303,3969,56897,works with no primary topic (field unknown)
+1997,unknown,238040,4203,61311,works with no primary topic (field unknown)
+1998,unknown,253318,3825,61319,works with no primary topic (field unknown)
+1999,unknown,272909,3274,63695,works with no primary topic (field unknown)
+2000,unknown,464500,3927,71545,works with no primary topic (field unknown)
+2001,unknown,309134,5144,78944,works with no primary topic (field unknown)
+2002,unknown,326808,4572,80923,works with no primary topic (field unknown)
+2003,unknown,528245,4550,85653,works with no primary topic (field unknown)
+2004,unknown,453766,6933,86229,works with no primary topic (field unknown)
+2005,unknown,500958,23381,83903,works with no primary topic (field unknown)
+2006,unknown,3690385,5089,85873,works with no primary topic (field unknown)
+2007,unknown,566356,5537,82679,works with no primary topic (field unknown)
+2008,unknown,595130,5500,88454,works with no primary topic (field unknown)
+2009,unknown,678394,4892,85938,works with no primary topic (field unknown)
+2010,unknown,797821,9778,86667,works with no primary topic (field unknown)
+2011,unknown,970897,5564,89902,works with no primary topic (field unknown)
+2012,unknown,1332122,7645,84746,works with no primary topic (field unknown)
+2013,unknown,1050789,6904,97711,works with no primary topic (field unknown)
+2014,unknown,1780931,10554,104196,works with no primary topic (field unknown)
+2015,unknown,2295723,7519,132369,works with no primary topic (field unknown)
+2016,unknown,2022881,12356,161741,works with no primary topic (field unknown)
+2017,unknown,2067701,11522,77617,works with no primary topic (field unknown)
+2018,unknown,1926928,12889,90254,works with no primary topic (field unknown)
+2019,unknown,3218408,14958,70249,works with no primary topic (field unknown)
+2020,unknown,2418341,21565,59995,works with no primary topic (field unknown)
+2021,unknown,3747190,28548,61355,works with no primary topic (field unknown)
+2022,unknown,3633447,41481,66763,works with no primary topic (field unknown)
+2023,unknown,7473418,27234,191351,works with no primary topic (field unknown)
+2024,unknown,13716046,8240868,77935,works with no primary topic (field unknown)
+2025,unknown,19162627,8405223,64671,works with no primary topic (field unknown)
+2026,unknown,8914576,6968,19689,works with no primary topic (field unknown)
+1990,neuroscience,36656,19746,31886,"primary topic in field 28, Neuroscience"
+1991,neuroscience,35951,20240,31047,"primary topic in field 28, Neuroscience"
+1992,neuroscience,38398,21224,33407,"primary topic in field 28, Neuroscience"
+1993,neuroscience,37972,21004,33144,"primary topic in field 28, Neuroscience"
+1994,neuroscience,39684,21093,34874,"primary topic in field 28, Neuroscience"
+1995,neuroscience,42049,22158,36849,"primary topic in field 28, Neuroscience"
+1996,neuroscience,46031,22957,41041,"primary topic in field 28, Neuroscience"
+1997,neuroscience,47530,25679,42099,"primary topic in field 28, Neuroscience"
+1998,neuroscience,49423,27530,43900,"primary topic in field 28, Neuroscience"
+1999,neuroscience,48910,28155,43252,"primary topic in field 28, Neuroscience"
+2000,neuroscience,56154,31093,48686,"primary topic in field 28, Neuroscience"
+2001,neuroscience,54052,30911,46352,"primary topic in field 28, Neuroscience"
+2002,neuroscience,60118,34970,51416,"primary topic in field 28, Neuroscience"
+2003,neuroscience,66210,37498,55317,"primary topic in field 28, Neuroscience"
+2004,neuroscience,68492,37207,57687,"primary topic in field 28, Neuroscience"
+2005,neuroscience,71551,40030,59889,"primary topic in field 28, Neuroscience"
+2006,neuroscience,81831,42515,64781,"primary topic in field 28, Neuroscience"
+2007,neuroscience,83114,44648,67337,"primary topic in field 28, Neuroscience"
+2008,neuroscience,90812,47040,73577,"primary topic in field 28, Neuroscience"
+2009,neuroscience,95113,50634,77094,"primary topic in field 28, Neuroscience"
+2010,neuroscience,105394,52526,85951,"primary topic in field 28, Neuroscience"
+2011,neuroscience,107841,56006,85777,"primary topic in field 28, Neuroscience"
+2012,neuroscience,113335,59058,88309,"primary topic in field 28, Neuroscience"
+2013,neuroscience,127483,64416,101406,"primary topic in field 28, Neuroscience"
+2014,neuroscience,128213,66675,99967,"primary topic in field 28, Neuroscience"
+2015,neuroscience,137655,67398,105806,"primary topic in field 28, Neuroscience"
+2016,neuroscience,146467,66381,114323,"primary topic in field 28, Neuroscience"
+2017,neuroscience,133525,69487,97554,"primary topic in field 28, Neuroscience"
+2018,neuroscience,139262,72719,98454,"primary topic in field 28, Neuroscience"
+2019,neuroscience,149538,77648,104017,"primary topic in field 28, Neuroscience"
+2020,neuroscience,152180,85614,103277,"primary topic in field 28, Neuroscience"
+2021,neuroscience,154651,91664,105788,"primary topic in field 28, Neuroscience"
+2022,neuroscience,150391,88635,103000,"primary topic in field 28, Neuroscience"
+2023,neuroscience,164016,91656,107063,"primary topic in field 28, Neuroscience"
+2024,neuroscience,205145,113760,115754,"primary topic in field 28, Neuroscience"
+2025,neuroscience,287415,121609,129314,"primary topic in field 28, Neuroscience"
+2026,neuroscience,47677,18761,36265,"primary topic in field 28, Neuroscience"
+1990,ai_extended,24648,7701,17511,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+1991,ai_extended,26672,9267,19032,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+1992,ai_extended,29276,10012,21071,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+1993,ai_extended,31080,10187,22505,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+1994,ai_extended,33855,11814,24953,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+1995,ai_extended,35135,11590,25196,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+1996,ai_extended,38481,13172,28434,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+1997,ai_extended,39292,13690,28435,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+1998,ai_extended,44082,15709,31235,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+1999,ai_extended,44748,16767,32909,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2000,ai_extended,52966,18225,38268,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2001,ai_extended,55150,18832,41083,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2002,ai_extended,100726,59285,85308,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2003,ai_extended,88275,41760,70381,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2004,ai_extended,90101,39032,70027,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2005,ai_extended,106954,50632,82913,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2006,ai_extended,135645,53946,90533,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2007,ai_extended,127443,53880,97705,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2008,ai_extended,146253,58657,115222,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2009,ai_extended,142932,63913,107395,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2010,ai_extended,152803,69554,115514,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2011,ai_extended,159495,71501,112822,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2012,ai_extended,169516,77104,116491,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2013,ai_extended,177842,81118,128863,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2014,ai_extended,185015,85699,127674,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2015,ai_extended,192702,85708,132043,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2016,ai_extended,200314,86804,135124,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2017,ai_extended,191238,92416,119302,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2018,ai_extended,217149,107928,131500,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2019,ai_extended,245916,123918,147032,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2020,ai_extended,261340,136040,149060,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2021,ai_extended,275977,152318,158555,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2022,ai_extended,270585,136274,158834,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2023,ai_extended,346525,159354,183591,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2024,ai_extended,453546,258379,209309,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2025,ai_extended,586892,244504,245564,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+2026,ai_extended,101330,23418,66684,"AI as used in the article: 1702 minus 26 topics, plus 1707, plus T10502"
+1990,ai_strict_core35,12321,4802,8925,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+1991,ai_strict_core35,13582,5807,9702,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+1992,ai_strict_core35,14622,5998,10789,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+1993,ai_strict_core35,15643,6343,11386,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+1994,ai_strict_core35,17293,7306,12845,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+1995,ai_strict_core35,17004,6844,12239,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+1996,ai_strict_core35,18497,7383,13659,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+1997,ai_strict_core35,19117,7966,13807,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+1998,ai_strict_core35,20319,8819,14937,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+1999,ai_strict_core35,20626,9205,15150,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2000,ai_strict_core35,23548,10372,16775,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2001,ai_strict_core35,23077,10514,16433,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2002,ai_strict_core35,42133,27798,35026,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2003,ai_strict_core35,35150,20114,27083,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2004,ai_strict_core35,35433,19184,25974,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2005,ai_strict_core35,41098,23760,29826,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2006,ai_strict_core35,46436,25125,32140,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2007,ai_strict_core35,48969,25236,35305,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2008,ai_strict_core35,57055,26937,43385,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2009,ai_strict_core35,52399,28228,37348,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2010,ai_strict_core35,55731,30218,40060,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2011,ai_strict_core35,58175,29923,38717,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2012,ai_strict_core35,62256,32908,41201,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2013,ai_strict_core35,66308,33651,46343,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2014,ai_strict_core35,68588,35114,46288,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2015,ai_strict_core35,70968,34626,47949,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2016,ai_strict_core35,74920,35887,49443,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2017,ai_strict_core35,71856,37728,43637,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2018,ai_strict_core35,84484,45408,49085,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2019,ai_strict_core35,95120,52086,53850,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2020,ai_strict_core35,103396,59317,56456,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2021,ai_strict_core35,108984,65173,59254,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2022,ai_strict_core35,105768,52853,58450,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2023,ai_strict_core35,124748,62639,67212,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2024,ai_strict_core35,162574,79117,81592,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2025,ai_strict_core35,227253,86019,101431,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+2026,ai_strict_core35,47354,9118,28814,AI as the curated 35-topic core of subfield 1702 (sensitivity)
+1990,ai_subfield_1702_whole,29288,8619,20914,"every topic of subfield 1702, Artificial Intelligence"
+1991,ai_subfield_1702_whole,30274,9709,21372,"every topic of subfield 1702, Artificial Intelligence"
+1992,ai_subfield_1702_whole,32724,10154,23649,"every topic of subfield 1702, Artificial Intelligence"
+1993,ai_subfield_1702_whole,34837,10638,25094,"every topic of subfield 1702, Artificial Intelligence"
+1994,ai_subfield_1702_whole,37433,11601,27531,"every topic of subfield 1702, Artificial Intelligence"
+1995,ai_subfield_1702_whole,38658,11384,27988,"every topic of subfield 1702, Artificial Intelligence"
+1996,ai_subfield_1702_whole,41850,12368,30498,"every topic of subfield 1702, Artificial Intelligence"
+1997,ai_subfield_1702_whole,43371,12884,31602,"every topic of subfield 1702, Artificial Intelligence"
+1998,ai_subfield_1702_whole,45596,14353,33348,"every topic of subfield 1702, Artificial Intelligence"
+1999,ai_subfield_1702_whole,48405,15232,35660,"every topic of subfield 1702, Artificial Intelligence"
+2000,ai_subfield_1702_whole,58008,17081,42654,"every topic of subfield 1702, Artificial Intelligence"
+2001,ai_subfield_1702_whole,61139,17809,46181,"every topic of subfield 1702, Artificial Intelligence"
+2002,ai_subfield_1702_whole,91808,42597,75174,"every topic of subfield 1702, Artificial Intelligence"
+2003,ai_subfield_1702_whole,88763,32813,69626,"every topic of subfield 1702, Artificial Intelligence"
+2004,ai_subfield_1702_whole,93553,32013,72674,"every topic of subfield 1702, Artificial Intelligence"
+2005,ai_subfield_1702_whole,105728,40297,80611,"every topic of subfield 1702, Artificial Intelligence"
+2006,ai_subfield_1702_whole,118855,42649,87795,"every topic of subfield 1702, Artificial Intelligence"
+2007,ai_subfield_1702_whole,127958,43768,97376,"every topic of subfield 1702, Artificial Intelligence"
+2008,ai_subfield_1702_whole,150866,46449,119304,"every topic of subfield 1702, Artificial Intelligence"
+2009,ai_subfield_1702_whole,136938,49298,102741,"every topic of subfield 1702, Artificial Intelligence"
+2010,ai_subfield_1702_whole,146216,53347,109938,"every topic of subfield 1702, Artificial Intelligence"
+2011,ai_subfield_1702_whole,152591,53879,107740,"every topic of subfield 1702, Artificial Intelligence"
+2012,ai_subfield_1702_whole,163033,58668,112571,"every topic of subfield 1702, Artificial Intelligence"
+2013,ai_subfield_1702_whole,182398,60742,133934,"every topic of subfield 1702, Artificial Intelligence"
+2014,ai_subfield_1702_whole,188745,63777,131020,"every topic of subfield 1702, Artificial Intelligence"
+2015,ai_subfield_1702_whole,213485,62941,148210,"every topic of subfield 1702, Artificial Intelligence"
+2016,ai_subfield_1702_whole,247058,64400,182361,"every topic of subfield 1702, Artificial Intelligence"
+2017,ai_subfield_1702_whole,200154,67468,111850,"every topic of subfield 1702, Artificial Intelligence"
+2018,ai_subfield_1702_whole,200003,79708,118608,"every topic of subfield 1702, Artificial Intelligence"
+2019,ai_subfield_1702_whole,226234,92261,131410,"every topic of subfield 1702, Artificial Intelligence"
+2020,ai_subfield_1702_whole,242929,105218,137278,"every topic of subfield 1702, Artificial Intelligence"
+2021,ai_subfield_1702_whole,261766,119773,145614,"every topic of subfield 1702, Artificial Intelligence"
+2022,ai_subfield_1702_whole,260213,107516,144899,"every topic of subfield 1702, Artificial Intelligence"
+2023,ai_subfield_1702_whole,300319,128311,170548,"every topic of subfield 1702, Artificial Intelligence"
+2024,ai_subfield_1702_whole,452522,222588,208419,"every topic of subfield 1702, Artificial Intelligence"
+2025,ai_subfield_1702_whole,3310775,506886,436238,"every topic of subfield 1702, Artificial Intelligence"
+2026,ai_subfield_1702_whole,96909,20041,63219,"every topic of subfield 1702, Artificial Intelligence"
+1990,ai_1702_minus_excluded,16719,5147,11677,subfield 1702 minus the 26 excluded topics
+1991,ai_1702_minus_excluded,17877,6163,12360,subfield 1702 minus the 26 excluded topics
+1992,ai_1702_minus_excluded,19185,6379,13599,subfield 1702 minus the 26 excluded topics
+1993,ai_1702_minus_excluded,20383,6678,14409,subfield 1702 minus the 26 excluded topics
+1994,ai_1702_minus_excluded,22292,7687,16047,subfield 1702 minus the 26 excluded topics
+1995,ai_1702_minus_excluded,22591,7236,15828,subfield 1702 minus the 26 excluded topics
+1996,ai_1702_minus_excluded,24483,7824,17556,subfield 1702 minus the 26 excluded topics
+1997,ai_1702_minus_excluded,25217,8392,17891,subfield 1702 minus the 26 excluded topics
+1998,ai_1702_minus_excluded,26829,9365,19251,subfield 1702 minus the 26 excluded topics
+1999,ai_1702_minus_excluded,28061,9751,20286,subfield 1702 minus the 26 excluded topics
+2000,ai_1702_minus_excluded,34408,10981,24628,subfield 1702 minus the 26 excluded topics
+2001,ai_1702_minus_excluded,35605,11178,26205,subfield 1702 minus the 26 excluded topics
+2002,ai_1702_minus_excluded,57212,29080,47076,subfield 1702 minus the 26 excluded topics
+2003,ai_1702_minus_excluded,52856,21266,41153,subfield 1702 minus the 26 excluded topics
+2004,ai_1702_minus_excluded,54960,20355,41948,subfield 1702 minus the 26 excluded topics
+2005,ai_1702_minus_excluded,62915,25293,47515,subfield 1702 minus the 26 excluded topics
+2006,ai_1702_minus_excluded,72301,26809,52338,subfield 1702 minus the 26 excluded topics
+2007,ai_1702_minus_excluded,75791,27023,56975,subfield 1702 minus the 26 excluded topics
+2008,ai_1702_minus_excluded,86349,29156,66322,subfield 1702 minus the 26 excluded topics
+2009,ai_1702_minus_excluded,82549,31048,60467,subfield 1702 minus the 26 excluded topics
+2010,ai_1702_minus_excluded,87231,33668,63937,subfield 1702 minus the 26 excluded topics
+2011,ai_1702_minus_excluded,90434,33493,61185,subfield 1702 minus the 26 excluded topics
+2012,ai_1702_minus_excluded,95632,36785,62981,subfield 1702 minus the 26 excluded topics
+2013,ai_1702_minus_excluded,98640,37640,68198,subfield 1702 minus the 26 excluded topics
+2014,ai_1702_minus_excluded,102198,39419,66278,subfield 1702 minus the 26 excluded topics
+2015,ai_1702_minus_excluded,105163,38832,68078,subfield 1702 minus the 26 excluded topics
+2016,ai_1702_minus_excluded,111376,40596,70754,subfield 1702 minus the 26 excluded topics
+2017,ai_1702_minus_excluded,106932,43167,63021,subfield 1702 minus the 26 excluded topics
+2018,ai_1702_minus_excluded,123745,52710,70593,subfield 1702 minus the 26 excluded topics
+2019,ai_1702_minus_excluded,140117,61698,78624,subfield 1702 minus the 26 excluded topics
+2020,ai_1702_minus_excluded,156538,71571,83283,subfield 1702 minus the 26 excluded topics
+2021,ai_1702_minus_excluded,163363,80202,88082,subfield 1702 minus the 26 excluded topics
+2022,ai_1702_minus_excluded,155604,67794,85114,subfield 1702 minus the 26 excluded topics
+2023,ai_1702_minus_excluded,187603,81376,100589,subfield 1702 minus the 26 excluded topics
+2024,ai_1702_minus_excluded,304828,171634,121321,subfield 1702 minus the 26 excluded topics
+2025,ai_1702_minus_excluded,365362,151635,140303,subfield 1702 minus the 26 excluded topics
+2026,ai_1702_minus_excluded,63953,12185,41744,subfield 1702 minus the 26 excluded topics
+1990,ai_subfield_1707,7779,2482,5718,"subfield 1707, Computer Vision and Pattern Recognition"
+1991,ai_subfield_1707,8583,2971,6498,"subfield 1707, Computer Vision and Pattern Recognition"
+1992,ai_subfield_1707,9899,3524,7314,"subfield 1707, Computer Vision and Pattern Recognition"
+1993,ai_subfield_1707,10492,3403,7923,"subfield 1707, Computer Vision and Pattern Recognition"
+1994,ai_subfield_1707,11393,4043,8776,"subfield 1707, Computer Vision and Pattern Recognition"
+1995,ai_subfield_1707,12367,4276,9230,"subfield 1707, Computer Vision and Pattern Recognition"
+1996,ai_subfield_1707,13855,5294,10762,"subfield 1707, Computer Vision and Pattern Recognition"
+1997,ai_subfield_1707,13878,5218,10384,"subfield 1707, Computer Vision and Pattern Recognition"
+1998,ai_subfield_1707,17021,6249,11815,"subfield 1707, Computer Vision and Pattern Recognition"
+1999,ai_subfield_1707,16468,6917,12464,"subfield 1707, Computer Vision and Pattern Recognition"
+2000,ai_subfield_1707,18311,7151,13456,"subfield 1707, Computer Vision and Pattern Recognition"
+2001,ai_subfield_1707,19255,7518,14643,"subfield 1707, Computer Vision and Pattern Recognition"
+2002,ai_subfield_1707,42884,29747,37670,"subfield 1707, Computer Vision and Pattern Recognition"
+2003,ai_subfield_1707,34891,20162,28784,"subfield 1707, Computer Vision and Pattern Recognition"
+2004,ai_subfield_1707,34655,18409,27686,"subfield 1707, Computer Vision and Pattern Recognition"
+2005,ai_subfield_1707,43437,25009,34945,"subfield 1707, Computer Vision and Pattern Recognition"
+2006,ai_subfield_1707,62467,26644,37485,"subfield 1707, Computer Vision and Pattern Recognition"
+2007,ai_subfield_1707,50756,26339,39999,"subfield 1707, Computer Vision and Pattern Recognition"
+2008,ai_subfield_1707,58786,28888,47973,"subfield 1707, Computer Vision and Pattern Recognition"
+2009,ai_subfield_1707,58995,32006,45783,"subfield 1707, Computer Vision and Pattern Recognition"
+2010,ai_subfield_1707,63791,34782,50058,"subfield 1707, Computer Vision and Pattern Recognition"
+2011,ai_subfield_1707,66849,36517,49771,"subfield 1707, Computer Vision and Pattern Recognition"
+2012,ai_subfield_1707,71386,38660,51437,"subfield 1707, Computer Vision and Pattern Recognition"
+2013,ai_subfield_1707,76363,41621,58305,"subfield 1707, Computer Vision and Pattern Recognition"
+2014,ai_subfield_1707,79560,44063,58632,"subfield 1707, Computer Vision and Pattern Recognition"
+2015,ai_subfield_1707,84087,44574,61093,"subfield 1707, Computer Vision and Pattern Recognition"
+2016,ai_subfield_1707,84893,43635,61000,"subfield 1707, Computer Vision and Pattern Recognition"
+2017,ai_subfield_1707,80118,46335,52998,"subfield 1707, Computer Vision and Pattern Recognition"
+2018,ai_subfield_1707,88836,51909,57225,"subfield 1707, Computer Vision and Pattern Recognition"
+2019,ai_subfield_1707,100462,58393,64231,"subfield 1707, Computer Vision and Pattern Recognition"
+2020,ai_subfield_1707,99067,60217,61380,"subfield 1707, Computer Vision and Pattern Recognition"
+2021,ai_subfield_1707,106430,67415,65818,"subfield 1707, Computer Vision and Pattern Recognition"
+2022,ai_subfield_1707,107867,63201,68218,"subfield 1707, Computer Vision and Pattern Recognition"
+2023,ai_subfield_1707,150559,71959,76784,"subfield 1707, Computer Vision and Pattern Recognition"
+2024,ai_subfield_1707,139844,80554,81374,"subfield 1707, Computer Vision and Pattern Recognition"
+2025,ai_subfield_1707,210987,86542,97953,"subfield 1707, Computer Vision and Pattern Recognition"
+2026,ai_subfield_1707,35480,10445,23546,"subfield 1707, Computer Vision and Pattern Recognition"
+1990,ai_topic_T10502,150,72,116,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+1991,ai_topic_T10502,212,133,174,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+1992,ai_topic_T10502,192,109,158,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+1993,ai_topic_T10502,205,106,173,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+1994,ai_topic_T10502,170,84,130,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+1995,ai_topic_T10502,177,78,138,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+1996,ai_topic_T10502,143,54,116,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+1997,ai_topic_T10502,197,80,160,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+1998,ai_topic_T10502,232,95,169,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+1999,ai_topic_T10502,219,99,159,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2000,ai_topic_T10502,247,93,184,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2001,ai_topic_T10502,290,136,235,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2002,ai_topic_T10502,630,458,562,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2003,ai_topic_T10502,528,332,444,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2004,ai_topic_T10502,486,268,393,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2005,ai_topic_T10502,602,330,453,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2006,ai_topic_T10502,877,493,710,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2007,ai_topic_T10502,896,518,731,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2008,ai_topic_T10502,1118,613,927,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2009,ai_topic_T10502,1388,859,1145,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2010,ai_topic_T10502,1781,1104,1519,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2011,ai_topic_T10502,2212,1491,1866,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2012,ai_topic_T10502,2498,1659,2073,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2013,ai_topic_T10502,2839,1857,2360,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2014,ai_topic_T10502,3257,2217,2764,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2015,ai_topic_T10502,3452,2302,2872,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2016,ai_topic_T10502,4045,2573,3370,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2017,ai_topic_T10502,4188,2914,3283,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2018,ai_topic_T10502,4568,3309,3682,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2019,ai_topic_T10502,5337,3827,4177,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2020,ai_topic_T10502,5735,4252,4397,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2021,ai_topic_T10502,6184,4701,4655,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2022,ai_topic_T10502,7114,5279,5502,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2023,ai_topic_T10502,8363,6019,6218,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2024,ai_topic_T10502,8874,6191,6614,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2025,ai_topic_T10502,10543,6327,7308,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+2026,ai_topic_T10502,1897,788,1394,"topic T10502, Advanced Memory and Neural Computing (subfield 2208)"
+1990,excluded_26_topics,12569,3472,9237,the 26 topics of subfield 1702 that the extended definition drops
+1991,excluded_26_topics,12397,3546,9012,the 26 topics of subfield 1702 that the extended definition drops
+1992,excluded_26_topics,13539,3775,10050,the 26 topics of subfield 1702 that the extended definition drops
+1993,excluded_26_topics,14454,3960,10685,the 26 topics of subfield 1702 that the extended definition drops
+1994,excluded_26_topics,15141,3914,11484,the 26 topics of subfield 1702 that the extended definition drops
+1995,excluded_26_topics,16067,4148,12160,the 26 topics of subfield 1702 that the extended definition drops
+1996,excluded_26_topics,17367,4544,12942,the 26 topics of subfield 1702 that the extended definition drops
+1997,excluded_26_topics,18154,4492,13711,the 26 topics of subfield 1702 that the extended definition drops
+1998,excluded_26_topics,18767,4988,14097,the 26 topics of subfield 1702 that the extended definition drops
+1999,excluded_26_topics,20344,5481,15374,the 26 topics of subfield 1702 that the extended definition drops
+2000,excluded_26_topics,23600,6100,18026,the 26 topics of subfield 1702 that the extended definition drops
+2001,excluded_26_topics,25534,6631,19976,the 26 topics of subfield 1702 that the extended definition drops
+2002,excluded_26_topics,34596,13517,28098,the 26 topics of subfield 1702 that the extended definition drops
+2003,excluded_26_topics,35907,11547,28473,the 26 topics of subfield 1702 that the extended definition drops
+2004,excluded_26_topics,38593,11658,30726,the 26 topics of subfield 1702 that the extended definition drops
+2005,excluded_26_topics,42813,15004,33096,the 26 topics of subfield 1702 that the extended definition drops
+2006,excluded_26_topics,46554,15840,35457,the 26 topics of subfield 1702 that the extended definition drops
+2007,excluded_26_topics,52167,16745,40401,the 26 topics of subfield 1702 that the extended definition drops
+2008,excluded_26_topics,64517,17293,52982,the 26 topics of subfield 1702 that the extended definition drops
+2009,excluded_26_topics,54389,18250,42274,the 26 topics of subfield 1702 that the extended definition drops
+2010,excluded_26_topics,58985,19679,46001,the 26 topics of subfield 1702 that the extended definition drops
+2011,excluded_26_topics,62157,20386,46555,the 26 topics of subfield 1702 that the extended definition drops
+2012,excluded_26_topics,67401,21883,49590,the 26 topics of subfield 1702 that the extended definition drops
+2013,excluded_26_topics,83758,23102,65736,the 26 topics of subfield 1702 that the extended definition drops
+2014,excluded_26_topics,86547,24358,64742,the 26 topics of subfield 1702 that the extended definition drops
+2015,excluded_26_topics,108322,24109,80132,the 26 topics of subfield 1702 that the extended definition drops
+2016,excluded_26_topics,135682,23804,111607,the 26 topics of subfield 1702 that the extended definition drops
+2017,excluded_26_topics,93222,24301,48829,the 26 topics of subfield 1702 that the extended definition drops
+2018,excluded_26_topics,76258,26998,48015,the 26 topics of subfield 1702 that the extended definition drops
+2019,excluded_26_topics,86117,30563,52786,the 26 topics of subfield 1702 that the extended definition drops
+2020,excluded_26_topics,86391,33647,53995,the 26 topics of subfield 1702 that the extended definition drops
+2021,excluded_26_topics,98403,39571,57532,the 26 topics of subfield 1702 that the extended definition drops
+2022,excluded_26_topics,104609,39722,59785,the 26 topics of subfield 1702 that the extended definition drops
+2023,excluded_26_topics,112716,46935,69959,the 26 topics of subfield 1702 that the extended definition drops
+2024,excluded_26_topics,147694,50954,87098,the 26 topics of subfield 1702 that the extended definition drops
+2025,excluded_26_topics,2945413,355251,295935,the 26 topics of subfield 1702 that the extended definition drops
+2026,excluded_26_topics,32956,7856,21475,the 26 topics of subfield 1702 that the extended definition drops
+1990,excluded_T12157,5701,609,4166,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+1991,excluded_T12157,5323,503,3889,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+1992,excluded_T12157,5782,496,4349,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+1993,excluded_T12157,6483,508,4874,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+1994,excluded_T12157,6644,449,5304,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+1995,excluded_T12157,7056,479,5578,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+1996,excluded_T12157,7352,468,5637,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+1997,excluded_T12157,8185,454,6478,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+1998,excluded_T12157,8044,448,6384,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+1999,excluded_T12157,8730,460,7053,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2000,excluded_T12157,9705,547,7942,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2001,excluded_T12157,9887,581,8333,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2002,excluded_T12157,10601,654,8894,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2003,excluded_T12157,12457,673,10688,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2004,excluded_T12157,13826,657,11860,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2005,excluded_T12157,13063,929,10781,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2006,excluded_T12157,14124,852,12004,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2007,excluded_T12157,17198,877,14217,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2008,excluded_T12157,23715,883,21108,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2009,excluded_T12157,16522,861,14045,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2010,excluded_T12157,18012,1012,15429,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2011,excluded_T12157,18878,1157,15803,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2012,excluded_T12157,20329,1108,16847,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2013,excluded_T12157,33450,1288,29678,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2014,excluded_T12157,33458,1638,27818,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2015,excluded_T12157,46229,1477,41287,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2016,excluded_T12157,70878,1528,65286,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2017,excluded_T12157,33102,1573,9205,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2018,excluded_T12157,16303,1822,9120,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2019,excluded_T12157,18199,2308,10352,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2020,excluded_T12157,17355,2084,9893,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2021,excluded_T12157,26169,2435,12093,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2022,excluded_T12157,31552,2552,12965,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2023,excluded_T12157,26709,2809,14623,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2024,excluded_T12157,50854,4528,27534,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2025,excluded_T12157,2818121,303790,219845,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+2026,excluded_T12157,2534,279,1100,"topic T12157, Geochemistry and Geologic Mapping (one of the 26)"
+1990,other_extended,2248041,599254,1805389,"works with a primary topic in neither field, extended definition"
+1991,other_extended,2226986,628246,1777571,"works with a primary topic in neither field, extended definition"
+1992,other_extended,2347450,657522,1864276,"works with a primary topic in neither field, extended definition"
+1993,other_extended,2454625,667873,1967845,"works with a primary topic in neither field, extended definition"
+1994,other_extended,2595228,692972,2082626,"works with a primary topic in neither field, extended definition"
+1995,other_extended,2779011,728316,2218320,"works with a primary topic in neither field, extended definition"
+1996,other_extended,2993330,787683,2410443,"works with a primary topic in neither field, extended definition"
+1997,other_extended,3082529,834207,2487984,"works with a primary topic in neither field, extended definition"
+1998,other_extended,3281239,891083,2649373,"works with a primary topic in neither field, extended definition"
+1999,other_extended,3422263,944779,2755865,"works with a primary topic in neither field, extended definition"
+2000,other_extended,4141159,1077112,3289426,"works with a primary topic in neither field, extended definition"
+2001,other_extended,4128742,1100220,3310077,"works with a primary topic in neither field, extended definition"
+2002,other_extended,4740617,1430737,3857629,"works with a primary topic in neither field, extended definition"
+2003,other_extended,5153132,1436846,4061822,"works with a primary topic in neither field, extended definition"
+2004,other_extended,5464867,1508439,4346534,"works with a primary topic in neither field, extended definition"
+2005,other_extended,5973962,1700083,4731724,"works with a primary topic in neither field, extended definition"
+2006,other_extended,6836253,1857515,5193789,"works with a primary topic in neither field, extended definition"
+2007,other_extended,7204246,1946318,5490988,"works with a primary topic in neither field, extended definition"
+2008,other_extended,7868724,2123566,6056935,"works with a primary topic in neither field, extended definition"
+2009,other_extended,8342451,2267042,6331158,"works with a primary topic in neither field, extended definition"
+2010,other_extended,8993300,2449974,6772213,"works with a primary topic in neither field, extended definition"
+2011,other_extended,9877727,2662543,7179257,"works with a primary topic in neither field, extended definition"
+2012,other_extended,10595702,2861561,7470582,"works with a primary topic in neither field, extended definition"
+2013,other_extended,11236568,3075898,8138627,"works with a primary topic in neither field, extended definition"
+2014,other_extended,12062221,3261910,8406799,"works with a primary topic in neither field, extended definition"
+2015,other_extended,13124211,3303886,8931927,"works with a primary topic in neither field, extended definition"
+2016,other_extended,13908750,3324297,9855590,"works with a primary topic in neither field, extended definition"
+2017,other_extended,12762479,3430530,8360959,"works with a primary topic in neither field, extended definition"
+2018,other_extended,12490330,3668478,8047224,"works with a primary topic in neither field, extended definition"
+2019,other_extended,13189593,3970764,8462819,"works with a primary topic in neither field, extended definition"
+2020,other_extended,13563933,4565880,8627710,"works with a primary topic in neither field, extended definition"
+2021,other_extended,13367417,4874022,8291434,"works with a primary topic in neither field, extended definition"
+2022,other_extended,12833182,4850699,7826730,"works with a primary topic in neither field, extended definition"
+2023,other_extended,13957444,5121705,8259988,"works with a primary topic in neither field, extended definition"
+2024,other_extended,15187076,6160263,8812728,"works with a primary topic in neither field, extended definition"
+2025,other_extended,25210483,7886997,9335742,"works with a primary topic in neither field, extended definition"
+2026,other_extended,2471654,890169,1964971,"works with a primary topic in neither field, extended definition"

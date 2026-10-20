@@ -1,0 +1,16 @@
+rank,title_prefix,year,c_neuro,c_ai,B
+1,the multimodal brain tumor image segmentation benchmark,2014,2547,1952,2210
+2,synaptic modifications in cultured hippocampal neurons,1998,2271,2106,2185
+3,simple model of spiking neurons,2003,1680,2235,1918
+4,emergence of simple-cell receptive field properties,1996,2004,1832,1914
+5,computational modelling of visual attention,2001,1750,1948,1844
+6,the magical number seven,1994,2126,1563,1802
+7,fitting linear mixed-effects models,2015,8437,920,1659
+8,segmentation of brain mr images through a hidden markov random field,2001,2111,1335,1636
+9,a survey on deep learning in medical image analysis,2017,969,4431,1590
+10,a model of saliency-based visual attention,1998,879,8286,1589
+11,scipy 1.0,2020,1944,1293,1553
+12,short-term synaptic plasticity,2002,2787,1035,1509
+13,an introduction to roc analysis,2005,885,3938,1445
+14,hierarchical models of object recognition in cortex,1999,1690,1205,1407
+15,xgboost,2016,798,5559,1396

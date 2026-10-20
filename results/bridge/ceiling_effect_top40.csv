@@ -1,0 +1,41 @@
+rank_no_ceiling,title,publication_year,bridge_paper_field,c_neuro,c_ai,c_total_classified,B_harmonic,neuro_share,removed_by_ceiling,work_id
+1,Deep Residual Learning for Image Recognition,2016,ai,4671,112475,117146,8969.503440151606,0.03987332047188978,True,https://openalex.org/W2194775991
+2,Deep learning,2015,ai,3099,20569,23668,5386.456903836403,0.13093628527970255,True,https://openalex.org/W2919115771
+3,LIBSVM,2011,ai,2724,15546,18270,4635.720197044335,0.14909688013136288,True,https://openalex.org/W2153635508
+4,ImageNet classification with deep convolutional neural networks,2017,ai,2456,38936,41392,4620.545805952841,0.05933513722458446,True,https://openalex.org/W2163605009
+5,Scikit-learn: Machine Learning in Python,2012,ai,2793,11757,14550,4513.7183505154635,0.19195876288659794,True,https://openalex.org/W2101234009
+6,Long Short-Term Memory,1997,ai,2212,34318,36530,4156.113660005475,0.06055297016151109,True,https://openalex.org/W2064675550
+7,Random Forests,2001,ai,2241,14983,17224,3898.850789595913,0.1301091500232234,True,https://openalex.org/W2911964244
+8,Reinforcement Learning: An Introduction,1998,ai,2502,7607,10109,3765.4988623998415,0.2475022257394401,True,https://openalex.org/W4214717370
+9,Reinforcement Learning: An Introduction,2005,ai,2302,10040,12342,3745.273051369308,0.18651758223950737,True,https://openalex.org/W2121863487
+10,Adam: A Method for Stochastic Optimization,2014,ai,1932,39228,41160,3682.6285714285714,0.04693877551020408,True,https://openalex.org/W1522301498
+11,Very Deep Convolutional Networks for Large-Scale Image Recognition,2014,ai,1817,42664,44481,3485.555090937704,0.04084890177828736,True,https://openalex.org/W1686810756
+12,MizAR 60 for Mizar 50,2023,ai,1702,35419,37121,3247.926402844751,0.04585005791869831,True,https://openalex.org/W4385245566
+13,Support-vector networks,1995,ai,1763,9578,11341,2977.8703818005465,0.15545366369808658,True,https://openalex.org/W4239510810
+14,Gradient-based learning applied to document recognition,1998,ai,1461,28913,30374,2781.4507802726016,0.048100348982682554,True,https://openalex.org/W2112796928
+15,ImageNet: A large-scale hierarchical image database,2009,ai,1361,37872,39233,2627.5733183799352,0.03469018428363877,True,https://openalex.org/W2108598243
+16,Visualizing Data using t-SNE,2008,ai,1407,15122,16529,2574.46354891403,0.08512311694597374,True,https://openalex.org/W2187089797
+17,Going deeper with convolutions,2015,ai,1261,23512,24773,2393.624672021959,0.05090219190247447,True,https://openalex.org/W2097117768
+18,Densely Connected Convolutional Networks,2017,ai,1259,20119,21378,2369.7091402376273,0.058892319206661055,True,https://openalex.org/W2963446712
+19,Support-Vector Networks,1995,ai,1294,10061,11355,2293.07512109203,0.11395860854249229,True,https://openalex.org/W2119821739
+20,The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS),2014,ai,2547,1952,4499,2210.1551455879085,0.5661258057346077,False,https://openalex.org/W1641498739
+21,"Synaptic Modifications in Cultured Hippocampal Neurons: Dependence on Spike Timing, Synaptic Strength, and Postsynaptic Cell Type",1998,neuro,2271,2106,4377,2185.3899931459905,0.518848526387937,False,https://openalex.org/W2147101007
+22,Dropout: a simple way to prevent neural networks from overfitting,2014,ai,1154,14395,15549,2136.7071837417197,0.07421699144639526,True,https://openalex.org/W2095705004
+23,The Nature of Statistical Learning Theory,1995,ai,1040,13214,14254,1928.239090781535,0.07296197558580048,True,https://openalex.org/W2156909104
+24,Simple model of spiking neurons,2003,neuro,1680,2235,3915,1918.16091954023,0.42911877394636017,False,https://openalex.org/W2164653071
+25,Pattern Classification,2012,ai,1091,7834,8925,1915.2703641456583,0.12224089635854342,False,https://openalex.org/W2799061466
+26,Emergence of simple-cell receptive field properties by learning a sparse code for natural images,1996,neuro,2004,1832,3836,1914.1438998957246,0.5224191866527633,False,https://openalex.org/W2145889472
+27,,2021,ai,962,26651,27613,1856.9704124868722,0.03483866294861116,True,https://openalex.org/W2964121744
+28,Computational modelling of visual attention,2001,ai,1750,1948,3698,1843.6992969172525,0.4732287723093564,False,https://openalex.org/W2144764737
+29,"The magical number seven, plus or minus two: Some limits on our capacity for processing information.",1994,ai,2126,1563,3689,1801.5386283545677,0.5763079425318515,False,https://openalex.org/W1984314602
+30,ImageNet Large Scale Visual Recognition Challenge,2015,ai,914,25227,26141,1764.0853831146476,0.0349642324318121,True,https://openalex.org/W2117539524
+31,Fitting Linear Mixed-Effects Models Using <b>lme4</b>,2015,ai,8437,920,9357,1659.0873143101421,0.9016778882120338,False,https://openalex.org/W1951724000
+32,Segmentation of brain MR images through a hidden Markov random field model and the expectation-maximization algorithm,2001,ai,2111,1335,3446,1635.62681369704,0.6125943122460824,False,https://openalex.org/W2136573752
+33,Rethinking the Inception Architecture for Computer Vision,2016,ai,839,15256,16095,1590.5292326809567,0.05212799005902454,True,https://openalex.org/W2183341477
+34,A survey on deep learning in medical image analysis,2017,ai,969,4431,5400,1590.2366666666667,0.17944444444444443,False,https://openalex.org/W2592929672
+35,A model of saliency-based visual attention for rapid scene analysis,1998,ai,879,8286,9165,1589.3931260229133,0.09590834697217676,False,https://openalex.org/W2128272608
+36,SciPy 1.0: fundamental algorithms for scientific computing in Python,2020,ai,1944,1293,3237,1553.0379981464318,0.6005560704355886,False,https://openalex.org/W3003257820
+37,Short-Term Synaptic Plasticity,2002,neuro,2787,1035,3822,1509.442700156986,0.7291993720565149,False,https://openalex.org/W2112927743
+38,Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift,2015,ai,790,11361,12151,1477.2759443667187,0.0650152250843552,True,https://openalex.org/W1836465849
+39,Fully convolutional networks for semantic segmentation,2015,ai,752,18790,19542,1446.1242452154333,0.03848121993654693,True,https://openalex.org/W1903029394
+40,An introduction to ROC analysis,2005,ai,885,3938,4823,1445.212523325731,0.18349574953348538,False,https://openalex.org/W2158698691

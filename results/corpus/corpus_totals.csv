@@ -1,0 +1,12 @@
+quantity,value,definition
+parquet_daily_partitions,381,daily update files of the OpenAlex works snapshot
+parquet_work_records,458112708,"work records in those files, all publication years"
+parquet_supplement_records,4,hand-added records for tier-1 anchors (_tier1_supplement)
+index_works,398288606,works in the DuckDB index
+index_year_min,1990,earliest publication year in the index
+index_year_max,2026,latest publication year in the index
+index_works_1990_2025,386753369,works published 1990-2025
+index_works_with_primary_topic,311299063,"works with a primary topic, 1990-2026"
+index_works_with_references,111676520,"works with a non-empty reference list, 1990-2026"
+citation_edges,2893128636,"rows of citation_edges, one per entry of a reference list (the cited work may lie outside the index)"
+topics,4516,OpenAlex topics in the index

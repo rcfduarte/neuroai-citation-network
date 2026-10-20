@@ -1,0 +1,1041 @@
+# Headline numbers quoted in docs/supplements/S4-*.md, checked by tests/test_supplement_claims.py
+- id: s4-core-excl-cog
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Exclusive set (the article''s basis) | 90.3 | 5.0 | 2.6 | 139,730 |'
+  shown: '90.3'
+  expr: mod('analysis.s4_numbers').subfield_share('Cognitive Neuroscience', classifier='strict35')
+- id: s4-core-excl-cell
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Exclusive set (the article''s basis) | 90.3 | 5.0 | 2.6 | 139,730 |'
+  shown: '5.0'
+  expr: mod('analysis.s4_numbers').subfield_share('Cellular and Molecular Neuroscience', classifier='strict35')
+- id: s4-core-excl-neur
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Exclusive set (the article''s basis) | 90.3 | 5.0 | 2.6 | 139,730 |'
+  shown: '2.6'
+  expr: mod('analysis.s4_numbers').subfield_share('Neurology', classifier='strict35')
+- id: s4-core-excl-n
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Exclusive set (the article''s basis) | 90.3 | 5.0 | 2.6 | 139,730 |'
+  shown: 139,730
+  expr: mod('analysis.s4_numbers').vintage('n_edges','2020-2025', classifier='strict35')
+- id: s4-core-unres-cog
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Unrestricted set | 88.3 | 4.3 | 5.7 | 179,242 |'
+  shown: '88.3'
+  expr: mod('analysis.s4_numbers').subfield_share('Cognitive Neuroscience', classifier='strict35', cited_set='unrestricted')
+- id: s4-core-unres-cell
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Unrestricted set | 88.3 | 4.3 | 5.7 | 179,242 |'
+  shown: '4.3'
+  expr: mod('analysis.s4_numbers').subfield_share('Cellular and Molecular Neuroscience', classifier='strict35', cited_set='unrestricted')
+- id: s4-core-unres-neur
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Unrestricted set | 88.3 | 4.3 | 5.7 | 179,242 |'
+  shown: '5.7'
+  expr: mod('analysis.s4_numbers').subfield_share('Neurology', classifier='strict35', cited_set='unrestricted')
+- id: s4-core-unres-n
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Unrestricted set | 88.3 | 4.3 | 5.7 | 179,242 |'
+  shown: 179,242
+  expr: mod('analysis.s4_numbers').matrix_edges((2020, 2025), citing='strict')
+- id: s4-core-cell-exact
+  file: docs/supplements/S4-what-ai-cites.md
+  context: to cognitive neuroscience and 4.98 percent to cellular and molecular neuroscience
+  shown: '4.98'
+  expr: mod('analysis.s4_numbers').subfield_share('Cellular and Molecular Neuroscience', classifier='strict35')
+- id: s4-comp-ext-total
+  file: docs/supplements/S4-what-ai-cites.md
+  context: neuroscience papers cited AI works 951,900 times under the extended definition, spread over 87 topics
+  shown: 951,900
+  expr: mod('analysis.s4_numbers').comp_total()
+- id: s4-comp-ext-topics
+  file: docs/supplements/S4-what-ai-cites.md
+  context: neuroscience papers cited AI works 951,900 times under the extended definition, spread over 87 topics
+  shown: '87'
+  expr: mod('analysis.s4_numbers').comp_topics()
+- id: s4-comp-core-total
+  file: docs/supplements/S4-what-ai-cites.md
+  context: under the 35-topic core the same flow is 436,326 citations over 35 topics
+  shown: 436,326
+  expr: mod('analysis.s4_numbers').comp_total('strict')
+- id: s4-comp-core-topics
+  file: docs/supplements/S4-what-ai-cites.md
+  context: under the 35-topic core the same flow is 436,326 citations over 35 topics
+  shown: '35'
+  expr: mod('analysis.s4_numbers').comp_topics('strict')
+- id: s4-cat-found-ext
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Foundational deep learning and AI | 41.1 | 64.5 |'
+  shown: '41.1'
+  expr: mod('analysis.s4_numbers').category_share('Foundational deep learning and AI')
+- id: s4-cat-found-core
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Foundational deep learning and AI | 41.1 | 64.5 |'
+  shown: '64.5'
+  expr: mod('analysis.s4_numbers').category_share('Foundational deep learning and AI', 'strict')
+- id: s4-cat-img-ext
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Neuroimaging and medical image processing | 15.1 | 0.0 |'
+  shown: '15.1'
+  expr: mod('analysis.s4_numbers').category_share('Neuroimaging and medical image processing')
+- id: s4-cat-img-core
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Neuroimaging and medical image processing | 15.1 | 0.0 |'
+  shown: '0.0'
+  expr: mod('analysis.s4_numbers').category_share('Neuroimaging and medical image processing', 'strict')
+- id: s4-cat-stat-ext
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| General statistics and ML software | 14.5 | 21.8 |'
+  shown: '14.5'
+  expr: mod('analysis.s4_numbers').category_share('General statistics and ML software')
+- id: s4-cat-stat-core
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| General statistics and ML software | 14.5 | 21.8 |'
+  shown: '21.8'
+  expr: mod('analysis.s4_numbers').category_share('General statistics and ML software', 'strict')
+- id: s4-cat-cv-ext
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Computer-vision applications | 13.9 | 0.0 |'
+  shown: '13.9'
+  expr: mod('analysis.s4_numbers').category_share('Computer vision applications')
+- id: s4-cat-cv-core
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Computer-vision applications | 13.9 | 0.0 |'
+  shown: '0.0'
+  expr: mod('analysis.s4_numbers').category_share('Computer vision applications', 'strict')
+- id: s4-cat-brain-ext
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Brain-adjacent modeling | 10.6 | 13.7 |'
+  shown: '10.6'
+  expr: mod('analysis.s4_numbers').category_share('Brain-adjacent modelling')
+- id: s4-cat-brain-core
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Brain-adjacent modeling | 10.6 | 13.7 |'
+  shown: '13.7'
+  expr: mod('analysis.s4_numbers').category_share('Brain-adjacent modelling', 'strict')
+- id: s4-cat-off-ext
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Off-topic or misclassified | 4.9 | 0.0 |'
+  shown: '4.9'
+  expr: mod('analysis.s4_numbers').category_share('Off-topic or misclassified')
+- id: s4-cat-off-core
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Off-topic or misclassified | 4.9 | 0.0 |'
+  shown: '0.0'
+  expr: mod('analysis.s4_numbers').category_share('Off-topic or misclassified', 'strict')
+- id: s4-nna-share
+  file: docs/supplements/S4-what-ai-cites.md
+  context: alone takes 14.3 percent of the extended flow
+  shown: '14.3'
+  expr: mod('analysis.s4_numbers').topic_share('Neural Networks and Applications')
+- id: s4-stat-1995
+  file: docs/supplements/S4-what-ai-cites.md
+  context: rising from 4.4 percent of the 1995 citations to a peak of 18.4 percent in 2021
+  shown: '4.4'
+  expr: mod('analysis.s4_numbers').category_share('General statistics and ML software', years=(1995, 1995))
+- id: s4-stat-2021
+  file: docs/supplements/S4-what-ai-cites.md
+  context: rising from 4.4 percent of the 1995 citations to a peak of 18.4 percent in 2021
+  shown: '18.4'
+  expr: mod('analysis.s4_numbers').category_share('General statistics and ML software', years=(2021, 2021))
+- id: s4-stat-core-1995
+  file: docs/supplements/S4-what-ai-cites.md
+  context: rising from 3.2 percent in 1995 to 32.1 percent in 2022 and 30.9 percent in 2023
+  shown: '3.2'
+  expr: mod('analysis.s4_numbers').category_share('General statistics and ML software', 'strict', years=(1995, 1995))
+- id: s4-stat-core-2022
+  file: docs/supplements/S4-what-ai-cites.md
+  context: rising from 3.2 percent in 1995 to 32.1 percent in 2022 and 30.9 percent in 2023
+  shown: '32.1'
+  expr: mod('analysis.s4_numbers').category_share('General statistics and ML software', 'strict', years=(2022, 2022))
+- id: s4-stat-core-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: rising from 3.2 percent in 1995 to 32.1 percent in 2022 and 30.9 percent in 2023
+  shown: '30.9'
+  expr: mod('analysis.s4_numbers').category_share('General statistics and ML software', 'strict', years=(2023, 2023))
+- id: s4-r-topic
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '"Data Analysis with R" (1.8 percent of the extended flow)'
+  shown: '1.8'
+  expr: mod('analysis.s4_numbers').topic_share('Data Analysis with R')
+- id: s4-brain-1995
+  file: docs/supplements/S4-what-ai-cites.md
+  context: they took 20.0 percent of neuroscience's AI citations in 1995 and 6.2 percent in 2023; under the core, 26.2 and 6.7 percent
+  shown: '20.0'
+  expr: mod('analysis.s4_numbers').category_share('Brain-adjacent modelling', years=(1995, 1995))
+- id: s4-brain-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: they took 20.0 percent of neuroscience's AI citations in 1995 and 6.2 percent in 2023; under the core, 26.2 and 6.7 percent
+  shown: '6.2'
+  expr: mod('analysis.s4_numbers').category_share('Brain-adjacent modelling', years=(2023, 2023))
+- id: s4-brain-core-1995
+  file: docs/supplements/S4-what-ai-cites.md
+  context: they took 20.0 percent of neuroscience's AI citations in 1995 and 6.2 percent in 2023; under the core, 26.2 and 6.7 percent
+  shown: '26.2'
+  expr: mod('analysis.s4_numbers').category_share('Brain-adjacent modelling', 'strict', years=(1995, 1995))
+- id: s4-brain-core-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: they took 20.0 percent of neuroscience's AI citations in 1995 and 6.2 percent in 2023; under the core, 26.2 and 6.7 percent
+  shown: '6.7'
+  expr: mod('analysis.s4_numbers').category_share('Brain-adjacent modelling', 'strict', years=(2023, 2023))
+- id: s4-head-total
+  file: docs/supplements/S4-what-ai-cites.md
+  context: the extended gold flow holds 1,188,383 citations to 217,988 distinct AI works
+  shown: 1,188,383
+  expr: mod('analysis.s4_numbers').concentration(0.5, 'total_edges')
+- id: s4-head-works
+  file: docs/supplements/S4-what-ai-cites.md
+  context: the extended gold flow holds 1,188,383 citations to 217,988 distinct AI works
+  shown: 217,988
+  expr: mod('analysis.s4_numbers').concentration(0.5, 'n_distinct_cited_works')
+- id: s4-head-half
+  file: docs/supplements/S4-what-ai-cites.md
+  context: half of the citations go to just 4,379 of them, 2.0 percent of the cited works
+  shown: 4,379
+  expr: mod('analysis.s4_numbers').concentration(0.5)
+- id: s4-head-half-share
+  file: docs/supplements/S4-what-ai-cites.md
+  context: half of the citations go to just 4,379 of them, 2.0 percent of the cited works
+  shown: '2.0'
+  expr: mod('analysis.s4_numbers').concentration(0.5, 'share_of_works')
+- id: s4-lme4
+  file: docs/supplements/S4-what-ai-cites.md
+  context: with 8,094 citations from neuroscience papers
+  shown: 8,094
+  expr: mod('analysis.s4_numbers').head(1)
+- id: s4-head-img25
+  file: docs/supplements/S4-what-ai-cites.md
+  context: Of the 25 most-cited works, 10 are neuroimaging tools
+  shown: '10'
+  expr: mod('analysis.s4_numbers').head_category_count('Neuroimaging and medical image processing', 25)
+- id: s4-mizar
+  file: docs/supplements/S4-what-ai-cites.md
+  context: collects 1,680 citations from neuroscience papers
+  shown: 1,680
+  expr: mod('analysis.s4_numbers').head(34)
+- id: s4-neuro-ai-sf-1
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 57.5 percent went to the AI subfield and 42.0 percent to computer vision in 2010-2019
+  shown: '57.5'
+  expr: mod('analysis.s4_numbers').subfield_share('Artificial Intelligence', period='2010-2019', direction='neuro_to_ai')
+- id: s4-neuro-ai-sf-2
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 57.5 percent went to the AI subfield and 42.0 percent to computer vision in 2010-2019
+  shown: '42.0'
+  expr: mod('analysis.s4_numbers').subfield_share('Computer Vision and Pattern Recognition', period='2010-2019', direction='neuro_to_ai')
+- id: s4-neuro-ai-sf-3
+  file: docs/supplements/S4-what-ai-cites.md
+  context: and 54.3 and 44.7 percent in 2020-2025
+  shown: '54.3'
+  expr: mod('analysis.s4_numbers').subfield_share('Artificial Intelligence', direction='neuro_to_ai')
+- id: s4-neuro-ai-sf-4
+  file: docs/supplements/S4-what-ai-cites.md
+  context: and 54.3 and 44.7 percent in 2020-2025
+  shown: '44.7'
+  expr: mod('analysis.s4_numbers').subfield_share('Computer Vision and Pattern Recognition', direction='neuro_to_ai')
+- id: s4-vt-n-2010
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Citations, exclusive set | 224,890 | 315,457 | 179,925 |'
+  shown: 224,890
+  expr: mod('analysis.s4_numbers').vintage('n_edges','2010-2019')
+- id: s4-vt-n-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Citations, exclusive set | 224,890 | 315,457 | 179,925 |'
+  shown: 179,925
+  expr: mod('analysis.s4_numbers').vintage('n_edges','2020-2023')
+- id: s4-vt-median_cited_year-2010-2019
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Median cited year | 2007 | 2015 | 2014 |'
+  shown: '2007'
+  expr: mod('analysis.s4_numbers').vintage('median_cited_year','2010-2019')
+- id: s4-vt-median_cited_year-2020-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Median cited year | 2007 | 2015 | 2014 |'
+  shown: '2015'
+  expr: mod('analysis.s4_numbers').vintage('median_cited_year','2020-2025')
+- id: s4-vt-median_cited_year-2020-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Median cited year | 2007 | 2015 | 2014 |'
+  shown: '2014'
+  expr: mod('analysis.s4_numbers').vintage('median_cited_year','2020-2023')
+- id: s4-vt-share_le2005-2010-2019
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share published 2005 or earlier (%) | 43.8 | 19.9 | 23.1 |'
+  shown: '43.8'
+  expr: mod('analysis.s4_numbers').vintage('share_le2005','2010-2019')
+- id: s4-vt-share_le2005-2020-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share published 2005 or earlier (%) | 43.8 | 19.9 | 23.1 |'
+  shown: '19.9'
+  expr: mod('analysis.s4_numbers').vintage('share_le2005','2020-2025')
+- id: s4-vt-share_le2005-2020-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share published 2005 or earlier (%) | 43.8 | 19.9 | 23.1 |'
+  shown: '23.1'
+  expr: mod('analysis.s4_numbers').vintage('share_le2005','2020-2023')
+- id: s4-vt-share_le2004-2010-2019
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share published 2004 or earlier (%) | 39.3 | 17.8 | 20.7 |'
+  shown: '39.3'
+  expr: mod('analysis.s4_numbers').vintage('share_le2004','2010-2019')
+- id: s4-vt-share_le2004-2020-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share published 2004 or earlier (%) | 39.3 | 17.8 | 20.7 |'
+  shown: '17.8'
+  expr: mod('analysis.s4_numbers').vintage('share_le2004','2020-2025')
+- id: s4-vt-share_le2004-2020-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share published 2004 or earlier (%) | 39.3 | 17.8 | 20.7 |'
+  shown: '20.7'
+  expr: mod('analysis.s4_numbers').vintage('share_le2004','2020-2023')
+- id: s4-vt-mean_age-2010-2019
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Mean age (years) | 9.2 | 10.1 | 10.1 |'
+  shown: '9.2'
+  expr: mod('analysis.s4_numbers').vintage('mean_age','2010-2019')
+- id: s4-vt-mean_age-2020-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Mean age (years) | 9.2 | 10.1 | 10.1 |'
+  shown: '10.1'
+  expr: mod('analysis.s4_numbers').vintage('mean_age','2020-2025')
+- id: s4-vt-mean-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Mean age (years) | 9.2 | 10.1 | 10.1 |'
+  shown: '10.1'
+  expr: mod('analysis.s4_numbers').vintage('mean_age','2020-2023')
+- id: s4-win-le5-2010-2019
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Within ages 0-20: share aged 5 or less (%) | 38.0 | 43.1 | 42.4 |'
+  shown: '38.0'
+  expr: mod('analysis.s4_numbers').age_window('le5','2010-2019')
+- id: s4-win-le5-2020-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Within ages 0-20: share aged 5 or less (%) | 38.0 | 43.1 | 42.4 |'
+  shown: '43.1'
+  expr: mod('analysis.s4_numbers').age_window('le5','2020-2025')
+- id: s4-win-le5-2020-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Within ages 0-20: share aged 5 or less (%) | 38.0 | 43.1 | 42.4 |'
+  shown: '42.4'
+  expr: mod('analysis.s4_numbers').age_window('le5','2020-2023')
+- id: s4-win-med-2010-2019
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Within ages 0-20: median age (years) | 7 | 7 | 7 |'
+  shown: '7'
+  expr: mod('analysis.s4_numbers').age_window('median','2010-2019')
+- id: s4-win-med-2020-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Within ages 0-20: median age (years) | 7 | 7 | 7 |'
+  shown: '7'
+  expr: mod('analysis.s4_numbers').age_window('median','2020-2025')
+- id: s4-unres-med
+  file: docs/supplements/S4-what-ai-cites.md
+  context: I find the median moves from 2007 to 2016 and the share falls from 42.5 to 18.0 percent
+  shown: '2016'
+  expr: mod('analysis.s4_numbers').vintage('median_cited_year','2020-2025', cited_set='unrestricted')
+- id: s4-unres-old1
+  file: docs/supplements/S4-what-ai-cites.md
+  context: I find the median moves from 2007 to 2016 and the share falls from 42.5 to 18.0 percent
+  shown: '42.5'
+  expr: mod('analysis.s4_numbers').vintage('share_le2005','2010-2019', cited_set='unrestricted')
+- id: s4-unres-old2
+  file: docs/supplements/S4-what-ai-cites.md
+  context: I find the median moves from 2007 to 2016 and the share falls from 42.5 to 18.0 percent
+  shown: '18.0'
+  expr: mod('analysis.s4_numbers').vintage('share_le2005','2020-2025', cited_set='unrestricted')
+- id: s4-ar-med
+  file: docs/supplements/S4-what-ai-cites.md
+  context: restricted to articles and reviews, the median again moves from 2007 to 2015
+  shown: '2015'
+  expr: mod('analysis.s4_numbers').vintage('median_cited_year','2020-2025', citing_def='article_review')
+- id: s4-lag-2012
+  file: docs/supplements/S4-what-ai-cites.md
+  context: eight years behind it in every year from 2012 to 2025
+  shown: '2012'
+  expr: 'pd.read_csv(RESULTS/''vintage/vintage_by_year.csv'').query("direction==''ai_to_neuro'' and cited_set==''exclusive'' and citing_year>=2000 and citing_year<=2025").pipe(lambda b: b[b.citing_year - b.median_cited_year != 8].citing_year.max() + 1)'
+- id: s4-rm-total
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 'took out 13,946 cited works: 13,925 by the title pattern, 11 clear AI papers and 10 borderline ones'
+  shown: 13,946
+  expr: mod('analysis.s4_numbers').removed_count()
+- id: s4-rm-regex
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 'took out 13,946 cited works: 13,925 by the title pattern, 11 clear AI papers and 10 borderline ones'
+  shown: 13,925
+  expr: mod('analysis.s4_numbers').removed_count('title regex')
+- id: s4-rm-clear
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 'took out 13,946 cited works: 13,925 by the title pattern, 11 clear AI papers and 10 borderline ones'
+  shown: '11'
+  expr: mod('analysis.s4_numbers').removed_count('manual (clear)')
+- id: s4-rm-border
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 'took out 13,946 cited works: 13,925 by the title pattern, 11 clear AI papers and 10 borderline ones'
+  shown: '10'
+  expr: mod('analysis.s4_numbers').removed_count('manual (borderline)')
+- id: s4-rb-cognitive_share-2010-2019
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Cognitive share (%) | 86.1 | 82.4 | 82.9 |'
+  shown: '86.1'
+  expr: mod('analysis.s4_numbers').robustness('cognitive_share', 'regex_plus_clear_plus_borderline', 'exclusive', '2010-2019')
+- id: s4-rb-cognitive_share-2020-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Cognitive share (%) | 86.1 | 82.4 | 82.9 |'
+  shown: '82.4'
+  expr: mod('analysis.s4_numbers').robustness('cognitive_share', 'regex_plus_clear_plus_borderline', 'exclusive', '2020-2025')
+- id: s4-rb-cognitive_share-2020-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Cognitive share (%) | 86.1 | 82.4 | 82.9 |'
+  shown: '82.9'
+  expr: mod('analysis.s4_numbers').robustness('cognitive_share', 'regex_plus_clear_plus_borderline', 'exclusive', '2020-2023')
+- id: s4-rb-median_cited_year-2010-2019
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Median cited year | 2006 | 2014 | 2013 |'
+  shown: '2006'
+  expr: mod('analysis.s4_numbers').robustness('median_cited_year', 'regex_plus_clear_plus_borderline', 'exclusive', '2010-2019')
+- id: s4-rb-median_cited_year-2020-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Median cited year | 2006 | 2014 | 2013 |'
+  shown: '2014'
+  expr: mod('analysis.s4_numbers').robustness('median_cited_year', 'regex_plus_clear_plus_borderline', 'exclusive', '2020-2025')
+- id: s4-rb-median_cited_year-2020-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Median cited year | 2006 | 2014 | 2013 |'
+  shown: '2013'
+  expr: mod('analysis.s4_numbers').robustness('median_cited_year', 'regex_plus_clear_plus_borderline', 'exclusive', '2020-2023')
+- id: s4-rb-share_le2005-2010-2019
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share published 2005 or earlier (%) | 45.6 | 22.1 | 25.7 |'
+  shown: '45.6'
+  expr: mod('analysis.s4_numbers').robustness('share_le2005', 'regex_plus_clear_plus_borderline', 'exclusive', '2010-2019')
+- id: s4-rb-share_le2005-2020-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share published 2005 or earlier (%) | 45.6 | 22.1 | 25.7 |'
+  shown: '22.1'
+  expr: mod('analysis.s4_numbers').robustness('share_le2005', 'regex_plus_clear_plus_borderline', 'exclusive', '2020-2025')
+- id: s4-rb-share_le2005-2020-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share published 2005 or earlier (%) | 45.6 | 22.1 | 25.7 |'
+  shown: '25.7'
+  expr: mod('analysis.s4_numbers').robustness('share_le2005', 'regex_plus_clear_plus_borderline', 'exclusive', '2020-2023')
+- id: s4-rb-cog-excl-max
+  file: docs/supplements/S4-what-ai-cites.md
+  context: Exclusive, the cognitive share holds within 0.7 points
+  shown: '0.7'
+  expr: np.ceil(10*pd.read_csv(RESULTS/'vintage/robustness.csv').query("cited_set=='exclusive'").d_cognitive_share_pp.abs().max())/10
+- id: s4-rb-cog-unres
+  file: docs/supplements/S4-what-ai-cites.md
+  context: Unrestricted, it moves by up to 2.2 points for 2020-2025
+  shown: '2.2'
+  expr: pd.read_csv(RESULTS/'vintage/robustness.csv').query("cited_set=='unrestricted' and period=='2020-2025'").d_cognitive_share_pp.max()
+- id: s4-rb-old-lo
+  file: docs/supplements/S4-what-ai-cites.md
+  context: for 2020-2025 rise by 2.2 to 2.8 points across the cells
+  shown: '2.2'
+  expr: pd.read_csv(RESULTS/'vintage/robustness.csv').query("period=='2020-2025' and stage!='baseline'").d_share_le2005_pp.min()
+- id: s4-rb-old-hi
+  file: docs/supplements/S4-what-ai-cites.md
+  context: for 2020-2025 rise by 2.2 to 2.8 points across the cells
+  shown: '2.8'
+  expr: pd.read_csv(RESULTS/'vintage/robustness.csv').query("period=='2020-2025' and stage!='baseline'").d_share_le2005_pp.max()
+- id: s4-shift-lo
+  file: docs/supplements/S4-what-ai-cites.md
+  context: stays between 23.3 and 23.9 points
+  shown: '23.3'
+  expr: -pd.read_csv(RESULTS/'vintage/robustness_shift.csv').query("cited_set=='exclusive' and comparison=='2010-2019 -> 2020-2025'").share_le2005_change_pp.max()
+- id: s4-shift-hi
+  file: docs/supplements/S4-what-ai-cites.md
+  context: stays between 23.3 and 23.9 points
+  shown: '23.9'
+  expr: -pd.read_csv(RESULTS/'vintage/robustness_shift.csv').query("cited_set=='exclusive' and comparison=='2010-2019 -> 2020-2025'").share_le2005_change_pp.min()
+- id: s4-shift-med
+  file: docs/supplements/S4-what-ai-cites.md
+  context: In the exclusive set the median moves by 8 years at every stage of removal
+  shown: '8'
+  expr: pd.read_csv(RESULTS/'vintage/robustness_shift.csv').query("cited_set=='exclusive' and comparison=='2010-2019 -> 2020-2025'").median_shift_years.min()
+- id: s4-rev-median_cited_year-2010-2019
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Median cited year | 2006 | 2016 | 2015 |'
+  shown: '2006'
+  expr: mod('analysis.s4_numbers').vintage('median_cited_year','2010-2019', direction='neuro_to_ai')
+- id: s4-rev-median_cited_year-2020-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Median cited year | 2006 | 2016 | 2015 |'
+  shown: '2016'
+  expr: mod('analysis.s4_numbers').vintage('median_cited_year','2020-2025', direction='neuro_to_ai')
+- id: s4-rev-median_cited_year-2020-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Median cited year | 2006 | 2016 | 2015 |'
+  shown: '2015'
+  expr: mod('analysis.s4_numbers').vintage('median_cited_year','2020-2023', direction='neuro_to_ai')
+- id: s4-rev-share_le2005-2010-2019
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share published 2005 or earlier (%) | 47.6 | 17.4 | 20.8 |'
+  shown: '47.6'
+  expr: mod('analysis.s4_numbers').vintage('share_le2005','2010-2019', direction='neuro_to_ai')
+- id: s4-rev-share_le2005-2020-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share published 2005 or earlier (%) | 47.6 | 17.4 | 20.8 |'
+  shown: '17.4'
+  expr: mod('analysis.s4_numbers').vintage('share_le2005','2020-2025', direction='neuro_to_ai')
+- id: s4-rev-share_le2005-2020-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share published 2005 or earlier (%) | 47.6 | 17.4 | 20.8 |'
+  shown: '20.8'
+  expr: mod('analysis.s4_numbers').vintage('share_le2005','2020-2023', direction='neuro_to_ai')
+- id: s4-rev-win-med-2010-2019
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Within ages 0-20: median age (years) | 8 | 6 | 6 |'
+  shown: '8'
+  expr: mod('analysis.s4_numbers').age_window('median','2010-2019', direction='neuro_to_ai')
+- id: s4-rev-win-med-2020-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Within ages 0-20: median age (years) | 8 | 6 | 6 |'
+  shown: '6'
+  expr: mod('analysis.s4_numbers').age_window('median','2020-2025', direction='neuro_to_ai')
+- id: s4-rev-win-med-2020-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Within ages 0-20: median age (years) | 8 | 6 | 6 |'
+  shown: '6'
+  expr: mod('analysis.s4_numbers').age_window('median','2020-2023', direction='neuro_to_ai')
+- id: s4-rev-win-le5-2010-2019
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Within ages 0-20: share aged 5 or less (%) | 35.5 | 49.0 | 46.4 |'
+  shown: '35.5'
+  expr: mod('analysis.s4_numbers').age_window('le5','2010-2019', direction='neuro_to_ai')
+- id: s4-rev-win-le5-2020-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Within ages 0-20: share aged 5 or less (%) | 35.5 | 49.0 | 46.4 |'
+  shown: '49.0'
+  expr: mod('analysis.s4_numbers').age_window('le5','2020-2025', direction='neuro_to_ai')
+- id: s4-rev-win-le5-2020-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Within ages 0-20: share aged 5 or less (%) | 35.5 | 49.0 | 46.4 |'
+  shown: '46.4'
+  expr: mod('analysis.s4_numbers').age_window('le5','2020-2023', direction='neuro_to_ai')
+- id: s4-rev-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: In 2025 alone the median AI work cited by neuroscience dates from 2019
+  shown: '2019'
+  expr: pd.read_csv(RESULTS/'vintage/vintage_by_year.csv').query("direction=='neuro_to_ai' and cited_set=='exclusive' and citing_year==2025").median_cited_year.iloc[0]
+- id: s4-fwd-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: and the median neuroscience work cited by AI from 2017
+  shown: '2017'
+  expr: pd.read_csv(RESULTS/'vintage/vintage_by_year.csv').query("direction=='ai_to_neuro' and cited_set=='exclusive' and citing_year==2025").median_cited_year.iloc[0]
+- id: s4-man-hassabis-ai
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Hassabis et al. 2017 | 341 | 206 | 288 | 835 |'
+  shown: '341'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Hassabis 2017','ai']
+- id: s4-man-hassabis-neuro
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Hassabis et al. 2017 | 341 | 206 | 288 | 835 |'
+  shown: '206'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Hassabis 2017','neuro']
+- id: s4-man-hassabis-other
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Hassabis et al. 2017 | 341 | 206 | 288 | 835 |'
+  shown: '288'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Hassabis 2017','other']
+- id: s4-man-hassabis-total
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Hassabis et al. 2017 | 341 | 206 | 288 | 835 |'
+  shown: '835'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Hassabis 2017','total']
+- id: s4-man-richards-ai
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Richards et al. 2019 | 153 | 365 | 140 | 658 |'
+  shown: '153'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Richards 2019','ai']
+- id: s4-man-richards-neuro
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Richards et al. 2019 | 153 | 365 | 140 | 658 |'
+  shown: '365'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Richards 2019','neuro']
+- id: s4-man-richards-other
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Richards et al. 2019 | 153 | 365 | 140 | 658 |'
+  shown: '140'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Richards 2019','other']
+- id: s4-man-richards-total
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Richards et al. 2019 | 153 | 365 | 140 | 658 |'
+  shown: '658'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Richards 2019','total']
+- id: s4-man-lillicrap-ai
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Lillicrap et al. 2020 | 201 | 208 | 122 | 531 |'
+  shown: '201'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Lillicrap 2020','ai']
+- id: s4-man-lillicrap-neuro
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Lillicrap et al. 2020 | 201 | 208 | 122 | 531 |'
+  shown: '208'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Lillicrap 2020','neuro']
+- id: s4-man-lillicrap-other
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Lillicrap et al. 2020 | 201 | 208 | 122 | 531 |'
+  shown: '122'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Lillicrap 2020','other']
+- id: s4-man-lillicrap-total
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Lillicrap et al. 2020 | 201 | 208 | 122 | 531 |'
+  shown: '531'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Lillicrap 2020','total']
+- id: s4-man-sinz-ai
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Sinz et al. 2019 | 41 | 54 | 32 | 127 |'
+  shown: '41'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Sinz 2019','ai']
+- id: s4-man-sinz-neuro
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Sinz et al. 2019 | 41 | 54 | 32 | 127 |'
+  shown: '54'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Sinz 2019','neuro']
+- id: s4-man-sinz-other
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Sinz et al. 2019 | 41 | 54 | 32 | 127 |'
+  shown: '32'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Sinz 2019','other']
+- id: s4-man-sinz-total
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Sinz et al. 2019 | 41 | 54 | 32 | 127 |'
+  shown: '127'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Sinz 2019','total']
+- id: s4-man-macpherson-ai
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Macpherson et al. 2021 | 8 | 17 | 35 | 60 |'
+  shown: '8'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Macpherson 2021','ai']
+- id: s4-man-macpherson-neuro
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Macpherson et al. 2021 | 8 | 17 | 35 | 60 |'
+  shown: '17'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Macpherson 2021','neuro']
+- id: s4-man-macpherson-other
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Macpherson et al. 2021 | 8 | 17 | 35 | 60 |'
+  shown: '35'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Macpherson 2021','other']
+- id: s4-man-macpherson-total
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Macpherson et al. 2021 | 8 | 17 | 35 | 60 |'
+  shown: '60'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Macpherson 2021','total']
+- id: s4-man-zador-ai
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Zador et al. 2023 | 16 | 19 | 21 | 56 |'
+  shown: '16'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Zador 2023','ai']
+- id: s4-man-zador-neuro
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Zador et al. 2023 | 16 | 19 | 21 | 56 |'
+  shown: '19'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Zador 2023','neuro']
+- id: s4-man-zador-other
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Zador et al. 2023 | 16 | 19 | 21 | 56 |'
+  shown: '21'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Zador 2023','other']
+- id: s4-man-zador-total
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Zador et al. 2023 | 16 | 19 | 21 | 56 |'
+  shown: '56'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short').loc['Zador 2023','total']
+- id: s4-man-all-ai
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| All six | 760 | 869 | 638 | 2,267 |'
+  shown: '760'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short')['ai'].sum()
+- id: s4-man-all-neuro
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| All six | 760 | 869 | 638 | 2,267 |'
+  shown: '869'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short')['neuro'].sum()
+- id: s4-man-all-other
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| All six | 760 | 869 | 638 | 2,267 |'
+  shown: '638'
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short')['other'].sum()
+- id: s4-man-all-total
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| All six | 760 | 869 | 638 | 2,267 |'
+  shown: 2,267
+  expr: pd.read_csv(RESULTS/'manifestos/totals_2020_2023_by_citing_field.csv').set_index('short')['total'].sum()
+- id: s4-man-ai-2017
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 'citations from AI papers to the six rose from 3 in 2017 to 144 in 2020 and 215 in 2021, then held near 200: 194 in 2022, 207 in 2023, 185 in 2024 and 214 in 2025'
+  shown: '3'
+  expr: pd.read_csv(RESULTS/'manifestos/share_of_flow_by_year.csv').set_index('year').loc[2017,'from_ai']
+- id: s4-man-ai-2020
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 'citations from AI papers to the six rose from 3 in 2017 to 144 in 2020 and 215 in 2021, then held near 200: 194 in 2022, 207 in 2023, 185 in 2024 and 214 in 2025'
+  shown: '144'
+  expr: pd.read_csv(RESULTS/'manifestos/share_of_flow_by_year.csv').set_index('year').loc[2020,'from_ai']
+- id: s4-man-ai-2021
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 'citations from AI papers to the six rose from 3 in 2017 to 144 in 2020 and 215 in 2021, then held near 200: 194 in 2022, 207 in 2023, 185 in 2024 and 214 in 2025'
+  shown: '215'
+  expr: pd.read_csv(RESULTS/'manifestos/share_of_flow_by_year.csv').set_index('year').loc[2021,'from_ai']
+- id: s4-man-ai-2022
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 'citations from AI papers to the six rose from 3 in 2017 to 144 in 2020 and 215 in 2021, then held near 200: 194 in 2022, 207 in 2023, 185 in 2024 and 214 in 2025'
+  shown: '194'
+  expr: pd.read_csv(RESULTS/'manifestos/share_of_flow_by_year.csv').set_index('year').loc[2022,'from_ai']
+- id: s4-man-ai-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 'citations from AI papers to the six rose from 3 in 2017 to 144 in 2020 and 215 in 2021, then held near 200: 194 in 2022, 207 in 2023, 185 in 2024 and 214 in 2025'
+  shown: '207'
+  expr: pd.read_csv(RESULTS/'manifestos/share_of_flow_by_year.csv').set_index('year').loc[2023,'from_ai']
+- id: s4-man-ai-2024
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 'citations from AI papers to the six rose from 3 in 2017 to 144 in 2020 and 215 in 2021, then held near 200: 194 in 2022, 207 in 2023, 185 in 2024 and 214 in 2025'
+  shown: '185'
+  expr: pd.read_csv(RESULTS/'manifestos/share_of_flow_by_year.csv').set_index('year').loc[2024,'from_ai']
+- id: s4-man-ai-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 'citations from AI papers to the six rose from 3 in 2017 to 144 in 2020 and 215 in 2021, then held near 200: 194 in 2022, 207 in 2023, 185 in 2024 and 214 in 2025'
+  shown: '214'
+  expr: pd.read_csv(RESULTS/'manifestos/share_of_flow_by_year.csv').set_index('year').loc[2025,'from_ai']
+- id: s4-flow-2020
+  file: docs/supplements/S4-what-ai-cites.md
+  context: from 57,081 edges in 2020 to 72,841 in 2023 and 97,295 in 2025
+  shown: 57,081
+  expr: pd.read_csv(RESULTS/'manifestos/share_of_flow_by_year.csv').set_index('year').loc[2020,'flow_ai_to_neuro_edges']
+- id: s4-flow-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: from 57,081 edges in 2020 to 72,841 in 2023 and 97,295 in 2025
+  shown: 72,841
+  expr: pd.read_csv(RESULTS/'manifestos/share_of_flow_by_year.csv').set_index('year').loc[2023,'flow_ai_to_neuro_edges']
+- id: s4-flow-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: from 57,081 edges in 2020 to 72,841 in 2023 and 97,295 in 2025
+  shown: 97,295
+  expr: pd.read_csv(RESULTS/'manifestos/share_of_flow_by_year.csv').set_index('year').loc[2025,'flow_ai_to_neuro_edges']
+- id: s4-man-share-lo
+  file: docs/supplements/S4-what-ai-cites.md
+  context: account for 0.25 to 0.32 percent of the flow in 2020-2023
+  shown: '0.25'
+  expr: mod('analysis.s4_numbers').manifesto_share_extreme('min')
+- id: s4-man-share-hi
+  file: docs/supplements/S4-what-ai-cites.md
+  context: account for 0.25 to 0.32 percent of the flow in 2020-2023
+  shown: '0.32'
+  expr: mod('analysis.s4_numbers').manifesto_share_extreme('max')
+- id: s4-man-share4-lo
+  file: docs/supplements/S4-what-ai-cites.md
+  context: the share is 0.24 to 0.31 percent
+  shown: '0.24'
+  expr: mod('analysis.s4_numbers').manifesto_share_extreme('min', col='share_of_ai_to_neuro_neuro_labelled')
+- id: s4-man-share4-hi
+  file: docs/supplements/S4-what-ai-cites.md
+  context: the share is 0.24 to 0.31 percent
+  shown: '0.31'
+  expr: mod('analysis.s4_numbers').manifesto_share_extreme('max', col='share_of_ai_to_neuro_neuro_labelled')
+- id: s4-man-share-late
+  file: docs/supplements/S4-what-ai-cites.md
+  context: and for about 0.2 percent in 2024-2025
+  shown: '0.2'
+  expr: mod('analysis.s4_numbers').manifesto_share_extreme('mean', years=(2024, 2025))
+- id: s4-man-or-max
+  file: docs/supplements/S4-what-ai-cites.md
+  context: changes the teal odds ratio of Figure 1 by at most 0.31 percent in any year from 2015 to 2023
+  shown: '0.31'
+  expr: mod('analysis.s4_numbers').or_change_max()
+- id: s4-man-or-2023a
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '(2023: 0.0544 before, 0.0543 after)'
+  shown: '0.0544'
+  expr: pd.read_csv(RESULTS/'manifestos/or_excluding_manifestos.csv').query("direction=='ai_to_neuro' and year==2023").or_restricted_baseline.iloc[0]
+- id: s4-man-or-2023b
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '(2023: 0.0544 before, 0.0543 after)'
+  shown: '0.0543'
+  expr: pd.read_csv(RESULTS/'manifestos/or_excluding_manifestos.csv').query("direction=='ai_to_neuro' and year==2023").or_restricted_without_six.iloc[0]
+- id: s4-man-or-gold
+  file: docs/supplements/S4-what-ai-cites.md
+  context: and the gold one by at most 0.02 percent
+  shown: '0.02'
+  expr: mod('analysis.s4_numbers').or_change_max('neuro_to_ai')
+- id: s4-man-rho
+  file: docs/supplements/S4-what-ai-cites.md
+  context: at a Spearman coefficient of 0.59 (exact p = 0.098)
+  shown: '0.59'
+  expr: json.load(open(RESULTS/'manifestos/curve_comparison.json'))['spearman_changes_vs_flow_ai_to_neuro_edges']
+- id: s4-man-p
+  file: docs/supplements/S4-what-ai-cites.md
+  context: at a Spearman coefficient of 0.59 (exact p = 0.098)
+  shown: '0.098'
+  expr: json.load(open(RESULTS/'manifestos/curve_comparison.json'))['exact_p_vs_flow_ai_to_neuro_edges']
+- id: s4-man-rho-or
+  file: docs/supplements/S4-what-ai-cites.md
+  context: with changes in the odds ratio at -0.34 (p = 0.36)
+  shown: '-0.34'
+  expr: json.load(open(RESULTS/'manifestos/curve_comparison.json'))['spearman_changes_vs_flow_or_restricted']
+- id: s4-man-p-or
+  file: docs/supplements/S4-what-ai-cites.md
+  context: with changes in the odds ratio at -0.34 (p = 0.36)
+  shown: '0.36'
+  expr: json.load(open(RESULTS/'manifestos/curve_comparison.json'))['exact_p_vs_flow_or_restricted']
+- id: s4-man-rho-lvl
+  file: docs/supplements/S4-what-ai-cites.md
+  context: Levels correlate at 0.98
+  shown: '0.98'
+  expr: json.load(open(RESULTS/'manifestos/curve_comparison.json'))['spearman_levels_vs_flow_ai_to_neuro_edges']
+- id: s4-ra-ai-n_refs
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| References with a dated cited work | 12,173,300 | 14,320,543 |'
+  shown: 12,173,300
+  expr: mod('analysis.s4_numbers').refage('n_refs','ai')
+- id: s4-ra-neuro-n_refs
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| References with a dated cited work | 12,173,300 | 14,320,543 |'
+  shown: 14,320,543
+  expr: mod('analysis.s4_numbers').refage('n_refs','neuro')
+- id: s4-ra-ai-median_age
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Median age (years) | 4 | 8 |'
+  shown: '4'
+  expr: mod('analysis.s4_numbers').refage('median_age','ai')
+- id: s4-ra-neuro-median_age
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Median age (years) | 4 | 8 |'
+  shown: '8'
+  expr: mod('analysis.s4_numbers').refage('median_age','neuro')
+- id: s4-ra-ai-mean_age
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Mean age (years) | 6.6 | 9.7 |'
+  shown: '6.6'
+  expr: mod('analysis.s4_numbers').refage('mean_age','ai')
+- id: s4-ra-neuro-mean_age
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Mean age (years) | 6.6 | 9.7 |'
+  shown: '9.7'
+  expr: mod('analysis.s4_numbers').refage('mean_age','neuro')
+- id: s4-ra-ai-p90_age
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| 90th percentile (years) | 16 | 21 |'
+  shown: '16'
+  expr: mod('analysis.s4_numbers').refage('p90_age','ai')
+- id: s4-ra-neuro-p90_age
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| 90th percentile (years) | 16 | 21 |'
+  shown: '21'
+  expr: mod('analysis.s4_numbers').refage('p90_age','neuro')
+- id: s4-ra-ai-share_le5
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share aged 5 or less (%) | 58.5 | 36.2 |'
+  shown: '58.5'
+  expr: mod('analysis.s4_numbers').refage('share_le5','ai')
+- id: s4-ra-neuro-share_le5
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share aged 5 or less (%) | 58.5 | 36.2 |'
+  shown: '36.2'
+  expr: mod('analysis.s4_numbers').refage('share_le5','neuro')
+- id: s4-ra-ai-share_le10
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share aged 10 or less (%) | 80.1 | 62.2 |'
+  shown: '80.1'
+  expr: mod('analysis.s4_numbers').refage('share_le10','ai')
+- id: s4-ra-neuro-share_le10
+  file: docs/supplements/S4-what-ai-cites.md
+  context: '| Share aged 10 or less (%) | 80.1 | 62.2 |'
+  shown: '62.2'
+  expr: mod('analysis.s4_numbers').refage('share_le10','neuro')
+- id: s4-ra-ai-all-med
+  file: docs/supplements/S4-what-ai-cites.md
+  context: I get an AI median of 5 years and a share of 58.2 percent
+  shown: '5'
+  expr: mod('analysis.s4_numbers').refage('median_age','ai', types='all')
+- id: s4-ra-ai-all-le5
+  file: docs/supplements/S4-what-ai-cites.md
+  context: I get an AI median of 5 years and a share of 58.2 percent
+  shown: '58.2'
+  expr: mod('analysis.s4_numbers').refage('share_le5','ai', types='all')
+- id: s4-ra-ai-2010s
+  file: docs/supplements/S4-what-ai-cites.md
+  context: the AI median was 6 years for papers of 2010-2019
+  shown: '6'
+  expr: mod('analysis.s4_numbers').refage('median_age','ai', period='2010-2019')
+- id: s4-ra-neuro-2010s
+  file: docs/supplements/S4-what-ai-cites.md
+  context: while the neuroscience median went from 7 to 8
+  shown: '7'
+  expr: mod('analysis.s4_numbers').refage('median_age','neuro', period='2010-2019')
+- id: s4-ra-x-ai-med
+  file: docs/supplements/S4-what-ai-cites.md
+  context: the median cited work is 7 years old and 43.4 percent are five years old or less
+  shown: '7'
+  expr: mod('analysis.s4_numbers').refage('median_age','ai', scope='to_other_field')
+- id: s4-ra-x-ai-le5
+  file: docs/supplements/S4-what-ai-cites.md
+  context: the median cited work is 7 years old and 43.4 percent are five years old or less
+  shown: '43.4'
+  expr: mod('analysis.s4_numbers').refage('share_le5','ai', scope='to_other_field')
+- id: s4-ra-x-neuro-med
+  file: docs/supplements/S4-what-ai-cites.md
+  context: the median is also 7 years and the share 41.9 percent
+  shown: '7'
+  expr: mod('analysis.s4_numbers').refage('median_age','neuro', scope='to_other_field')
+- id: s4-ra-x-neuro-le5
+  file: docs/supplements/S4-what-ai-cites.md
+  context: the median is also 7 years and the share 41.9 percent
+  shown: '41.9'
+  expr: mod('analysis.s4_numbers').refage('share_le5','neuro', scope='to_other_field')
+- id: s4-cov-ai-lo
+  file: docs/supplements/S4-what-ai-cites.md
+  context: Only 41.7 to 57.0 percent of AI works of 2020-2025 have any reference list
+  shown: '41.7'
+  expr: mod('analysis.s4_numbers').coverage_extreme('min','ai',(2020, 2025))
+- id: s4-cov-ai-hi
+  file: docs/supplements/S4-what-ai-cites.md
+  context: Only 41.7 to 57.0 percent of AI works of 2020-2025 have any reference list
+  shown: '57.0'
+  expr: mod('analysis.s4_numbers').coverage_extreme('max','ai',(2020, 2025))
+- id: s4-cov-ai-2020
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 52.1 percent in 2020, 46.0 percent in 2023, 41.7 percent in 2025
+  shown: '52.1'
+  expr: mod('analysis.s4_numbers').coverage('share_with_reflist','ai',2020)
+- id: s4-cov-ai-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 52.1 percent in 2020, 46.0 percent in 2023, 41.7 percent in 2025
+  shown: '46.0'
+  expr: mod('analysis.s4_numbers').coverage('share_with_reflist','ai',2023)
+- id: s4-cov-ai-2025
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 52.1 percent in 2020, 46.0 percent in 2023, 41.7 percent in 2025
+  shown: '41.7'
+  expr: mod('analysis.s4_numbers').coverage('share_with_reflist','ai',2025)
+- id: s4-cov-neuro-lo
+  file: docs/supplements/S4-what-ai-cites.md
+  context: against 55.5 to 59.3 percent of neuroscience works in 2020-2024
+  shown: '55.5'
+  expr: mod('analysis.s4_numbers').coverage_extreme('min','neuro',(2020, 2024))
+- id: s4-cov-neuro-hi
+  file: docs/supplements/S4-what-ai-cites.md
+  context: against 55.5 to 59.3 percent of neuroscience works in 2020-2024
+  shown: '59.3'
+  expr: mod('analysis.s4_numbers').coverage_extreme('max','neuro',(2020, 2024))
+- id: s4-cov-ar-2020
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 60.3 percent in 2020 and 70.7 percent in 2023
+  shown: '60.3'
+  expr: mod('analysis.s4_numbers').coverage('share_with_reflist','ai',2020,'article_review')
+- id: s4-cov-ar-2023
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 60.3 percent in 2020 and 70.7 percent in 2023
+  shown: '70.7'
+  expr: mod('analysis.s4_numbers').coverage('share_with_reflist','ai',2023,'article_review')
+- id: s4-dated-ai
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 80.6 percent of AI references and 91.1 percent of neuroscience references resolve to a dated work
+  shown: '80.6'
+  expr: mod('analysis.s4_numbers').dated_share('ai')
+- id: s4-dated-neuro
+  file: docs/supplements/S4-what-ai-cites.md
+  context: 80.6 percent of AI references and 91.1 percent of neuroscience references resolve to a dated work
+  shown: '91.1'
+  expr: mod('analysis.s4_numbers').dated_share('neuro')
+- id: s4x-ra-ai-with-future
+  file: docs/supplements/S4-what-ai-cites.md
+  context: against 12,261,289 and 14,335,868 if the 87,989 and 15,325 dropped references were kept
+  shown: 12,261,289
+  expr: pd.read_csv(RESULTS/'vintage/reference_age_by_field.csv').query("citing_field=='ai' and types=='article_review' and scope=='all_references' and citing_year>=2020 and citing_year<=2023").eval('n_refs+n_dropped_future_dated').sum()
+- id: s4x-ra-neuro-with-future
+  file: docs/supplements/S4-what-ai-cites.md
+  context: against 12,261,289 and 14,335,868 if the 87,989 and 15,325 dropped references were kept
+  shown: 14,335,868
+  expr: pd.read_csv(RESULTS/'vintage/reference_age_by_field.csv').query("citing_field=='neuro' and types=='article_review' and scope=='all_references' and citing_year>=2020 and citing_year<=2023").eval('n_refs+n_dropped_future_dated').sum()
+- id: s4x-ra-ai-dropped
+  file: docs/supplements/S4-what-ai-cites.md
+  context: against 12,261,289 and 14,335,868 if the 87,989 and 15,325 dropped references were kept
+  shown: 87,989
+  expr: pd.read_csv(RESULTS/'vintage/reference_age_by_field.csv').query("citing_field=='ai' and types=='article_review' and scope=='all_references' and citing_year>=2020 and citing_year<=2023").n_dropped_future_dated.sum()
+- id: s4x-ra-neuro-dropped
+  file: docs/supplements/S4-what-ai-cites.md
+  context: against 12,261,289 and 14,335,868 if the 87,989 and 15,325 dropped references were kept
+  shown: 15,325
+  expr: pd.read_csv(RESULTS/'vintage/reference_age_by_field.csv').query("citing_field=='neuro' and types=='article_review' and scope=='all_references' and citing_year>=2020 and citing_year<=2023").n_dropped_future_dated.sum()
+- id: s4-core-excl-cog-text
+  file: docs/supplements/S4-what-ai-cites.md
+  context: AI papers of 2020-2025, under the 35-topic core definition, send 90.3 percent of their citations
+  shown: '90.3'
+  expr: mod('analysis.s4_numbers').subfield_share('Cognitive Neuroscience', classifier='strict35')
+- id: s4-core-unres-text-cog
+  file: docs/supplements/S4-what-ai-cites.md
+  context: Counting the unrestricted cited set instead, the shares are 88.3 and 4.3 percent, and neurology takes 5.7 percent
+  shown: '88.3'
+  expr: mod('analysis.s4_numbers').subfield_share('Cognitive Neuroscience', classifier='strict35', cited_set='unrestricted')
+- id: s4-core-unres-text-cell
+  file: docs/supplements/S4-what-ai-cites.md
+  context: Counting the unrestricted cited set instead, the shares are 88.3 and 4.3 percent, and neurology takes 5.7 percent
+  shown: '4.3'
+  expr: mod('analysis.s4_numbers').subfield_share('Cellular and Molecular Neuroscience', classifier='strict35', cited_set='unrestricted')
+- id: s4-core-unres-text-neur
+  file: docs/supplements/S4-what-ai-cites.md
+  context: Counting the unrestricted cited set instead, the shares are 88.3 and 4.3 percent, and neurology takes 5.7 percent
+  shown: '5.7'
+  expr: mod('analysis.s4_numbers').subfield_share('Neurology', classifier='strict35', cited_set='unrestricted')
+- id: s4-core-2023-cog
+  file: docs/supplements/S4-what-ai-cites.md
+  context: gives 91.2 and 4.41 percent for the exclusive set
+  shown: '91.2'
+  expr: mod('analysis.s4_numbers').subfield_share('Cognitive Neuroscience', period='2020-2023', classifier='strict35')
+- id: s4-core-2023-cell
+  file: docs/supplements/S4-what-ai-cites.md
+  context: gives 91.2 and 4.41 percent for the exclusive set
+  shown: '4.41'
+  expr: mod('analysis.s4_numbers').subfield_share('Cellular and Molecular Neuroscience', period='2020-2023', classifier='strict35')
+- id: s4-core-cog-2010s
+  file: docs/supplements/S4-what-ai-cites.md
+  context: The cognitive share was 91.7 percent in 2010-2019 and 90.3 percent in 2020-2025
+  shown: '91.7'
+  expr: mod('analysis.s4_numbers').subfield_share('Cognitive Neuroscience', period='2010-2019', classifier='strict35')
+- id: s4-core-cog-2020s
+  file: docs/supplements/S4-what-ai-cites.md
+  context: The cognitive share was 91.7 percent in 2010-2019 and 90.3 percent in 2020-2025
+  shown: '90.3'
+  expr: mod('analysis.s4_numbers').subfield_share('Cognitive Neuroscience', classifier='strict35')
+- id: s4-core-cog-min
+  file: docs/supplements/S4-what-ai-cites.md
+  context: it lies between 90.1 percent (2015) and 92.5 percent (2021)
+  shown: '90.1'
+  expr: mod('analysis.s4_numbers').matrix_share_extreme('min', 'Cognitive Neuroscience', (2010, 2024), citing='strict', cited_set='exclusive')
+- id: s4-core-cog-max
+  file: docs/supplements/S4-what-ai-cites.md
+  context: it lies between 90.1 percent (2015) and 92.5 percent (2021)
+  shown: '92.5'
+  expr: mod('analysis.s4_numbers').matrix_share_extreme('max', 'Cognitive Neuroscience', (2010, 2024), citing='strict', cited_set='exclusive')
+- id: s4-core-cog-2015
+  file: docs/supplements/S4-what-ai-cites.md
+  context: it lies between 90.1 percent (2015) and 92.5 percent (2021)
+  shown: '2015'
+  expr: "mod('analysis.s4_numbers').matrix_share_extreme('min', 'Cognitive Neuroscience', (2010, 2024), citing='strict', cited_set='exclusive', what='year')"
+- id: s4-core-cog-2021
+  file: docs/supplements/S4-what-ai-cites.md
+  context: it lies between 90.1 percent (2015) and 92.5 percent (2021)
+  shown: '2021'
+  expr: "mod('analysis.s4_numbers').matrix_share_extreme('max', 'Cognitive Neuroscience', (2010, 2024), citing='strict', cited_set='exclusive', what='year')"
+- id: s4-med-article-2007
+  file: docs/supplements/S4-what-ai-cites.md
+  context: rests on the median cited year, 2007 in 2010-2019 and 2015 in 2020-2025
+  shown: '2007'
+  expr: mod('analysis.s4_numbers').vintage('median_cited_year','2010-2019')
+- id: s4-med-article-2015
+  file: docs/supplements/S4-what-ai-cites.md
+  context: rests on the median cited year, 2007 in 2010-2019 and 2015 in 2020-2025
+  shown: '2015'
+  expr: mod('analysis.s4_numbers').vintage('median_cited_year','2020-2025')
+- id: s4-ext-excl-cog
+  file: docs/supplements/S4-what-ai-cites.md
+  context: the same two shares for the exclusive set in 2020-2025 are 82.7 percent and 9.96 percent
+  shown: '82.7'
+  expr: mod('analysis.s4_numbers').matrix_share('Cognitive Neuroscience', (2020, 2025), citing='all', cited_set='exclusive')
+- id: s4-ext-excl-cell
+  file: docs/supplements/S4-what-ai-cites.md
+  context: the same two shares for the exclusive set in 2020-2025 are 82.7 percent and 9.96 percent
+  shown: '9.96'
+  expr: mod('analysis.s4_numbers').matrix_share('Cellular and Molecular Neuroscience', (2020, 2025), citing='all', cited_set='exclusive')

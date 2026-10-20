@@ -1,0 +1,210 @@
+topic_id,topic_name,subfield_id,subfield_name,field_id,field_name,label_extended,label_strict_core35,note,n_works_1990_2025
+T10028,Topic Modeling,1702,Artificial Intelligence,17,Computer Science,ai,ai,,144830
+T10100,Metaheuristic Optimization Algorithms Research,1702,Artificial Intelligence,17,Computer Science,ai,ai,,68406
+T10181,Natural Language Processing Techniques,1702,Artificial Intelligence,17,Computer Science,ai,ai,,260625
+T10201,Speech Recognition and Synthesis,1702,Artificial Intelligence,17,Computer Science,ai,ai,,86586
+T10215,Semantic Web and Ontologies,1702,Artificial Intelligence,17,Computer Science,ai,ai,,157059
+T10320,Neural Networks and Applications,1702,Artificial Intelligence,17,Computer Science,ai,ai,,226984
+T10456,Multi-Agent Systems and Negotiation,1702,Artificial Intelligence,17,Computer Science,ai,ai,,52669
+T10462,Reinforcement Learning in Robotics,1702,Artificial Intelligence,17,Computer Science,ai,ai,,49378
+T10637,Advanced Clustering Algorithms Research,1702,Artificial Intelligence,17,Computer Science,ai,ai,,35010
+T10664,Sentiment Analysis and Opinion Mining,1702,Artificial Intelligence,17,Computer Science,ai,ai,,60538
+T10820,Fuzzy Logic and Control Systems,1702,Artificial Intelligence,17,Computer Science,ai,ai,,54018
+T10862,AI in cancer detection,1702,Artificial Intelligence,17,Computer Science,ai,other,,74185
+T10906,AI-based Problem Solving and Planning,1702,Artificial Intelligence,17,Computer Science,ai,ai,,44414
+T11010,"Logic, Reasoning, and Knowledge",1702,Artificial Intelligence,17,Computer Science,ai,ai,,64655
+T11273,Advanced Graph Neural Networks,1702,Artificial Intelligence,17,Computer Science,ai,ai,,44625
+T11303,Bayesian Modeling and Causal Inference,1702,Artificial Intelligence,17,Computer Science,ai,ai,,49386
+T11307,Domain Adaptation and Few-Shot Learning,1702,Artificial Intelligence,17,Computer Science,ai,other,,40453
+T11512,Anomaly Detection Techniques and Applications,1702,Artificial Intelligence,17,Computer Science,ai,ai,,71029
+T11550,Text and Document Classification Technologies,1702,Artificial Intelligence,17,Computer Science,ai,ai,,33278
+T11574,Artificial Intelligence in Games,1702,Artificial Intelligence,17,Computer Science,ai,ai,,42225
+T11612,Stochastic Gradient Optimization Techniques,1702,Artificial Intelligence,17,Computer Science,ai,ai,,21542
+T11652,Imbalanced Data Classification Techniques,1702,Artificial Intelligence,17,Computer Science,ai,ai,,33417
+T11689,Adversarial Robustness in Machine Learning,1702,Artificial Intelligence,17,Computer Science,ai,ai,,48567
+T11901,Bayesian Methods and Mixture Models,1702,Artificial Intelligence,17,Computer Science,ai,ai,,48236
+T11975,Evolutionary Algorithms and Applications,1702,Artificial Intelligence,17,Computer Science,ai,ai,,67988
+T12026,Explainable Artificial Intelligence (XAI),1702,Artificial Intelligence,17,Computer Science,ai,ai,,38126
+T12031,Speech and dialogue systems,1702,Artificial Intelligence,17,Computer Science,ai,ai,,50809
+T12072,Machine Learning and Algorithms,1702,Artificial Intelligence,17,Computer Science,ai,ai,,32174
+T12262,Hate Speech and Cyberbullying Detection,1702,Artificial Intelligence,17,Computer Science,ai,other,,39463
+T12380,Authorship Attribution and Profiling,1702,Artificial Intelligence,17,Computer Science,ai,other,,21675
+T12535,Machine Learning and Data Classification,1702,Artificial Intelligence,17,Computer Science,ai,ai,,36233
+T12611,Neural Networks and Reservoir Computing,1702,Artificial Intelligence,17,Computer Science,ai,ai,,28949
+T12676,Machine Learning and ELM,1702,Artificial Intelligence,17,Computer Science,ai,ai,,16186
+T12761,Data Stream Mining Techniques,1702,Artificial Intelligence,17,Computer Science,ai,ai,,19173
+T12805,Cognitive Science and Mapping,1702,Artificial Intelligence,17,Computer Science,ai,ai,,34032
+T12814,Gaussian Processes and Bayesian Inference,1702,Artificial Intelligence,17,Computer Science,ai,ai,,21079
+T13062,Cognitive Computing and Networks,1702,Artificial Intelligence,17,Computer Science,ai,ai,,16101
+T13083,Advanced Text Analysis Techniques,1702,Artificial Intelligence,17,Computer Science,ai,ai,,40114
+T13398,Data Analysis with R,1702,Artificial Intelligence,17,Computer Science,ai,other,,165585
+T13514,Experience-Based Knowledge Management,1702,Artificial Intelligence,17,Computer Science,ai,other,,2429
+T13623,Linguistic Studies and Language Acquisition,1702,Artificial Intelligence,17,Computer Science,ai,other,,117943
+T13629,Text Readability and Simplification,1702,Artificial Intelligence,17,Computer Science,ai,other,,16845
+T13650,Computational Physics and Python Applications,1702,Artificial Intelligence,17,Computer Science,ai,other,,299586
+T13674,Computer Science and Engineering,1702,Artificial Intelligence,17,Computer Science,ai,other,,54358
+T13702,Machine Learning in Healthcare,1702,Artificial Intelligence,17,Computer Science,ai,other,,35286
+T13734,Advanced Computational Techniques and Applications,1702,Artificial Intelligence,17,Computer Science,ai,other,,174214
+T13898,Diverse Interdisciplinary Research Studies,1702,Artificial Intelligence,17,Computer Science,ai,other,,18591
+T13904,Artificial Intelligence Applications,1702,Artificial Intelligence,17,Computer Science,ai,ai,,17010
+T14351,Statistical and Computational Modeling,1702,Artificial Intelligence,17,Computer Science,ai,other,,19422
+T14381,"Psychiatry, Mental Health, Neuroscience",1702,Artificial Intelligence,17,Computer Science,ai,other,,24150
+T14413,Advanced Technologies in Various Fields,1702,Artificial Intelligence,17,Computer Science,ai,other,,13713
+T10036,Advanced Neural Network Applications,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,92751
+T10052,Medical Image Segmentation Techniques,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,79726
+T10057,Face and Expression Recognition,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,72731
+T10331,Video Surveillance and Tracking Methods,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,79976
+T10388,Advanced Steganography and Watermarking Techniques,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,70466
+T10444,Context-Aware Activity Recognition Systems,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,67162
+T10531,Advanced Vision and Imaging,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,99951
+T10586,Robotic Path Planning Algorithms,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,107487
+T10601,Handwritten Text Recognition Techniques,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,65539
+T10627,Advanced Image and Video Retrieval Techniques,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,109899
+T10638,Optical measurement and interference techniques,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,60859
+T10688,Image and Signal Denoising Methods,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,86905
+T10775,Generative Adversarial Networks and Image Synthesis,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,43696
+T10799,Data Visualization and Analytics,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,77496
+T10812,Human Pose and Action Recognition,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,46211
+T10824,Image Retrieval and Classification Techniques,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,73560
+T10888,Augmented Reality Applications,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,69562
+T10901,Advanced Data Compression Techniques,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,60634
+T11017,Chaos-based Image/Signal Encryption,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,53137
+T11019,Image Enhancement Techniques,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,41400
+T11105,Advanced Image Processing Techniques,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,37527
+T11165,Image and Video Quality Assessment,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,30614
+T11349,Music Technology and Sound Studies,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,114349
+T11439,Video Analysis and Summarization,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,46442
+T11448,Face recognition and analysis,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,52781
+T11605,Visual Attention and Saliency Detection,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,25089
+T11714,Multimodal Machine Learning Applications,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,47227
+T12292,Graph Theory and Algorithms,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,33628
+T12357,Digital Media Forensic Detection,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,22550
+T12549,Image and Object Detection Techniques,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,25753
+T12874,Digital Imaging for Blood Diseases,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,27058
+T12923,Digital Image Processing Techniques,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,21277
+T13579,Image and Video Stabilization,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,8069
+T14319,Currency Recognition and Detection,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,12785
+T14339,Image Processing and 3D Reconstruction,1707,Computer Vision and Pattern Recognition,17,Computer Science,ai,other,,192974
+T10502,Advanced Memory and Neural Computing,2208,Electrical and Electronic Engineering,22,Engineering,ai,other,,89949
+T10529,Stress Responses and Cortisol,2802,Behavioral Neuroscience,28,Neuroscience,neuroscience,neuroscience,,86764
+T11337,Tryptophan and brain disorders,2803,Biological Psychiatry,28,Neuroscience,neuroscience,neuroscience,,55546
+T10056,Neurotransmitter Receptor Influence on Behavior,2804,Cellular and Molecular Neuroscience,28,Neuroscience,neuroscience,neuroscience,,75868
+T10077,Neuroscience and Neuropharmacology Research,2804,Cellular and Molecular Neuroscience,28,Neuroscience,neuroscience,neuroscience,,181102
+T10423,Neurobiology and Insect Physiology Research,2804,Cellular and Molecular Neuroscience,28,Neuroscience,neuroscience,neuroscience,,89841
+T10483,Nerve injury and regeneration,2804,Cellular and Molecular Neuroscience,28,Neuroscience,neuroscience,neuroscience,,55958
+T10814,Neuropeptides and Animal Physiology,2804,Cellular and Molecular Neuroscience,28,Neuroscience,neuroscience,neuroscience,,80851
+T10949,Genetic Neurodegenerative Diseases,2804,Cellular and Molecular Neuroscience,28,Neuroscience,neuroscience,neuroscience,,71452
+T11406,Cerebrospinal fluid and hydrocephalus,2804,Cellular and Molecular Neuroscience,28,Neuroscience,neuroscience,neuroscience,,52007
+T11601,Neuroscience and Neural Engineering,2804,Cellular and Molecular Neuroscience,28,Neuroscience,neuroscience,neuroscience,,57931
+T12061,Axon Guidance and Neuronal Signaling,2804,Cellular and Molecular Neuroscience,28,Neuroscience,neuroscience,neuroscience,,28082
+T12236,Photoreceptor and optogenetics research,2804,Cellular and Molecular Neuroscience,28,Neuroscience,neuroscience,neuroscience,,53768
+T12331,Hereditary Neurological Disorders,2804,Cellular and Molecular Neuroscience,28,Neuroscience,neuroscience,neuroscience,,22435
+T13446,"Antioxidants, Aging, Portulaca oleracea",2804,Cellular and Molecular Neuroscience,28,Neuroscience,neuroscience,neuroscience,,15667
+T13991,Nuclear Receptors and Signaling,2804,Cellular and Molecular Neuroscience,28,Neuroscience,neuroscience,neuroscience,,20936
+T10042,Neural and Behavioral Psychology Studies,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,74074
+T10106,Autism Spectrum Disorder Research,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,140584
+T10241,Functional Brain Connectivity Studies,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,110754
+T10283,Hearing Loss and Rehabilitation,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,88868
+T10427,Visual perception and processing mechanisms,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,96265
+T10429,EEG and Brain-Computer Interfaces,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,145315
+T10448,Memory and Neural Mechanisms,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,62034
+T10465,Neurobiology of Language and Bilingualism,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,71437
+T10581,Neural dynamics and brain function,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,119850
+T10788,Neuroscience and Music Perception,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,57930
+T10914,Tactile and Sensory Interactions,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,58347
+T10918,Memory Processes and Influences,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,38314
+T10982,Motor Control and Adaptation,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,44015
+T10985,Sleep and Wakefulness Research,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,68878
+T11094,Face Recognition and Perception,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,43889
+T11883,Embodied and Extended Cognition,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,29258
+T11953,"Neuroethics, Human Enhancement, Biomedical Innovations",2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,38854
+T11997,Free Will and Agency,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,25132
+T12035,Pain Management and Placebo Effect,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,40492
+T12520,Psychology of Moral and Emotional Judgment,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,45373
+T12608,Spatial Neglect and Hemispheric Dysfunction,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,19975
+T12621,Hemispheric Asymmetry in Neuroscience,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,26090
+T12650,Aesthetic Perception and Analysis,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,29874
+T13106,"Neuroscience, Education and Cognitive Function",2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,61131
+T13219,Mind wandering and attention,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,16793
+T13397,Hallucinations in medical conditions,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,10982
+T14394,Cognitive Science and Education Research,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,26411
+T14411,Undergraduate Neuroscience Education and Research,2805,Cognitive Neuroscience,28,Neuroscience,neuroscience,neuroscience,,4680
+T10608,Neurogenesis and neuroplasticity mechanisms,2806,Developmental Neuroscience,28,Neuroscience,neuroscience,neuroscience,,56363
+T12963,Anesthesia and Neurotoxicity Research,2806,Developmental Neuroscience,28,Neuroscience,neuroscience,neuroscience,,49419
+T13258,Williams Syndrome Research,2806,Developmental Neuroscience,28,Neuroscience,neuroscience,neuroscience,,18842
+T10342,Circadian rhythm and melatonin,2807,Endocrine and Autonomic Systems,28,Neuroscience,neuroscience,neuroscience,,80655
+T10489,Regulation of Appetite and Obesity,2807,Endocrine and Autonomic Systems,28,Neuroscience,neuroscience,neuroscience,,66521
+T11456,Neuroscience of respiration and sleep,2807,Endocrine and Autonomic Systems,28,Neuroscience,neuroscience,neuroscience,,57906
+T10542,Vestibular and auditory disorders,2808,Neurology,28,Neuroscience,neuroscience,neuroscience,,78031
+T10614,Transcranial Magnetic Stimulation Studies,2808,Neurology,28,Neuroscience,neuroscience,neuroscience,,51104
+T11266,Neuroinflammation and Neurodegeneration Mechanisms,2808,Neurology,28,Neuroscience,neuroscience,neuroscience,,76338
+T11872,Barrier Structure and Function Studies,2808,Neurology,28,Neuroscience,neuroscience,neuroscience,,24500
+T12580,Vagus Nerve Stimulation Research,2808,Neurology,28,Neuroscience,neuroscience,neuroscience,,17043
+T12702,Brain Tumor Detection and Classification,2808,Neurology,28,Neuroscience,neuroscience,neuroscience,,45721
+T12854,Neurology and Historical Studies,2808,Neurology,28,Neuroscience,neuroscience,neuroscience,,80295
+T13481,Neurological diseases and metabolism,2808,Neurology,28,Neuroscience,neuroscience,neuroscience,,17604
+T13796,Neurological Disorders and Treatments,2808,Neurology,28,Neuroscience,neuroscience,neuroscience,,57485
+T14144,Neurological Disease Mechanisms and Treatments,2808,Neurology,28,Neuroscience,neuroscience,neuroscience,,47722
+T10334,"Hearing, Cochlea, Tinnitus, Genetics",2809,Sensory Systems,28,Neuroscience,neuroscience,neuroscience,,66960
+T10971,Olfactory and Sensory Function Studies,2809,Sensory Systems,28,Neuroscience,neuroscience,neuroscience,,75295
+T11204,Ion Channels and Receptors,2809,Sensory Systems,28,Neuroscience,neuroscience,neuroscience,,40951
+T10020,Quantum Information and Cryptography,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),130019
+T10126,"Logic, programming, and type systems",1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),89358
+T10237,Cryptography and Data Security,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),77718
+T10639,Advanced Software Engineering Methodologies,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),56671
+T10682,Quantum Computing Algorithms and Architecture,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),101989
+T10711,Target Tracking and Data Fusion in Sensor Networks,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),52163
+T10764,Privacy-Preserving Technologies in Data,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),74894
+T10951,Cryptographic Implementations and Security,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),42179
+T11130,Coding theory and cryptography,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),58362
+T11269,Algorithms and Data Compression,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),62496
+T11276,Solar Radiation and Photovoltaics,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),47207
+T11424,Security and Verification in Computing,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),35942
+T11598,Internet Traffic Analysis and Secure E-voting,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),36747
+T11902,Intelligent Tutoring Systems and Adaptive Learning,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),49216
+T12128,AI in Service Interactions,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),45713
+T12131,Wireless Signal Modulation Classification,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),17141
+T12157,Geochemistry and Geologic Mapping,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),3489996
+T12260,Educational Technology and Pedagogy,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),43506
+T13018,Seismology and Earthquake Studies,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),45334
+T13559,Edcuational Technology Systems,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),79773
+T13567,AI and Multimedia in Education,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),4221
+T13851,"Law, AI, and Intellectual Property",1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),29459
+T13935,Mathematical Control Systems and Analysis,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),11351
+T14064,Organizational and Employee Performance,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),39188
+T14175,Intuitionistic Fuzzy Systems Applications,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),8202
+T14335,Educational Robotics and Engineering,1702,Artificial Intelligence,17,Computer Science,other,other,excluded from AI (one of the 26),202299
+T10054,Parallel Computing and Optimization Techniques,1708,Hardware and Architecture,17,Computer Science,other,other,"neighboring subfield, not counted",170928
+T10904,Embedded Systems Design Techniques,1708,Hardware and Architecture,17,Computer Science,other,other,"neighboring subfield, not counted",75613
+T10933,Real-Time Systems Scheduling,1708,Hardware and Architecture,17,Computer Science,other,other,"neighboring subfield, not counted",46336
+T11032,VLSI and Analog Circuit Testing,1708,Hardware and Architecture,17,Computer Science,other,other,"neighboring subfield, not counted",50927
+T12122,Physical Unclonable Functions (PUFs) and Hardware Security,1708,Hardware and Architecture,17,Computer Science,other,other,"neighboring subfield, not counted",19955
+T12326,Network Packet Processing and Optimization,1708,Hardware and Architecture,17,Computer Science,other,other,"neighboring subfield, not counted",18603
+T14067,Cloud Computing and Remote Desktop Technologies,1708,Hardware and Architecture,17,Computer Science,other,other,"neighboring subfield, not counted",11403
+T14098,Energy Efficiency in Computing,1708,Hardware and Architecture,17,Computer Science,other,other,"neighboring subfield, not counted",2321
+T10258,Philosophy and Theoretical Science,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",70652
+T10316,Sleep and related disorders,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",84449
+T10403,Phonetics and Phonology Research,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",113344
+T10547,"Education, Achievement, and Giftedness",3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",34921
+T10667,Emotion and Mood Recognition,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",44003
+T10853,"Anxiety, Depression, Psychometrics, Treatment, Cognitive Processes",3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",52314
+T11079,Creativity in Education and Neuroscience,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",80642
+T11118,Evolutionary Psychology and Human Behavior,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",55820
+T11148,"Language, Metaphor, and Cognition",3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",119977
+T11373,Sleep and Work-Related Fatigue,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",39657
+T11516,Visual and Cognitive Learning Processes,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",23925
+T11577,Cognitive Abilities and Testing,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",48633
+T11592,Phenomenology and Existential Philosophy,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",51001
+T12032,Multisensory perception and integration,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",34149
+T12051,Diversity and Impact of Dance,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",85739
+T12694,"Categorization, perception, and language",3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",27883
+T12757,Diverse Academia and Research Topics,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",5178
+T13211,"Memory, Trauma, and Testimony",3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",10571
+T13283,Mental Health Research Topics,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",73991
+T13284,Psychology Research and Bibliometrics,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",33196
+T13380,Sound Studies and Aurality,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",16648
+T13471,Cognitive Functions and Memory,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",12282
+T13536,Psychological and Temporal Perspectives Research,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",14293
+T14308,Psychological and Educational Research Studies,3205,Experimental and Cognitive Psychology,32,Psychology,other,other,"neighboring subfield, not counted",11342
+T11265,Aging and Gerontology Research,3206,Neuropsychology and Physiological Psychology,32,Psychology,other,other,"neighboring subfield, not counted",47701
+T14104,Developmental and Educational Neuropsychology,3206,Neuropsychology and Physiological Psychology,32,Psychology,other,other,"neighboring subfield, not counted",55706

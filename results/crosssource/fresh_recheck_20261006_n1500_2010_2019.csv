@@ -1,0 +1,5 @@
+direction,field,year,n_papers,within,target,other,per1000,ci_lo,ci_hi,n_refs_classified
+neuro_to_ai,neuro,2010,1500,22563,458,11429,13.295,9.339,17.857,34450
+ai_to_neuro,ai,2010,1500,11146,608,5827,34.583,14.742,61.809,17581
+neuro_to_ai,neuro,2011,1500,25728,407,12876,10.433,7.625,14.054,39011
+ai_to_neuro,ai,2011,1500,11378,240,5438,14.071,7.375,22.35,17056

@@ -1,0 +1,957 @@
+# Headline numbers quoted in docs/supplements/S3-*.md, checked by tests/test_supplement_claims.py
+- id: s3-cnt-1995-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 1995 | 4,439 | 1,886 | 2.35 |'
+  shown: 4,439
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[1995,'neuro_to_ai']
+- id: s3-cnt-1995-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 1995 | 4,439 | 1,886 | 2.35 |'
+  shown: 1,886
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[1995,'ai_to_neuro']
+- id: s3-cnt-1995-ratio
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 1995 | 4,439 | 1,886 | 2.35 |'
+  shown: '2.35'
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[1995,'neuro_to_ai']/mod('analysis.flow_numbers').cross_field_citations_per_year().loc[1995,'ai_to_neuro']
+- id: s3-cnt-2000-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2000 | 6,964 | 4,661 | 1.49 |'
+  shown: 6,964
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2000,'neuro_to_ai']
+- id: s3-cnt-2000-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2000 | 6,964 | 4,661 | 1.49 |'
+  shown: 4,661
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2000,'ai_to_neuro']
+- id: s3-cnt-2000-ratio
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2000 | 6,964 | 4,661 | 1.49 |'
+  shown: '1.49'
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2000,'neuro_to_ai']/mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2000,'ai_to_neuro']
+- id: s3-cnt-2010-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2010 | 24,871 | 19,946 | 1.25 |'
+  shown: 24,871
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2010,'neuro_to_ai']
+- id: s3-cnt-2010-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2010 | 24,871 | 19,946 | 1.25 |'
+  shown: 19,946
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2010,'ai_to_neuro']
+- id: s3-cnt-2010-ratio
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2010 | 24,871 | 19,946 | 1.25 |'
+  shown: '1.25'
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2010,'neuro_to_ai']/mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2010,'ai_to_neuro']
+- id: s3-cnt-2019-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2019 | 69,308 | 51,938 | 1.33 |'
+  shown: 69,308
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2019,'neuro_to_ai']
+- id: s3-cnt-2019-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2019 | 69,308 | 51,938 | 1.33 |'
+  shown: 51,938
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2019,'ai_to_neuro']
+- id: s3-cnt-2019-ratio
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2019 | 69,308 | 51,938 | 1.33 |'
+  shown: '1.33'
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2019,'neuro_to_ai']/mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2019,'ai_to_neuro']
+- id: s3-cnt-2023-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2023 | 103,054 | 72,841 | 1.41 |'
+  shown: 103,054
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2023,'neuro_to_ai']
+- id: s3-cnt-2023-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2023 | 103,054 | 72,841 | 1.41 |'
+  shown: 72,841
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2023,'ai_to_neuro']
+- id: s3-cnt-2023-ratio
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2023 | 103,054 | 72,841 | 1.41 |'
+  shown: '1.41'
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2023,'neuro_to_ai']/mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2023,'ai_to_neuro']
+- id: s3-cnt-2024-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2024 (provisional) | 114,308 | 90,282 | 1.27 |'
+  shown: 114,308
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2024,'neuro_to_ai']
+- id: s3-cnt-2024-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2024 (provisional) | 114,308 | 90,282 | 1.27 |'
+  shown: 90,282
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2024,'ai_to_neuro']
+- id: s3-cnt-2024-ratio
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2024 (provisional) | 114,308 | 90,282 | 1.27 |'
+  shown: '1.27'
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2024,'neuro_to_ai']/mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2024,'ai_to_neuro']
+- id: s3-cnt-2025-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2025 (provisional) | 112,183 | 97,295 | 1.15 |'
+  shown: 112,183
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2025,'neuro_to_ai']
+- id: s3-cnt-2025-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2025 (provisional) | 112,183 | 97,295 | 1.15 |'
+  shown: 97,295
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2025,'ai_to_neuro']
+- id: s3-cnt-2025-ratio
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2025 (provisional) | 112,183 | 97,295 | 1.15 |'
+  shown: '1.15'
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2025,'neuro_to_ai']/mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2025,'ai_to_neuro']
+- id: s3-p1000-1995-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 1995 | 11.05 | 19.33 |'
+  shown: '11.05'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[1995,'neuro_to_ai']
+- id: s3-p1000-1995-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 1995 | 11.05 | 19.33 |'
+  shown: '19.33'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[1995,'ai_to_neuro']
+- id: s3-p1000-2000-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2000 | 8.30 | 20.95 |'
+  shown: '8.30'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2000,'neuro_to_ai']
+- id: s3-p1000-2000-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2000 | 8.30 | 20.95 |'
+  shown: '20.95'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2000,'ai_to_neuro']
+- id: s3-p1000-2010-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2010 | 11.59 | 17.48 |'
+  shown: '11.59'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2010,'neuro_to_ai']
+- id: s3-p1000-2010-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2010 | 11.59 | 17.48 |'
+  shown: '17.48'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2010,'ai_to_neuro']
+- id: s3-p1000-2017-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2017 | 15.23 | 17.78 |'
+  shown: '15.23'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2017,'neuro_to_ai']
+- id: s3-p1000-2017-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2017 | 15.23 | 17.78 |'
+  shown: '17.78'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2017,'ai_to_neuro']
+- id: s3-p1000-2018-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2018 | 16.71 | 16.34 |'
+  shown: '16.71'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2018,'neuro_to_ai']
+- id: s3-p1000-2018-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2018 | 16.71 | 16.34 |'
+  shown: '16.34'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2018,'ai_to_neuro']
+- id: s3-p1000-2019-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2019 | 18.54 | 16.58 |'
+  shown: '18.54'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2019,'neuro_to_ai']
+- id: s3-p1000-2019-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2019 | 18.54 | 16.58 |'
+  shown: '16.58'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2019,'ai_to_neuro']
+- id: s3-p1000-2020-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2020 | 19.24 | 15.26 |'
+  shown: '19.24'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2020,'neuro_to_ai']
+- id: s3-p1000-2020-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2020 | 19.24 | 15.26 |'
+  shown: '15.26'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2020,'ai_to_neuro']
+- id: s3-p1000-2023-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2023 | 22.19 | 16.51 |'
+  shown: '22.19'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'neuro_to_ai']
+- id: s3-p1000-2023-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2023 | 22.19 | 16.51 |'
+  shown: '16.51'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'ai_to_neuro']
+- id: s3-p1000-2025-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2025 (provisional) | 24.34 | 21.37 |'
+  shown: '24.34'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2025,'neuro_to_ai']
+- id: s3-p1000-2025-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2025 (provisional) | 24.34 | 21.37 |'
+  shown: '21.37'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2025,'ai_to_neuro']
+- id: s3-rpp-1995-neuro
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 1995 | 9.56 | 2.78 |'
+  shown: '9.56'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[1995,'refs_per_neuroscience_paper']
+- id: s3-rpp-1995-ai
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 1995 | 9.56 | 2.78 |'
+  shown: '2.78'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[1995,'refs_per_ai_paper']
+- id: s3-rpp-2000-neuro
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2000 | 14.95 | 4.20 |'
+  shown: '14.95'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2000,'refs_per_neuroscience_paper']
+- id: s3-rpp-2000-ai
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2000 | 14.95 | 4.20 |'
+  shown: '4.20'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2000,'refs_per_ai_paper']
+- id: s3-rpp-2010-neuro
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2010 | 20.36 | 7.47 |'
+  shown: '20.36'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2010,'refs_per_neuroscience_paper']
+- id: s3-rpp-2010-ai
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2010 | 20.36 | 7.47 |'
+  shown: '7.47'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2010,'refs_per_ai_paper']
+- id: s3-rpp-2019-neuro
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2019 | 25.00 | 12.74 |'
+  shown: '25.00'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2019,'refs_per_neuroscience_paper']
+- id: s3-rpp-2019-ai
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2019 | 25.00 | 12.74 |'
+  shown: '12.74'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2019,'refs_per_ai_paper']
+- id: s3-rpp-2021-neuro
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2021 | 30.78 | 15.84 |'
+  shown: '30.78'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2021,'refs_per_neuroscience_paper']
+- id: s3-rpp-2021-ai
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2021 | 30.78 | 15.84 |'
+  shown: '15.84'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2021,'refs_per_ai_paper']
+- id: s3-rpp-2023-neuro
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2023 | 28.31 | 12.73 |'
+  shown: '28.31'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_neuroscience_paper']
+- id: s3-rpp-2023-ai
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2023 | 28.31 | 12.73 |'
+  shown: '12.73'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_ai_paper']
+- id: s3-rpp-2024-neuro
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2024 (provisional) | 23.21 | 10.39 |'
+  shown: '23.21'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2024,'refs_per_neuroscience_paper']
+- id: s3-rpp-2024-ai
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2024 (provisional) | 23.21 | 10.39 |'
+  shown: '10.39'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2024,'refs_per_ai_paper']
+- id: s3-rpp-2025-neuro
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2025 (provisional) | 16.04 | 7.76 |'
+  shown: '16.04'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2025,'refs_per_neuroscience_paper']
+- id: s3-rpp-2025-ai
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| 2025 (provisional) | 16.04 | 7.76 |'
+  shown: '7.76'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2025,'refs_per_ai_paper']
+- id: s3-ratio-min
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: Nowhere does the ratio of the two counts fall below 1.15 (in 2025)
+  shown: '1.15'
+  expr: mod('analysis.flow_numbers').count_dominance()['min_ratio']
+- id: s3-ratio-max
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: never above 2.35 (in 1995)
+  shown: '2.35'
+  expr: (mod('analysis.flow_numbers').cross_field_citations_per_year().neuro_to_ai/mod('analysis.flow_numbers').cross_field_citations_per_year().ai_to_neuro).loc[1995:].max()
+- id: s3-dominance
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: every year of the series, 1990 to 2025, with no exception
+  shown: '1990'
+  expr: 1990 if mod('analysis.flow_numbers').count_dominance()['neuro_exceeds_ai_every_year'] else -1
+- id: s3-ratio-0619-lo
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: Between 2006 and 2019 it stays within 1.19 and 1.38
+  shown: '1.19'
+  expr: (mod('analysis.flow_numbers').cross_field_citations_per_year().neuro_to_ai/mod('analysis.flow_numbers').cross_field_citations_per_year().ai_to_neuro).loc[2006:2019].min()
+- id: s3-ratio-0619-hi
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: Between 2006 and 2019 it stays within 1.19 and 1.38
+  shown: '1.38'
+  expr: (mod('analysis.flow_numbers').cross_field_citations_per_year().neuro_to_ai/mod('analysis.flow_numbers').cross_field_citations_per_year().ai_to_neuro).loc[2006:2019].max()
+- id: s3-ratio-2022
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: it rises to 1.52 in 2022
+  shown: '1.52'
+  expr: (mod('analysis.flow_numbers').cross_field_citations_per_year().neuro_to_ai/mod('analysis.flow_numbers').cross_field_citations_per_year().ai_to_neuro).loc[2022]
+- id: s3-growth-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the gold count multiplied by 23.2 and the teal count by 38.6
+  shown: '23.2'
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2023,'neuro_to_ai']/mod('analysis.flow_numbers').cross_field_citations_per_year().loc[1995,'neuro_to_ai']
+- id: s3-growth-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the gold count multiplied by 23.2 and the teal count by 38.6
+  shown: '38.6'
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2023,'ai_to_neuro']/mod('analysis.flow_numbers').cross_field_citations_per_year().loc[1995,'ai_to_neuro']
+- id: s3-fac-papers-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| papers in the citing field | x 3.90 | x 9.86 |'
+  shown: '3.90'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'neuroscience_papers']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[1995,'neuroscience_papers']
+- id: s3-fac-papers-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| papers in the citing field | x 3.90 | x 9.86 |'
+  shown: '9.86'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'ai_papers']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[1995,'ai_papers']
+- id: s3-fac-rpp-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| references recorded per paper | x 2.96 | x 4.58 |'
+  shown: '2.96'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_neuroscience_paper']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[1995,'refs_per_neuroscience_paper']
+- id: s3-fac-rpp-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| references recorded per paper | x 2.96 | x 4.58 |'
+  shown: '4.58'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_ai_paper']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[1995,'refs_per_ai_paper']
+- id: s3-fac-share-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| cross-field share, per 1,000 | x 2.01 | x 0.85 |'
+  shown: '2.01'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'neuro_to_ai']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[1995,'neuro_to_ai']
+- id: s3-fac-share-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| cross-field share, per 1,000 | x 2.01 | x 0.85 |'
+  shown: '0.85'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'ai_to_neuro']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[1995,'ai_to_neuro']
+- id: s3-fac-count-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| cross-field count | x 23.2 | x 38.6 |'
+  shown: '23.2'
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2023,'neuro_to_ai']/mod('analysis.flow_numbers').cross_field_citations_per_year().loc[1995,'neuro_to_ai']
+- id: s3-fac-count-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| cross-field count | x 23.2 | x 38.6 |'
+  shown: '38.6'
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2023,'ai_to_neuro']/mod('analysis.flow_numbers').cross_field_citations_per_year().loc[1995,'ai_to_neuro']
+- id: s3-2023-size
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: AI published 2.11 times as many papers as neuroscience that year
+  shown: '2.11'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'ai_papers']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'neuroscience_papers']
+- id: s3-2023-countratio
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: yet the gold count is 1.41 times the teal one
+  shown: '1.41'
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2023,'neuro_to_ai']/mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2023,'ai_to_neuro']
+- id: s3-2023-rppratio
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: a neuroscience paper recorded 2.22 times as many references as an AI paper
+  shown: '2.22'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_neuroscience_paper']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_ai_paper']
+- id: s3-2023-shareratio
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the neuroscience cross-field share was 1.34 times the AI one
+  shown: '1.34'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'neuro_to_ai']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'ai_to_neuro']
+- id: s3-2023-papersratio
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: (0.473 x 2.224 x 1.344 gives the 1.41)
+  shown: '0.473'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'neuroscience_papers']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'ai_papers']
+- id: s3-gold-1995
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: Starting at 11.05 per 1,000 in 1995, the gold share fell to its lowest value, 8.30, in 2000
+  shown: '11.05'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[1995,'neuro_to_ai']
+- id: s3-gold-2000
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: fell to its lowest value, 8.30, in 2000
+  shown: '8.30'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[:,'neuro_to_ai'].min()
+- id: s3-gold-2023
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: with one yearly dip in 2003, to 22.19 in 2023
+  shown: '22.19'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'neuro_to_ai']
+- id: s3-teal-1995
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: it begins at 19.33, stays between
+  shown: '19.33'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[1995,'ai_to_neuro']
+- id: s3-teal-range-lo
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: stays between 16.2 and 18.7 from 2002 to 2019
+  shown: '16.2'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2002:2019,'ai_to_neuro'].min()
+- id: s3-teal-range-hi
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: stays between 16.2 and 18.7 from 2002 to 2019
+  shown: '18.7'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2002:2019,'ai_to_neuro'].max()
+- id: s3-teal-2020
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: falls to 15.26 in 2020 and has its lowest value, 15.19, in 2021
+  shown: '15.26'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2020,'ai_to_neuro']
+- id: s3-teal-min
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: has its lowest value, 15.19, in 2021
+  shown: '15.19'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[:,'ai_to_neuro'].min()
+- id: s3-teal-2023
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: By 2023 it is back at 16.51, still below the 20.95 of 2000
+  shown: '16.51'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'ai_to_neuro']
+- id: s3-teal-2000
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: still below the 20.95 of 2000
+  shown: '20.95'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2000,'ai_to_neuro']
+- id: s3-cross-2017
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: teal was higher in 2017 (17.78 against 15.23)
+  shown: '17.78'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2017,'ai_to_neuro']
+- id: s3-cross-2017g
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: teal was higher in 2017 (17.78 against 15.23)
+  shown: '15.23'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2017,'neuro_to_ai']
+- id: s3-cross-interp
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: puts the crossing at 2017.87
+  shown: '2017.87'
+  expr: mod('analysis.flow_numbers').share_crossing(smoothed=False)['crossing_year_interpolated']
+- id: s3-cross-interp-sm
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: with the interpolated crossing at 2018.04
+  shown: '2018.04'
+  expr: mod('analysis.flow_numbers').share_crossing(smoothed=True)['crossing_year_interpolated']
+- id: s3-size-2019
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: AI went from 1.64 times the size of neuroscience in 2019 to 2.11 times in 2023
+  shown: '1.64'
+  expr: mod('analysis.flow_numbers').size_ratio_by_year().loc[2019]
+- id: s3-size-2023
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 1.64 times the size of neuroscience in 2019 to 2.11 times in 2023
+  shown: '2.11'
+  expr: mod('analysis.flow_numbers').size_ratio_by_year().loc[2023]
+- id: s3-gold-2019
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: while the gold share went from 18.54 to 22.19
+  shown: '18.54'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2019,'neuro_to_ai']
+- id: s3-size-2006
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the ratio of AI to neuroscience papers fell from 1.66 to 1.40
+  shown: '1.66'
+  expr: mod('analysis.flow_numbers').size_ratio_by_year().loc[2006]
+- id: s3-size-2015
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the ratio of AI to neuroscience papers fell from 1.66 to 1.40
+  shown: '1.40'
+  expr: mod('analysis.flow_numbers').size_ratio_by_year().loc[2015]
+- id: s3-gold-2006
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: while the gold share rose from 10.58 to 13.24 per 1,000
+  shown: '10.58'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2006,'neuro_to_ai']
+- id: s3-gold-2015
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: while the gold share rose from 10.58 to 13.24 per 1,000
+  shown: '13.24'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2015,'neuro_to_ai']
+- id: s3-def-comp-max
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the companion value is lower by at most 0.43 percent
+  shown: '0.43'
+  expr: (((mod('analysis.flow_numbers').cross_refs_per_1000()-mod('analysis.flow_numbers').cross_refs_per_1000(include_unknown=True))/mod('analysis.flow_numbers').cross_refs_per_1000(include_unknown=True))*100).max().max()
+- id: s3-def-comp-1995
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: and by at most 0.18 percent from 1995
+  shown: '0.18'
+  expr: (((mod('analysis.flow_numbers').cross_refs_per_1000()-mod('analysis.flow_numbers').cross_refs_per_1000(include_unknown=True))/mod('analysis.flow_numbers').cross_refs_per_1000(include_unknown=True))*100).loc[1995:].max().max()
+- id: s3-third-ai
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 34.2 percent of the recorded references of AI papers in 2023
+  shown: '34.2'
+  expr: (lambda o:(o.n_to_other/(o.n_to_within+o.n_to_target+o.n_to_other)))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction'])).loc[(2023,'ai_to_neuro')]*100
+- id: s3-third-neuro
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 44.0 percent for neuroscience papers
+  shown: '44.0'
+  expr: (lambda o:(o.n_to_other/(o.n_to_within+o.n_to_target+o.n_to_other)))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction'])).loc[(2023,'neuro_to_ai')]*100
+- id: s3-obs-ai-2023
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: In 2023 the observed share is 25.10 per 1,000 for AI papers citing neuroscience against 16.51 in panel B
+  shown: '25.10'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'rho_restricted']*1000
+- id: s3-obs-gold-2023
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: and 39.65 against 22.19 for neuroscience papers citing AI
+  shown: '39.65'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'rho_restricted']*1000
+- id: s3-miss-neuro
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: In 2023 they were 8.5 percent of all references made by neuroscience papers and 19.6 percent
+  shown: '8.5'
+  expr: (lambda o:(o.n_to_missing/(o.n_to_within+o.n_to_target+o.n_to_other+o.n_to_unknown+o.n_to_missing)))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction'])).loc[(2023,'neuro_to_ai')]*100
+- id: s3-miss-ai
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: 8.5 percent of all references made by neuroscience papers and 19.6 percent of those made by AI papers
+  shown: '19.6'
+  expr: (lambda o:(o.n_to_missing/(o.n_to_within+o.n_to_target+o.n_to_other+o.n_to_unknown+o.n_to_missing)))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction'])).loc[(2023,'ai_to_neuro')]*100
+- id: s3-w23-n_to_within-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| references to own field | 2,495,721 | 2,828,899 |'
+  shown: 2,495,721
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'n_to_within']
+- id: s3-w23-n_to_within-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| references to own field | 2,495,721 | 2,828,899 |'
+  shown: 2,828,899
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'n_to_within']
+- id: s3-w23-n_to_target-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| references to the other field | 103,054 | 72,841 |'
+  shown: 103,054
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'n_to_target']
+- id: s3-w23-n_to_target-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| references to the other field | 103,054 | 72,841 |'
+  shown: 72,841
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'n_to_target']
+- id: s3-w23-n_works_source-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| papers in the citing field | 164,016 | 346,525 |'
+  shown: 164,016
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'n_works_source']
+- id: s3-w23-n_works_source-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| papers in the citing field | 164,016 | 346,525 |'
+  shown: 346,525
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'n_works_source']
+- id: s3-w23-observed-share-own-+-other-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| observed share, own + other | 0.0397 | 0.0251 |'
+  shown: '0.0397'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'rho_restricted']
+- id: s3-w23-observed-share-own-+-other-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| observed share, own + other | 0.0397 | 0.0251 |'
+  shown: '0.0251'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'rho_restricted']
+- id: s3-w23-odds-of-the-observed-share-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| odds of the observed share | 0.0413 | 0.0257 |'
+  shown: '0.0413'
+  expr: (lambda p:p/(1-p))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'rho_restricted'])
+- id: s3-w23-odds-of-the-observed-share-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| odds of the observed share | 0.0413 | 0.0257 |'
+  shown: '0.0257'
+  expr: (lambda p:p/(1-p))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'rho_restricted'])
+- id: s3-w23-expected-share-from-field-sizes-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| expected share from field sizes | 0.679 | 0.321 |'
+  shown: '0.679'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'rho_null_restricted']
+- id: s3-w23-expected-share-from-field-sizes-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| expected share from field sizes | 0.679 | 0.321 |'
+  shown: '0.321'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'rho_null_restricted']
+- id: s3-w23-odds-of-the-expected-share-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| odds of the expected share | 2.113 | 0.473 |'
+  shown: '2.113'
+  expr: (lambda p:p/(1-p))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'rho_null_restricted'])
+- id: s3-w23-odds-of-the-expected-share-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| odds of the expected share | 2.113 | 0.473 |'
+  shown: '0.473'
+  expr: (lambda p:p/(1-p))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'rho_null_restricted'])
+- id: s3-w23-odds-ratio-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| odds ratio | 0.0195 | 0.0544 |'
+  shown: '0.0195'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'or_restricted']
+- id: s3-w23-odds-ratio-teal
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| odds ratio | 0.0195 | 0.0544 |'
+  shown: '0.0544'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'or_restricted']
+- id: s3-w23-oddsratio-rawgold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: its observed odds are 1.6 times the teal ones
+  shown: '1.6'
+  expr: (lambda p:p/(1-p))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'rho_restricted'])/(lambda p:p/(1-p))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'rho_restricted'])
+- id: s3-w23-teal-over-gold
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the teal line is 2.78 times the gold line
+  shown: '2.78'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'or_restricted']/pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'or_restricted']
+- id: s3-w23-obsratio
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the observed odds of the teal line are 0.624 times those of the gold line
+  shown: '0.624'
+  expr: (lambda p:p/(1-p))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'rho_restricted'])/(lambda p:p/(1-p))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'rho_restricted'])
+- id: s3-w23-sizesq
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the squared AI-to-neuroscience size ratio is 4.46
+  shown: '4.46'
+  expr: mod('analysis.flow_numbers').size_ratio_by_year().loc[2023]**2
+- id: s3-flat-share-drop
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: fell by 15 percent (from 19.33 to 16.51 per 1,000)
+  shown: '15'
+  expr: (1-mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'ai_to_neuro']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[1995,'ai_to_neuro'])*100
+- id: s3-flat-exp-1995
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: from 0.545 to 0.321
+  shown: '0.545'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(1995,'ai_to_neuro'),'rho_null_restricted']
+- id: s3-flat-exp-2023
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: from 0.545 to 0.321
+  shown: '0.321'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'rho_null_restricted']
+- id: s3-flat-or-growth
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the teal odds ratio rose by a factor of 1.88
+  shown: '1.88'
+  expr: mod('analysis.flow_numbers').odds_ratio_growth()['ai_to_neuro']
+- id: s3-flat-gold-share
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: its raw share doubled between 1995 and 2023
+  shown: '2'
+  expr: round(mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'neuro_to_ai']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[1995,'neuro_to_ai'])
+- id: s3-flat-gold-or
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: its odds ratio fell to 0.84 of its 1995 value
+  shown: '0.84'
+  expr: mod('analysis.flow_numbers').odds_ratio_growth()['neuro_to_ai']
+- id: s3-dil-n20
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: neuroscience published 152,180 and then 164,016 papers per year
+  shown: 152,180
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2020,'neuroscience_papers']
+- id: s3-dil-n23
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: neuroscience published 152,180 and then 164,016 papers per year
+  shown: 164,016
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'neuroscience_papers']
+- id: s3-dil-a20
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: AI 261,340 and then 346,525
+  shown: 261,340
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2020,'ai_papers']
+- id: s3-dil-a23
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: AI 261,340 and then 346,525
+  shown: 346,525
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'ai_papers']
+- id: s3-dil-r20
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: so AI went from 1.72 to 2.11 times the size of neuroscience
+  shown: '1.72'
+  expr: mod('analysis.flow_numbers').size_ratio_by_year().loc[2020]
+- id: s3-dil-exp-t20
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| expected share of the cited field | 0.368 to 0.321 | 0.632 to 0.679 |'
+  shown: '0.368'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'rho_null_restricted']
+- id: s3-dil-exp-t23
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| expected share of the cited field | 0.368 to 0.321 | 0.632 to 0.679 |'
+  shown: '0.321'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'rho_null_restricted']
+- id: s3-dil-exp-g20
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| expected share of the cited field | 0.368 to 0.321 | 0.632 to 0.679 |'
+  shown: '0.632'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2020,'neuro_to_ai'),'rho_null_restricted']
+- id: s3-dil-exp-g23
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| expected share of the cited field | 0.368 to 0.321 | 0.632 to 0.679 |'
+  shown: '0.679'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'rho_null_restricted']
+- id: s3-dil-obs-t20
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| observed share, per 1,000 (own + other) | 22.48 to 25.10 | 34.01 to 39.65 |'
+  shown: '22.48'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'rho_restricted']*1000
+- id: s3-dil-obs-t23
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| observed share, per 1,000 (own + other) | 22.48 to 25.10 | 34.01 to 39.65 |'
+  shown: '25.10'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'rho_restricted']*1000
+- id: s3-dil-obs-g20
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| observed share, per 1,000 (own + other) | 22.48 to 25.10 | 34.01 to 39.65 |'
+  shown: '34.01'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2020,'neuro_to_ai'),'rho_restricted']*1000
+- id: s3-dil-obs-g23
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| observed share, per 1,000 (own + other) | 22.48 to 25.10 | 34.01 to 39.65 |'
+  shown: '39.65'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'rho_restricted']*1000
+- id: s3-dil-or-t20
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| odds ratio | 0.0395 to 0.0544 | 0.0205 to 0.0195 |'
+  shown: '0.0395'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'or_restricted']
+- id: s3-dil-or-t23
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| odds ratio | 0.0395 to 0.0544 | 0.0205 to 0.0195 |'
+  shown: '0.0544'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'or_restricted']
+- id: s3-dil-or-g20
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| odds ratio | 0.0395 to 0.0544 | 0.0205 to 0.0195 |'
+  shown: '0.0205'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2020,'neuro_to_ai'),'or_restricted']
+- id: s3-dil-or-g23
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| odds ratio | 0.0395 to 0.0544 | 0.0205 to 0.0195 |'
+  shown: '0.0195'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'or_restricted']
+- id: s3-dil-chg-t
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| change in odds ratio | x 1.38 | x 0.95 |'
+  shown: '1.38'
+  expr: pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'odds_ratio']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'odds_ratio']
+- id: s3-dil-chg-g
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| change in odds ratio | x 1.38 | x 0.95 |'
+  shown: '0.95'
+  expr: pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'odds_ratio']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'neuro_to_ai'),'odds_ratio']
+- id: s3-dil-obsodds-t
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| of which, observed odds | x 1.12 | x 1.17 |'
+  shown: '1.12'
+  expr: pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'observed_odds']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'observed_odds']
+- id: s3-dil-obsodds-g
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| of which, observed odds | x 1.12 | x 1.17 |'
+  shown: '1.17'
+  expr: pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'observed_odds']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'neuro_to_ai'),'observed_odds']
+- id: s3-dil-size-t
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| of which, field-size factor | x 1.23 | x 0.81 |'
+  shown: '1.23'
+  expr: pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'size_factor_citing_over_cited_papers']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'size_factor_citing_over_cited_papers']
+- id: s3-dil-size-g
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: '| of which, field-size factor | x 1.23 | x 0.81 |'
+  shown: '0.81'
+  expr: pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'size_factor_citing_over_cited_papers']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'neuro_to_ai'),'size_factor_citing_over_cited_papers']
+- id: s3-dil-37
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: Between 2020 and 2023 the teal odds ratio rose by 37.8 percent
+  shown: '37.8'
+  expr: (pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'odds_ratio']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'odds_ratio']-1)*100
+- id: s3-dil-12
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: Its observed odds rose by 12.0 percent
+  shown: '12.0'
+  expr: (pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'observed_odds']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'observed_odds']-1)*100
+- id: s3-dil-23
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the field-size factor by 23.0 percent
+  shown: '23.0'
+  expr: (pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'size_factor_citing_over_cited_papers']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'size_factor_citing_over_cited_papers']-1)*100
+- id: s3-dil-35
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: about 35 percent of the rise is the raw share
+  shown: '35'
+  expr: 100*np.log(pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'observed_odds']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'observed_odds'])/np.log(pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'odds_ratio']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'odds_ratio'])
+- id: s3-dil-65
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: about 65 percent is the shrinking share
+  shown: '65'
+  expr: 100*np.log(pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'size_factor_citing_over_cited_papers']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'size_factor_citing_over_cited_papers'])/np.log(pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'odds_ratio']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'odds_ratio'])
+- id: s3-dil-neuro-growth
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: Neuroscience grew by 7.8 percent over the three years
+  shown: '7.8'
+  expr: (pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'neuroscience_papers']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2020,'neuroscience_papers']-1)*100
+- id: s3-dil-ai-growth
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: AI by 32.6 percent
+  shown: '32.6'
+  expr: (pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'ai_papers']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2020,'ai_papers']-1)*100
+- id: s3-dil-cf
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the teal odds ratio would have reached 0.0442 in 2023
+  shown: '0.0442'
+  expr: (lambda p:p/(1-p))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'rho_restricted'])/(lambda p:p/(1-p))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'rho_null_restricted'])
+- id: s3-dil-cf-actual
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: instead of 0.0544
+  shown: '0.0544'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'or_restricted']
+- id: s3-dil-raw82
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: a rise of 8.2 percent, against the 37.8 percent
+  shown: '8.2'
+  expr: (mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'ai_to_neuro']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[2020,'ai_to_neuro']-1)*100
+- id: s3-dil-gold-raw
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: Its raw share rose by 15.3 percent in panel B
+  shown: '15.3'
+  expr: (mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'neuro_to_ai']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[2020,'neuro_to_ai']-1)*100
+- id: s3-dil-gold-or
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: its odds ratio fell by 4.7 percent
+  shown: '4.7'
+  expr: (1-pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'odds_ratio']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'neuro_to_ai'),'odds_ratio'])*100
+- id: s3-dil-1520a
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: fell from 27.04 to 22.48 per 1,000
+  shown: '27.04'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2015,'ai_to_neuro'),'rho_restricted']*1000
+- id: s3-dil-1520b
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: fell from 27.04 to 22.48 per 1,000
+  shown: '22.48'
+  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'rho_restricted']*1000
+- id: s3-dil-concl23
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: would still have risen by 23 percent from field sizes alone, against the 38 percent observed
+  shown: '23'
+  expr: (pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'size_factor_citing_over_cited_papers']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'size_factor_citing_over_cited_papers']-1)*100
+- id: s3-dil-concl38
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: against the 38 percent observed
+  shown: '38'
+  expr: (pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'odds_ratio']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'odds_ratio']-1)*100
+- id: s3-rpp-ratio23
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: Neuroscience papers carry about 2.2 times as many as AI papers in 2023
+  shown: '2.2'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_neuroscience_paper']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_ai_paper']
+- id: s3-rpp-ratio95
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: and 3.4 times as many in 1995
+  shown: '3.4'
+  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[1995,'refs_per_neuroscience_paper']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[1995,'refs_per_ai_paper']
+- id: s3-rpp-n92
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: neuroscience at 92 percent of its 2021 value
+  shown: '92'
+  expr: 100*pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_neuroscience_paper']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2021,'refs_per_neuroscience_paper']
+- id: s3-rpp-a80
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: AI at 80 percent
+  shown: '80'
+  expr: 100*pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_ai_paper']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2021,'refs_per_ai_paper']
+- id: s3-rpp-n52
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: by 2025 neuroscience is at 52 percent of its 2021 level
+  shown: '52'
+  expr: 100*pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2025,'refs_per_neuroscience_paper']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2021,'refs_per_neuroscience_paper']
+- id: s3-rpp-a49
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: AI at 49 percent
+  shown: '49'
+  expr: 100*pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2025,'refs_per_ai_paper']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2021,'refs_per_ai_paper']
+- id: s3-rpp-p75
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the papers per field rose by 75 and 69 percent from 2023
+  shown: '75'
+  expr: 100*(pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2025,'neuroscience_papers']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'neuroscience_papers']-1)
+- id: s3-rpp-p69
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the papers per field rose by 75 and 69 percent from 2023
+  shown: '69'
+  expr: 100*(pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2025,'ai_papers']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'ai_papers']-1)
+- id: s3-miss-1995
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: in 1995, 56.2 percent of neuroscience papers' references
+  shown: '56.2'
+  expr: (lambda o:(o.n_to_missing/(o.n_to_within+o.n_to_target+o.n_to_other+o.n_to_unknown+o.n_to_missing)))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction'])).loc[(1995,'neuro_to_ai')]*100
+- id: s3-v-gold2000
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: By 2023 the gold share is 2.68 times its value of 2000
+  shown: '2.68'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'neuro_to_ai']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[2000,'neuro_to_ai']
+- id: s3-v-gold2025
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: (2.93 times with the provisional 2025 value)
+  shown: '2.93'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2025,'neuro_to_ai']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[2000,'neuro_to_ai']
+- id: s3-v-gold1995
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: from 1995 the multiple is 2.01
+  shown: '2.01'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'neuro_to_ai']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[1995,'neuro_to_ai']
+- id: s3-v-teal2000
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: For teal the 2023 share is 0.79 of its 2000 value
+  shown: '0.79'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'ai_to_neuro']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[2000,'ai_to_neuro']
+- id: s3-v-or-min
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: (smallest ratio 1.25, in 1995)
+  shown: '1.25'
+  expr: (mod('analysis.flow_numbers').odds_ratio_at(tuple(range(1995,2026))).ai_to_neuro/mod('analysis.flow_numbers').odds_ratio_at(tuple(range(1995,2026))).neuro_to_ai).min()
+- id: s3-v-share-2023
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: (16.51 and 22.19 per 1,000 for the teal and gold lines in 2023)
+  shown: '22.19'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'neuro_to_ai']
+- id: s3-cav-size95
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: was 0.84 in 1995 and 2.11 in 2023
+  shown: '0.84'
+  expr: mod('analysis.flow_numbers').size_ratio_by_year().loc[1995]
+- id: s3-cav-teal23
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the teal count jumps from 72,841 in 2023 to 90,282 in 2024 and 97,295 in 2025
+  shown: 72,841
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2023,'ai_to_neuro']
+- id: s3-cav-teal24
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: to 90,282 in 2024
+  shown: 90,282
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2024,'ai_to_neuro']
+- id: s3-cav-teal25
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: and 97,295 in 2025
+  shown: 97,295
+  expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2025,'ai_to_neuro']
+- id: s3-cav-rpp-neuro
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: fall to 57 percent (neuroscience) and 61 percent (AI) of their 2023 values
+  shown: '57'
+  expr: 100*pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2025,'refs_per_neuroscience_paper']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_neuroscience_paper']
+- id: s3-cav-rpp-ai
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: fall to 57 percent (neuroscience) and 61 percent (AI) of their 2023 values
+  shown: '61'
+  expr: 100*pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2025,'refs_per_ai_paper']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_ai_paper']
+# S5 bridge builders

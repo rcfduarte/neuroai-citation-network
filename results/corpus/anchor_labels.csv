@@ -1,0 +1,71 @@
+anchor,expected,doi,primary_topic,subfield,field,label_extended,label_whole_1702,label_venue,venue,label_semantic_scholar
+"Hopfield 1982 (PNAS, via book reprint)",bridge,10.1201/9780429500459-2,Neural Networks and Applications,1702,17,ai,ai,venue_other,,s2_not_found
+Markram 2004 Annu Rev Neuro (synapses),neuro,10.1146/annurev.neuro.27.070203.144152,Neural dynamics and brain function,2805,28,neuro,neuro,venue_neuro,Annual Review of Neuroscience,s2_neuro
+Pereira 2009 fMRI MVPA review,bridge,10.1016/j.neuroimage.2008.11.007,Face Recognition and Perception,2805,28,neuro,neuro,venue_neuro,NeuroImage,s2_intersection
+Schirrmeister 2017 HBM (DL EEG),bridge,10.1002/hbm.23730,EEG and Brain-Computer Interfaces,2805,28,neuro,neuro,venue_other,Human Brain Mapping,s2_not_found
+Esser 2016 TrueNorth PNAS,bridge,10.1073/pnas.1604850113,Advanced Memory and Neural Computing,2208,22,ai,other,venue_general_high,Proceedings of the National Academy of Sciences,s2_intersection
+Vogels-Sprekeler 2011 Science,neuro,10.1126/science.1211095,Neural dynamics and brain function,2805,28,neuro,neuro,venue_general_high,Science,s2_neuro
+Wang 2018 NatNeurosci,bridge,10.1038/s41593-018-0147-8,Neural dynamics and brain function,2805,28,neuro,neuro,venue_neuro,Nature Neuroscience,s2_intersection
+Yuste-Tank 1996 Neuron,neuro,10.1016/s0896-6273(00)80091-4,Neural dynamics and brain function,2805,28,neuro,neuro,venue_neuro,Neuron,s2_neuro
+Diehl-Cook 2015 STDP MNIST,bridge,10.3389/fncom.2015.00099,Advanced Memory and Neural Computing,2208,22,ai,other,venue_intersection,Frontiers in Computational Neuroscience,s2_intersection
+Davies 2018 Loihi IEEE Micro,bridge,10.1109/mm.2018.112130359,Advanced Memory and Neural Computing,2208,22,ai,other,venue_other,IEEE Micro,s2_ai
+Esteva 2017 Nature skin cancer,bridge,10.1038/nature21056,Cutaneous Melanoma Detection and Management,2730,27,other,other,venue_general_high,Nature,s2_intersection
+Gulshan 2016 JAMA retina,bridge,10.1001/jama.2016.17216,Retinal Imaging and Analysis,2741,27,other,other,venue_other,JAMA,s2_intersection
+Friston 1994 SPM HBM,bridge,10.1002/hbm.460020402,Functional Brain Connectivity Studies,2805,28,neuro,neuro,venue_other,Human Brain Mapping,s2_intersection
+Hung-Kreiman-Poggio-DiCarlo 2005 Science,bridge,10.1126/science.1117593,Face Recognition and Perception,2805,28,neuro,neuro,venue_general_high,Science,s2_intersection
+Kingma-Ba 2014 Adam,ai,10.48550/arxiv.1412.6980,Stochastic Gradient Optimization Techniques,1702,17,ai,ai,venue_other,UvA-DARE (University of Amsterdam),s2_not_found
+Bowers 2023 BBS,bridge,10.1017/s0140525x22002813,Neural dynamics and brain function,2805,28,neuro,neuro,venue_intersection,Behavioral and Brain Sciences,s2_intersection
+Lillicrap 2016 NatComm,bridge,10.1038/ncomms13276,Advanced Memory and Neural Computing,2208,22,ai,other,venue_general_high,Nature Communications,s2_intersection
+Sjostrom-Hausser 2006 Neuron,neuro,10.1016/j.neuron.2006.06.017,Neural dynamics and brain function,2805,28,neuro,neuro,venue_neuro,Neuron,s2_neuro
+Logothetis 2001 Nature,neuro,10.1038/19978,Neuroscience and Neuropharmacology Research,2804,28,neuro,neuro,venue_general_high,Nature,s2_neuro
+Petersen-Crochet 2013 Neuron,neuro,10.1016/j.neuron.2013.09.038,Neural dynamics and brain function,2805,28,neuro,neuro,venue_neuro,Neuron,s2_neuro
+Bellec 2020 e-prop NatComm,bridge,10.1038/s41467-020-17236-y,Advanced Memory and Neural Computing,2208,22,ai,other,venue_general_high,Nature Communications,s2_intersection
+Tavanaei 2019 deep SNNs review,bridge,10.1016/j.neunet.2018.12.002,Advanced Memory and Neural Computing,2208,22,ai,other,venue_intersection,Neural Networks,s2_intersection
+Smith 2004 FSL,bridge,10.1016/j.neuroimage.2004.07.051,Advanced MRI Techniques and Applications,2741,27,other,other,venue_neuro,NeuroImage,s2_intersection
+Radford 2021 CLIP,ai,10.48550/arxiv.2103.00020,Multimodal Machine Learning Applications,1707,17,ai,other,venue_other,arXiv (Cornell University),s2_not_found
+Schultz-Dayan-Montague 1997 Science,bridge,10.1126/science.275.5306.1593,Memory and Neural Mechanisms,2805,28,neuro,neuro,venue_general_high,Science,s2_intersection
+Sacramento 2018 dendritic backprop,bridge,10.48550/arxiv.1810.11393,Neural dynamics and brain function,2805,28,neuro,neuro,venue_other,Bern Open Repository and Information System (University of Bern),s2_not_found
+Yamins 2014 PNAS,bridge,10.1073/pnas.1403112111,Neural dynamics and brain function,2805,28,neuro,neuro,venue_general_high,Proceedings of the National Academy of Sciences,s2_intersection
+Indiveri-Liu 2015 IEEE Proc,bridge,10.1109/jproc.2015.2444094,Advanced Memory and Neural Computing,2208,22,ai,other,venue_other,Proceedings of the IEEE,s2_ai
+Simonyan-Zisserman 2014 VGG,ai,10.48550/arxiv.1409.1556,Advanced Vision and Imaging,1707,17,ai,other,venue_other,arXiv (Cornell University),s2_not_found
+Markram 2006 NRN BlueBrain,neuro,10.1038/nrn1848,Neural dynamics and brain function,2805,28,neuro,neuro,venue_other,Nature reviews. Neuroscience,s2_intersection
+Mante-Sussillo 2013 Nature,bridge,10.1038/nature12742,Neural dynamics and brain function,2805,28,neuro,neuro,venue_general_high,Nature,s2_neuro
+Richards 2019 NatNeurosci,bridge,10.1038/s41593-019-0520-2,Neural dynamics and brain function,2805,28,neuro,neuro,venue_neuro,Nature Neuroscience,s2_intersection
+He 2016 ResNet,ai,10.1109/cvpr.2016.90,Advanced Neural Network Applications,1707,17,ai,other,venue_other,,s2_ai
+Cox 1996 AFNI,bridge,10.1006/cbmr.1996.0014,Medical Image Segmentation Techniques,1707,17,ai,other,venue_other,Computers and Biomedical Research,s2_intersection
+Bahdanau 2014 NMT attention,ai,10.48550/arxiv.1409.0473,Natural Language Processing Techniques,1702,17,ai,ai,venue_other,arXiv (Cornell University),s2_not_found
+Rumelhart-Hinton-Williams 1986 (PDP chapter reprint),bridge,10.7551/mitpress/1888.003.0013,Intelligent Tutoring Systems and Adaptive Learning,1702,17,other,ai,venue_other,The MIT Press eBooks,s2_not_found
+Yamins-DiCarlo 2016 NatNeurosci,bridge,10.1038/nn.4244,Neural dynamics and brain function,2805,28,neuro,neuro,venue_neuro,Nature Neuroscience,s2_intersection
+Kriegeskorte-Douglas 2018 NatNeurosci,bridge,10.1038/s41593-018-0210-5,Neural dynamics and brain function,2805,28,neuro,neuro,venue_neuro,Nature Neuroscience,s2_intersection
+Fremaux-Gerstner 2016 3-factor,bridge,10.3389/fncir.2015.00085,Neural dynamics and brain function,2805,28,neuro,neuro,venue_other,Frontiers in Neural Circuits,s2_neuro
+Hassabis 2017 Neuron,bridge,10.1016/j.neuron.2017.06.011,EEG and Brain-Computer Interfaces,2805,28,neuro,neuro,venue_neuro,Neuron,s2_intersection
+Zador 2023 NatComm,bridge,10.1038/s41467-023-37180-x,Reinforcement Learning in Robotics,1702,17,ai,ai,venue_general_high,Nature Communications,s2_intersection
+Jumper 2021 AlphaFold,ai,10.1038/s41586-021-03819-2,Protein Structure and Dynamics,1312,13,other,other,venue_general_high,Nature,s2_intersection
+Mnih 2015 DQN Nature,ai,10.1038/nature14236,Neural dynamics and brain function,2805,28,neuro,neuro,venue_general_high,Nature,s2_intersection
+Bohte-Kok-LaPoutre 2002 SpikeProp,bridge,10.1016/s0925-2312(01)00658-0,Advanced Memory and Neural Computing,2208,22,ai,other,venue_intersection,Neurocomputing,s2_ai
+LeCun-Bengio-Hinton 2015 Nature DL,ai,10.1038/nature14539,Generative Adversarial Networks and Image Synthesis,1707,17,ai,other,venue_general_high,Nature,s2_not_found
+Breiman 2001 RandomForests,ai,10.1023/a:1010933404324,Neural Networks and Applications,1702,17,ai,ai,venue_other,Machine Learning,s2_ai
+Bargmann 1998 Science,neuro,10.1126/science.282.5396.2028,"Genetics, Aging, and Longevity in Model Organisms",1302,13,other,other,venue_general_high,Science,s2_neuro
+Furber 2014 SpiNNaker IEEE,bridge,10.1109/jproc.2014.2304638,Advanced Memory and Neural Computing,2208,22,ai,other,venue_other,Proceedings of the IEEE,s2_ai
+Plis 2014 fMRI DL,bridge,10.3389/fnins.2014.00229,Functional Brain Connectivity Studies,2805,28,neuro,neuro,venue_intersection,Frontiers in Neuroscience,s2_intersection
+Hafting 2005 Nature (grid cells),neuro,10.1038/nature03721,Memory and Neural Mechanisms,2805,28,neuro,neuro,venue_general_high,Nature,s2_neuro
+Pfeiffer-Pfeil 2018 deep SNN survey,bridge,10.3389/fnins.2018.00774,Advanced Memory and Neural Computing,2208,22,ai,other,venue_intersection,Frontiers in Neuroscience,s2_intersection
+Roy 2019 DL EEG review,bridge,10.1088/1741-2552/ab260c,EEG and Brain-Computer Interfaces,2805,28,neuro,neuro,venue_other,Journal of Neural Engineering,s2_intersection
+Goodfellow 2014 GAN,ai,10.48550/arxiv.1406.2661,Generative Adversarial Networks and Image Synthesis,1707,17,ai,other,venue_other,arXiv (Cornell University),s2_not_found
+Markram 2006 (replacement neuro anchor),neuro,10.1038/nature05278,Sleep and Wakefulness Research,2805,28,neuro,neuro,venue_general_high,Nature,s2_neuro
+Avants 2008 ANTs,bridge,10.1016/j.media.2007.06.004,Medical Image Segmentation Techniques,1707,17,ai,other,venue_other,Medical Image Analysis,s2_intersection
+Silver 2016 AlphaGo,ai,10.1038/nature16961,Artificial Intelligence in Games,1702,17,ai,ai,venue_general_high,Nature,s2_intersection
+Maass 2002 LSM (NeurComp),bridge,10.1162/089976602760407955,Neural Networks and Applications,1702,17,ai,ai,venue_intersection,Neural Computation,s2_intersection
+Krizhevsky-Sutskever-Hinton 2017 CACM (AlexNet),ai,10.1145/3065386,Advanced Neural Network Applications,1707,17,ai,other,venue_other,Communications of the ACM,s2_ai
+Marblestone-Wayne-Kording 2016 FrontComp,bridge,10.3389/fncom.2016.00094,Neural dynamics and brain function,2805,28,neuro,neuro,venue_intersection,Frontiers in Computational Neuroscience,s2_intersection
+Doerig 2023 NRN,bridge,10.1038/s41583-023-00705-w,Neural dynamics and brain function,2805,28,neuro,neuro,venue_other,Nature reviews. Neuroscience,s2_intersection
+Marblestone-Wayne-Kording 2016 FrontComp,bridge,10.3389/fncom.2016.00094,Neural dynamics and brain function,2805,28,neuro,neuro,venue_other,arXiv (Cornell University),s2_intersection
+Sacramento 2018 dendritic backprop,bridge,10.48550/arxiv.1810.11393,Neural dynamics and brain function,2805,28,neuro,neuro,venue_other,arXiv (Cornell University),s2_not_found
+Buzsaki 2009 NRN,neuro,10.1038/nrn2575,Functional Brain Connectivity Studies,2805,28,neuro,neuro,venue_other,Nature reviews. Neuroscience,s2_intersection
+Buzsaki Draguhn 2004 (gamma),neuro,10.1038/35021093,Gene expression and cancer classification,1312,13,other,other,venue_general_high,Nature,s2_neuro
+Hubel-Wiesel 1962 J Physiol,neuro,10.1113/jphysiol.1962.sp006837,,,,NOT_FOUND,NOT_FOUND,venue_unknown,,s2_neuro
+Vaswani 2017 Transformer,ai,10.48550/arxiv.1706.03762,,,,NOT_FOUND,NOT_FOUND,venue_unknown,,s2_not_found
+Srivastava 2014 Dropout (JMLR),ai,10.5555/2627435.2670313,,,,NOT_FOUND,NOT_FOUND,venue_unknown,,s2_ai
+Devlin 2018 BERT,ai,10.48550/arxiv.1810.04805,,,,NOT_FOUND,NOT_FOUND,venue_unknown,,s2_not_found
+OKeefe-Dostrovsky 1971 BrainRes,neuro,10.1016/0006-8993(71)90358-1,,,,NOT_FOUND,NOT_FOUND,venue_unknown,,s2_neuro
+Mountcastle 1957 J Neurophysiol,neuro,10.1152/jn.1957.20.4.408,,,,NOT_FOUND,NOT_FOUND,venue_unknown,,s2_neuro

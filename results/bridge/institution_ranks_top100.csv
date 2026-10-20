@@ -1,0 +1,198 @@
+variant,rank,inst_id,inst_name,inst_type,n_bridge_papers,total_B
+consolidated,1,ALPHABET_GROUP,Alphabet (Google + DeepMind),company,924,63141.50869605248
+consolidated,2,MICROSOFT_GROUP,Microsoft,company,712,35557.4467388427
+consolidated,3,https://openalex.org/I63966007,Massachusetts Institute of Technology,education,220,35337.944928093806
+consolidated,4,https://openalex.org/I95457486,"University of California, Berkeley",education,138,27773.94867906887
+consolidated,5,https://openalex.org/I136199984,Harvard University,education,173,27390.452714780673
+consolidated,6,https://openalex.org/I45129253,University College London,education,165,23553.45067418386
+consolidated,7,https://openalex.org/I97018004,Stanford University,education,153,23448.907023353764
+consolidated,8,https://openalex.org/I40120149,University of Oxford,education,92,16769.113586829382
+consolidated,9,https://openalex.org/I74973139,Carnegie Mellon University,education,99,16748.294585678304
+consolidated,10,https://openalex.org/I36258959,"University of California, San Diego",education,100,16125.405844341689
+consolidated,11,https://openalex.org/I122411786,California Institute of Technology,education,83,15263.928408233813
+consolidated,12,https://openalex.org/I185261750,University of Toronto,education,77,15058.827728604274
+consolidated,13,https://openalex.org/I79576946,University of Pennsylvania,education,70,13500.077843496478
+consolidated,14,https://openalex.org/I5124864,École Polytechnique Fédérale de Lausanne,education,70,13195.455864243773
+consolidated,15,https://openalex.org/I1344073410,Howard Hughes Medical Institute,facility,98,12664.458357143694
+consolidated,16,https://openalex.org/I57206974,New York University,education,101,12401.967527066208
+consolidated,17,https://openalex.org/I78577930,Columbia University,education,70,11561.373064756073
+consolidated,18,https://openalex.org/I241749,University of Cambridge,education,74,11371.346295062594
+consolidated,19,META_GROUP,Meta (Facebook),company,124,11255.59961337243
+consolidated,20,https://openalex.org/I201448701,University of Washington,education,53,10707.217210474782
+consolidated,21,https://openalex.org/I20089843,Princeton University,education,103,10668.728341288665
+consolidated,22,https://openalex.org/I4210151618,National Hospital for Neurology and Neurosurgery,healthcare,50,10316.256142314109
+consolidated,23,https://openalex.org/I47508984,Imperial College London,education,51,10211.028743005198
+consolidated,24,https://openalex.org/I4210087915,Massachusetts General Hospital,healthcare,65,10190.212911351504
+consolidated,25,https://openalex.org/I6902469,Brandeis University,education,56,9986.29096620925
+consolidated,26,https://openalex.org/I1294671590,Centre National de la Recherche Scientifique,government,78,9774.511855406725
+consolidated,27,https://openalex.org/I70931966,Université de Montréal,education,44,9662.385896452572
+consolidated,28,https://openalex.org/I161318765,"University of California, Los Angeles",education,56,9117.330107364834
+consolidated,29,https://openalex.org/I144112489,McGovern Institute for Brain Research,facility,60,8973.128323767212
+consolidated,30,https://openalex.org/I205783295,Cornell University,education,44,8733.628359686281
+consolidated,31,https://openalex.org/I145311948,Johns Hopkins University,education,57,8592.550253398365
+consolidated,32,https://openalex.org/I1174212,University of Southern California,education,53,8270.310104892798
+consolidated,33,https://openalex.org/I5023651,McGill University,education,41,8251.981284237449
+consolidated,34,https://openalex.org/I35440088,ETH Zurich,education,34,7910.3271941874855
+consolidated,35,https://openalex.org/I4210127055,Athinoula A. Martinos Center for Biomedical Imaging,facility,43,7861.365585629763
+consolidated,36,https://openalex.org/I1283280774,Brigham and Women's Hospital,healthcare,33,7761.352786191836
+consolidated,37,https://openalex.org/I165524941,Wellcome Centre for Human Neuroimaging,facility,47,7709.5090838401975
+consolidated,38,https://openalex.org/I1307098950,Salk Institute for Biological Studies,nonprofit,51,7365.30924811543
+consolidated,39,https://openalex.org/I98677209,University of Edinburgh,education,52,7127.042265757069
+consolidated,40,https://openalex.org/I186667990,Neurosciences Institute,nonprofit,34,7109.1594239626165
+consolidated,41,https://openalex.org/I1299303238,National Institutes of Health,government,35,6995.2709304705995
+consolidated,42,https://openalex.org/I5388228,University of Rochester,education,48,6874.0041296742065
+consolidated,43,https://openalex.org/I4210115172,Oxford Centre for Computational Neuroscience,healthcare,43,6833.058145865588
+consolidated,44,https://openalex.org/I4210112925,Max Planck Institute for Biological Cybernetics,facility,44,6811.023098971634
+consolidated,45,https://openalex.org/I62916508,Technical University of Munich,education,31,6626.162559753549
+consolidated,46,https://openalex.org/I86519309,The University of Texas at Austin,education,42,6610.328239886027
+consolidated,47,https://openalex.org/I161046081,University of Freiburg,education,20,6502.577248189567
+consolidated,48,https://openalex.org/I32971472,Yale University,education,49,6404.872070199238
+consolidated,49,https://openalex.org/I149899117,Max Planck Society,funder,48,6355.692557603268
+consolidated,50,https://openalex.org/I223822909,Heidelberg University,education,18,6024.36824792215
+consolidated,51,https://openalex.org/I4210101881,Wellcome Centre for Integrative Neuroimaging,facility,26,6020.627805405761
+consolidated,52,https://openalex.org/I4210104429,Institute of Cognitive and Brain Sciences,education,33,5835.9766661443755
+consolidated,53,https://openalex.org/I4210158500,National Institute of Mental Health,facility,40,5813.808512528543
+consolidated,54,https://openalex.org/I2802742124,John Radcliffe Hospital,healthcare,11,5785.194337537098
+consolidated,55,https://openalex.org/I1326498283,Institut national de recherche en informatique et en automatique,funder,22,5592.400994634806
+consolidated,56,https://openalex.org/I157725225,University of Illinois Urbana-Champaign,education,49,5454.3436049362845
+consolidated,57,https://openalex.org/I154526488,Inserm,government,30,5391.338802891976
+consolidated,58,https://openalex.org/I1283103587,AT&T (United States),company,24,5350.020122564227
+consolidated,59,https://openalex.org/I84218800,"University of California, Davis",education,21,5340.371900116596
+consolidated,60,https://openalex.org/I27804330,Brown University,education,40,5232.710811720091
+consolidated,61,https://openalex.org/I87216513,Michigan State University,education,37,5222.576390929015
+consolidated,62,https://openalex.org/I145872427,Radboud University Nijmegen,education,33,5098.955405743547
+consolidated,63,https://openalex.org/I204465549,Washington University in St. Louis,education,44,4959.459807784718
+consolidated,64,https://openalex.org/I135310074,University of Wisconsin–Madison,education,22,4779.084321883525
+consolidated,65,https://openalex.org/I4092182,Graz University of Technology,education,27,4686.129680900568
+consolidated,66,https://openalex.org/I188538660,University of Colorado Boulder,education,26,4425.8941784721765
+consolidated,67,https://openalex.org/I24603500,University of Massachusetts Amherst,education,26,4411.097149251461
+consolidated,68,https://openalex.org/I204250578,"University of California, Irvine",education,31,4395.543904093991
+consolidated,69,https://openalex.org/I36672615,Courant Institute of Mathematical Sciences,education,31,4335.621281638109
+consolidated,70,https://openalex.org/I2801851002,Harvard University Press,other,27,4231.739640290775
+consolidated,71,https://openalex.org/I4210119109,Indiana University Bloomington,education,33,4187.957332692667
+consolidated,72,https://openalex.org/I197251160,Hebrew University of Jerusalem,education,33,4099.758321662192
+consolidated,73,https://openalex.org/I29607241,École Normale Supérieure - PSL,funder,24,4051.709130154496
+consolidated,74,https://openalex.org/I118564535,University of Bern,education,15,4024.519000067735
+consolidated,75,https://openalex.org/I102322142,"Rutgers, The State University of New Jersey",education,35,3982.2645721877484
+consolidated,76,https://openalex.org/I27837315,University of Michigan–Ann Arbor,education,30,3932.123245003393
+consolidated,77,https://openalex.org/I2802164966,University Hospital Heidelberg,healthcare,9,3861.9739942928836
+consolidated,78,https://openalex.org/I99464096,KU Leuven,education,24,3854.4138469687955
+consolidated,79,https://openalex.org/I181547552,Baylor College of Medicine,education,25,3676.1772676234805
+consolidated,80,https://openalex.org/I79619799,University of Birmingham,education,8,3620.890121005129
+consolidated,81,https://openalex.org/I219193219,Purdue University West Lafayette,education,11,3559.692945232218
+consolidated,82,https://openalex.org/I53964585,Weizmann Institute of Science,education,25,3504.7092325231984
+consolidated,83,https://openalex.org/I4210145991,Centre de recherche cerveau et cognition,facility,23,3493.0293178820616
+consolidated,84,https://openalex.org/I7882870,University of Glasgow,education,26,3425.745069016108
+consolidated,85,https://openalex.org/I114027177,University of North Carolina at Chapel Hill,education,24,3392.4683349998822
+consolidated,86,https://openalex.org/I180670191,"University of California, San Francisco",education,25,3385.6573256644106
+consolidated,87,https://openalex.org/I141945490,University of British Columbia,education,21,3362.227469508214
+consolidated,88,https://openalex.org/I94722563,University of Jyväskylä,education,5,3307.9909828067457
+consolidated,89,https://openalex.org/I202697423,University of Zurich,education,30,3306.2917649234832
+consolidated,90,https://openalex.org/I52357470,The Ohio State University,education,30,3235.473053838507
+consolidated,91,https://openalex.org/I12708293,SIB Swiss Institute of Bioinformatics,funder,25,3235.1033449292268
+consolidated,92,https://openalex.org/I1292859797,Montreal Neurological Institute and Hospital,healthcare,24,3137.3358937841294
+consolidated,93,https://openalex.org/I170201317,University of Pittsburgh,education,25,3122.4973630191303
+consolidated,94,https://openalex.org/I8204097,Ludwig-Maximilians-Universität München,education,18,3108.2240545566565
+consolidated,95,https://openalex.org/I111088046,Boston University,education,24,3062.1200481544774
+consolidated,96,https://openalex.org/I111979921,Northwestern University,education,29,3041.1851414927437
+consolidated,97,https://openalex.org/I51556381,University of Virginia,education,9,3011.083863714536
+separated,1,https://openalex.org/I63966007,Massachusetts Institute of Technology,education,220,35337.944928093806
+separated,2,https://openalex.org/I95457486,"University of California, Berkeley",education,138,27773.94867906887
+separated,3,https://openalex.org/I136199984,Harvard University,education,173,27390.452714780673
+separated,4,https://openalex.org/I45129253,University College London,education,165,23553.45067418386
+separated,5,https://openalex.org/I97018004,Stanford University,education,153,23448.907023353764
+separated,6,https://openalex.org/I1291425158,Google (United States),company,91,17200.225909645793
+separated,7,https://openalex.org/I40120149,University of Oxford,education,92,16769.113586829382
+separated,8,https://openalex.org/I74973139,Carnegie Mellon University,education,99,16748.294585678304
+separated,9,https://openalex.org/I36258959,"University of California, San Diego",education,100,16125.405844341689
+separated,10,https://openalex.org/I122411786,California Institute of Technology,education,83,15263.928408233813
+separated,11,https://openalex.org/I185261750,University of Toronto,education,77,15058.827728604274
+separated,12,https://openalex.org/I79576946,University of Pennsylvania,education,70,13500.077843496478
+separated,13,https://openalex.org/I5124864,École Polytechnique Fédérale de Lausanne,education,70,13195.455864243773
+separated,14,https://openalex.org/I1344073410,Howard Hughes Medical Institute,facility,98,12664.458357143694
+separated,15,https://openalex.org/I57206974,New York University,education,101,12401.967527066208
+separated,16,https://openalex.org/I78577930,Columbia University,education,70,11561.373064756073
+separated,17,https://openalex.org/I241749,University of Cambridge,education,74,11371.346295062594
+separated,18,https://openalex.org/I201448701,University of Washington,education,53,10707.217210474782
+separated,19,https://openalex.org/I20089843,Princeton University,education,103,10668.728341288665
+separated,20,https://openalex.org/I4210151618,National Hospital for Neurology and Neurosurgery,healthcare,50,10316.256142314109
+separated,21,https://openalex.org/I47508984,Imperial College London,education,51,10211.028743005198
+separated,22,https://openalex.org/I4210087915,Massachusetts General Hospital,healthcare,65,10190.212911351504
+separated,23,https://openalex.org/I6902469,Brandeis University,education,56,9986.29096620925
+separated,24,https://openalex.org/I1294671590,Centre National de la Recherche Scientifique,government,78,9774.511855406725
+separated,25,https://openalex.org/I70931966,Université de Montréal,education,44,9662.385896452572
+separated,26,https://openalex.org/I4210090411,DeepMind (United Kingdom),company,43,9155.095509329138
+separated,27,https://openalex.org/I161318765,"University of California, Los Angeles",education,56,9117.330107364834
+separated,28,https://openalex.org/I144112489,McGovern Institute for Brain Research,facility,60,8973.128323767212
+separated,29,https://openalex.org/I205783295,Cornell University,education,44,8733.628359686281
+separated,30,https://openalex.org/I145311948,Johns Hopkins University,education,57,8592.550253398365
+separated,31,https://openalex.org/I1174212,University of Southern California,education,53,8270.310104892798
+separated,32,https://openalex.org/I5023651,McGill University,education,41,8251.981284237449
+separated,33,https://openalex.org/I35440088,ETH Zurich,education,34,7910.3271941874855
+separated,34,https://openalex.org/I4210127055,Athinoula A. Martinos Center for Biomedical Imaging,facility,43,7861.365585629763
+separated,35,https://openalex.org/I1283280774,Brigham and Women's Hospital,healthcare,33,7761.352786191836
+separated,36,https://openalex.org/I165524941,Wellcome Centre for Human Neuroimaging,facility,47,7709.5090838401975
+separated,37,https://openalex.org/I1307098950,Salk Institute for Biological Studies,nonprofit,51,7365.30924811543
+separated,38,https://openalex.org/I98677209,University of Edinburgh,education,52,7127.042265757069
+separated,39,https://openalex.org/I186667990,Neurosciences Institute,nonprofit,34,7109.1594239626165
+separated,40,https://openalex.org/I1299303238,National Institutes of Health,government,35,6995.2709304705995
+separated,41,https://openalex.org/I5388228,University of Rochester,education,48,6874.0041296742065
+separated,42,https://openalex.org/I4210115172,Oxford Centre for Computational Neuroscience,healthcare,43,6833.058145865588
+separated,43,https://openalex.org/I4210112925,Max Planck Institute for Biological Cybernetics,facility,44,6811.023098971634
+separated,44,https://openalex.org/I62916508,Technical University of Munich,education,31,6626.162559753549
+separated,45,https://openalex.org/I86519309,The University of Texas at Austin,education,42,6610.328239886027
+separated,46,https://openalex.org/I161046081,University of Freiburg,education,20,6502.577248189567
+separated,47,https://openalex.org/I32971472,Yale University,education,49,6404.872070199238
+separated,48,https://openalex.org/I149899117,Max Planck Society,funder,48,6355.692557603268
+separated,49,https://openalex.org/I4210164937,Microsoft Research (United Kingdom),company,22,6236.779285302288
+separated,50,https://openalex.org/I223822909,Heidelberg University,education,18,6024.36824792215
+separated,51,https://openalex.org/I4210101881,Wellcome Centre for Integrative Neuroimaging,facility,26,6020.627805405761
+separated,52,https://openalex.org/I4210104429,Institute of Cognitive and Brain Sciences,education,33,5835.9766661443755
+separated,53,https://openalex.org/I4210158500,National Institute of Mental Health,facility,40,5813.808512528543
+separated,54,https://openalex.org/I2802742124,John Radcliffe Hospital,healthcare,11,5785.194337537098
+separated,55,https://openalex.org/I1326498283,Institut national de recherche en informatique et en automatique,funder,22,5592.400994634806
+separated,56,https://openalex.org/I157725225,University of Illinois Urbana-Champaign,education,49,5454.3436049362845
+separated,57,https://openalex.org/I154526488,Inserm,government,30,5391.338802891976
+separated,58,https://openalex.org/I1283103587,AT&T (United States),company,24,5350.020122564227
+separated,59,https://openalex.org/I84218800,"University of California, Davis",education,21,5340.371900116596
+separated,60,https://openalex.org/I27804330,Brown University,education,40,5232.710811720091
+separated,61,https://openalex.org/I87216513,Michigan State University,education,37,5222.576390929015
+separated,62,https://openalex.org/I145872427,Radboud University Nijmegen,education,33,5098.955405743547
+separated,63,https://openalex.org/I204465549,Washington University in St. Louis,education,44,4959.459807784718
+separated,64,https://openalex.org/I1290206253,Microsoft (United States),company,28,4819.470849318358
+separated,65,https://openalex.org/I135310074,University of Wisconsin–Madison,education,22,4779.084321883525
+separated,66,https://openalex.org/I4092182,Graz University of Technology,education,27,4686.129680900568
+separated,67,https://openalex.org/I188538660,University of Colorado Boulder,education,26,4425.8941784721765
+separated,68,https://openalex.org/I24603500,University of Massachusetts Amherst,education,26,4411.097149251461
+separated,69,https://openalex.org/I204250578,"University of California, Irvine",education,31,4395.543904093991
+separated,70,https://openalex.org/I36672615,Courant Institute of Mathematical Sciences,education,31,4335.621281638109
+separated,71,https://openalex.org/I2801851002,Harvard University Press,other,27,4231.739640290775
+separated,72,https://openalex.org/I4210119109,Indiana University Bloomington,education,33,4187.957332692667
+separated,73,https://openalex.org/I197251160,Hebrew University of Jerusalem,education,33,4099.758321662192
+separated,74,https://openalex.org/I29607241,École Normale Supérieure - PSL,funder,24,4051.709130154496
+separated,75,https://openalex.org/I118564535,University of Bern,education,15,4024.519000067735
+separated,76,https://openalex.org/I2252078561,Meta (Israel),company,22,4010.6039215489245
+separated,77,https://openalex.org/I102322142,"Rutgers, The State University of New Jersey",education,35,3982.2645721877484
+separated,78,https://openalex.org/I27837315,University of Michigan–Ann Arbor,education,30,3932.123245003393
+separated,79,https://openalex.org/I4210113297,Google (United Kingdom),company,14,3881.0507402206113
+separated,80,https://openalex.org/I2802164966,University Hospital Heidelberg,healthcare,9,3861.9739942928836
+separated,81,https://openalex.org/I99464096,KU Leuven,education,24,3854.4138469687955
+separated,82,https://openalex.org/I181547552,Baylor College of Medicine,education,25,3676.1772676234805
+separated,83,https://openalex.org/I79619799,University of Birmingham,education,8,3620.890121005129
+separated,84,https://openalex.org/I219193219,Purdue University West Lafayette,education,11,3559.692945232218
+separated,85,https://openalex.org/I53964585,Weizmann Institute of Science,education,25,3504.7092325231984
+separated,86,https://openalex.org/I4210145991,Centre de recherche cerveau et cognition,facility,23,3493.0293178820616
+separated,87,https://openalex.org/I7882870,University of Glasgow,education,26,3425.745069016108
+separated,88,https://openalex.org/I114027177,University of North Carolina at Chapel Hill,education,24,3392.4683349998822
+separated,89,https://openalex.org/I180670191,"University of California, San Francisco",education,25,3385.6573256644106
+separated,90,https://openalex.org/I141945490,University of British Columbia,education,21,3362.227469508214
+separated,91,https://openalex.org/I94722563,University of Jyväskylä,education,5,3307.9909828067457
+separated,92,https://openalex.org/I202697423,University of Zurich,education,30,3306.2917649234832
+separated,93,https://openalex.org/I52357470,The Ohio State University,education,30,3235.473053838507
+separated,94,https://openalex.org/I12708293,SIB Swiss Institute of Bioinformatics,funder,25,3235.1033449292268
+separated,95,https://openalex.org/I1292859797,Montreal Neurological Institute and Hospital,healthcare,24,3137.3358937841294
+separated,96,https://openalex.org/I170201317,University of Pittsburgh,education,25,3122.4973630191303
+separated,97,https://openalex.org/I8204097,Ludwig-Maximilians-Universität München,education,18,3108.2240545566565
+separated,98,https://openalex.org/I111088046,Boston University,education,24,3062.1200481544774
+separated,99,https://openalex.org/I111979921,Northwestern University,education,29,3041.1851414927437
+separated,100,https://openalex.org/I51556381,University of Virginia,education,9,3011.083863714536

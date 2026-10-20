@@ -1,0 +1,4 @@
+step,n_remaining,n_removed
+gate: at least 5 classified citations from each side,133763,0
+own field label neuro or ai (drops other and unknown),59038,74725
+"classified citations under the 10,000 ceiling (E2)",58971,67

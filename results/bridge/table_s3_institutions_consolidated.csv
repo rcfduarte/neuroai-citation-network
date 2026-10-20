@@ -1,0 +1,16 @@
+rank,inst_id,inst_name,inst_type,country_code,n_bridge_papers,total_B,total_c_neuro,total_c_ai,neuro_share,consolidated_from
+1,ALPHABET_GROUP,Alphabet (Google + DeepMind),company,US,924,63141.50869605248,58082,624666,0.08507091928500705,Google (United States); DeepMind (United Kingdom); Google (United Kingdom)
+2,MICROSOFT_GROUP,Microsoft,company,US,712,35557.4467388427,25164,516754,0.04643506951236165,Microsoft Research (United Kingdom); Microsoft (United States)
+3,https://openalex.org/I63966007,Massachusetts Institute of Technology,education,US,220,35337.944928093806,120393,98452,0.5501290867965912,
+4,https://openalex.org/I95457486,"University of California, Berkeley",education,US,138,27773.94867906887,48403,165580,0.22620021216638705,
+5,https://openalex.org/I136199984,Harvard University,education,US,173,27390.452714780673,136141,33821,0.801008460714748,
+6,https://openalex.org/I45129253,University College London,education,GB,165,23553.45067418386,118480,32113,0.7867563565371565,
+7,https://openalex.org/I97018004,Stanford University,education,US,153,23448.907023353764,68171,139671,0.3279943418558328,
+8,https://openalex.org/I40120149,University of Oxford,education,GB,92,16769.113586829382,58958,58506,0.5019239937342505,
+9,https://openalex.org/I74973139,Carnegie Mellon University,education,US,99,16748.294585678304,33503,100936,0.24920595958018135,
+10,https://openalex.org/I36258959,"University of California, San Diego",education,US,100,16125.405844341689,67701,22732,0.7486315836033306,
+11,https://openalex.org/I122411786,California Institute of Technology,education,US,83,15263.928408233813,42998,44971,0.4887858222783026,
+12,https://openalex.org/I185261750,University of Toronto,education,CA,77,15058.827728604274,19606,90660,0.17780639544374513,
+13,https://openalex.org/I79576946,University of Pennsylvania,education,US,70,13500.077843496478,38692,24185,0.6153601475897387,
+14,https://openalex.org/I5124864,École Polytechnique Fédérale de Lausanne,education,CH,70,13195.455864243773,22800,26862,0.4591035399299263,
+15,https://openalex.org/I1344073410,Howard Hughes Medical Institute,facility,US,98,12664.458357143694,92768,10958,0.8943562848273335,

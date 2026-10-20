@@ -1,0 +1,155 @@
+{
+ "claim1_text": "about 90 percent cognitive neuroscience, under 5 percent cellular and molecular (AI papers 2020-2025)",
+ "claim2_text": "median cited year 2008 -> 2015; share published in 2005 or earlier 35% -> 15% (AI papers 2010-2019 -> 2020-2025)",
+ "claim1": {
+  "extended_exclusive_2020-2025": {
+   "cognitive_neuroscience_share": 0.8269526433079627,
+   "cellular_molecular_share": 0.09955715041986705
+  },
+  "extended_exclusive_2020-2023": {
+   "cognitive_neuroscience_share": 0.835153536195637,
+   "cellular_molecular_share": 0.10051410309851327
+  },
+  "extended_unrestricted_2020-2025": {
+   "cognitive_neuroscience_share": 0.7794639945117356,
+   "cellular_molecular_share": 0.08452826793526547
+  },
+  "extended_unrestricted_2020-2023": {
+   "cognitive_neuroscience_share": 0.7966887159533074,
+   "cellular_molecular_share": 0.08430350194552529
+  },
+  "strict35_exclusive_2020-2025": {
+   "cognitive_neuroscience_share": 0.9031203034423531,
+   "cellular_molecular_share": 0.049788878551492166
+  },
+  "strict35_exclusive_2020-2023": {
+   "cognitive_neuroscience_share": 0.9123887562405035,
+   "cellular_molecular_share": 0.04411764705882353
+  },
+  "strict35_unrestricted_2020-2025": {
+   "cognitive_neuroscience_share": 0.8832304928532375,
+   "cellular_molecular_share": 0.04298099775722208
+  },
+  "strict35_unrestricted_2020-2023": {
+   "cognitive_neuroscience_share": 0.8961383849534482,
+   "cellular_molecular_share": 0.03738726541834163
+  }
+ },
+ "claim2": {
+  "extended_exclusive": {
+   "2010-2019": {
+    "n_edges": 224890,
+    "median_cited_year": 2007.0,
+    "share_le2005": 0.4375072257548135,
+    "share_le2004": 0.39251189470407755,
+    "mean_age": 9.241286851349548
+   },
+   "2020-2025": {
+    "n_edges": 315457,
+    "median_cited_year": 2015.0,
+    "share_le2005": 0.19861344018360663,
+    "share_le2004": 0.17812570334467137,
+    "mean_age": 10.067882468926035
+   },
+   "2020-2023": {
+    "n_edges": 179925,
+    "median_cited_year": 2014.0,
+    "share_le2005": 0.2306516604140614,
+    "share_le2004": 0.20728636932055022,
+    "mean_age": 10.114553286091427
+   }
+  },
+  "extended_unrestricted": {
+   "2010-2019": {
+    "n_edges": 314843,
+    "median_cited_year": 2007.0,
+    "share_le2005": 0.42473232690579116,
+    "share_le2004": 0.3789285453384703,
+    "mean_age": 8.960389781573673
+   },
+   "2020-2025": {
+    "n_edges": 444585,
+    "median_cited_year": 2016.0,
+    "share_le2005": 0.17969117266664417,
+    "share_le2004": 0.16068693275751544,
+    "mean_age": 9.29146957274762
+   },
+   "2020-2023": {
+    "n_edges": 257000,
+    "median_cited_year": 2015.0,
+    "share_le2005": 0.2097626459143969,
+    "share_le2004": 0.18794552529182879,
+    "mean_age": 9.40811673151751
+   }
+  },
+  "extended_exclusive_article_review": {
+   "2010-2019": {
+    "n_edges": 157157,
+    "median_cited_year": 2007.0,
+    "share_le2005": 0.44111302710028827,
+    "share_le2004": 0.39655249209389337,
+    "mean_age": 9.219277537748875
+   },
+   "2020-2025": {
+    "n_edges": 212796,
+    "median_cited_year": 2015.0,
+    "share_le2005": 0.19202428617079267,
+    "share_le2004": 0.17316584898212373,
+    "mean_age": 9.793327882103046
+   },
+   "2020-2023": {
+    "n_edges": 120238,
+    "median_cited_year": 2014.0,
+    "share_le2005": 0.22546948552038457,
+    "share_le2004": 0.20342986410286265,
+    "mean_age": 9.956278381210598
+   }
+  },
+  "strict35_unrestricted_earlier_script": {
+   "2010-2019": {
+    "n_edges": 117363,
+    "median_cited_year": 2008.0,
+    "share_le2005": 0.3930881112446001,
+    "share_le2004": 0.3495224218876477,
+    "mean_age": 8.549057198606034
+   },
+   "2020-2025": {
+    "n_edges": 179242,
+    "median_cited_year": 2015.0,
+    "share_le2005": 0.16879972327914217,
+    "share_le2004": 0.14960779281641579,
+    "mean_age": 9.429168386873613
+   },
+   "2020-2023": {
+    "n_edges": 96022,
+    "median_cited_year": 2015.0,
+    "share_le2005": 0.19510112265939056,
+    "share_le2004": 0.17309574889087917,
+    "mean_age": 9.305315448543043
+   }
+  },
+  "strict35_exclusive": {
+   "2010-2019": {
+    "n_edges": 91833,
+    "median_cited_year": 2007.0,
+    "share_le2005": 0.40799059161739243,
+    "share_le2004": 0.36350767153419794,
+    "mean_age": 8.776986486339334
+   },
+   "2020-2025": {
+    "n_edges": 139730,
+    "median_cited_year": 2015.0,
+    "share_le2005": 0.17966793100980463,
+    "share_le2004": 0.1589565590782223,
+    "mean_age": 9.917669791741215
+   },
+   "2020-2023": {
+    "n_edges": 73712,
+    "median_cited_year": 2014.0,
+    "share_le2005": 0.2074696114608205,
+    "share_le2004": 0.18372856522682873,
+    "mean_age": 9.747300303885392
+   }
+  }
+ }
+}

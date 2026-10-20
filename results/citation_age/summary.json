@@ -1,0 +1,1153 @@
+{
+  "orig": {
+    "top15": {
+      "most_recent_concept": {
+        "year": 2003,
+        "rank": 3,
+        "work": "Izhikevich, simple model of spiking neurons"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2003,
+        "rank": 3,
+        "work": "Izhikevich, simple model of spiking neurons"
+      },
+      "n_concepts": 8,
+      "concepts_after_2005": [],
+      "methods_after_2005": []
+    },
+    "top25": {
+      "most_recent_concept": {
+        "year": 2003,
+        "rank": 3,
+        "work": "Izhikevich, simple model of spiking neurons"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2009,
+        "rank": 16,
+        "work": "Pan & Yang, transfer learning survey"
+      },
+      "n_concepts": 10,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "Pan & Yang, transfer learning survey (2009, #16)",
+        "Hinton & Salakhutdinov, deep autoencoders (2006, #20)"
+      ]
+    },
+    "top50": {
+      "most_recent_concept": {
+        "year": 2004,
+        "rank": 46,
+        "work": "Izhikevich, which model for cortical spiking neurons"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2017,
+        "rank": 28,
+        "work": "Chollet, Xception"
+      },
+      "n_concepts": 22,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "Pan & Yang, transfer learning survey (2009, #16)",
+        "Hinton & Salakhutdinov, deep autoencoders (2006, #20)",
+        "Chollet, Xception (2017, #28)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #33)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #36)",
+        "Hinton, Osindero & Teh, deep belief nets (2006, #39)"
+      ]
+    }
+  },
+  "rate": {
+    "top15": {
+      "most_recent_concept": {
+        "year": 2003,
+        "rank": 13,
+        "work": "Izhikevich, simple model of spiking neurons"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2019,
+        "rank": 14,
+        "work": "Shorten & Khoshgoftaar, data augmentation survey"
+      },
+      "n_concepts": 2,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "He et al., PReLU / delving deep into rectifiers (2015, #7)",
+        "Chollet, Xception (2017, #8)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #10)",
+        "Silver et al., AlphaGo (2016, #12)",
+        "Shorten & Khoshgoftaar, data augmentation survey (2019, #14)"
+      ]
+    },
+    "top25": {
+      "most_recent_concept": {
+        "year": 2003,
+        "rank": 13,
+        "work": "Izhikevich, simple model of spiking neurons"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2021,
+        "rank": 20,
+        "work": "Alzubaidi et al., review of deep learning"
+      },
+      "n_concepts": 4,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "He et al., PReLU / delving deep into rectifiers (2015, #7)",
+        "Chollet, Xception (2017, #8)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #10)",
+        "Silver et al., AlphaGo (2016, #12)",
+        "Shorten & Khoshgoftaar, data augmentation survey (2019, #14)",
+        "Pan & Yang, transfer learning survey (2009, #17)",
+        "Alzubaidi et al., review of deep learning (2021, #20)",
+        "Hinton & Salakhutdinov, deep autoencoders (2006, #22)",
+        "Bengio et al., representation learning review (2013, #25)"
+      ]
+    },
+    "top50": {
+      "most_recent_concept": {
+        "year": 2020,
+        "rank": 36,
+        "work": "Lillicrap et al., backpropagation and the brain"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2021,
+        "rank": 20,
+        "work": "Alzubaidi et al., review of deep learning"
+      },
+      "n_concepts": 14,
+      "concepts_after_2005": [
+        "Lillicrap et al., backpropagation and the brain (2020, #36)",
+        "Hassabis et al., neuroscience-inspired AI (2017, #38)",
+        "Yamins & DiCarlo, goal-driven models of sensory cortex (2016, #43)",
+        "Yamins et al., performance-optimized models predict higher visual cortex (2014, #48)",
+        "Friston, free-energy principle (2010, #50)"
+      ],
+      "methods_after_2005": [
+        "He et al., PReLU / delving deep into rectifiers (2015, #7)",
+        "Chollet, Xception (2017, #8)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #10)",
+        "Silver et al., AlphaGo (2016, #12)",
+        "Shorten & Khoshgoftaar, data augmentation survey (2019, #14)",
+        "Pan & Yang, transfer learning survey (2009, #17)",
+        "Alzubaidi et al., review of deep learning (2021, #20)",
+        "Hinton & Salakhutdinov, deep autoencoders (2006, #22)",
+        "Bengio et al., representation learning review (2013, #25)",
+        "Long et al., fully convolutional networks (2016, #30)",
+        "Hinton, Osindero & Teh, deep belief nets (2006, #35)",
+        "Silver et al., AlphaGo Zero (2017, #40)",
+        "Nair & Hinton, rectified linear units (2010, #41)",
+        "Kingma & Welling, variational autoencoder (2013, #44)",
+        "Goodfellow et al., GANs (2014, #45)",
+        "Kirkpatrick et al., elastic weight consolidation (2017, #47)"
+      ]
+    }
+  },
+  "win8": {
+    "top15": {
+      "most_recent_concept": {
+        "year": 2014,
+        "rank": 9,
+        "work": "Yamins et al., performance-optimized models predict higher visual cortex"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2015,
+        "rank": 3,
+        "work": "He et al., PReLU / delving deep into rectifiers"
+      },
+      "n_concepts": 2,
+      "concepts_after_2005": [
+        "Yamins et al., performance-optimized models predict higher visual cortex (2014, #9)"
+      ],
+      "methods_after_2005": [
+        "He et al., PReLU / delving deep into rectifiers (2015, #3)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #4)",
+        "Bengio et al., representation learning review (2013, #6)",
+        "Kingma & Welling, variational autoencoder (2013, #8)",
+        "Graves et al., speech recognition with deep RNNs (2013, #11)"
+      ]
+    },
+    "top25": {
+      "most_recent_concept": {
+        "year": 2015,
+        "rank": 21,
+        "work": "Kriegeskorte, DNNs as a framework for biological vision"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2015,
+        "rank": 3,
+        "work": "He et al., PReLU / delving deep into rectifiers"
+      },
+      "n_concepts": 7,
+      "concepts_after_2005": [
+        "Yamins et al., performance-optimized models predict higher visual cortex (2014, #9)",
+        "Clark, whatever next? predictive brains (2013, #19)",
+        "Kriegeskorte, DNNs as a framework for biological vision (2015, #21)",
+        "DiCarlo, Zoccolan & Rust, how the brain solves object recognition (2012, #23)"
+      ],
+      "methods_after_2005": [
+        "He et al., PReLU / delving deep into rectifiers (2015, #3)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #4)",
+        "Bengio et al., representation learning review (2013, #6)",
+        "Kingma & Welling, variational autoencoder (2013, #8)",
+        "Graves et al., speech recognition with deep RNNs (2013, #11)",
+        "Indiveri et al., neuromorphic silicon neuron circuits (2011, #20)"
+      ]
+    },
+    "top50": {
+      "most_recent_concept": {
+        "year": 2015,
+        "rank": 21,
+        "work": "Kriegeskorte, DNNs as a framework for biological vision"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2015,
+        "rank": 3,
+        "work": "He et al., PReLU / delving deep into rectifiers"
+      },
+      "n_concepts": 21,
+      "concepts_after_2005": [
+        "Yamins et al., performance-optimized models predict higher visual cortex (2014, #9)",
+        "Clark, whatever next? predictive brains (2013, #19)",
+        "Kriegeskorte, DNNs as a framework for biological vision (2015, #21)",
+        "DiCarlo, Zoccolan & Rust, how the brain solves object recognition (2012, #23)",
+        "Lake, Salakhutdinov & Tenenbaum, human-level concept learning (2015, #29)",
+        "Khaligh-Razavi & Kriegeskorte, deep supervised models explain IT (2014, #30)",
+        "Torralba et al., contextual guidance of eye movements (2006, #31)",
+        "Friston, free-energy principle (2010, #33)",
+        "Eliasmith et al., large-scale model of the functioning brain (Spaun) (2012, #37)",
+        "G\u00fc\u00e7l\u00fc & van Gerven, DNNs reveal ventral-stream gradient (2015, #42)",
+        "Tenenbaum et al., how to grow a mind (2011, #47)",
+        "Caporale & Dan, STDP review (2008, #50)"
+      ],
+      "methods_after_2005": [
+        "He et al., PReLU / delving deep into rectifiers (2015, #3)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #4)",
+        "Bengio et al., representation learning review (2013, #6)",
+        "Kingma & Welling, variational autoencoder (2013, #8)",
+        "Graves et al., speech recognition with deep RNNs (2013, #11)",
+        "Indiveri et al., neuromorphic silicon neuron circuits (2011, #20)",
+        "Bach et al., layer-wise relevance propagation (2015, #27)",
+        "Hinton et al., DNNs for acoustic modelling (2012, #32)",
+        "Merolla et al., TrueNorth chip (2014, #41)",
+        "Taigman et al., DeepFace (2014, #45)",
+        "Hinton, Osindero & Teh, deep belief nets (2006, #46)"
+      ]
+    }
+  },
+  "orig_1990_2015": {
+    "top15": {
+      "most_recent_concept": {
+        "year": 2003,
+        "rank": 3,
+        "work": "Izhikevich, simple model of spiking neurons"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2009,
+        "rank": 13,
+        "work": "Pan & Yang, transfer learning survey"
+      },
+      "n_concepts": 9,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "Pan & Yang, transfer learning survey (2009, #13)"
+      ]
+    },
+    "top25": {
+      "most_recent_concept": {
+        "year": 2003,
+        "rank": 3,
+        "work": "Izhikevich, simple model of spiking neurons"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2009,
+        "rank": 13,
+        "work": "Pan & Yang, transfer learning survey"
+      },
+      "n_concepts": 13,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "Pan & Yang, transfer learning survey (2009, #13)",
+        "Hinton & Salakhutdinov, deep autoencoders (2006, #17)"
+      ]
+    },
+    "top50": {
+      "most_recent_concept": {
+        "year": 2010,
+        "rank": 44,
+        "work": "Friston, free-energy principle"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2015,
+        "rank": 32,
+        "work": "He et al., PReLU / delving deep into rectifiers"
+      },
+      "n_concepts": 24,
+      "concepts_after_2005": [
+        "Friston, free-energy principle (2010, #44)",
+        "Caporale & Dan, STDP review (2008, #49)"
+      ],
+      "methods_after_2005": [
+        "Pan & Yang, transfer learning survey (2009, #13)",
+        "Hinton & Salakhutdinov, deep autoencoders (2006, #17)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #29)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #32)",
+        "Hinton, Osindero & Teh, deep belief nets (2006, #35)",
+        "Bengio et al., representation learning review (2013, #50)"
+      ]
+    }
+  },
+  "win7": {
+    "top15": {
+      "most_recent_concept": {
+        "year": 2014,
+        "rank": 9,
+        "work": "Yamins et al., performance-optimized models predict higher visual cortex"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2015,
+        "rank": 4,
+        "work": "He et al., PReLU / delving deep into rectifiers"
+      },
+      "n_concepts": 2,
+      "concepts_after_2005": [
+        "Yamins et al., performance-optimized models predict higher visual cortex (2014, #9)"
+      ],
+      "methods_after_2005": [
+        "Schmidhuber, deep learning in neural networks: overview (2014, #3)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #4)",
+        "Bengio et al., representation learning review (2013, #6)",
+        "Graves et al., speech recognition with deep RNNs (2013, #10)",
+        "Kingma & Welling, variational autoencoder (2013, #11)"
+      ]
+    },
+    "top25": {
+      "most_recent_concept": {
+        "year": 2015,
+        "rank": 21,
+        "work": "Kriegeskorte, DNNs as a framework for biological vision"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2015,
+        "rank": 4,
+        "work": "He et al., PReLU / delving deep into rectifiers"
+      },
+      "n_concepts": 7,
+      "concepts_after_2005": [
+        "Yamins et al., performance-optimized models predict higher visual cortex (2014, #9)",
+        "Kriegeskorte, DNNs as a framework for biological vision (2015, #21)",
+        "Torralba et al., contextual guidance of eye movements (2006, #22)",
+        "Khaligh-Razavi & Kriegeskorte, deep supervised models explain IT (2014, #24)",
+        "Lake, Salakhutdinov & Tenenbaum, human-level concept learning (2015, #25)"
+      ],
+      "methods_after_2005": [
+        "Schmidhuber, deep learning in neural networks: overview (2014, #3)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #4)",
+        "Bengio et al., representation learning review (2013, #6)",
+        "Graves et al., speech recognition with deep RNNs (2013, #10)",
+        "Kingma & Welling, variational autoencoder (2013, #11)",
+        "Indiveri et al., neuromorphic silicon neuron circuits (2011, #16)"
+      ]
+    },
+    "top50": {
+      "most_recent_concept": {
+        "year": 2015,
+        "rank": 21,
+        "work": "Kriegeskorte, DNNs as a framework for biological vision"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2015,
+        "rank": 4,
+        "work": "He et al., PReLU / delving deep into rectifiers"
+      },
+      "n_concepts": 22,
+      "concepts_after_2005": [
+        "Yamins et al., performance-optimized models predict higher visual cortex (2014, #9)",
+        "Kriegeskorte, DNNs as a framework for biological vision (2015, #21)",
+        "Torralba et al., contextual guidance of eye movements (2006, #22)",
+        "Khaligh-Razavi & Kriegeskorte, deep supervised models explain IT (2014, #24)",
+        "Lake, Salakhutdinov & Tenenbaum, human-level concept learning (2015, #25)",
+        "Clark, whatever next? predictive brains (2013, #26)",
+        "DiCarlo, Zoccolan & Rust, how the brain solves object recognition (2012, #27)",
+        "Eliasmith et al., large-scale model of the functioning brain (Spaun) (2012, #28)",
+        "Friston, free-energy principle (2010, #30)",
+        "G\u00fc\u00e7l\u00fc & van Gerven, DNNs reveal ventral-stream gradient (2015, #34)",
+        "Cadieu et al., DNNs rival primate IT (2014, #41)",
+        "Markram et al., reconstruction of neocortical microcircuitry (2015, #45)",
+        "Tenenbaum et al., how to grow a mind (2011, #46)",
+        "Markram, the Blue Brain Project (2006, #50)"
+      ],
+      "methods_after_2005": [
+        "Schmidhuber, deep learning in neural networks: overview (2014, #3)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #4)",
+        "Bengio et al., representation learning review (2013, #6)",
+        "Graves et al., speech recognition with deep RNNs (2013, #10)",
+        "Kingma & Welling, variational autoencoder (2013, #11)",
+        "Indiveri et al., neuromorphic silicon neuron circuits (2011, #16)",
+        "Merolla et al., TrueNorth chip (2014, #35)",
+        "Taigman et al., DeepFace (2014, #38)",
+        "Bach et al., layer-wise relevance propagation (2015, #40)",
+        "Xu et al., show, attend and tell (2015, #42)",
+        "Hinton et al., DNNs for acoustic modelling (2012, #44)"
+      ]
+    }
+  },
+  "win5_to2018": {
+    "top15": {
+      "most_recent_concept": {
+        "year": 2017,
+        "rank": 15,
+        "work": "Hassabis et al., neuroscience-inspired AI"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2017,
+        "rank": 6,
+        "work": "Chollet, Xception"
+      },
+      "n_concepts": 1,
+      "concepts_after_2005": [
+        "Hassabis et al., neuroscience-inspired AI (2017, #15)"
+      ],
+      "methods_after_2005": [
+        "Silver et al., AlphaGo (2016, #5)",
+        "Chollet, Xception (2017, #6)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #7)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #9)"
+      ]
+    },
+    "top25": {
+      "most_recent_concept": {
+        "year": 2017,
+        "rank": 15,
+        "work": "Hassabis et al., neuroscience-inspired AI"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2017,
+        "rank": 6,
+        "work": "Chollet, Xception"
+      },
+      "n_concepts": 2,
+      "concepts_after_2005": [
+        "Hassabis et al., neuroscience-inspired AI (2017, #15)",
+        "Yamins & DiCarlo, goal-driven models of sensory cortex (2016, #16)"
+      ],
+      "methods_after_2005": [
+        "Silver et al., AlphaGo (2016, #5)",
+        "Chollet, Xception (2017, #6)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #7)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #9)",
+        "Silver et al., AlphaGo Zero (2017, #17)",
+        "Kirkpatrick et al., elastic weight consolidation (2017, #18)",
+        "Long et al., fully convolutional networks (2016, #21)",
+        "Szegedy et al., Inception-v4 (2017, #23)",
+        "Bengio et al., representation learning review (2013, #24)",
+        "Gatys et al., style transfer (2016, #25)"
+      ]
+    },
+    "top50": {
+      "most_recent_concept": {
+        "year": 2018,
+        "rank": 41,
+        "work": "Banino et al., grid-like representations in agents"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2018,
+        "rank": 26,
+        "work": "Lin et al., focal loss"
+      },
+      "n_concepts": 13,
+      "concepts_after_2005": [
+        "Hassabis et al., neuroscience-inspired AI (2017, #15)",
+        "Yamins & DiCarlo, goal-driven models of sensory cortex (2016, #16)",
+        "Yamins et al., performance-optimized models predict higher visual cortex (2014, #27)",
+        "Lillicrap et al., random feedback weights (feedback alignment) (2016, #33)",
+        "Banino et al., grid-like representations in agents (2018, #41)",
+        "Eliasmith et al., large-scale model of the functioning brain (Spaun) (2012, #44)",
+        "Lake, Salakhutdinov & Tenenbaum, human-level concept learning (2015, #46)",
+        "Huth et al., semantic maps in cortex (2016, #47)",
+        "Marblestone, Wayne & Kording, integrating deep learning and neuroscience (2016, #48)",
+        "Torralba et al., contextual guidance of eye movements (2006, #49)",
+        "Wolfe & Horowitz, five factors guiding visual search (2017, #50)"
+      ],
+      "methods_after_2005": [
+        "Silver et al., AlphaGo (2016, #5)",
+        "Chollet, Xception (2017, #6)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #7)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #9)",
+        "Silver et al., AlphaGo Zero (2017, #17)",
+        "Kirkpatrick et al., elastic weight consolidation (2017, #18)",
+        "Long et al., fully convolutional networks (2016, #21)",
+        "Szegedy et al., Inception-v4 (2017, #23)",
+        "Bengio et al., representation learning review (2013, #24)",
+        "Gatys et al., style transfer (2016, #25)",
+        "Lin et al., focal loss (2018, #26)",
+        "Zhou et al., class activation maps (2016, #29)",
+        "Xie et al., ResNeXt (2017, #37)",
+        "Indiveri et al., neuromorphic silicon neuron circuits (2011, #39)"
+      ]
+    }
+  },
+  "win8_share": {
+    "top15": {
+      "most_recent_concept": {
+        "year": 2001,
+        "rank": 9,
+        "work": "Itti & Koch, computational modelling of visual attention"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2001,
+        "rank": 9,
+        "work": "Itti & Koch, computational modelling of visual attention"
+      },
+      "n_concepts": 8,
+      "concepts_after_2005": [],
+      "methods_after_2005": []
+    },
+    "top25": {
+      "most_recent_concept": {
+        "year": 2001,
+        "rank": 9,
+        "work": "Itti & Koch, computational modelling of visual attention"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2015,
+        "rank": 18,
+        "work": "He et al., PReLU / delving deep into rectifiers"
+      },
+      "n_concepts": 12,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "Schmidhuber, deep learning in neural networks: overview (2014, #16)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #18)"
+      ]
+    },
+    "top50": {
+      "most_recent_concept": {
+        "year": 2004,
+        "rank": 50,
+        "work": "Izhikevich, which model for cortical spiking neurons"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2015,
+        "rank": 18,
+        "work": "He et al., PReLU / delving deep into rectifiers"
+      },
+      "n_concepts": 31,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "Schmidhuber, deep learning in neural networks: overview (2014, #16)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #18)"
+      ]
+    }
+  },
+  "rate_share": {
+    "top15": {
+      "most_recent_concept": {
+        "year": 2003,
+        "rank": 12,
+        "work": "Izhikevich, simple model of spiking neurons"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2003,
+        "rank": 12,
+        "work": "Izhikevich, simple model of spiking neurons"
+      },
+      "n_concepts": 7,
+      "concepts_after_2005": [],
+      "methods_after_2005": []
+    },
+    "top25": {
+      "most_recent_concept": {
+        "year": 2003,
+        "rank": 12,
+        "work": "Izhikevich, simple model of spiking neurons"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2016,
+        "rank": 24,
+        "work": "Silver et al., AlphaGo"
+      },
+      "n_concepts": 10,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "Schmidhuber, deep learning in neural networks: overview (2014, #19)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #21)",
+        "Silver et al., AlphaGo (2016, #24)"
+      ]
+    },
+    "top50": {
+      "most_recent_concept": {
+        "year": 2003,
+        "rank": 12,
+        "work": "Izhikevich, simple model of spiking neurons"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2017,
+        "rank": 26,
+        "work": "Chollet, Xception"
+      },
+      "n_concepts": 18,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "Schmidhuber, deep learning in neural networks: overview (2014, #19)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #21)",
+        "Silver et al., AlphaGo (2016, #24)",
+        "Chollet, Xception (2017, #26)",
+        "Pan & Yang, transfer learning survey (2009, #41)",
+        "Hinton & Salakhutdinov, deep autoencoders (2006, #44)"
+      ]
+    }
+  },
+  "rate_noceil": {
+    "top15": {
+      "most_recent_concept": null,
+      "most_recent_concept_or_method": {
+        "year": 2016,
+        "rank": 1,
+        "work": "He et al., ResNet"
+      },
+      "n_concepts": 0,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "He et al., ResNet (2016, #1)",
+        "Krizhevsky et al., AlexNet (2012, #2)",
+        "LeCun, Bengio & Hinton, deep learning (2015, #3)",
+        "Simonyan & Zisserman, VGG (2014, #5)",
+        "Szegedy et al., GoogLeNet (2015, #6)",
+        "Srivastava et al., dropout (2014, #8)",
+        "Szegedy et al., Inception v3 (2016, #15)"
+      ]
+    },
+    "top25": {
+      "most_recent_concept": null,
+      "most_recent_concept_or_method": {
+        "year": 2021,
+        "rank": 22,
+        "work": "Liu et al., Swin Transformer"
+      },
+      "n_concepts": 0,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "He et al., ResNet (2016, #1)",
+        "Krizhevsky et al., AlexNet (2012, #2)",
+        "LeCun, Bengio & Hinton, deep learning (2015, #3)",
+        "Simonyan & Zisserman, VGG (2014, #5)",
+        "Szegedy et al., GoogLeNet (2015, #6)",
+        "Srivastava et al., dropout (2014, #8)",
+        "Szegedy et al., Inception v3 (2016, #15)",
+        "Mnih et al., DQN (2015, #16)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #21)",
+        "Liu et al., Swin Transformer (2021, #22)",
+        "Chollet, Xception (2017, #23)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #25)"
+      ]
+    },
+    "top50": {
+      "most_recent_concept": {
+        "year": 2003,
+        "rank": 31,
+        "work": "Izhikevich, simple model of spiking neurons"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2021,
+        "rank": 22,
+        "work": "Liu et al., Swin Transformer"
+      },
+      "n_concepts": 6,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "He et al., ResNet (2016, #1)",
+        "Krizhevsky et al., AlexNet (2012, #2)",
+        "LeCun, Bengio & Hinton, deep learning (2015, #3)",
+        "Simonyan & Zisserman, VGG (2014, #5)",
+        "Szegedy et al., GoogLeNet (2015, #6)",
+        "Srivastava et al., dropout (2014, #8)",
+        "Szegedy et al., Inception v3 (2016, #15)",
+        "Mnih et al., DQN (2015, #16)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #21)",
+        "Liu et al., Swin Transformer (2021, #22)",
+        "Chollet, Xception (2017, #23)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #25)",
+        "Selvaraju et al., Grad-CAM (2017, #27)",
+        "Silver et al., AlphaGo (2016, #29)",
+        "Shorten & Khoshgoftaar, data augmentation survey (2019, #33)",
+        "Pan & Yang, transfer learning survey (2009, #36)",
+        "Alzubaidi et al., review of deep learning (2021, #40)",
+        "Hinton & Salakhutdinov, deep autoencoders (2006, #42)",
+        "Bengio et al., representation learning review (2013, #45)",
+        "Long et al., fully convolutional networks (2016, #50)"
+      ]
+    }
+  },
+  "win8_noceil": {
+    "top15": {
+      "most_recent_concept": null,
+      "most_recent_concept_or_method": {
+        "year": 2015,
+        "rank": 1,
+        "work": "LeCun, Bengio & Hinton, deep learning"
+      },
+      "n_concepts": 0,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "LeCun, Bengio & Hinton, deep learning (2015, #1)",
+        "Simonyan & Zisserman, VGG (2014, #3)",
+        "Szegedy et al., GoogLeNet (2015, #4)",
+        "Srivastava et al., dropout (2014, #5)",
+        "Mnih et al., DQN (2015, #9)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #10)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #11)",
+        "Bengio et al., representation learning review (2013, #13)",
+        "Kingma & Welling, variational autoencoder (2013, #15)"
+      ]
+    },
+    "top25": {
+      "most_recent_concept": {
+        "year": 2014,
+        "rank": 16,
+        "work": "Yamins et al., performance-optimized models predict higher visual cortex"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2015,
+        "rank": 1,
+        "work": "LeCun, Bengio & Hinton, deep learning"
+      },
+      "n_concepts": 2,
+      "concepts_after_2005": [
+        "Yamins et al., performance-optimized models predict higher visual cortex (2014, #16)"
+      ],
+      "methods_after_2005": [
+        "LeCun, Bengio & Hinton, deep learning (2015, #1)",
+        "Simonyan & Zisserman, VGG (2014, #3)",
+        "Szegedy et al., GoogLeNet (2015, #4)",
+        "Srivastava et al., dropout (2014, #5)",
+        "Mnih et al., DQN (2015, #9)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #10)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #11)",
+        "Bengio et al., representation learning review (2013, #13)",
+        "Kingma & Welling, variational autoencoder (2013, #15)",
+        "Pennington et al., GloVe (2014, #17)",
+        "Graves et al., speech recognition with deep RNNs (2013, #19)",
+        "Girshick et al., R-CNN (2014, #20)"
+      ]
+    },
+    "top50": {
+      "most_recent_concept": {
+        "year": 2015,
+        "rank": 30,
+        "work": "Kriegeskorte, DNNs as a framework for biological vision"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2015,
+        "rank": 1,
+        "work": "LeCun, Bengio & Hinton, deep learning"
+      },
+      "n_concepts": 15,
+      "concepts_after_2005": [
+        "Yamins et al., performance-optimized models predict higher visual cortex (2014, #16)",
+        "Clark, whatever next? predictive brains (2013, #28)",
+        "Kriegeskorte, DNNs as a framework for biological vision (2015, #30)",
+        "DiCarlo, Zoccolan & Rust, how the brain solves object recognition (2012, #32)",
+        "Lake, Salakhutdinov & Tenenbaum, human-level concept learning (2015, #38)",
+        "Khaligh-Razavi & Kriegeskorte, deep supervised models explain IT (2014, #39)",
+        "Torralba et al., contextual guidance of eye movements (2006, #40)",
+        "Friston, free-energy principle (2010, #42)",
+        "Eliasmith et al., large-scale model of the functioning brain (Spaun) (2012, #46)"
+      ],
+      "methods_after_2005": [
+        "LeCun, Bengio & Hinton, deep learning (2015, #1)",
+        "Simonyan & Zisserman, VGG (2014, #3)",
+        "Szegedy et al., GoogLeNet (2015, #4)",
+        "Srivastava et al., dropout (2014, #5)",
+        "Mnih et al., DQN (2015, #9)",
+        "He et al., PReLU / delving deep into rectifiers (2015, #10)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #11)",
+        "Bengio et al., representation learning review (2013, #13)",
+        "Kingma & Welling, variational autoencoder (2013, #15)",
+        "Pennington et al., GloVe (2014, #17)",
+        "Graves et al., speech recognition with deep RNNs (2013, #19)",
+        "Girshick et al., R-CNN (2014, #20)",
+        "Indiveri et al., neuromorphic silicon neuron circuits (2011, #29)",
+        "Bach et al., layer-wise relevance propagation (2015, #36)",
+        "Hinton et al., DNNs for acoustic modelling (2012, #41)",
+        "Merolla et al., TrueNorth chip (2014, #50)"
+      ]
+    }
+  },
+  "rate_unknown": {
+    "top15": {
+      "most_recent_concept": {
+        "year": 2003,
+        "rank": 13,
+        "work": "Izhikevich, simple model of spiking neurons"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2019,
+        "rank": 14,
+        "work": "Shorten & Khoshgoftaar, data augmentation survey"
+      },
+      "n_concepts": 2,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "He et al., PReLU / delving deep into rectifiers (2015, #7)",
+        "Chollet, Xception (2017, #8)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #10)",
+        "Silver et al., AlphaGo (2016, #12)",
+        "Shorten & Khoshgoftaar, data augmentation survey (2019, #14)"
+      ]
+    },
+    "top25": {
+      "most_recent_concept": {
+        "year": 2003,
+        "rank": 13,
+        "work": "Izhikevich, simple model of spiking neurons"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2021,
+        "rank": 20,
+        "work": "Alzubaidi et al., review of deep learning"
+      },
+      "n_concepts": 4,
+      "concepts_after_2005": [],
+      "methods_after_2005": [
+        "He et al., PReLU / delving deep into rectifiers (2015, #7)",
+        "Chollet, Xception (2017, #8)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #10)",
+        "Silver et al., AlphaGo (2016, #12)",
+        "Shorten & Khoshgoftaar, data augmentation survey (2019, #14)",
+        "Pan & Yang, transfer learning survey (2009, #17)",
+        "Alzubaidi et al., review of deep learning (2021, #20)",
+        "Hinton & Salakhutdinov, deep autoencoders (2006, #22)",
+        "Bengio et al., representation learning review (2013, #25)"
+      ]
+    },
+    "top50": {
+      "most_recent_concept": {
+        "year": 2020,
+        "rank": 36,
+        "work": "Lillicrap et al., backpropagation and the brain"
+      },
+      "most_recent_concept_or_method": {
+        "year": 2021,
+        "rank": 20,
+        "work": "Alzubaidi et al., review of deep learning"
+      },
+      "n_concepts": 14,
+      "concepts_after_2005": [
+        "Lillicrap et al., backpropagation and the brain (2020, #36)",
+        "Hassabis et al., neuroscience-inspired AI (2017, #38)",
+        "Yamins & DiCarlo, goal-driven models of sensory cortex (2016, #43)",
+        "Yamins et al., performance-optimized models predict higher visual cortex (2014, #48)",
+        "Friston, free-energy principle (2010, #50)"
+      ],
+      "methods_after_2005": [
+        "He et al., PReLU / delving deep into rectifiers (2015, #7)",
+        "Chollet, Xception (2017, #8)",
+        "Schmidhuber, deep learning in neural networks: overview (2014, #10)",
+        "Silver et al., AlphaGo (2016, #12)",
+        "Shorten & Khoshgoftaar, data augmentation survey (2019, #14)",
+        "Pan & Yang, transfer learning survey (2009, #17)",
+        "Alzubaidi et al., review of deep learning (2021, #20)",
+        "Hinton & Salakhutdinov, deep autoencoders (2006, #22)",
+        "Bengio et al., representation learning review (2013, #25)",
+        "Long et al., fully convolutional networks (2016, #30)",
+        "Hinton, Osindero & Teh, deep belief nets (2006, #35)",
+        "Silver et al., AlphaGo Zero (2017, #40)",
+        "Nair & Hinton, rectified linear units (2010, #41)",
+        "Kingma & Welling, variational autoencoder (2013, #44)",
+        "Goodfellow et al., GANs (2014, #45)",
+        "Kirkpatrick et al., elastic weight consolidation (2017, #47)"
+      ]
+    }
+  },
+  "top100_year_distribution": {
+    "orig": {
+      "median_year": 2002.0,
+      "iqr": [
+        1998.0,
+        2010.0
+      ],
+      "n_after_2005": 39,
+      "n_after_2010": 20,
+      "by_class": {
+        "concept": 42,
+        "tool": 30,
+        "method": 21,
+        "book": 7
+      },
+      "concepts_after_2005": 6,
+      "bins": {
+        "<1990": 1,
+        "1990-95": 13,
+        "1996-00": 24,
+        "2001-05": 23,
+        "2006-10": 19,
+        "2011-15": 8,
+        "2016-20": 12,
+        "2021-26": 0
+      }
+    },
+    "rate": {
+      "median_year": 2011.0,
+      "iqr": [
+        2002.0,
+        2017.0
+      ],
+      "n_after_2005": 67,
+      "n_after_2010": 50,
+      "by_class": {
+        "method": 32,
+        "tool": 31,
+        "concept": 30,
+        "book": 6,
+        "artefact": 1
+      },
+      "concepts_after_2005": 11,
+      "bins": {
+        "<1990": 1,
+        "1990-95": 4,
+        "1996-00": 14,
+        "2001-05": 14,
+        "2006-10": 17,
+        "2011-15": 13,
+        "2016-20": 32,
+        "2021-26": 5
+      }
+    },
+    "win8": {
+      "median_year": 2010.0,
+      "iqr": [
+        2005.0,
+        2014.0
+      ],
+      "n_after_2005": 73,
+      "n_after_2010": 49,
+      "by_class": {
+        "concept": 43,
+        "tool": 26,
+        "method": 25,
+        "book": 5,
+        "artefact": 1
+      },
+      "concepts_after_2005": 24,
+      "bins": {
+        "<1990": 2,
+        "1990-95": 2,
+        "1996-00": 9,
+        "2001-05": 14,
+        "2006-10": 24,
+        "2011-15": 49,
+        "2016-20": 0,
+        "2021-26": 0
+      }
+    },
+    "win8_share": {
+      "median_year": 1995.0,
+      "iqr": [
+        1991.0,
+        2000.0
+      ],
+      "n_after_2005": 12,
+      "n_after_2010": 6,
+      "by_class": {
+        "concept": 66,
+        "book": 16,
+        "tool": 13,
+        "method": 4,
+        "artefact": 1
+      },
+      "concepts_after_2005": 4,
+      "bins": {
+        "<1990": 2,
+        "1990-95": 49,
+        "1996-00": 25,
+        "2001-05": 12,
+        "2006-10": 6,
+        "2011-15": 6,
+        "2016-20": 0,
+        "2021-26": 0
+      }
+    }
+  },
+  "published_top15_landing": [
+    {
+      "work": "Menze et al., BRATS benchmark",
+      "year": 2014,
+      "class": "tool",
+      "orig": 1,
+      "rate": 2,
+      "win8": 1,
+      "win8_share": 7,
+      "rate_share": 3
+    },
+    {
+      "work": "Bi & Poo, spike-timing plasticity",
+      "year": 1998,
+      "class": "concept",
+      "orig": 2,
+      "rate": 15,
+      "win8": 48,
+      "win8_share": 11,
+      "rate_share": 5
+    },
+    {
+      "work": "Izhikevich, simple model of spiking neurons",
+      "year": 2003,
+      "class": "concept",
+      "orig": 3,
+      "rate": 13,
+      "win8": 22,
+      "win8_share": 38,
+      "rate_share": 12
+    },
+    {
+      "work": "Olshausen & Field, sparse coding",
+      "year": 1996,
+      "class": "concept",
+      "orig": 4,
+      "rate": 23,
+      "win8": 60,
+      "win8_share": 8,
+      "rate_share": 6
+    },
+    {
+      "work": "Itti & Koch, computational modelling of visual attention",
+      "year": 2001,
+      "class": "concept",
+      "orig": 5,
+      "rate": 16,
+      "win8": 10,
+      "win8_share": 9,
+      "rate_share": 7
+    },
+    {
+      "work": "Miller, magical number seven",
+      "year": 1956,
+      "class": "concept",
+      "orig": 6,
+      "rate": 26,
+      "win8": 18,
+      "win8_share": 1,
+      "rate_share": 2
+    },
+    {
+      "work": "Bates et al., lme4",
+      "year": 2015,
+      "class": "tool",
+      "orig": 7,
+      "rate": 4,
+      "win8": 2,
+      "win8_share": 6,
+      "rate_share": 4
+    },
+    {
+      "work": "Zhang, Brady & Smith, HMRF brain MR segmentation",
+      "year": 2001,
+      "class": "tool",
+      "orig": 8,
+      "rate": 24,
+      "win8": 143,
+      "win8_share": 283,
+      "rate_share": 16
+    },
+    {
+      "work": "Litjens et al., DL in medical image analysis survey",
+      "year": 2017,
+      "class": "tool",
+      "orig": 9,
+      "rate": 3,
+      "win8": null,
+      "win8_share": null,
+      "rate_share": 8
+    },
+    {
+      "work": "Itti, Koch & Niebur, saliency model",
+      "year": 1998,
+      "class": "concept",
+      "orig": 10,
+      "rate": 29,
+      "win8": 138,
+      "win8_share": 167,
+      "rate_share": 31
+    },
+    {
+      "work": "Virtanen et al., SciPy 1.0",
+      "year": 2020,
+      "class": "tool",
+      "orig": 11,
+      "rate": 1,
+      "win8": null,
+      "win8_share": null,
+      "rate_share": 1
+    },
+    {
+      "work": "Zucker & Regehr, short-term synaptic plasticity",
+      "year": 2002,
+      "class": "concept",
+      "orig": 12,
+      "rate": 42,
+      "win8": 823,
+      "win8_share": 484,
+      "rate_share": 55
+    },
+    {
+      "work": "Fawcett, ROC analysis",
+      "year": 2005,
+      "class": "tool",
+      "orig": 13,
+      "rate": 19,
+      "win8": 24,
+      "win8_share": 99,
+      "rate_share": 29
+    },
+    {
+      "work": "Riesenhuber & Poggio, hierarchical object recognition",
+      "year": 1999,
+      "class": "concept",
+      "orig": 14,
+      "rate": 31,
+      "win8": 69,
+      "win8_share": 23,
+      "rate_share": 15
+    },
+    {
+      "work": "Chen & Guestrin, XGBoost",
+      "year": 2016,
+      "class": "tool",
+      "orig": 15,
+      "rate": 11,
+      "win8": null,
+      "win8_share": null,
+      "rate_share": 27
+    }
+  ],
+  "win8_share_from_1996": {
+    "top15": [
+      "Arbib (ed.), Handbook of brain theory and neural networks (1996, book)",
+      "Markram et al., spike-timing synaptic efficacy (1997, concept)",
+      "Bates et al., lme4 (2015, tool)",
+      "Menze et al., BRATS benchmark (2014, tool)",
+      "Olshausen & Field, sparse coding (1996, concept)",
+      "Itti & Koch, computational modelling of visual attention (2001, concept)",
+      "Bi & Poo, spike-timing plasticity (1998, concept)",
+      "Schmidhuber, deep learning in neural networks: overview (2014, method)",
+      "Chang & Lin, LIBSVM (duplicate record) (2008, tool)",
+      "He et al., PReLU / delving deep into rectifiers (2015, method)",
+      "Bell & Sejnowski, independent components are edge filters (1997, concept)",
+      "Song, Miller & Abbott, competitive Hebbian STDP (2000, concept)",
+      "Riesenhuber & Poggio, hierarchical object recognition (1999, concept)",
+      "Smith, brain extraction (BET) (2002, tool)",
+      "Ashburner & Friston, unified segmentation (2005, tool)"
+    ],
+    "most_recent_concept_top15": {
+      "year": 2001,
+      "rank": 6,
+      "work": "Itti & Koch, computational modelling of visual attention"
+    },
+    "most_recent_concept_top50": {
+      "year": 2014,
+      "rank": 44,
+      "work": "Yamins et al., performance-optimized models predict higher visual cortex"
+    },
+    "yamins2014_rank": 44
+  }
+}

@@ -1,0 +1,1943 @@
+# Headline numbers quoted in docs/supplements/S5-*.md, checked by tests/test_supplement_claims.py
+- id: s5-ex-b-brats
+  file: docs/supplements/S5-bridge-builders.md
+  context: = 2,210.16
+  shown: 2,210.16
+  expr: 2*pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').c_neuro[0]*pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').c_ai[0]/(pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').c_neuro[0]+pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').c_ai[0])
+- id: s5-ex-mean-brats
+  file: docs/supplements/S5-bridge-builders.md
+  context: arithmetic mean of 2,249.5
+  shown: 2,249.5
+  expr: (pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').c_neuro[0]+pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').c_ai[0])/2
+- id: s5-ex-article-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: scores 3.99 on this scale
+  shown: '3.99'
+  expr: 2*1000*2/(1000+2)
+- id: s5-ex-article-mean
+  file: docs/supplements/S5-bridge-builders.md
+  context: the arithmetic mean would give 501 and 100
+  shown: '501'
+  expr: (1000+2)/2
+- id: s5-ex-roadmap-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: scores 11.98, and
+  shown: '11.98'
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['ai_skew_example_B'])
+- id: s5-ex-adi-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: by AI scores 13.99
+  shown: '13.99'
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['neuro_skew_example_B'])
+- id: s5-ex-roadmap-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: cited 4,790 times by AI
+  shown: 4,790
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['ai_skew_example_c_ai'])
+- id: s5-ex-adi-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: cited 7,379 times by neuroscience
+  shown: 7,379
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['neuro_skew_example_c_neuro'])
+- id: s5-gate
+  file: docs/supplements/S5-bridge-builders.md
+  context: The gate admits 133,763 papers
+  shown: 133,763
+  expr: pd.read_csv(RESULTS/'bridge/eligibility_funnel.csv').n_remaining[0]
+- id: s5-b15
+  file: docs/supplements/S5-bridge-builders.md
+  context: any paper with B above 1,396
+  shown: 1,396
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').B[14]
+- id: s5-min-side
+  file: docs/supplements/S5-bridge-builders.md
+  context: has at least 698 citations from each side
+  shown: '698'
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').B[14]/2
+- id: s5-min-count
+  file: docs/supplements/S5-bridge-builders.md
+  context: the smallest count among the top fifteen is 798
+  shown: '798'
+  expr: min(pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').c_neuro.min(),pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').c_ai.min())
+- id: s5-n-other
+  file: docs/supplements/S5-bridge-builders.md
+  context: removes 74,485 papers labeled as another field
+  shown: 74,485
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_field_other'])
+- id: s5-n-unknown
+  file: docs/supplements/S5-bridge-builders.md
+  context: and 240 with no label
+  shown: '240'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_field_unknown'])
+- id: s5-n-after-label
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 59,038 | 74,725 |'
+  shown: 59,038
+  expr: pd.read_csv(RESULTS/'bridge/eligibility_funnel.csv').n_remaining[1]
+- id: s5-n-removed-label
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 59,038 | 74,725 |'
+  shown: 74,725
+  expr: pd.read_csv(RESULTS/'bridge/eligibility_funnel.csv').n_removed[1]
+- id: s5-r-rank
+  file: docs/supplements/S5-bridge-builders.md
+  context: the R language (11,739 neuroscience and 4,085 AI citations, rank 2)
+  shown: 11,739
+  expr: pd.read_csv(RESULTS/'bridge/unfiltered_top_papers.csv').set_index('rank_unfiltered').loc[2,'c_neuro']
+- id: s5-r-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: the R language (11,739 neuroscience and 4,085 AI citations, rank 2)
+  shown: 4,085
+  expr: pd.read_csv(RESULTS/'bridge/unfiltered_top_papers.csv').set_index('rank_unfiltered').loc[2,'c_ai']
+- id: s5-ceil-removed
+  file: docs/supplements/S5-bridge-builders.md
+  context: It removes 67 papers, 66 labeled AI
+  shown: '67'
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['n_dropped_by_ceiling'])
+- id: s5-ceil-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: It removes 67 papers, 66 labeled AI
+  shown: '66'
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['n_dropped_by_ceiling_ai'])
+- id: s5-eligible
+  file: docs/supplements/S5-bridge-builders.md
+  context: After these three rules 58,971 papers remain
+  shown: 58,971
+  expr: pd.read_csv(RESULTS/'bridge/eligibility_funnel.csv').n_remaining[2]
+- id: s5-cand-removed
+  file: docs/supplements/S5-bridge-builders.md
+  context: Among the 40 best eligible candidates, 7 are removed
+  shown: '7'
+  expr: (~pd.read_csv(RESULTS/'bridge/s1_eligibility_check.csv').included).sum()
+- id: s5-cand-kept
+  file: docs/supplements/S5-bridge-builders.md
+  context: the first fifteen of the 33 that remain
+  shown: '33'
+  expr: pd.read_csv(RESULTS/'bridge/s1_eligibility_check.csv').included.sum()
+- id: s5-tools
+  file: docs/supplements/S5-bridge-builders.md
+  context: Of the 15 papers, 7 are tools
+  shown: '7'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_tools_top15'])
+- id: s5-concepts
+  file: docs/supplements/S5-bridge-builders.md
+  context: 7 are tools and 8 are concepts
+  shown: '8'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_concepts_top15'])
+- id: s5-recent-concept
+  file: docs/supplements/S5-bridge-builders.md
+  context: Izhikevich's spiking-neuron model of 2003
+  shown: '2003'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['most_recent_concept_year_top15'])
+- id: s5-recent-tool
+  file: docs/supplements/S5-bridge-builders.md
+  context: SciPy 1.0 of 2020
+  shown: '2020'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['most_recent_tool_year_top15'])
+- id: s5-median-year
+  file: docs/supplements/S5-bridge-builders.md
+  context: The median publication year of the top 15 of Table S1 is 2002
+  shown: '2002'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['median_year_top15'])
+- id: s5-b-max
+  file: docs/supplements/S5-bridge-builders.md
+  context: from 2,210 to 1,396
+  shown: 2,210
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').B.max()
+- id: s5-share-min
+  file: docs/supplements/S5-bridge-builders.md
+  context: from 0.10 (the Itti, Koch and Niebur saliency model)
+  shown: '0.10'
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').neuro_share.min()
+- id: s5-share-max
+  file: docs/supplements/S5-bridge-builders.md
+  context: to 0.90 (lme4)
+  shown: '0.90'
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').neuro_share.max()
+- id: s5-itti-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: has 8,286 AI citations against 879 from neuroscience
+  shown: 8,286
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[10,'c_ai']
+- id: s5-itti-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: has 8,286 AI citations against 879 from neuroscience
+  shown: '879'
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[10,'c_neuro']
+- id: s5-n-b1000
+  file: docs/supplements/S5-bridge-builders.md
+  context: 48 have a B of at least 1,000
+  shown: '48'
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['n_eligible_B_ge_1000'])
+- id: s5-n-b100
+  file: docs/supplements/S5-bridge-builders.md
+  context: 2,150 have at least 100
+  shown: 2,150
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['n_eligible_B_ge_100'])
+- id: s5-n-both100
+  file: docs/supplements/S5-bridge-builders.md
+  context: 1,108 have at least 100 citations from each side
+  shown: 1,108
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['n_eligible_both_sides_ge_100'])
+- id: s5-ceil-19
+  file: docs/supplements/S5-bridge-builders.md
+  context: All 19 highest-scoring papers of that pool are removed
+  shown: '19'
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').removed_by_ceiling.head(19).sum()
+- id: s5-ceil-brats-rank
+  file: docs/supplements/S5-bridge-builders.md
+  context: BRATS, would rank 20th
+  shown: '20'
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').query("work_id=='https://openalex.org/W1641498739'").rank_no_ceiling.iloc[0]
+- id: s5-ceil-26
+  file: docs/supplements/S5-bridge-builders.md
+  context: Of the 67 removed papers, 26 score above
+  shown: '26'
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['n_dropped_above_table_s1_rank15'])
+- id: s5-ceil-mizar
+  file: docs/supplements/S5-bridge-builders.md
+  context: MizAR 60 for Mizar 50 with 35,419 AI citations
+  shown: 35,419
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[12,'c_ai']
+- id: s5-ceil-share-lo
+  file: docs/supplements/S5-bridge-builders.md
+  context: lies between 0.03 and 0.25
+  shown: '0.03'
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').neuro_share.head(19).min()
+- id: s5-ceil-share-hi
+  file: docs/supplements/S5-bridge-builders.md
+  context: lies between 0.03 and 0.25
+  shown: '0.25'
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').neuro_share.head(19).max()
+- id: s5-resnet-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: ResNet has 4,671 citations from neuroscience
+  shown: 4,671
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').c_neuro[0]
+- id: s5-resnet-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: and 112,475 from AI
+  shown: 112,475
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').c_ai[0]
+- id: s5-resnet-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: so its B of 8,970 is the highest of the pool
+  shown: 8,970
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['max_B_unfiltered'])
+- id: s5-a10
+  file: docs/supplements/S5-bridge-builders.md
+  context: the author in tenth place (5,715)
+  shown: 5,715
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[9]
+- id: s5-a15
+  file: docs/supplements/S5-bridge-builders.md
+  context: and the fifteenth (5,076)
+  shown: 5,076
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[14]
+- id: s5-a-gap
+  file: docs/supplements/S5-bridge-builders.md
+  context: the sums differ by 11 percent
+  shown: '11'
+  expr: 100*(pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[9]-pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[14])/pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[9]
+- id: s5-avants-sum
+  file: docs/supplements/S5-bridge-builders.md
+  context: contributes 2,210 of his 5,226
+  shown: 5,226
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[13]
+- id: s5-oliva-rank
+  file: docs/supplements/S5-bridge-builders.md
+  context: she ranks 6th of 15
+  shown: '6'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['oliva_rank'])
+- id: s5-oliva-papers
+  file: docs/supplements/S5-bridge-builders.md
+  context: with 32 bridge papers and a sum of 7,312
+  shown: '32'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['oliva_n_papers'])
+- id: s5-oliva-sum
+  file: docs/supplements/S5-bridge-builders.md
+  context: with 32 bridge papers and a sum of 7,312
+  shown: 7,312
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['oliva_total_B'])
+- id: s5-smith-sum
+  file: docs/supplements/S5-bridge-builders.md
+  context: ahead of Stephen Smith (6,263)
+  shown: 6,263
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[6]
+- id: s5-friston-sum
+  file: docs/supplements/S5-bridge-builders.md
+  context: behind Karl Friston (7,909)
+  shown: 7,909
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[4]
+- id: s5-oliva-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: cited 8,303 times by neuroscience papers
+  shown: 8,303
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_c_neuro[5]
+- id: s5-oliva-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: and 23,659 times by AI papers
+  shown: 23,659
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_c_ai[5]
+- id: s5-oliva-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: a neuroscience share of 0.26
+  shown: '0.26'
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').neuro_share[5]
+- id: s5-oliva-from-ai-end
+  file: docs/supplements/S5-bridge-builders.md
+  context: which puts her 5th from the AI-leaning end
+  shown: '5'
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').neuro_share.rank()[5]
+- id: s5-rank-deepmind
+  file: docs/supplements/S5-bridge-builders.md
+  context: DeepMind (United Kingdom) is at rank 26
+  shown: '26'
+  expr: pd.read_csv(RESULTS/'bridge/institution_ranks_top100.csv').query("variant=='separated' and inst_name=='DeepMind (United Kingdom)'")['rank'].iloc[0]
+- id: s5-rank-msr
+  file: docs/supplements/S5-bridge-builders.md
+  context: Microsoft Research (United Kingdom) at 49
+  shown: '49'
+  expr: pd.read_csv(RESULTS/'bridge/institution_ranks_top100.csv').query("variant=='separated' and inst_name=='Microsoft Research (United Kingdom)'")['rank'].iloc[0]
+- id: s5-rank-msus
+  file: docs/supplements/S5-bridge-builders.md
+  context: Microsoft (United States) at 64
+  shown: '64'
+  expr: pd.read_csv(RESULTS/'bridge/institution_ranks_top100.csv').query("variant=='separated' and inst_name=='Microsoft (United States)'")['rank'].iloc[0]
+- id: s5-rank-meta-il
+  file: docs/supplements/S5-bridge-builders.md
+  context: Meta (Israel) at 76
+  shown: '76'
+  expr: pd.read_csv(RESULTS/'bridge/institution_ranks_top100.csv').query("variant=='separated' and inst_name=='Meta (Israel)'")['rank'].iloc[0]
+- id: s5-rank-meta
+  file: docs/supplements/S5-bridge-builders.md
+  context: while consolidated Meta (Facebook) is 19th
+  shown: '19'
+  expr: pd.read_csv(RESULTS/'bridge/institution_ranks_top100.csv').query("variant=='consolidated' and inst_name=='Meta (Facebook)'")['rank'].iloc[0]
+- id: s5-edges-total
+  file: docs/supplements/S5-bridge-builders.md
+  context: That gives 26 edges, 10 current and 16 past
+  shown: '26'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_edges_total'])
+- id: s5-edges-current
+  file: docs/supplements/S5-bridge-builders.md
+  context: That gives 26 edges, 10 current and 16 past
+  shown: '10'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_edges_current'])
+- id: s5-edges-past
+  file: docs/supplements/S5-bridge-builders.md
+  context: That gives 26 edges, 10 current and 16 past
+  shown: '16'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_edges_past'])
+- id: s5-edges-sep
+  file: docs/supplements/S5-bridge-builders.md
+  context: (25 of the 26 edges are drawn
+  shown: '25'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_edges_drawn_separated'])
+- id: s5-era-701
+  file: docs/supplements/S5-bridge-builders.md
+  context: 701 (70.1 percent) were published before 2012
+  shown: '701'
+  expr: pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n_before_2012']
+- id: s5-era-701p
+  file: docs/supplements/S5-bridge-builders.md
+  context: 701 (70.1 percent) were published before 2012
+  shown: '70.1'
+  expr: 100*pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n_before_2012']/1000
+- id: s5-era-115
+  file: docs/supplements/S5-bridge-builders.md
+  context: 115 from 2012 to 2015
+  shown: '115'
+  expr: pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n_2012_2015']
+- id: s5-era-133
+  file: docs/supplements/S5-bridge-builders.md
+  context: 133 from 2016 to 2019
+  shown: '133'
+  expr: pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n_2016_2019']
+- id: s5-era-51
+  file: docs/supplements/S5-bridge-builders.md
+  context: 51 (5.1 percent) in 2020 or later
+  shown: '51'
+  expr: pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n_2020_onward']
+- id: s5-era-median
+  file: docs/supplements/S5-bridge-builders.md
+  context: the median year is 2005
+  shown: '2005'
+  expr: pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','median_year']
+- id: s5-era-pool-median
+  file: docs/supplements/S5-bridge-builders.md
+  context: Across the eligible pool as a whole the median is 2011
+  shown: '2011'
+  expr: pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['all_eligible','median_year']
+- id: s5-cl-140
+  file: docs/supplements/S5-bridge-builders.md
+  context: removed 140 papers in physics subfields
+  shown: '140'
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['clustered_n_dropped_physics'])
+- id: s5-cl-324
+  file: docs/supplements/S5-bridge-builders.md
+  context: it keeps 324 papers labeled other and 76 above the ceiling
+  shown: '324'
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['clustered_n_field_other'])
+- id: s5-cl-76
+  file: docs/supplements/S5-bridge-builders.md
+  context: it keeps 324 papers labeled other and 76 above the ceiling
+  shown: '76'
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['clustered_n_over_ceiling'])
+- id: s5-cl-dl-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Foundational DL/AI | 350 | 40.7 | 723 |'
+  shown: '350'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Foundational DL/AI'),'n']
+- id: s5-cl-dl-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Foundational DL/AI | 350 | 40.7 | 723 |'
+  shown: '40.7'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Foundational DL/AI'),'share_pct']
+- id: s5-cl-manifesto
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Bridge manifestos & theory | 4 | 0.5 | 602 |'
+  shown: '4'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Bridge manifestos & theory'),'n']
+- id: s5-cl-pre2012
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Before 2012 | 604 | 70.2 | 651 |'
+  shown: '604'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('era','before_2012'),'n']
+- id: s5-cl-post2020
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2020 onward | 43 | 5.0 | 720 |'
+  shown: '43'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('era','2020_onward'),'n']
+- id: s5-cl-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: four in the 860
+  shown: '860'
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['clustered_n'])
+# S1 data, corpus and field classification
+- id: s5-cb-low2
+  file: docs/supplements/S5-bridge-builders.md
+  context: followed by Bengio (0.081), Alphabet (0.085) and Hinton (0.086)
+  shown: '0.081'
+  expr: np.sort(np.concatenate([pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').neuro_share.values,pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').neuro_share.values,pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').head(15).neuro_share.values]))[1]
+- id: s5-cb-low3
+  file: docs/supplements/S5-bridge-builders.md
+  context: followed by Bengio (0.081), Alphabet (0.085) and Hinton (0.086)
+  shown: '0.085'
+  expr: np.sort(np.concatenate([pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').neuro_share.values,pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').neuro_share.values,pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').head(15).neuro_share.values]))[2]
+- id: s5-cb-low4
+  file: docs/supplements/S5-bridge-builders.md
+  context: followed by Bengio (0.081), Alphabet (0.085) and Hinton (0.086)
+  shown: '0.086'
+  expr: np.sort(np.concatenate([pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').neuro_share.values,pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').neuro_share.values,pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').head(15).neuro_share.values]))[3]
+- id: s5-cb-low-names
+  file: docs/supplements/S5-bridge-builders.md
+  context: followed by Bengio (0.081), Alphabet (0.085) and Hinton (0.086)
+  shown: '0.085'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('inst_name').loc['Alphabet (Google + DeepMind)','neuro_share']
+- id: s5x-brats-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: BRATS has 2,547 citations from neuroscience and 1,952 from AI
+  shown: 2,547
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[1,'c_neuro']
+- id: s5x-brats-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: BRATS has 2,547 citations from neuroscience and 1,952 from AI
+  shown: 1,952
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[1,'c_ai']
+- id: s5x-hm-2-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Balanced: Bi and Poo (1998) | 2,271 | 2,106 | 2,188.5 | 2,185.39 |'
+  shown: 2,271
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[2,'c_neuro']
+- id: s5x-hm-2-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Balanced: Bi and Poo (1998) | 2,271 | 2,106 | 2,188.5 | 2,185.39 |'
+  shown: 2,106
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[2,'c_ai']
+- id: s5x-hm-2-mean
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Balanced: Bi and Poo (1998) | 2,271 | 2,106 | 2,188.5 | 2,185.39 |'
+  shown: 2,188.5
+  expr: (pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[2,'c_neuro']+pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[2,'c_ai'])/2
+- id: s5x-hm-2-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Balanced: Bi and Poo (1998) | 2,271 | 2,106 | 2,188.5 | 2,185.39 |'
+  shown: 2,185.39
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[2,'B']
+- id: s5x-hm-7-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Skewed toward neuroscience: lme4 (2015) | 8,437 | 920 | 4,678.5 | 1,659.09 |'
+  shown: 8,437
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[7,'c_neuro']
+- id: s5x-hm-7-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Skewed toward neuroscience: lme4 (2015) | 8,437 | 920 | 4,678.5 | 1,659.09 |'
+  shown: '920'
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[7,'c_ai']
+- id: s5x-hm-7-mean
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Skewed toward neuroscience: lme4 (2015) | 8,437 | 920 | 4,678.5 | 1,659.09 |'
+  shown: 4,678.5
+  expr: (pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[7,'c_neuro']+pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[7,'c_ai'])/2
+- id: s5x-hm-7-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Skewed toward neuroscience: lme4 (2015) | 8,437 | 920 | 4,678.5 | 1,659.09 |'
+  shown: 1,659.09
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[7,'B']
+- id: s5x-hm-15-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Skewed toward AI: XGBoost (2016) | 798 | 5,559 | 3,178.5 | 1,395.65 |'
+  shown: 5,559
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[15,'c_ai']
+- id: s5x-hm-15-mean
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Skewed toward AI: XGBoost (2016) | 798 | 5,559 | 3,178.5 | 1,395.65 |'
+  shown: 3,178.5
+  expr: (pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[15,'c_neuro']+pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[15,'c_ai'])/2
+- id: s5x-hm-15-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Skewed toward AI: XGBoost (2016) | 798 | 5,559 | 3,178.5 | 1,395.65 |'
+  shown: 1,395.65
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[15,'B']
+- id: s5x-hm-ExtremeAIside1996-mean
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Extreme, AI side: Probabilistic roadmaps for path planning (1996) | 6 | 4,790 | 2,398.0 | 11.98 |'
+  shown: 2,398.0
+  expr: (float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['ai_skew_example_c_neuro'])+float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['ai_skew_example_c_ai']))/2
+- id: s5x-hm-Extremeneurosciences-mean
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Extreme, neuroscience side: Autism Diagnostic Interview-Revised (1994) | 7,379 | 7 | 3,693.0 | 13.99 |'
+  shown: 3,693.0
+  expr: (float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['neuro_skew_example_c_neuro'])+float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['neuro_skew_example_c_ai']))/2
+- id: s5x-t1-1-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 1 | Multimodal Brain Tumor Image Segmentation Benchmark (BRATS), Menze et al. | 2014 | 2,547 | 1,952 | 2,210 | 0.57 | tool |'
+  shown: 2,547
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[1,'c_neuro']
+- id: s5x-t1-1-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 1 | Multimodal Brain Tumor Image Segmentation Benchmark (BRATS), Menze et al. | 2014 | 2,547 | 1,952 | 2,210 | 0.57 | tool |'
+  shown: 1,952
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[1,'c_ai']
+- id: s5x-t1-2-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2 | Synaptic modifications in cultured hippocampal neurons (spike-timing plasticity), Bi and Poo | 1998 | 2,271 | 2,106 | 2,185 | 0.52 | concept |'
+  shown: 2,271
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[2,'c_neuro']
+- id: s5x-t1-2-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2 | Synaptic modifications in cultured hippocampal neurons (spike-timing plasticity), Bi and Poo | 1998 | 2,271 | 2,106 | 2,185 | 0.52 | concept |'
+  shown: 2,106
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[2,'c_ai']
+- id: s5x-t1-2-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2 | Synaptic modifications in cultured hippocampal neurons (spike-timing plasticity), Bi and Poo | 1998 | 2,271 | 2,106 | 2,185 | 0.52 | concept |'
+  shown: 2,185
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[2,'B']
+- id: s5x-t1-3-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 3 | Simple model of spiking neurons, Izhikevich | 2003 | 1,680 | 2,235 | 1,918 | 0.43 | concept |'
+  shown: 1,680
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[3,'c_neuro']
+- id: s5x-t1-3-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 3 | Simple model of spiking neurons, Izhikevich | 2003 | 1,680 | 2,235 | 1,918 | 0.43 | concept |'
+  shown: 2,235
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[3,'c_ai']
+- id: s5x-t1-3-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 3 | Simple model of spiking neurons, Izhikevich | 2003 | 1,680 | 2,235 | 1,918 | 0.43 | concept |'
+  shown: 1,918
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[3,'B']
+- id: s5x-t1-4-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 4 | Emergence of simple-cell receptive field properties by learning a sparse code, Olshausen and Field | 1996 | 2,004 | 1,832 | 1,914 | 0.52 | concept |'
+  shown: 2,004
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[4,'c_neuro']
+- id: s5x-t1-4-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 4 | Emergence of simple-cell receptive field properties by learning a sparse code, Olshausen and Field | 1996 | 2,004 | 1,832 | 1,914 | 0.52 | concept |'
+  shown: 1,832
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[4,'c_ai']
+- id: s5x-t1-4-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 4 | Emergence of simple-cell receptive field properties by learning a sparse code, Olshausen and Field | 1996 | 2,004 | 1,832 | 1,914 | 0.52 | concept |'
+  shown: 1,914
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[4,'B']
+- id: s5x-t1-5-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 5 | Computational modeling of visual attention, Itti and Koch | 2001 | 1,750 | 1,948 | 1,844 | 0.47 | concept |'
+  shown: 1,750
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[5,'c_neuro']
+- id: s5x-t1-5-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 5 | Computational modeling of visual attention, Itti and Koch | 2001 | 1,750 | 1,948 | 1,844 | 0.47 | concept |'
+  shown: 1,948
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[5,'c_ai']
+- id: s5x-t1-5-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 5 | Computational modeling of visual attention, Itti and Koch | 2001 | 1,750 | 1,948 | 1,844 | 0.47 | concept |'
+  shown: 1,844
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[5,'B']
+- id: s5x-t1-6-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 6 | The magical number seven, plus or minus two, Miller | 1994 | 2,126 | 1,563 | 1,802 | 0.58 | concept |'
+  shown: 2,126
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[6,'c_neuro']
+- id: s5x-t1-6-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 6 | The magical number seven, plus or minus two, Miller | 1994 | 2,126 | 1,563 | 1,802 | 0.58 | concept |'
+  shown: 1,563
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[6,'c_ai']
+- id: s5x-t1-6-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 6 | The magical number seven, plus or minus two, Miller | 1994 | 2,126 | 1,563 | 1,802 | 0.58 | concept |'
+  shown: 1,802
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[6,'B']
+- id: s5x-t1-7-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 7 | Fitting linear mixed-effects models using lme4, Bates et al. | 2015 | 8,437 | 920 | 1,659 | 0.90 | tool |'
+  shown: 8,437
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[7,'c_neuro']
+- id: s5x-t1-7-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 7 | Fitting linear mixed-effects models using lme4, Bates et al. | 2015 | 8,437 | 920 | 1,659 | 0.90 | tool |'
+  shown: '920'
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[7,'c_ai']
+- id: s5x-t1-7-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 7 | Fitting linear mixed-effects models using lme4, Bates et al. | 2015 | 8,437 | 920 | 1,659 | 0.90 | tool |'
+  shown: 1,659
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[7,'B']
+- id: s5x-t1-8-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 8 | Segmentation of brain MR images by hidden Markov random field and EM, Zhang et al. | 2001 | 2,111 | 1,335 | 1,636 | 0.61 | tool |'
+  shown: 2,111
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[8,'c_neuro']
+- id: s5x-t1-8-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 8 | Segmentation of brain MR images by hidden Markov random field and EM, Zhang et al. | 2001 | 2,111 | 1,335 | 1,636 | 0.61 | tool |'
+  shown: 1,335
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[8,'c_ai']
+- id: s5x-t1-8-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 8 | Segmentation of brain MR images by hidden Markov random field and EM, Zhang et al. | 2001 | 2,111 | 1,335 | 1,636 | 0.61 | tool |'
+  shown: 1,636
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[8,'B']
+- id: s5x-t1-9-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 9 | A survey on deep learning in medical image analysis, Litjens et al. | 2017 | 969 | 4,431 | 1,590 | 0.18 | tool |'
+  shown: '969'
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[9,'c_neuro']
+- id: s5x-t1-9-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 9 | A survey on deep learning in medical image analysis, Litjens et al. | 2017 | 969 | 4,431 | 1,590 | 0.18 | tool |'
+  shown: 4,431
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[9,'c_ai']
+- id: s5x-t1-9-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 9 | A survey on deep learning in medical image analysis, Litjens et al. | 2017 | 969 | 4,431 | 1,590 | 0.18 | tool |'
+  shown: 1,590
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[9,'B']
+- id: s5x-t1-10-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 10 | A model of saliency-based visual attention, Itti, Koch and Niebur | 1998 | 879 | 8,286 | 1,589 | 0.10 | concept |'
+  shown: 1,589
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[10,'B']
+- id: s5x-t1-11-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 11 | SciPy 1.0, Virtanen et al. | 2020 | 1,944 | 1,293 | 1,553 | 0.60 | tool |'
+  shown: 1,944
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[11,'c_neuro']
+- id: s5x-t1-11-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 11 | SciPy 1.0, Virtanen et al. | 2020 | 1,944 | 1,293 | 1,553 | 0.60 | tool |'
+  shown: 1,293
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[11,'c_ai']
+- id: s5x-t1-11-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 11 | SciPy 1.0, Virtanen et al. | 2020 | 1,944 | 1,293 | 1,553 | 0.60 | tool |'
+  shown: 1,553
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[11,'B']
+- id: s5x-t1-12-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 12 | Short-term synaptic plasticity, Zucker and Regehr | 2002 | 2,787 | 1,035 | 1,509 | 0.73 | concept |'
+  shown: 2,787
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[12,'c_neuro']
+- id: s5x-t1-12-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 12 | Short-term synaptic plasticity, Zucker and Regehr | 2002 | 2,787 | 1,035 | 1,509 | 0.73 | concept |'
+  shown: 1,035
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[12,'c_ai']
+- id: s5x-t1-12-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 12 | Short-term synaptic plasticity, Zucker and Regehr | 2002 | 2,787 | 1,035 | 1,509 | 0.73 | concept |'
+  shown: 1,509
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[12,'B']
+- id: s5x-t1-13-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 13 | An introduction to ROC analysis, Fawcett | 2005 | 885 | 3,938 | 1,445 | 0.18 | tool |'
+  shown: '885'
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[13,'c_neuro']
+- id: s5x-t1-13-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 13 | An introduction to ROC analysis, Fawcett | 2005 | 885 | 3,938 | 1,445 | 0.18 | tool |'
+  shown: 3,938
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[13,'c_ai']
+- id: s5x-t1-13-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 13 | An introduction to ROC analysis, Fawcett | 2005 | 885 | 3,938 | 1,445 | 0.18 | tool |'
+  shown: 1,445
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[13,'B']
+- id: s5x-t1-14-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 14 | Hierarchical models of object recognition in cortex, Riesenhuber and Poggio | 1999 | 1,690 | 1,205 | 1,407 | 0.58 | concept |'
+  shown: 1,690
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[14,'c_neuro']
+- id: s5x-t1-14-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 14 | Hierarchical models of object recognition in cortex, Riesenhuber and Poggio | 1999 | 1,690 | 1,205 | 1,407 | 0.58 | concept |'
+  shown: 1,205
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[14,'c_ai']
+- id: s5x-t1-14-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 14 | Hierarchical models of object recognition in cortex, Riesenhuber and Poggio | 1999 | 1,690 | 1,205 | 1,407 | 0.58 | concept |'
+  shown: 1,407
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[14,'B']
+- id: s5x-t1-15-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 15 | XGBoost, Chen and Guestrin | 2016 | 798 | 5,559 | 1,396 | 0.13 | tool |'
+  shown: 5,559
+  expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').set_index('rank').loc[15,'c_ai']
+- id: s5x-ce-2-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2 | Deep learning | 2015 | 3,099 | 20,569 | 5,386 | yes |'
+  shown: 3,099
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[2,'c_neuro']
+- id: s5x-ce-2-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2 | Deep learning | 2015 | 3,099 | 20,569 | 5,386 | yes |'
+  shown: 20,569
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[2,'c_ai']
+- id: s5x-ce-2-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2 | Deep learning | 2015 | 3,099 | 20,569 | 5,386 | yes |'
+  shown: 5,386
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[2,'B_harmonic']
+- id: s5x-ce-3-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 3 | LIBSVM | 2011 | 2,724 | 15,546 | 4,636 | yes |'
+  shown: 2,724
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[3,'c_neuro']
+- id: s5x-ce-3-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 3 | LIBSVM | 2011 | 2,724 | 15,546 | 4,636 | yes |'
+  shown: 15,546
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[3,'c_ai']
+- id: s5x-ce-3-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 3 | LIBSVM | 2011 | 2,724 | 15,546 | 4,636 | yes |'
+  shown: 4,636
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[3,'B_harmonic']
+- id: s5x-ce-4-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 4 | ImageNet classification with deep convolutional neural networks | 2017 | 2,456 | 38,936 | 4,621 | yes |'
+  shown: 2,456
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[4,'c_neuro']
+- id: s5x-ce-4-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 4 | ImageNet classification with deep convolutional neural networks | 2017 | 2,456 | 38,936 | 4,621 | yes |'
+  shown: 38,936
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[4,'c_ai']
+- id: s5x-ce-4-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 4 | ImageNet classification with deep convolutional neural networks | 2017 | 2,456 | 38,936 | 4,621 | yes |'
+  shown: 4,621
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[4,'B_harmonic']
+- id: s5x-ce-5-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 5 | Scikit-learn: Machine Learning in Python | 2012 | 2,793 | 11,757 | 4,514 | yes |'
+  shown: 2,793
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[5,'c_neuro']
+- id: s5x-ce-5-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 5 | Scikit-learn: Machine Learning in Python | 2012 | 2,793 | 11,757 | 4,514 | yes |'
+  shown: 11,757
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[5,'c_ai']
+- id: s5x-ce-5-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 5 | Scikit-learn: Machine Learning in Python | 2012 | 2,793 | 11,757 | 4,514 | yes |'
+  shown: 4,514
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[5,'B_harmonic']
+- id: s5x-ce-6-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 6 | Long Short-Term Memory | 1997 | 2,212 | 34,318 | 4,156 | yes |'
+  shown: 2,212
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[6,'c_neuro']
+- id: s5x-ce-6-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 6 | Long Short-Term Memory | 1997 | 2,212 | 34,318 | 4,156 | yes |'
+  shown: 34,318
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[6,'c_ai']
+- id: s5x-ce-6-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 6 | Long Short-Term Memory | 1997 | 2,212 | 34,318 | 4,156 | yes |'
+  shown: 4,156
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[6,'B_harmonic']
+- id: s5x-ce-7-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 7 | Random Forests | 2001 | 2,241 | 14,983 | 3,899 | yes |'
+  shown: 2,241
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[7,'c_neuro']
+- id: s5x-ce-7-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 7 | Random Forests | 2001 | 2,241 | 14,983 | 3,899 | yes |'
+  shown: 14,983
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[7,'c_ai']
+- id: s5x-ce-7-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 7 | Random Forests | 2001 | 2,241 | 14,983 | 3,899 | yes |'
+  shown: 3,899
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[7,'B_harmonic']
+- id: s5x-ce-8-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 8 | Reinforcement Learning: An Introduction | 1998 | 2,502 | 7,607 | 3,765 | yes |'
+  shown: 2,502
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[8,'c_neuro']
+- id: s5x-ce-8-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 8 | Reinforcement Learning: An Introduction | 1998 | 2,502 | 7,607 | 3,765 | yes |'
+  shown: 7,607
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[8,'c_ai']
+- id: s5x-ce-8-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 8 | Reinforcement Learning: An Introduction | 1998 | 2,502 | 7,607 | 3,765 | yes |'
+  shown: 3,765
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[8,'B_harmonic']
+- id: s5x-ce-9-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 9 | Reinforcement Learning: An Introduction | 2005 | 2,302 | 10,040 | 3,745 | yes |'
+  shown: 2,302
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[9,'c_neuro']
+- id: s5x-ce-9-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 9 | Reinforcement Learning: An Introduction | 2005 | 2,302 | 10,040 | 3,745 | yes |'
+  shown: 10,040
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[9,'c_ai']
+- id: s5x-ce-9-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 9 | Reinforcement Learning: An Introduction | 2005 | 2,302 | 10,040 | 3,745 | yes |'
+  shown: 3,745
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[9,'B_harmonic']
+- id: s5x-ce-10-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 10 | Adam: A Method for Stochastic Optimization | 2014 | 1,932 | 39,228 | 3,683 | yes |'
+  shown: 1,932
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[10,'c_neuro']
+- id: s5x-ce-10-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 10 | Adam: A Method for Stochastic Optimization | 2014 | 1,932 | 39,228 | 3,683 | yes |'
+  shown: 39,228
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[10,'c_ai']
+- id: s5x-ce-10-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 10 | Adam: A Method for Stochastic Optimization | 2014 | 1,932 | 39,228 | 3,683 | yes |'
+  shown: 3,683
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[10,'B_harmonic']
+- id: s5x-ce-11-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 11 | Very Deep Convolutional Networks for Large-Scale Image Recognition | 2014 | 1,817 | 42,664 | 3,486 | yes |'
+  shown: 1,817
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[11,'c_neuro']
+- id: s5x-ce-11-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 11 | Very Deep Convolutional Networks for Large-Scale Image Recognition | 2014 | 1,817 | 42,664 | 3,486 | yes |'
+  shown: 42,664
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[11,'c_ai']
+- id: s5x-ce-11-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 11 | Very Deep Convolutional Networks for Large-Scale Image Recognition | 2014 | 1,817 | 42,664 | 3,486 | yes |'
+  shown: 3,486
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[11,'B_harmonic']
+- id: s5x-ce-12-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 12 | MizAR 60 for Mizar 50 | 2023 | 1,702 | 35,419 | 3,248 | yes |'
+  shown: 1,702
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[12,'c_neuro']
+- id: s5x-ce-12-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 12 | MizAR 60 for Mizar 50 | 2023 | 1,702 | 35,419 | 3,248 | yes |'
+  shown: 3,248
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[12,'B_harmonic']
+- id: s5x-ce-13-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 13 | Support-vector networks | 1995 | 1,763 | 9,578 | 2,978 | yes |'
+  shown: 1,763
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[13,'c_neuro']
+- id: s5x-ce-13-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 13 | Support-vector networks | 1995 | 1,763 | 9,578 | 2,978 | yes |'
+  shown: 9,578
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[13,'c_ai']
+- id: s5x-ce-13-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 13 | Support-vector networks | 1995 | 1,763 | 9,578 | 2,978 | yes |'
+  shown: 2,978
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[13,'B_harmonic']
+- id: s5x-ce-14-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 14 | Gradient-based learning applied to document recognition | 1998 | 1,461 | 28,913 | 2,781 | yes |'
+  shown: 1,461
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[14,'c_neuro']
+- id: s5x-ce-14-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 14 | Gradient-based learning applied to document recognition | 1998 | 1,461 | 28,913 | 2,781 | yes |'
+  shown: 28,913
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[14,'c_ai']
+- id: s5x-ce-14-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 14 | Gradient-based learning applied to document recognition | 1998 | 1,461 | 28,913 | 2,781 | yes |'
+  shown: 2,781
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[14,'B_harmonic']
+- id: s5x-ce-15-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 15 | ImageNet: A large-scale hierarchical image database | 2009 | 1,361 | 37,872 | 2,628 | yes |'
+  shown: 1,361
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[15,'c_neuro']
+- id: s5x-ce-15-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 15 | ImageNet: A large-scale hierarchical image database | 2009 | 1,361 | 37,872 | 2,628 | yes |'
+  shown: 37,872
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[15,'c_ai']
+- id: s5x-ce-15-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 15 | ImageNet: A large-scale hierarchical image database | 2009 | 1,361 | 37,872 | 2,628 | yes |'
+  shown: 2,628
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[15,'B_harmonic']
+- id: s5x-ce-16-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 16 | Visualizing Data using t-SNE | 2008 | 1,407 | 15,122 | 2,574 | yes |'
+  shown: 1,407
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[16,'c_neuro']
+- id: s5x-ce-16-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 16 | Visualizing Data using t-SNE | 2008 | 1,407 | 15,122 | 2,574 | yes |'
+  shown: 15,122
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[16,'c_ai']
+- id: s5x-ce-16-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 16 | Visualizing Data using t-SNE | 2008 | 1,407 | 15,122 | 2,574 | yes |'
+  shown: 2,574
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[16,'B_harmonic']
+- id: s5x-ce-17-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 17 | Going deeper with convolutions | 2015 | 1,261 | 23,512 | 2,394 | yes |'
+  shown: 1,261
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[17,'c_neuro']
+- id: s5x-ce-17-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 17 | Going deeper with convolutions | 2015 | 1,261 | 23,512 | 2,394 | yes |'
+  shown: 23,512
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[17,'c_ai']
+- id: s5x-ce-17-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 17 | Going deeper with convolutions | 2015 | 1,261 | 23,512 | 2,394 | yes |'
+  shown: 2,394
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[17,'B_harmonic']
+- id: s5x-ce-18-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 18 | Densely Connected Convolutional Networks | 2017 | 1,259 | 20,119 | 2,370 | yes |'
+  shown: 1,259
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[18,'c_neuro']
+- id: s5x-ce-18-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 18 | Densely Connected Convolutional Networks | 2017 | 1,259 | 20,119 | 2,370 | yes |'
+  shown: 20,119
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[18,'c_ai']
+- id: s5x-ce-18-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 18 | Densely Connected Convolutional Networks | 2017 | 1,259 | 20,119 | 2,370 | yes |'
+  shown: 2,370
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[18,'B_harmonic']
+- id: s5x-ce-19-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 19 | Support-Vector Networks | 1995 | 1,294 | 10,061 | 2,293 | yes |'
+  shown: 1,294
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[19,'c_neuro']
+- id: s5x-ce-19-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 19 | Support-Vector Networks | 1995 | 1,294 | 10,061 | 2,293 | yes |'
+  shown: 10,061
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[19,'c_ai']
+- id: s5x-ce-19-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 19 | Support-Vector Networks | 1995 | 1,294 | 10,061 | 2,293 | yes |'
+  shown: 2,293
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[19,'B_harmonic']
+- id: s5x-ce-20-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 20 | The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS) | 2014 | 2,547 | 1,952 | 2,210 | no |'
+  shown: 2,547
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[20,'c_neuro']
+- id: s5x-ce-20-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 20 | The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS) | 2014 | 2,547 | 1,952 | 2,210 | no |'
+  shown: 1,952
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[20,'c_ai']
+- id: s5x-ce-21-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 21 | Synaptic Modifications in Cultured Hippocampal Neurons: Dependence ... | 1998 | 2,271 | 2,106 | 2,185 | no |'
+  shown: 2,271
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[21,'c_neuro']
+- id: s5x-ce-21-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 21 | Synaptic Modifications in Cultured Hippocampal Neurons: Dependence ... | 1998 | 2,271 | 2,106 | 2,185 | no |'
+  shown: 2,106
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[21,'c_ai']
+- id: s5x-ce-21-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 21 | Synaptic Modifications in Cultured Hippocampal Neurons: Dependence ... | 1998 | 2,271 | 2,106 | 2,185 | no |'
+  shown: 2,185
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[21,'B_harmonic']
+- id: s5x-ce-22-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 22 | Dropout: a simple way to prevent neural networks from overfitting | 2014 | 1,154 | 14,395 | 2,137 | yes |'
+  shown: 1,154
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[22,'c_neuro']
+- id: s5x-ce-22-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 22 | Dropout: a simple way to prevent neural networks from overfitting | 2014 | 1,154 | 14,395 | 2,137 | yes |'
+  shown: 14,395
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[22,'c_ai']
+- id: s5x-ce-22-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 22 | Dropout: a simple way to prevent neural networks from overfitting | 2014 | 1,154 | 14,395 | 2,137 | yes |'
+  shown: 2,137
+  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').set_index('rank_no_ceiling').loc[22,'B_harmonic']
+- id: s5x-au-1-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 1 | Yoshua Bengio | 41 | 9,937 | 6,739 | 76,514 | 0.08 |'
+  shown: 9,937
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[1,'total_B']
+- id: s5x-au-1-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 1 | Yoshua Bengio | 41 | 9,937 | 6,739 | 76,514 | 0.08 |'
+  shown: 6,739
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[1,'total_c_neuro']
+- id: s5x-au-1-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 1 | Yoshua Bengio | 41 | 9,937 | 6,739 | 76,514 | 0.08 |'
+  shown: 76,514
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[1,'total_c_ai']
+- id: s5x-au-2-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2 | Christof Koch | 33 | 9,000 | 22,872 | 18,597 | 0.55 |'
+  shown: 9,000
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[2,'total_B']
+- id: s5x-au-2-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2 | Christof Koch | 33 | 9,000 | 22,872 | 18,597 | 0.55 |'
+  shown: 22,872
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[2,'total_c_neuro']
+- id: s5x-au-2-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2 | Christof Koch | 33 | 9,000 | 22,872 | 18,597 | 0.55 |'
+  shown: 18,597
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[2,'total_c_ai']
+- id: s5x-au-3-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 3 | Geoffrey E. Hinton | 34 | 8,807 | 5,505 | 58,177 | 0.09 |'
+  shown: 8,807
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[3,'total_B']
+- id: s5x-au-3-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 3 | Geoffrey E. Hinton | 34 | 8,807 | 5,505 | 58,177 | 0.09 |'
+  shown: 5,505
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[3,'total_c_neuro']
+- id: s5x-au-3-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 3 | Geoffrey E. Hinton | 34 | 8,807 | 5,505 | 58,177 | 0.09 |'
+  shown: 58,177
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[3,'total_c_ai']
+- id: s5x-au-4-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 4 | Wulfram Gerstner | 37 | 8,426 | 10,263 | 8,128 | 0.56 |'
+  shown: 8,426
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[4,'total_B']
+- id: s5x-au-4-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 4 | Wulfram Gerstner | 37 | 8,426 | 10,263 | 8,128 | 0.56 |'
+  shown: 10,263
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[4,'total_c_neuro']
+- id: s5x-au-4-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 4 | Wulfram Gerstner | 37 | 8,426 | 10,263 | 8,128 | 0.56 |'
+  shown: 8,128
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[4,'total_c_ai']
+- id: s5x-au-5-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 5 | Karl Friston | 46 | 7,909 | 55,276 | 4,444 | 0.93 |'
+  shown: 55,276
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[5,'total_c_neuro']
+- id: s5x-au-5-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 5 | Karl Friston | 46 | 7,909 | 55,276 | 4,444 | 0.93 |'
+  shown: 4,444
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[5,'total_c_ai']
+- id: s5x-au-7-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 7 | Stephen M. Smith | 16 | 6,263 | 33,904 | 5,767 | 0.85 |'
+  shown: 33,904
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[7,'total_c_neuro']
+- id: s5x-au-7-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 7 | Stephen M. Smith | 16 | 6,263 | 33,904 | 5,767 | 0.85 |'
+  shown: 5,767
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[7,'total_c_ai']
+- id: s5x-au-8-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 8 | Peter Dayan | 28 | 5,963 | 23,209 | 7,815 | 0.75 |'
+  shown: 5,963
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[8,'total_B']
+- id: s5x-au-8-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 8 | Peter Dayan | 28 | 5,963 | 23,209 | 7,815 | 0.75 |'
+  shown: 23,209
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[8,'total_c_neuro']
+- id: s5x-au-8-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 8 | Peter Dayan | 28 | 5,963 | 23,209 | 7,815 | 0.75 |'
+  shown: 7,815
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[8,'total_c_ai']
+- id: s5x-au-9-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 9 | Eugene M. Izhikevich | 14 | 5,955 | 7,630 | 5,816 | 0.57 |'
+  shown: 5,955
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[9,'total_B']
+- id: s5x-au-9-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 9 | Eugene M. Izhikevich | 14 | 5,955 | 7,630 | 5,816 | 0.57 |'
+  shown: 7,630
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[9,'total_c_neuro']
+- id: s5x-au-9-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 9 | Eugene M. Izhikevich | 14 | 5,955 | 7,630 | 5,816 | 0.57 |'
+  shown: 5,816
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[9,'total_c_ai']
+- id: s5x-au-10-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 10 | Antonio Torralba | 25 | 5,715 | 4,111 | 31,713 | 0.11 |'
+  shown: 4,111
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[10,'total_c_neuro']
+- id: s5x-au-10-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 10 | Antonio Torralba | 25 | 5,715 | 4,111 | 31,713 | 0.11 |'
+  shown: 31,713
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[10,'total_c_ai']
+- id: s5x-au-11-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 11 | Laurent Itti | 16 | 5,386 | 4,344 | 14,998 | 0.22 |'
+  shown: 5,386
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[11,'total_B']
+- id: s5x-au-11-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 11 | Laurent Itti | 16 | 5,386 | 4,344 | 14,998 | 0.22 |'
+  shown: 4,344
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[11,'total_c_neuro']
+- id: s5x-au-11-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 11 | Laurent Itti | 16 | 5,386 | 4,344 | 14,998 | 0.22 |'
+  shown: 14,998
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[11,'total_c_ai']
+- id: s5x-au-12-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 12 | Henry Markram | 20 | 5,378 | 14,813 | 5,867 | 0.72 |'
+  shown: 5,378
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[12,'total_B']
+- id: s5x-au-12-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 12 | Henry Markram | 20 | 5,378 | 14,813 | 5,867 | 0.72 |'
+  shown: 14,813
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[12,'total_c_neuro']
+- id: s5x-au-12-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 12 | Henry Markram | 20 | 5,378 | 14,813 | 5,867 | 0.72 |'
+  shown: 5,867
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[12,'total_c_ai']
+- id: s5x-au-13-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 13 | Bruce Fischl | 20 | 5,338 | 42,203 | 3,246 | 0.93 |'
+  shown: 5,338
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[13,'total_B']
+- id: s5x-au-13-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 13 | Bruce Fischl | 20 | 5,338 | 42,203 | 3,246 | 0.93 |'
+  shown: 42,203
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[13,'total_c_neuro']
+- id: s5x-au-13-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 13 | Bruce Fischl | 20 | 5,338 | 42,203 | 3,246 | 0.93 |'
+  shown: 3,246
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[13,'total_c_ai']
+- id: s5x-au-14-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 14 | Brian Avants | 10 | 5,226 | 7,257 | 4,315 | 0.63 |'
+  shown: 7,257
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[14,'total_c_neuro']
+- id: s5x-au-14-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 14 | Brian Avants | 10 | 5,226 | 7,257 | 4,315 | 0.63 |'
+  shown: 4,315
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[14,'total_c_ai']
+- id: s5x-au-15-neuro
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 15 | Bruno A. Olshausen | 12 | 5,076 | 7,067 | 4,806 | 0.60 |'
+  shown: 7,067
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[15,'total_c_neuro']
+- id: s5x-au-15-ai
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 15 | Bruno A. Olshausen | 12 | 5,076 | 7,067 | 4,806 | 0.60 |'
+  shown: 4,806
+  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').set_index('rank').loc[15,'total_c_ai']
+- id: s5x-in-pubcons-4-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 4 | University of California, Berkeley | education | 138 | 27,774 | 0.23 |'
+  shown: '138'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[4,'n_bridge_papers']
+- id: s5x-in-pubcons-4-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 4 | University of California, Berkeley | education | 138 | 27,774 | 0.23 |'
+  shown: 27,774
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[4,'total_B']
+- id: s5x-in-pubcons-5-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 5 | Harvard University | education | 173 | 27,390 | 0.80 |'
+  shown: '173'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[5,'n_bridge_papers']
+- id: s5x-in-pubcons-5-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 5 | Harvard University | education | 173 | 27,390 | 0.80 |'
+  shown: 27,390
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[5,'total_B']
+- id: s5x-in-pubcons-6-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 6 | University College London | education | 165 | 23,553 | 0.79 |'
+  shown: '165'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[6,'n_bridge_papers']
+- id: s5x-in-pubcons-6-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 6 | University College London | education | 165 | 23,553 | 0.79 |'
+  shown: 23,553
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[6,'total_B']
+- id: s5x-in-pubcons-7-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 7 | Stanford University | education | 153 | 23,449 | 0.33 |'
+  shown: '153'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[7,'n_bridge_papers']
+- id: s5x-in-pubcons-7-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 7 | Stanford University | education | 153 | 23,449 | 0.33 |'
+  shown: 23,449
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[7,'total_B']
+- id: s5x-in-pubcons-8-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 8 | University of Oxford | education | 92 | 16,769 | 0.50 |'
+  shown: 16,769
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[8,'total_B']
+- id: s5x-in-pubcons-9-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 9 | Carnegie Mellon University | education | 99 | 16,748 | 0.25 |'
+  shown: 16,748
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[9,'total_B']
+- id: s5x-in-pubcons-10-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 10 | University of California, San Diego | education | 100 | 16,125 | 0.75 |'
+  shown: '100'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[10,'n_bridge_papers']
+- id: s5x-in-pubcons-10-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 10 | University of California, San Diego | education | 100 | 16,125 | 0.75 |'
+  shown: 16,125
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[10,'total_B']
+- id: s5x-in-pubcons-11-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 11 | California Institute of Technology | education | 83 | 15,264 | 0.49 |'
+  shown: 15,264
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[11,'total_B']
+- id: s5x-in-pubcons-12-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 12 | University of Toronto | education | 77 | 15,059 | 0.18 |'
+  shown: 15,059
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[12,'total_B']
+- id: s5x-in-pubcons-13-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 13 | University of Pennsylvania | education | 70 | 13,500 | 0.62 |'
+  shown: 13,500
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[13,'total_B']
+- id: s5x-in-pubcons-14-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 14 | École Polytechnique Fédérale de Lausanne | education | 70 | 13,195 | 0.46 |'
+  shown: 13,195
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[14,'total_B']
+- id: s5x-in-pubcons-15-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 15 | Howard Hughes Medical Institute | facility | 98 | 12,664 | 0.89 |'
+  shown: 12,664
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[15,'total_B']
+- id: s5x-in-pubsep-2-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2 | University of California, Berkeley | education | 138 | 27,774 | 0.23 |'
+  shown: '138'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[2,'n_bridge_papers']
+- id: s5x-in-pubsep-2-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2 | University of California, Berkeley | education | 138 | 27,774 | 0.23 |'
+  shown: 27,774
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[2,'total_B']
+- id: s5x-in-pubsep-3-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 3 | Harvard University | education | 173 | 27,390 | 0.80 |'
+  shown: '173'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[3,'n_bridge_papers']
+- id: s5x-in-pubsep-3-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 3 | Harvard University | education | 173 | 27,390 | 0.80 |'
+  shown: 27,390
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[3,'total_B']
+- id: s5x-in-pubsep-4-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 4 | University College London | education | 165 | 23,553 | 0.79 |'
+  shown: '165'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[4,'n_bridge_papers']
+- id: s5x-in-pubsep-4-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 4 | University College London | education | 165 | 23,553 | 0.79 |'
+  shown: 23,553
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[4,'total_B']
+- id: s5x-in-pubsep-5-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 5 | Stanford University | education | 153 | 23,449 | 0.33 |'
+  shown: '153'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[5,'n_bridge_papers']
+- id: s5x-in-pubsep-5-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 5 | Stanford University | education | 153 | 23,449 | 0.33 |'
+  shown: 23,449
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[5,'total_B']
+- id: s5x-in-pubsep-6-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 6 | Google (United States) | company | 91 | 17,200 | 0.07 |'
+  shown: 17,200
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[6,'total_B']
+- id: s5x-in-pubsep-7-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 7 | University of Oxford | education | 92 | 16,769 | 0.50 |'
+  shown: 16,769
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[7,'total_B']
+- id: s5x-in-pubsep-8-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 8 | Carnegie Mellon University | education | 99 | 16,748 | 0.25 |'
+  shown: 16,748
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[8,'total_B']
+- id: s5x-in-pubsep-9-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 9 | University of California, San Diego | education | 100 | 16,125 | 0.75 |'
+  shown: '100'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[9,'n_bridge_papers']
+- id: s5x-in-pubsep-9-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 9 | University of California, San Diego | education | 100 | 16,125 | 0.75 |'
+  shown: 16,125
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[9,'total_B']
+- id: s5x-in-pubsep-10-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 10 | California Institute of Technology | education | 83 | 15,264 | 0.49 |'
+  shown: 15,264
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[10,'total_B']
+- id: s5x-in-pubsep-11-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 11 | University of Toronto | education | 77 | 15,059 | 0.18 |'
+  shown: 15,059
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[11,'total_B']
+- id: s5x-in-pubsep-12-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 12 | University of Pennsylvania | education | 70 | 13,500 | 0.62 |'
+  shown: 13,500
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[12,'total_B']
+- id: s5x-in-pubsep-13-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 13 | École Polytechnique Fédérale de Lausanne | education | 70 | 13,195 | 0.46 |'
+  shown: 13,195
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[13,'total_B']
+- id: s5x-in-pubsep-14-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 14 | Howard Hughes Medical Institute | facility | 98 | 12,664 | 0.89 |'
+  shown: 12,664
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[14,'total_B']
+- id: s5x-in-pubsep-15-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 15 | New York University | education | 101 | 12,402 | 0.51 |'
+  shown: 12,402
+  expr: pd.read_csv(RESULTS/'bridge/table_s3b_institutions_separated.csv').set_index('rank').loc[15,'total_B']
+- id: s5x-era-top_100-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Top 100 | 100 | 2002 | 75 (75.0%) | 9 (9.0%) | 10 (10.0%) | 6 (6.0%) |'
+  shown: '100'
+  expr: pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_100','n']
+- id: s5x-era-top_100-n_before_2012-pct
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Top 100 | 100 | 2002 | 75 (75.0%) | 9 (9.0%) | 10 (10.0%) | 6 (6.0%) |'
+  shown: '75.0'
+  expr: 100*pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_100','n_before_2012']/pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_100','n']
+- id: s5x-era-top_100-n_2012_2015-pct
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Top 100 | 100 | 2002 | 75 (75.0%) | 9 (9.0%) | 10 (10.0%) | 6 (6.0%) |'
+  shown: '9.0'
+  expr: 100*pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_100','n_2012_2015']/pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_100','n']
+- id: s5x-era-top_100-n_2016_2019-pct
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Top 100 | 100 | 2002 | 75 (75.0%) | 9 (9.0%) | 10 (10.0%) | 6 (6.0%) |'
+  shown: '10.0'
+  expr: 100*pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_100','n_2016_2019']/pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_100','n']
+- id: s5x-era-top_100-n_2020_onward-pct
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Top 100 | 100 | 2002 | 75 (75.0%) | 9 (9.0%) | 10 (10.0%) | 6 (6.0%) |'
+  shown: '6.0'
+  expr: 100*pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_100','n_2020_onward']/pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_100','n']
+- id: s5x-era-top_1000-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Top 1,000 | 1,000 | 2005 | 701 (70.1%) | 115 (11.5%) | 133 (13.3%) | 51 (5.1%) |'
+  shown: 1,000
+  expr: pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n']
+- id: s5x-era-top_1000-n_2012_2015-pct
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Top 1,000 | 1,000 | 2005 | 701 (70.1%) | 115 (11.5%) | 133 (13.3%) | 51 (5.1%) |'
+  shown: '11.5'
+  expr: 100*pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n_2012_2015']/pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n']
+- id: s5x-era-top_1000-n_2016_2019-pct
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Top 1,000 | 1,000 | 2005 | 701 (70.1%) | 115 (11.5%) | 133 (13.3%) | 51 (5.1%) |'
+  shown: '13.3'
+  expr: 100*pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n_2016_2019']/pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n']
+- id: s5x-era-top_1000-n_2020_onward-pct
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Top 1,000 | 1,000 | 2005 | 701 (70.1%) | 115 (11.5%) | 133 (13.3%) | 51 (5.1%) |'
+  shown: '5.1'
+  expr: 100*pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n_2020_onward']/pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n']
+- id: s5x-era-all_eligible-n_before_2012
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| All eligible papers | 58,971 | 2011 | 31,459 (53.3%) | 8,412 (14.3%) | 10,449 (17.7%) | 8,651 (14.7%) |'
+  shown: 31,459
+  expr: pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['all_eligible','n_before_2012']
+- id: s5x-era-all_eligible-n_before_2012-pct
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| All eligible papers | 58,971 | 2011 | 31,459 (53.3%) | 8,412 (14.3%) | 10,449 (17.7%) | 8,651 (14.7%) |'
+  shown: '53.3'
+  expr: 100*pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['all_eligible','n_before_2012']/pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['all_eligible','n']
+- id: s5x-era-all_eligible-n_2012_2015
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| All eligible papers | 58,971 | 2011 | 31,459 (53.3%) | 8,412 (14.3%) | 10,449 (17.7%) | 8,651 (14.7%) |'
+  shown: 8,412
+  expr: pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['all_eligible','n_2012_2015']
+- id: s5x-era-all_eligible-n_2012_2015-pct
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| All eligible papers | 58,971 | 2011 | 31,459 (53.3%) | 8,412 (14.3%) | 10,449 (17.7%) | 8,651 (14.7%) |'
+  shown: '14.3'
+  expr: 100*pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['all_eligible','n_2012_2015']/pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['all_eligible','n']
+- id: s5x-era-all_eligible-n_2016_2019
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| All eligible papers | 58,971 | 2011 | 31,459 (53.3%) | 8,412 (14.3%) | 10,449 (17.7%) | 8,651 (14.7%) |'
+  shown: 10,449
+  expr: pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['all_eligible','n_2016_2019']
+- id: s5x-era-all_eligible-n_2016_2019-pct
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| All eligible papers | 58,971 | 2011 | 31,459 (53.3%) | 8,412 (14.3%) | 10,449 (17.7%) | 8,651 (14.7%) |'
+  shown: '17.7'
+  expr: 100*pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['all_eligible','n_2016_2019']/pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['all_eligible','n']
+- id: s5x-era-all_eligible-n_2020_onward
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| All eligible papers | 58,971 | 2011 | 31,459 (53.3%) | 8,412 (14.3%) | 10,449 (17.7%) | 8,651 (14.7%) |'
+  shown: 8,651
+  expr: pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['all_eligible','n_2020_onward']
+- id: s5x-era-all_eligible-n_2020_onward-pct
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| All eligible papers | 58,971 | 2011 | 31,459 (53.3%) | 8,412 (14.3%) | 10,449 (17.7%) | 8,651 (14.7%) |'
+  shown: '14.7'
+  expr: 100*pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['all_eligible','n_2020_onward']/pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['all_eligible','n']
+- id: s5x-era-51-pct
+  file: docs/supplements/S5-bridge-builders.md
+  context: 51 (5.1 percent)
+  shown: '5.1'
+  expr: 100*pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n_2020_onward']/pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n']
+- id: s5x-cs-track-441-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Foundational DL/AI | 350 | 40.7 | 723 |'
+  shown: '723'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Foundational DL/AI'),'mean_B']
+- id: s5x-cs-track-442-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Cognitive neuroscience | 157 | 18.3 | 461 |'
+  shown: '157'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Cognitive neuroscience'),'n']
+- id: s5x-cs-track-442-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Cognitive neuroscience | 157 | 18.3 | 461 |'
+  shown: '18.3'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Cognitive neuroscience'),'share_pct']
+- id: s5x-cs-track-442-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Cognitive neuroscience | 157 | 18.3 | 461 |'
+  shown: '461'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Cognitive neuroscience'),'mean_B']
+- id: s5x-cs-track-443-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Statistical methods | 115 | 13.4 | 771 |'
+  shown: '13.4'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Statistical methods'),'share_pct']
+- id: s5x-cs-track-443-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Statistical methods | 115 | 13.4 | 771 |'
+  shown: '771'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Statistical methods'),'mean_B']
+- id: s5x-cs-track-444-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Other | 103 | 12.0 | 759 |'
+  shown: '103'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Other'),'n']
+- id: s5x-cs-track-444-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Other | 103 | 12.0 | 759 |'
+  shown: '12.0'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Other'),'share_pct']
+- id: s5x-cs-track-444-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Other | 103 | 12.0 | 759 |'
+  shown: '759'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Other'),'mean_B']
+- id: s5x-cs-track-446-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Applied ML for brain | 38 | 4.4 | 750 |'
+  shown: '750'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Applied ML for brain'),'mean_B']
+- id: s5x-cs-track-447-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Bio-plausible AI | 15 | 1.7 | 532 |'
+  shown: '532'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Bio-plausible AI'),'mean_B']
+- id: s5x-cs-track-448-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Molecular / cellular neuro | 13 | 1.5 | 753 |'
+  shown: '753'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Molecular / cellular neuro'),'mean_B']
+- id: s5x-cs-track-449-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Medical imaging methods | 11 | 1.3 | 508 |'
+  shown: '508'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Medical imaging methods'),'mean_B']
+- id: s5x-cs-track-450-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Bridge manifestos & theory | 4 | 0.5 | 602 |'
+  shown: '602'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('track','Bridge manifestos & theory'),'mean_B']
+- id: s5x-cs-type-454-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| research | 713 | 82.9 |'
+  shown: '713'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('paper_type','research'),'n']
+- id: s5x-cs-type-454-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| research | 713 | 82.9 |'
+  shown: '82.9'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('paper_type','research'),'share_pct']
+- id: s5x-cs-type-455-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| methods | 109 | 12.7 |'
+  shown: '109'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('paper_type','methods'),'n']
+- id: s5x-cs-type-455-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| methods | 109 | 12.7 |'
+  shown: '12.7'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('paper_type','methods'),'share_pct']
+- id: s5x-cs-era-460-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Before 2012 | 604 | 70.2 | 651 |'
+  shown: '70.2'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('era','before_2012'),'share_pct']
+- id: s5x-cs-era-460-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Before 2012 | 604 | 70.2 | 651 |'
+  shown: '651'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('era','before_2012'),'mean_B']
+- id: s5x-cs-era-461-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2012 to 2015 | 97 | 11.3 | 822 |'
+  shown: '11.3'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('era','2012_2015'),'share_pct']
+- id: s5x-cs-era-461-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2012 to 2015 | 97 | 11.3 | 822 |'
+  shown: '822'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('era','2012_2015'),'mean_B']
+- id: s5x-cs-era-462-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2016 to 2019 | 116 | 13.5 | 651 |'
+  shown: '116'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('era','2016_2019'),'n']
+- id: s5x-cs-era-462-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2016 to 2019 | 116 | 13.5 | 651 |'
+  shown: '13.5'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('era','2016_2019'),'share_pct']
+- id: s5x-cs-era-462-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2016 to 2019 | 116 | 13.5 | 651 |'
+  shown: '651'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('era','2016_2019'),'mean_B']
+- id: s5x-cs-era-463-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2020 onward | 43 | 5.0 | 720 |'
+  shown: '720'
+  expr: pd.read_csv(RESULTS/'bridge/clustered_set_composition.csv').set_index(['kind','label']).loc[('era','2020_onward'),'mean_B']
+# Article-basis institutions and concentration (sensitivity bound), 2026-10-20
+- id: s5-b11-gate
+  file: docs/supplements/S5-bridge-builders.md
+  context: In the snapshot, 133,763 papers pass the gate
+  shown: 133,763
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_papers_with_ge5_citations_each_side'])
+- id: s5-b11-eligible
+  file: docs/supplements/S5-bridge-builders.md
+  context: and 58,971 remain after the eligibility filters
+  shown: 58,971
+  expr: pd.read_csv(RESULTS/'bridge/eligibility_funnel.csv').iloc[-1,1]
+- id: s5-basis-corp-gate
+  file: docs/supplements/S5-bridge-builders.md
+  context: every paper that passes the 5-and-5 gate, 133,763 papers
+  shown: 133,763
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_papers_with_ge5_citations_each_side'])
+- id: s5-bound-drop-auth
+  file: docs/supplements/S5-bridge-builders.md
+  context: That removes 298 authors and 17 institutions
+  shown: '298'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_dropped_mean_B_gt_400_authors'])
+- id: s5-bound-drop-inst
+  file: docs/supplements/S5-bridge-builders.md
+  context: That removes 298 authors and 17 institutions
+  shown: '17'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_dropped_mean_B_gt_400_institutions'])
+- id: s5-inst-alph-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: with a summed B of 63,142 over 924 bridge papers
+  shown: 63,142
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('inst_name').loc['Alphabet (Google + DeepMind)','total_B']
+- id: s5-inst-alph-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: with a summed B of 63,142 over 924 bridge papers
+  shown: '924'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('inst_name').loc['Alphabet (Google + DeepMind)','n_bridge_papers']
+- id: s5-inst-ms-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: and 35,557 over 712
+  shown: 35,557
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('inst_name').loc['Microsoft','total_B']
+- id: s5-inst-ms-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: and 35,557 over 712
+  shown: '712'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('inst_name').loc['Microsoft','n_bridge_papers']
+- id: s5-inst-stanford-rank
+  file: docs/supplements/S5-bridge-builders.md
+  context: MIT, Berkeley, Harvard, UCL and Stanford follow in places 3 to 7
+  shown: '7'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('inst_name').loc['Stanford University','rank']
+- id: s5-inst-mit-rank
+  file: docs/supplements/S5-bridge-builders.md
+  context: MIT, Berkeley, Harvard, UCL and Stanford follow in places 3 to 7
+  shown: '3'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('inst_name').loc['Massachusetts Institute of Technology','rank']
+- id: s5-inst-alph-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: 0.09 of Alphabet's citations and 0.05 of Microsoft's
+  shown: '0.09'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('inst_name').loc['Alphabet (Google + DeepMind)','neuro_share']
+- id: s5-inst-ms-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: 0.09 of Alphabet's citations and 0.05 of Microsoft's
+  shown: '0.05'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('inst_name').loc['Microsoft','neuro_share']
+- id: s5-inst-toronto-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: against 0.18 for the University of Toronto, the next lowest
+  shown: '0.18'
+  expr: np.sort(pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').query("inst_type!='company'").neuro_share.values)[0]
+- id: s5-inst-bars
+  file: docs/supplements/S5-bridge-builders.md
+  context: Across all 45 bars of Figure 3
+  shown: '45'
+  expr: len(np.sort(np.concatenate([pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').neuro_share.values,pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').neuro_share.values,pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').head(15).neuro_share.values])))
+- id: s5-inst-low1
+  file: docs/supplements/S5-bridge-builders.md
+  context: Microsoft (0.046) has the lowest neuroscience share
+  shown: '0.046'
+  expr: np.sort(np.concatenate([pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').neuro_share.values,pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').neuro_share.values,pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').head(15).neuro_share.values]))[0]
+- id: s5-bound-auth-1
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 1 | 0.27 | 1.41 |'
+  shown: '0.27'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='authors' and top_n==1").share_pct.iloc[0]
+- id: s5-bound-inst-1
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 1 | 0.27 | 1.41 |'
+  shown: '1.41'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='institutions' and top_n==1").share_pct.iloc[0]
+- id: s5-bound-auth-5
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 5 | 0.94 | 6.30 |'
+  shown: '0.94'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='authors' and top_n==5").share_pct.iloc[0]
+- id: s5-bound-inst-5
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 5 | 0.94 | 6.30 |'
+  shown: '6.30'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='institutions' and top_n==5").share_pct.iloc[0]
+- id: s5-bound-auth-10
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 10 | 1.52 | 10.43 |'
+  shown: '1.52'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='authors' and top_n==10").share_pct.iloc[0]
+- id: s5-bound-inst-10
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 10 | 1.52 | 10.43 |'
+  shown: '10.43'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='institutions' and top_n==10").share_pct.iloc[0]
+- id: s5-bound-auth-15
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 15 | 1.98 | 13.72 |'
+  shown: '1.98'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='authors' and top_n==15").share_pct.iloc[0]
+- id: s5-bound-inst-15
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 15 | 1.98 | 13.72 |'
+  shown: '13.72'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='institutions' and top_n==15").share_pct.iloc[0]
+- id: s5-bound-auth-25
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 25 | 2.72 | 18.96 |'
+  shown: '2.72'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='authors' and top_n==25").share_pct.iloc[0]
+- id: s5-bound-inst-25
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 25 | 2.72 | 18.96 |'
+  shown: '18.96'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='institutions' and top_n==25").share_pct.iloc[0]
+- id: s5-bound-auth-50
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 50 | 4.28 | 28.08 |'
+  shown: '4.28'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='authors' and top_n==50").share_pct.iloc[0]
+- id: s5-bound-inst-50
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 50 | 4.28 | 28.08 |'
+  shown: '28.08'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='institutions' and top_n==50").share_pct.iloc[0]
+- id: s5-bound-auth-100
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 100 | 6.63 | 39.64 |'
+  shown: '6.63'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='authors' and top_n==100").share_pct.iloc[0]
+- id: s5-bound-inst-100
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 100 | 6.63 | 39.64 |'
+  shown: '39.64'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='institutions' and top_n==100").share_pct.iloc[0]
+- id: s5-bound-auth-250
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 250 | 11.04 | 56.52 |'
+  shown: '11.04'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='authors' and top_n==250").share_pct.iloc[0]
+- id: s5-bound-inst-250
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 250 | 11.04 | 56.52 |'
+  shown: '56.52'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='institutions' and top_n==250").share_pct.iloc[0]
+- id: s5-bound-auth-500
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 500 | 15.88 | 69.48 |'
+  shown: '15.88'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='authors' and top_n==500").share_pct.iloc[0]
+- id: s5-bound-inst-500
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 500 | 15.88 | 69.48 |'
+  shown: '69.48'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='institutions' and top_n==500").share_pct.iloc[0]
+- id: s5-bound-auth-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Entities in pool | 80,898 | 5,641 |'
+  shown: 80,898
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='authors'").n_entities.iloc[0]
+- id: s5-bound-inst-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| Entities in pool | 80,898 | 5,641 |'
+  shown: 5,641
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='institutions'").n_entities.iloc[0]
+- id: s5-head-inst-100
+  file: docs/supplements/S5-bridge-builders.md
+  context: The top 100 institutions hold 39.64 percent of all bridge weight
+  shown: '39.64'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='institutions' and top_n==100").share_pct.iloc[0]
+- id: s5-head-auth-100
+  file: docs/supplements/S5-bridge-builders.md
+  context: and the top 100 authors 6.63 percent
+  shown: '6.63'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='authors' and top_n==100").share_pct.iloc[0]
+- id: s5-bound-gini-auth
+  file: docs/supplements/S5-bridge-builders.md
+  context: the Gini coefficient is 0.311 for authors and 0.568 for institutions
+  shown: '0.311'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['gini_adjusted_authors_top1000'])
+- id: s5-bound-gini-inst
+  file: docs/supplements/S5-bridge-builders.md
+  context: the Gini coefficient is 0.311 for authors and 0.568 for institutions
+  shown: '0.568'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['gini_adjusted_institutions_top1000'])
+- id: s5-bound-drop-auth-2
+  file: docs/supplements/S5-bridge-builders.md
+  context: because dropping 298 authors or 17 institutions
+  shown: '298'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_dropped_mean_B_gt_400_authors'])
+- id: s5-bound-drop-inst-2
+  file: docs/supplements/S5-bridge-builders.md
+  context: because dropping 298 authors or 17 institutions
+  shown: '17'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_dropped_mean_B_gt_400_institutions'])
+- id: s5-fusion-top1
+  file: docs/supplements/S5-bridge-builders.md
+  context: one institute holds the top institution place with 3.03 percent of all weight
+  shown: '3.03'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_unfiltered' and entity=='institutions' and top_n==1").share_pct.iloc[0]
+- id: s5-limit-c-inst
+  file: docs/supplements/S5-bridge-builders.md
+  context: The concentration figures (39.64 and 6.63 percent)
+  shown: '39.64'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='institutions' and top_n==100").share_pct.iloc[0]
+- id: s5-limit-c-auth
+  file: docs/supplements/S5-bridge-builders.md
+  context: The concentration figures (39.64 and 6.63 percent)
+  shown: '6.63'
+  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='authors' and top_n==100").share_pct.iloc[0]
+- id: s5-cons-1-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 1 | Alphabet (Google + DeepMind) | company | 924 | 63,142 | 0.09 |'
+  shown: '924'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[1,'n_bridge_papers']
+- id: s5-cons-1-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 1 | Alphabet (Google + DeepMind) | company | 924 | 63,142 | 0.09 |'
+  shown: 63,142
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[1,'total_B']
+- id: s5-cons-1-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 1 | Alphabet (Google + DeepMind) | company | 924 | 63,142 | 0.09 |'
+  shown: '0.09'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[1,'neuro_share']
+- id: s5-cons-2-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2 | Microsoft | company | 712 | 35,557 | 0.05 |'
+  shown: '712'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[2,'n_bridge_papers']
+- id: s5-cons-2-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2 | Microsoft | company | 712 | 35,557 | 0.05 |'
+  shown: 35,557
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[2,'total_B']
+- id: s5-cons-2-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 2 | Microsoft | company | 712 | 35,557 | 0.05 |'
+  shown: '0.05'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[2,'neuro_share']
+- id: s5-cons-3-n
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 3 | Massachusetts Institute of Technology | education | 220 | 35,338 | 0.55 |'
+  shown: '220'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[3,'n_bridge_papers']
+- id: s5-cons-3-b
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 3 | Massachusetts Institute of Technology | education | 220 | 35,338 | 0.55 |'
+  shown: 35,338
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[3,'total_B']
+- id: s5-cons-3-share
+  file: docs/supplements/S5-bridge-builders.md
+  context: '| 3 | Massachusetts Institute of Technology | education | 220 | 35,338 | 0.55 |'
+  shown: '0.55'
+  expr: pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').set_index('rank').loc[3,'neuro_share']
+- id: s5-pool-elig-auth
+  file: docs/supplements/S5-bridge-builders.md
+  context: "| Eligible papers | 58,971 | 9.53 | 44.82 | 4.7 |"
+  shown: "9.53"
+  expr: "pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query(\"pool=='e2_58971' and entity=='authors' and top_n==100\").share_pct.iloc[0]"
+- id: s5-pool-elig-inst
+  file: docs/supplements/S5-bridge-builders.md
+  context: "| Eligible papers | 58,971 | 9.53 | 44.82 | 4.7 |"
+  shown: "44.82"
+  expr: "pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query(\"pool=='e2_58971' and entity=='institutions' and top_n==100\").share_pct.iloc[0]"
+- id: s5-pool-lab-auth
+  file: docs/supplements/S5-bridge-builders.md
+  context: "| Papers with a neuroscience or AI label | 59,038 | 12.53 | 46.11 | 3.7 |"
+  shown: "12.53"
+  expr: "pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query(\"pool=='neuro_ai_59038' and entity=='authors' and top_n==100\").share_pct.iloc[0]"
+- id: s5-pool-lab-inst
+  file: docs/supplements/S5-bridge-builders.md
+  context: "| Papers with a neuroscience or AI label | 59,038 | 12.53 | 46.11 | 3.7 |"
+  shown: "46.11"
+  expr: "pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query(\"pool=='neuro_ai_59038' and entity=='institutions' and top_n==100\").share_pct.iloc[0]"
+- id: s5-pool-all-auth
+  file: docs/supplements/S5-bridge-builders.md
+  context: "| Every paper passing the gate | 133,763 | 15.01 | 41.42 | 2.8 |"
+  shown: "15.01"
+  expr: "pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query(\"pool=='all_133763_unfiltered' and entity=='authors' and top_n==100\").share_pct.iloc[0]"
+- id: s5-pool-all-inst
+  file: docs/supplements/S5-bridge-builders.md
+  context: "| Every paper passing the gate | 133,763 | 15.01 | 41.42 | 2.8 |"
+  shown: "41.42"
+  expr: "pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query(\"pool=='all_133763_unfiltered' and entity=='institutions' and top_n==100\").share_pct.iloc[0]"
+- id: s5-pool-bound-ratio
+  file: docs/supplements/S5-bridge-builders.md
+  context: "| Sensitivity bound (headline) | 133,763 minus entities above 400 B per paper | 6.63 | 39.64 | 6.0 |"
+  shown: "6.0"
+  expr: "(lambda d: d.query(\"pool=='all_133763_minus_mean_B_gt_400' and entity=='institutions' and top_n==100\").share_pct.iloc[0]/d.query(\"pool=='all_133763_minus_mean_B_gt_400' and entity=='authors' and top_n==100\").share_pct.iloc[0])(pd.read_csv(RESULTS/'bridge/concentration_tiers.csv'))"
+- id: s5-pool-elig-ratio
+  file: docs/supplements/S5-bridge-builders.md
+  context: "| Eligible papers | 58,971 | 9.53 | 44.82 | 4.7 |"
+  shown: "4.7"
+  expr: "(lambda d: d.query(\"pool=='e2_58971' and entity=='institutions' and top_n==100\").share_pct.iloc[0]/d.query(\"pool=='e2_58971' and entity=='authors' and top_n==100\").share_pct.iloc[0])(pd.read_csv(RESULTS/'bridge/concentration_tiers.csv'))"
+- id: s5-pool-lab-ratio
+  file: docs/supplements/S5-bridge-builders.md
+  context: "| Papers with a neuroscience or AI label | 59,038 | 12.53 | 46.11 | 3.7 |"
+  shown: "3.7"
+  expr: "(lambda d: d.query(\"pool=='neuro_ai_59038' and entity=='institutions' and top_n==100\").share_pct.iloc[0]/d.query(\"pool=='neuro_ai_59038' and entity=='authors' and top_n==100\").share_pct.iloc[0])(pd.read_csv(RESULTS/'bridge/concentration_tiers.csv'))"
+- id: s5-pool-all-ratio
+  file: docs/supplements/S5-bridge-builders.md
+  context: "| Every paper passing the gate | 133,763 | 15.01 | 41.42 | 2.8 |"
+  shown: "2.8"
+  expr: "(lambda d: d.query(\"pool=='all_133763_unfiltered' and entity=='institutions' and top_n==100\").share_pct.iloc[0]/d.query(\"pool=='all_133763_unfiltered' and entity=='authors' and top_n==100\").share_pct.iloc[0])(pd.read_csv(RESULTS/'bridge/concentration_tiers.csv'))"
+- id: s5-ratio-min
+  file: docs/supplements/S5-bridge-builders.md
+  context: "the top 100 institutions hold between 2.8 and 6.0 times the share of the top 100 authors"
+  shown: '2.8'
+  expr: "min((lambda d: d.query(\"pool=='all_133763_minus_mean_B_gt_400' and entity=='institutions' and top_n==100\").share_pct.iloc[0]/d.query(\"pool=='all_133763_minus_mean_B_gt_400' and entity=='authors' and top_n==100\").share_pct.iloc[0])(pd.read_csv(RESULTS/'bridge/concentration_tiers.csv')),(lambda d: d.query(\"pool=='e2_58971' and entity=='institutions' and top_n==100\").share_pct.iloc[0]/d.query(\"pool=='e2_58971' and entity=='authors' and top_n==100\").share_pct.iloc[0])(pd.read_csv(RESULTS/'bridge/concentration_tiers.csv')),(lambda d: d.query(\"pool=='neuro_ai_59038' and entity=='institutions' and top_n==100\").share_pct.iloc[0]/d.query(\"pool=='neuro_ai_59038' and entity=='authors' and top_n==100\").share_pct.iloc[0])(pd.read_csv(RESULTS/'bridge/concentration_tiers.csv')),(lambda d: d.query(\"pool=='all_133763_unfiltered' and entity=='institutions' and top_n==100\").share_pct.iloc[0]/d.query(\"pool=='all_133763_unfiltered' and entity=='authors' and top_n==100\").share_pct.iloc[0])(pd.read_csv(RESULTS/'bridge/concentration_tiers.csv')))"
+- id: s5-ratio-max
+  file: docs/supplements/S5-bridge-builders.md
+  context: "the top 100 institutions hold between 2.8 and 6.0 times the share of the top 100 authors"
+  shown: '6.0'
+  expr: "max((lambda d: d.query(\"pool=='all_133763_minus_mean_B_gt_400' and entity=='institutions' and top_n==100\").share_pct.iloc[0]/d.query(\"pool=='all_133763_minus_mean_B_gt_400' and entity=='authors' and top_n==100\").share_pct.iloc[0])(pd.read_csv(RESULTS/'bridge/concentration_tiers.csv')),(lambda d: d.query(\"pool=='e2_58971' and entity=='institutions' and top_n==100\").share_pct.iloc[0]/d.query(\"pool=='e2_58971' and entity=='authors' and top_n==100\").share_pct.iloc[0])(pd.read_csv(RESULTS/'bridge/concentration_tiers.csv')),(lambda d: d.query(\"pool=='neuro_ai_59038' and entity=='institutions' and top_n==100\").share_pct.iloc[0]/d.query(\"pool=='neuro_ai_59038' and entity=='authors' and top_n==100\").share_pct.iloc[0])(pd.read_csv(RESULTS/'bridge/concentration_tiers.csv')),(lambda d: d.query(\"pool=='all_133763_unfiltered' and entity=='institutions' and top_n==100\").share_pct.iloc[0]/d.query(\"pool=='all_133763_unfiltered' and entity=='authors' and top_n==100\").share_pct.iloc[0])(pd.read_csv(RESULTS/'bridge/concentration_tiers.csv')))"
+- id: s5-disp-top100-median
+  file: docs/supplements/S5-bridge-builders.md
+  context: "has a median of 2002 and 3 papers from 2020 onward"
+  shown: "2002"
+  expr: "pd.read_csv(RESULTS/'citation_age/ranking_orig_top100.csv').publication_year.median()"
+- id: s5-disp-top100-2020
+  file: docs/supplements/S5-bridge-builders.md
+  context: "has a median of 2002 and 3 papers from 2020 onward"
+  shown: "3"
+  expr: "int((pd.read_csv(RESULTS/'citation_age/ranking_orig_top100.csv').publication_year>=2020).sum())"

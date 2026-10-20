@@ -1,0 +1,185 @@
+level,id,name,n_2000,n_2001,n_2002,n_2003,n_2004,ratio_2002_to_2001
+field,17,Computer Science,179164,190174,333762,306603,317484,1.755
+field,22,Engineering,809967,863232,1072896,1094812,1167224,1.2429
+field,18,Decision Sciences,31479,32810,39918,43256,45858,1.2166
+field,21,Energy,13063,13160,15557,17800,19734,1.1821
+field,14,"Business, Management and Accounting",92571,99403,115971,127435,141474,1.1667
+field,25,Materials Science,117891,120331,139664,143224,157414,1.1607
+field,35,Dentistry,9492,9559,10786,12376,13201,1.1284
+field,20,"Economics, Econometrics and Finance",132912,133512,150482,173963,183121,1.1271
+field,23,Environmental Science,172863,161789,180911,201940,212384,1.1182
+field,28,Neuroscience,56154,54052,60118,66210,68492,1.1122
+field,32,Psychology,90574,92993,103157,111797,120276,1.1093
+field,36,Health Professions,82881,82548,91523,101589,110769,1.1087
+field,19,Earth and Planetary Sciences,87600,79285,87594,98244,98132,1.1048
+field,29,Nursing,16197,14990,16536,18180,19804,1.1031
+field,30,"Pharmacology, Toxicology and Pharmaceutics",13063,13110,14457,16050,17981,1.1027
+field,33,Social Sciences,520407,542387,598063,660914,698294,1.1026
+field,11,Agricultural and Biological Sciences,210694,187194,204506,228110,240941,1.0925
+field,27,Medicine,615311,578704,630306,733139,788817,1.0892
+field,34,Veterinary,6098,5678,6164,6670,7089,1.0856
+field,13,"Biochemistry, Genetics and Molecular Biology",221798,220480,239139,276063,292305,1.0846
+field,31,Physics and Astronomy,242253,256006,275804,306648,298054,1.0773
+field,26,Mathematics,52675,54672,58600,63976,65906,1.0718
+field,15,Chemical Engineering,11742,11814,12557,13574,15357,1.0629
+field,12,Arts and Humanities,330914,295132,313400,342332,359921,1.0619
+field,24,Immunology and Microbiology,37013,35388,37496,42016,44966,1.0596
+field,16,Chemistry,95503,89541,92094,100696,118462,1.0285
+subfield,1708,Hardware and Architecture,6249,6108,20279,13570,10783,3.3201
+subfield,1711,Signal Processing,5545,5696,16553,12711,12192,2.9061
+subfield,1707,Computer Vision and Pattern Recognition,18311,19255,42884,34891,34655,2.2272
+subfield,1705,Computer Networks and Communications,29813,31132,67301,57832,60507,2.1618
+subfield,2208,Electrical and Electronic Engineering,87888,92398,175131,152294,149930,1.8954
+subfield,2207,Control and Systems Engineering,32592,36899,60985,56902,60118,1.6528
+subfield,2214,Media Technology,7067,7713,11671,10619,10600,1.5132
+subfield,1702,Artificial Intelligence,58008,61139,91808,88763,93553,1.5016
+subfield,1703,Computational Theory and Mathematics,18786,19096,27028,25208,25324,1.4154
+subfield,1710,Information Systems,27945,32792,45815,50944,57095,1.3971
+subfield,2507,Polymers and Plastics,18196,14059,19404,14722,17502,1.3802
+subfield,2209,Industrial and Manufacturing Engineering,14293,14195,19555,18086,19186,1.3776
+subfield,1404,Management Information Systems,10350,10875,14867,15196,16317,1.3671
+subfield,2204,Biomedical Engineering,40791,41943,56543,57914,60636,1.3481
+subfield,2203,Automotive Engineering,7773,7739,9820,9662,10131,1.2689
+subfield,1803,Management Science and Operations Research,15164,15981,20191,21139,21915,1.2634
+subfield,2305,Environmental Engineering,9938,9576,11903,13043,13314,1.243
+subfield,2212,Ocean Engineering,15819,15319,18965,19821,20131,1.238
+subfield,2731,Ophthalmology,8452,8104,9933,11324,12372,1.2257
+subfield,3107,"Atomic and Molecular Physics, and Optics",52370,52587,64163,65770,65903,1.2201
+subfield,1910,Oceanography,19244,14169,17187,17284,16918,1.213
+subfield,1405,Management of Technology and Innovation,7750,8474,10260,11175,12379,1.2108
+subfield,2213,"Safety, Risk, Reliability and Quality",9643,10394,12554,13865,15099,1.2078
+subfield,1802,Information Systems and Management,8212,9108,10928,12773,13801,1.1998
+subfield,1406,Marketing,8999,9149,10892,12073,14390,1.1905
+subfield,3604,Emergency Medical Services,6108,5995,7124,8076,8544,1.1883
+subfield,3108,Radiation,7964,8266,9802,9388,10289,1.1858
+subfield,3322,Urban Studies,12211,12801,15163,16592,17809,1.1845
+subfield,2741,"Radiology, Nuclear Medicine and Imaging",25727,25461,29924,32353,34228,1.1753
+subfield,2210,Mechanical Engineering,49110,50757,59520,61923,66042,1.1726
+subfield,3109,Statistical and Nonlinear Physics,13006,13830,16085,16484,16924,1.1631
+subfield,2206,Computational Mechanics,28345,28490,33124,34053,33724,1.1627
+subfield,3204,Developmental and Educational Psychology,11487,11490,13312,14232,15502,1.1586
+subfield,2505,Materials Chemistry,64181,69252,80229,84430,93273,1.1585
+subfield,3315,Communication,7492,7815,9024,10083,11298,1.1547
+subfield,1804,"Statistics, Probability and Uncertainty",7270,6830,7842,8322,9073,1.1482
+subfield,1902,Atmospheric Science,21141,19833,22760,25617,25219,1.1476
+subfield,2310,Pollution,8203,7712,8841,9748,10760,1.1464
+subfield,2302,Ecological Modeling,5137,5213,5967,7653,7960,1.1446
+subfield,2805,Cognitive Neuroscience,19736,19719,22566,24248,26643,1.1444
+subfield,2808,Neurology,6733,6387,7299,8858,8901,1.1428
+subfield,3311,Safety Research,10737,11088,12665,13516,14470,1.1422
+subfield,2215,Building and Construction,13156,13491,15407,16614,18641,1.142
+subfield,2205,Civil and Structural Engineering,32586,33480,38190,41961,46221,1.1407
+subfield,2211,Mechanics of Materials,30239,30830,35158,38014,39230,1.1404
+subfield,2707,Complementary and alternative medicine,8664,10980,12504,15575,17623,1.1388
+subfield,3312,Sociology and Political Science,145624,153949,175171,192141,206248,1.1379
+subfield,2307,"Health, Toxicology and Mutagenesis",12859,12046,13707,15364,16903,1.1379
+subfield,1305,Biotechnology,6637,6607,7496,8371,9199,1.1346
+subfield,1407,Organizational Behavior and Human Resource Management,14254,15331,17393,19321,21094,1.1345
+subfield,2105,"Renewable Energy, Sustainability and the Environment",10694,10680,12102,13623,15034,1.1331
+subfield,2705,Cardiology and Cardiovascular Medicine,31282,29996,33964,40317,40068,1.1323
+subfield,2002,Economics and Econometrics,105234,103584,117245,136857,144027,1.1319
+subfield,3205,Experimental and Cognitive Psychology,13700,14114,15971,17115,18617,1.1316
+subfield,1408,Strategy and Management,30801,33256,37575,41030,45328,1.1299
+subfield,2003,Finance,15919,17124,19336,21511,22628,1.1292
+subfield,2736,Pharmacology,18628,18370,20729,24888,25753,1.1284
+subfield,2311,Industrial and Manufacturing Engineering,7668,7799,8800,9553,10568,1.1283
+subfield,2720,Hematology,10894,9901,11149,12867,14379,1.126
+subfield,2711,Emergency Medicine,7561,6565,7385,8751,9029,1.1249
+subfield,1106,Food Science,21852,20112,22621,25741,27753,1.1248
+subfield,1213,Visual Arts and Performing Arts,13088,13283,14862,16728,16769,1.1189
+subfield,2502,Biomaterials,9231,9159,10228,13115,13430,1.1167
+subfield,1304,Biophysics,8629,8672,9646,12694,11636,1.1123
+subfield,1402,Accounting,16686,18193,20235,23517,25794,1.1122
+subfield,2728,Neurology,15713,14316,15904,18037,19062,1.1109
+subfield,3207,Social Psychology,26477,27235,30211,33283,35524,1.1093
+subfield,2732,Orthopedics and Sports Medicine,6351,6351,7043,8279,9014,1.109
+subfield,2308,"Management, Monitoring, Policy and Law",24671,23113,25633,28264,29888,1.109
+subfield,1100,General Agricultural and Biological Sciences,11889,10520,11663,11932,12636,1.1087
+subfield,3317,Demography,13247,14223,15763,17213,18938,1.1083
+subfield,1307,Cell Biology,14847,13981,15479,17228,19378,1.1071
+subfield,3616,Speech and Hearing,6040,5835,6458,7077,7580,1.1068
+subfield,3316,Cultural Studies,23793,24532,27147,30350,31626,1.1066
+subfield,1211,Philosophy,89698,43652,48288,51333,56561,1.1062
+subfield,2303,Ecology,35588,32440,35835,40107,41158,1.1047
+subfield,3004,Pharmacology,7113,7511,8297,9567,10536,1.1046
+subfield,3304,Education,82126,87858,96996,112545,110920,1.104
+subfield,2740,Pulmonary and Respiratory Medicine,43187,39570,43589,50330,58716,1.1016
+subfield,1109,Insect Science,11845,10517,11586,13490,13934,1.1016
+subfield,2738,Psychiatry and Mental health,16983,16250,17881,19925,21266,1.1004
+subfield,2306,Global and Planetary Change,25804,22915,25208,28301,28643,1.1001
+subfield,2613,Statistics and Probability,9629,9517,10469,11693,12640,1.1
+subfield,2312,Water Science and Technology,17086,16505,18152,20277,22499,1.0998
+subfield,2304,Environmental Chemistry,10721,10081,11080,12952,13089,1.0991
+subfield,1209,Museology,9203,9422,10348,12330,13110,1.0983
+subfield,2730,Oncology,29446,27339,29997,32507,39153,1.0972
+subfield,2309,Nature and Landscape Conservation,15188,14389,15785,16678,17602,1.097
+subfield,3600,General Health Professions,48605,48401,53046,58501,64405,1.096
+subfield,2202,Aerospace Engineering,436294,474738,520271,556282,610038,1.0959
+subfield,2504,"Electronic, Optical and Magnetic Materials",12761,13576,14865,15309,16657,1.0949
+subfield,1105,"Ecology, Evolution, Behavior and Systematics",35846,33921,37138,41640,44928,1.0948
+subfield,1110,Plant Science,90416,78135,85520,96300,100748,1.0945
+subfield,3203,Clinical Psychology,32526,33608,36771,39557,43150,1.0941
+subfield,3310,Linguistics and Language,5873,6011,6558,7402,7491,1.091
+subfield,2727,Nephrology,5744,5123,5580,6344,6912,1.0892
+subfield,3313,Transportation,7897,8084,8803,9817,10526,1.0889
+subfield,3318,Gender Studies,11734,11963,13011,14431,15328,1.0876
+subfield,1103,Animal Science and Zoology,8893,7443,8088,8883,9395,1.0867
+subfield,2000,"General Economics, Econometrics and Finance",11759,12804,13901,15595,16466,1.0857
+subfield,1312,Molecular Biology,118624,120574,130891,150505,161157,1.0856
+subfield,1602,Analytical Chemistry,6332,6272,6803,7622,8799,1.0847
+subfield,2734,Pathology and Forensic Medicine,18939,17562,19018,21715,23555,1.0829
+subfield,2739,"Public Health, Environmental and Occupational Health",46543,46119,49916,57448,62685,1.0823
+subfield,2610,Mathematical Physics,9747,9866,10671,11411,11653,1.0816
+subfield,1203,Language and Linguistics,28660,31239,33746,36285,37123,1.0803
+subfield,2916,Nutrition and Dietetics,13555,12309,13292,14798,16059,1.0799
+subfield,1104,Aquatic Science,5924,5028,5421,6020,6479,1.0782
+subfield,2804,Cellular and Molecular Neuroscience,18313,16849,18157,19144,18901,1.0776
+subfield,2716,Genetics,6273,5926,6383,7836,9158,1.0771
+subfield,2746,Surgery,78563,71137,76610,88882,96651,1.0769
+subfield,2725,Infectious Diseases,16254,14602,15724,19380,20711,1.0768
+subfield,1202,History,50028,49553,53313,58591,64472,1.0759
+subfield,2737,Physiology,32952,30060,32309,36032,38293,1.0748
+subfield,3320,Political Science and International Relations,104936,107202,115205,125037,133862,1.0747
+subfield,1311,Genetics,42583,40668,43628,49295,52109,1.0728
+subfield,3306,Health,6627,6662,7142,7956,8342,1.0721
+subfield,2713,Epidemiology,42269,39500,42305,50457,53701,1.071
+subfield,2604,Applied Mathematics,9724,10661,11416,12329,12195,1.0708
+subfield,3303,Development,5302,5542,5931,6509,6906,1.0702
+subfield,2712,"Endocrinology, Diabetes and Metabolism",17802,15725,16793,19457,20431,1.0679
+subfield,2403,Immunology,20546,20476,21843,24579,26800,1.0668
+subfield,3308,Law,26632,27885,29692,32627,36380,1.0648
+subfield,2735,"Pediatrics, Perinatology and Child Health",30085,28302,30110,40635,36482,1.0639
+subfield,3321,Public Administration,4925,5122,5442,5802,6250,1.0625
+subfield,1205,Classics,9993,10357,11003,11590,12185,1.0624
+subfield,2608,Geometry and Topology,10562,10833,11508,12409,12878,1.0623
+subfield,1204,Archeology,31356,32465,34434,37125,39036,1.0606
+subfield,1306,Cancer Research,9785,10104,10715,12222,14097,1.0605
+subfield,2708,Dermatology,9070,8397,8894,10393,11345,1.0592
+subfield,1111,Soil Science,8411,7984,8444,8992,9329,1.0576
+subfield,3305,"Geography, Planning and Development",9872,9651,10194,11350,11736,1.0563
+subfield,2745,Rheumatology,15024,14109,14901,17691,19218,1.0561
+subfield,1911,Paleontology,10333,10584,11166,13913,13570,1.055
+subfield,1908,Geophysics,18471,18305,19274,21806,22370,1.0529
+subfield,3106,Nuclear and High Energy Physics,94607,97343,102445,121579,114221,1.0524
+subfield,1904,Earth-Surface Processes,6393,5582,5860,6345,6652,1.0498
+subfield,3314,Anthropology,26769,26616,27884,29490,31209,1.0476
+subfield,2405,Parasitology,5790,5294,5535,6161,6212,1.0455
+subfield,3104,Condensed Matter Physics,20315,20649,21530,21386,20725,1.0427
+subfield,1606,Physical and Theoretical Chemistry,9315,9387,9775,10320,10436,1.0413
+subfield,2404,Microbiology,5711,5208,5411,6256,6477,1.039
+subfield,3300,General Social Sciences,9419,9807,10161,11273,11731,1.0361
+subfield,1208,Literature and Literary Theory,47858,49853,51648,57849,57424,1.036
+subfield,1906,Geochemistry and Petrology,5140,5095,5273,6009,6231,1.0349
+subfield,1206,Conservation,6422,6557,6720,7441,7647,1.0249
+subfield,1607,Spectroscopy,14446,14331,14684,16628,18703,1.0246
+subfield,2743,Reproductive Medicine,14743,14281,14609,15402,16531,1.023
+subfield,1605,Organic Chemistry,52985,46308,47245,51296,63825,1.0202
+subfield,1102,Agronomy and Crop Science,11382,9547,9722,10229,10866,1.0183
+subfield,1604,Inorganic Chemistry,10097,10998,11193,12528,14146,1.0177
+subfield,2729,Obstetrics and Gynecology,7904,7477,7568,8997,9765,1.0122
+subfield,1212,Religious studies,14867,15720,15717,17081,18005,0.9998
+subfield,2721,Hepatology,8351,8251,8238,9661,10172,0.9984
+subfield,1207,History and Philosophy of Science,16004,16675,16647,18926,19654,0.9983
+subfield,3103,Astronomy and Astrophysics,49131,58578,56772,66629,64175,0.9692
+subfield,1210,Music,10651,12418,11848,12838,13323,0.9541
+subfield,2715,Gastroenterology,5135,5067,4535,5884,6402,0.895

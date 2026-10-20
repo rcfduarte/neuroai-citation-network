@@ -1,0 +1,181 @@
+direction,cited_set,citing_def,classifier,period,cited_sf_id,cited_sf_name,n_edges,share_edges,n_cited_works,share_works
+ai_to_neuro,exclusive,all,extended,2010-2019,https://openalex.org/subfields/2805,Cognitive Neuroscience,194231,0.8636711281070746,62277,0.8256811402055022
+ai_to_neuro,exclusive,all,extended,2010-2019,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,20358,0.0905242563030815,8006,0.10614517732847199
+ai_to_neuro,exclusive,all,extended,2010-2019,https://openalex.org/subfields/2808,Neurology,5689,0.02529681177464538,2326,0.030838581372224064
+ai_to_neuro,exclusive,all,extended,2010-2019,https://openalex.org/subfields/2809,Sensory Systems,2368,0.010529592245097603,1297,0.017195889956910838
+ai_to_neuro,exclusive,all,extended,2010-2019,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,947,0.004210947574369692,680,0.009015578389128273
+ai_to_neuro,exclusive,all,extended,2010-2019,https://openalex.org/subfields/2806,Developmental Neuroscience,786,0.0034950420205433767,477,0.006324163075903215
+ai_to_neuro,exclusive,all,extended,2010-2019,https://openalex.org/subfields/2802,Behavioral Neuroscience,422,0.0018764729423273601,297,0.003937686443486908
+ai_to_neuro,exclusive,all,extended,2010-2019,https://openalex.org/subfields/2803,Biological Psychiatry,89,0.0003957490328605096,65,0.0008617832283725555
+ai_to_neuro,exclusive,all,extended,2020-2025,https://openalex.org/subfields/2805,Cognitive Neuroscience,260868,0.8269526433079627,93666,0.7979588011790564
+ai_to_neuro,exclusive,all,extended,2020-2025,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,31406,0.09955715041986705,12144,0.10345708882111397
+ai_to_neuro,exclusive,all,extended,2020-2025,https://openalex.org/subfields/2808,Neurology,14888,0.04719502182547859,6494,0.05532364417031572
+ai_to_neuro,exclusive,all,extended,2020-2025,https://openalex.org/subfields/2809,Sensory Systems,4152,0.013161857242032986,2077,0.017694365405258046
+ai_to_neuro,exclusive,all,extended,2020-2025,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,1547,0.004903996424235316,1174,0.010001533454873831
+ai_to_neuro,exclusive,all,extended,2020-2025,https://openalex.org/subfields/2806,Developmental Neuroscience,1141,0.003616974738236907,694,0.005912320457991856
+ai_to_neuro,exclusive,all,extended,2020-2025,https://openalex.org/subfields/2802,Behavioral Neuroscience,963,0.0030527139990553388,733,0.006244569013988516
+ai_to_neuro,exclusive,all,extended,2020-2025,https://openalex.org/subfields/2803,Biological Psychiatry,492,0.0015596420431310766,400,0.003407677497401646
+ai_to_neuro,exclusive,all,extended,2020-2023,https://openalex.org/subfields/2805,Cognitive Neuroscience,150265,0.835153536195637,59793,0.814197009722487
+ai_to_neuro,exclusive,all,extended,2020-2023,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,18085,0.10051410309851327,7437,0.10126909774231324
+ai_to_neuro,exclusive,all,extended,2020-2023,https://openalex.org/subfields/2808,Neurology,7135,0.03965541197721273,3292,0.04482692883793132
+ai_to_neuro,exclusive,all,extended,2020-2023,https://openalex.org/subfields/2809,Sensory Systems,2244,0.012471863276365153,1261,0.017170946921212453
+ai_to_neuro,exclusive,all,extended,2020-2023,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,886,0.004924274003056829,708,0.009640785424439663
+ai_to_neuro,exclusive,all,extended,2020-2023,https://openalex.org/subfields/2806,Developmental Neuroscience,649,0.0036070584965958038,420,0.005719109997548953
+ai_to_neuro,exclusive,all,extended,2020-2023,https://openalex.org/subfields/2802,Behavioral Neuroscience,450,0.0025010421008753647,350,0.004765924997957461
+ai_to_neuro,exclusive,all,extended,2020-2023,https://openalex.org/subfields/2803,Biological Psychiatry,211,0.001172710851743782,177,0.0024101963561099157
+ai_to_neuro,unrestricted,all,extended,2010-2019,https://openalex.org/subfields/2805,Cognitive Neuroscience,273345,0.8681946239871936,75891,0.8283596751659099
+ai_to_neuro,unrestricted,all,extended,2010-2019,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,24169,0.07676524489983896,9039,0.09866180579811387
+ai_to_neuro,unrestricted,all,extended,2010-2019,https://openalex.org/subfields/2808,Neurology,12420,0.039448232928793084,3805,0.041532046804051696
+ai_to_neuro,unrestricted,all,extended,2010-2019,https://openalex.org/subfields/2809,Sensory Systems,2639,0.008381955450811992,1353,0.014768162766329026
+ai_to_neuro,unrestricted,all,extended,2010-2019,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,954,0.0030300816597478744,684,0.007465944813133077
+ai_to_neuro,unrestricted,all,extended,2010-2019,https://openalex.org/subfields/2806,Developmental Neuroscience,805,0.002556829912051403,482,0.0052610897659797415
+ai_to_neuro,unrestricted,all,extended,2010-2019,https://openalex.org/subfields/2802,Behavioral Neuroscience,422,0.0013403505874356426,297,0.003241791826755152
+ai_to_neuro,unrestricted,all,extended,2010-2019,https://openalex.org/subfields/2803,Biological Psychiatry,89,0.00028268057412742225,65,0.0007094830597275585
+ai_to_neuro,unrestricted,all,extended,2020-2025,https://openalex.org/subfields/2805,Cognitive Neuroscience,346538,0.7794639945117356,111667,0.7758855491168828
+ai_to_neuro,unrestricted,all,extended,2020-2025,https://openalex.org/subfields/2808,Neurology,51802,0.11651765129277866,13365,0.09286280068370367
+ai_to_neuro,unrestricted,all,extended,2020-2025,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,37580,0.08452826793526547,13723,0.09535025916816053
+ai_to_neuro,unrestricted,all,extended,2020-2025,https://openalex.org/subfields/2809,Sensory Systems,4457,0.010025079568586434,2160,0.015008129403426856
+ai_to_neuro,unrestricted,all,extended,2020-2025,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,1551,0.0034886467154762305,1176,0.008171092675199066
+ai_to_neuro,unrestricted,all,extended,2020-2025,https://openalex.org/subfields/2806,Developmental Neuroscience,1199,0.0026968971062901357,697,0.004842901015828018
+ai_to_neuro,unrestricted,all,extended,2020-2025,https://openalex.org/subfields/2802,Behavioral Neuroscience,963,0.0021660649819494585,733,0.005093036505885132
+ai_to_neuro,unrestricted,all,extended,2020-2025,https://openalex.org/subfields/2803,Biological Psychiatry,495,0.001113397887917946,401,0.0027862314309139674
+ai_to_neuro,unrestricted,all,extended,2020-2023,https://openalex.org/subfields/2805,Cognitive Neuroscience,204749,0.7966887159533074,72892,0.7957728796165897
+ai_to_neuro,unrestricted,all,extended,2020-2023,https://openalex.org/subfields/2808,Neurology,25895,0.10075875486381324,7201,0.07861439535366106
+ai_to_neuro,unrestricted,all,extended,2020-2023,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,21666,0.08430350194552529,8522,0.09303595017412854
+ai_to_neuro,unrestricted,all,extended,2020-2023,https://openalex.org/subfields/2809,Sensory Systems,2439,0.009490272373540855,1324,0.014454306269719101
+ai_to_neuro,unrestricted,all,extended,2020-2023,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,889,0.0034591439688715954,710,0.007751176322885621
+ai_to_neuro,unrestricted,all,extended,2020-2023,https://openalex.org/subfields/2806,Developmental Neuroscience,701,0.002727626459143969,423,0.004617954344479743
+ai_to_neuro,unrestricted,all,extended,2020-2023,https://openalex.org/subfields/2802,Behavioral Neuroscience,450,0.0017509727626459145,350,0.0038210024126900948
+ai_to_neuro,unrestricted,all,extended,2020-2023,https://openalex.org/subfields/2803,Biological Psychiatry,211,0.000821011673151751,177,0.0019323355058461337
+ai_to_neuro,exclusive,article_review,extended,2010-2019,https://openalex.org/subfields/2805,Cognitive Neuroscience,133744,0.851021589875093,50008,0.8230008393265639
+ai_to_neuro,exclusive,article_review,extended,2010-2019,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,15703,0.09991918909116361,6636,0.10921119760380495
+ai_to_neuro,exclusive,article_review,extended,2010-2019,https://openalex.org/subfields/2808,Neurology,4368,0.027793862188766647,1932,0.031795665125158405
+ai_to_neuro,exclusive,article_review,extended,2010-2019,https://openalex.org/subfields/2809,Sensory Systems,1782,0.011338979491845733,1046,0.017214423250991557
+ai_to_neuro,exclusive,article_review,extended,2010-2019,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,672,0.004275978798271792,517,0.008508467323864852
+ai_to_neuro,exclusive,article_review,extended,2010-2019,https://openalex.org/subfields/2806,Developmental Neuroscience,527,0.003353334563525646,342,0.005628425192962823
+ai_to_neuro,exclusive,article_review,extended,2010-2019,https://openalex.org/subfields/2802,Behavioral Neuroscience,292,0.0018580145968681001,226,0.0037193686947649064
+ai_to_neuro,exclusive,article_review,extended,2010-2019,https://openalex.org/subfields/2803,Biological Psychiatry,69,0.0004390513944654072,56,0.0009216134818886494
+ai_to_neuro,exclusive,article_review,extended,2020-2025,https://openalex.org/subfields/2805,Cognitive Neuroscience,172108,0.8087933983721498,73189,0.795601791460127
+ai_to_neuro,exclusive,article_review,extended,2020-2025,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,23177,0.1089165209872366,9628,0.10466127489346899
+ai_to_neuro,exclusive,article_review,extended,2020-2025,https://openalex.org/subfields/2808,Neurology,11567,0.05435722475986391,5269,0.057276719714757805
+ai_to_neuro,exclusive,article_review,extended,2020-2025,https://openalex.org/subfields/2809,Sensory Systems,3022,0.014201394763059457,1641,0.01783850769632142
+ai_to_neuro,exclusive,article_review,extended,2020-2025,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,1179,0.005540517678903739,949,0.010316114444734325
+ai_to_neuro,exclusive,article_review,extended,2020-2025,https://openalex.org/subfields/2806,Developmental Neuroscience,729,0.0034258162747420064,477,0.005185233498565093
+ai_to_neuro,exclusive,article_review,extended,2020-2025,https://openalex.org/subfields/2802,Behavioral Neuroscience,659,0.0030968627229835148,537,0.005837464127315419
+ai_to_neuro,exclusive,article_review,extended,2020-2025,https://openalex.org/subfields/2803,Biological Psychiatry,355,0.0016682644410609222,302,0.0032828941647099746
+ai_to_neuro,exclusive,article_review,extended,2020-2023,https://openalex.org/subfields/2805,Cognitive Neuroscience,98090,0.8157986659791414,46716,0.8087950138504155
+ai_to_neuro,exclusive,article_review,extended,2020-2023,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,13534,0.11256008915650627,6105,0.10569598337950138
+ai_to_neuro,exclusive,article_review,extended,2020-2023,https://openalex.org/subfields/2808,Neurology,5422,0.045093897104076915,2695,0.04665858725761773
+ai_to_neuro,exclusive,article_review,extended,2020-2023,https://openalex.org/subfields/2809,Sensory Systems,1630,0.013556446381343668,987,0.017087950138504154
+ai_to_neuro,exclusive,article_review,extended,2020-2023,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,699,0.005813469951263328,584,0.010110803324099723
+ai_to_neuro,exclusive,article_review,extended,2020-2023,https://openalex.org/subfields/2806,Developmental Neuroscience,401,0.0033350521465759578,277,0.004795706371191135
+ai_to_neuro,exclusive,article_review,extended,2020-2023,https://openalex.org/subfields/2802,Behavioral Neuroscience,305,0.002536635672582711,257,0.004449445983379502
+ai_to_neuro,exclusive,article_review,extended,2020-2023,https://openalex.org/subfields/2803,Biological Psychiatry,157,0.0013057436085097888,139,0.0024065096952908586
+ai_to_neuro,unrestricted,article_review,extended,2010-2019,https://openalex.org/subfields/2805,Cognitive Neuroscience,191338,0.856911253627602,61688,0.8246287112168648
+ai_to_neuro,unrestricted,article_review,extended,2010-2019,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,18766,0.08404392533409767,7573,0.10123384175277715
+ai_to_neuro,unrestricted,article_review,extended,2010-2019,https://openalex.org/subfields/2808,Neurology,9595,0.0429714091218516,3297,0.04407341558945019
+ai_to_neuro,unrestricted,article_review,extended,2010-2019,https://openalex.org/subfields/2809,Sensory Systems,2013,0.009015262799613056,1100,0.014704506262782895
+ai_to_neuro,unrestricted,article_review,extended,2010-2019,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,677,0.0030319587259503423,521,0.006964588875372626
+ai_to_neuro,unrestricted,article_review,extended,2010-2019,https://openalex.org/subfields/2806,Developmental Neuroscience,538,0.0024094443051126796,346,0.0046252356062935285
+ai_to_neuro,unrestricted,article_review,extended,2010-2019,https://openalex.org/subfields/2802,Behavioral Neuroscience,292,0.0013077281358604134,226,0.0030211076503535764
+ai_to_neuro,unrestricted,article_review,extended,2010-2019,https://openalex.org/subfields/2803,Biological Psychiatry,69,0.000309017949912221,56,0.000748593046105311
+ai_to_neuro,unrestricted,article_review,extended,2020-2025,https://openalex.org/subfields/2805,Cognitive Neuroscience,233045,0.7521656897931782,88689,0.7684289873154502
+ai_to_neuro,unrestricted,article_review,extended,2020-2025,https://openalex.org/subfields/2808,Neurology,42325,0.1366062898603114,11703,0.10139841962986068
+ai_to_neuro,unrestricted,article_review,extended,2020-2025,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,28248,0.09117198998166748,11041,0.09566264642683857
+ai_to_neuro,unrestricted,article_review,extended,2020-2025,https://openalex.org/subfields/2809,Sensory Systems,3252,0.010496010741304965,1713,0.01484196298606779
+ai_to_neuro,unrestricted,article_review,extended,2020-2025,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,1182,0.003814970693795347,950,0.00823109447563596
+ai_to_neuro,unrestricted,article_review,extended,2020-2025,https://openalex.org/subfields/2806,Developmental Neuroscience,763,0.0024626249064008884,480,0.004158868787689748
+ai_to_neuro,unrestricted,article_review,extended,2020-2025,https://openalex.org/subfields/2802,Behavioral Neuroscience,659,0.002126959126236154,537,0.004652734456227906
+ai_to_neuro,unrestricted,article_review,extended,2020-2025,https://openalex.org/subfields/2803,Biological Psychiatry,358,0.0011554648971055282,303,0.0026252859222291535
+ai_to_neuro,unrestricted,article_review,extended,2020-2023,https://openalex.org/subfields/2805,Cognitive Neuroscience,135789,0.7712654776780643,57817,0.7868506648157977
+ai_to_neuro,unrestricted,article_review,extended,2020-2023,https://openalex.org/subfields/2808,Neurology,20516,0.11652845620811086,6303,0.08577961050095946
+ai_to_neuro,unrestricted,article_review,extended,2020-2023,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,16386,0.09307054413268204,7057,0.09604104574096001
+ai_to_neuro,unrestricted,article_review,extended,2020-2023,https://openalex.org/subfields/2809,Sensory Systems,1776,0.010087470180620244,1041,0.014167313109868126
+ai_to_neuro,unrestricted,article_review,extended,2020-2023,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,701,0.003981597182778599,585,0.007961458375862492
+ai_to_neuro,unrestricted,article_review,extended,2020-2023,https://openalex.org/subfields/2806,Developmental Neuroscience,430,0.002442349199136658,280,0.0038106125559683717
+ai_to_neuro,unrestricted,article_review,extended,2020-2023,https://openalex.org/subfields/2802,Behavioral Neuroscience,305,0.00173236396682949,257,0.003497597953156684
+ai_to_neuro,unrestricted,article_review,extended,2020-2023,https://openalex.org/subfields/2803,Biological Psychiatry,157,0.000891741451777803,139,0.001891696947427156
+ai_to_neuro,unrestricted,all,strict35,2010-2019,https://openalex.org/subfields/2805,Cognitive Neuroscience,107948,0.9197788059269105,41250,0.8818059385621754
+ai_to_neuro,unrestricted,all,strict35,2010-2019,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,4850,0.04132477867811832,2921,0.06244254900703307
+ai_to_neuro,unrestricted,all,strict35,2010-2019,https://openalex.org/subfields/2808,Neurology,2818,0.02401097449792524,1375,0.029393531285405845
+ai_to_neuro,unrestricted,all,strict35,2010-2019,https://openalex.org/subfields/2809,Sensory Systems,801,0.0068249789115820145,528,0.011287116013595845
+ai_to_neuro,unrestricted,all,strict35,2010-2019,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,385,0.0032804205754794953,291,0.0062207400756749825
+ai_to_neuro,unrestricted,all,strict35,2010-2019,https://openalex.org/subfields/2806,Developmental Neuroscience,289,0.0024624455748404523,217,0.004638833664678595
+ai_to_neuro,unrestricted,all,strict35,2010-2019,https://openalex.org/subfields/2802,Behavioral Neuroscience,230,0.001959731772364374,169,0.003612732208897155
+ai_to_neuro,unrestricted,all,strict35,2010-2019,https://openalex.org/subfields/2803,Biological Psychiatry,42,0.0003578640627795813,28,0.0005985591825391736
+ai_to_neuro,unrestricted,all,strict35,2020-2025,https://openalex.org/subfields/2805,Cognitive Neuroscience,158312,0.8832304928532375,64110,0.8442969459918612
+ai_to_neuro,unrestricted,all,strict35,2020-2025,https://openalex.org/subfields/2808,Neurology,10158,0.056671985360573975,4899,0.06451740350045435
+ai_to_neuro,unrestricted,all,strict35,2020-2025,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,7704,0.04298099775722208,4711,0.062041536617807806
+ai_to_neuro,unrestricted,all,strict35,2020-2025,https://openalex.org/subfields/2809,Sensory Systems,1386,0.007732562680621729,854,0.011246757009468873
+ai_to_neuro,unrestricted,all,strict35,2020-2025,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,686,0.0038272279934390375,576,0.007585634704278772
+ai_to_neuro,unrestricted,all,strict35,2020-2025,https://openalex.org/subfields/2802,Behavioral Neuroscience,467,0.002605416141306167,387,0.0050965983169373
+ai_to_neuro,unrestricted,all,strict35,2020-2025,https://openalex.org/subfields/2806,Developmental Neuroscience,414,0.002309726514990906,299,0.0039376819037835985
+ai_to_neuro,unrestricted,all,strict35,2020-2025,https://openalex.org/subfields/2803,Biological Psychiatry,115,0.0006415906986085851,97,0.0012774419554080572
+ai_to_neuro,unrestricted,all,strict35,2020-2023,https://openalex.org/subfields/2805,Cognitive Neuroscience,86049,0.8961383849534482,37426,0.8604865038855934
+ai_to_neuro,unrestricted,all,strict35,2020-2023,https://openalex.org/subfields/2808,Neurology,4707,0.049020016246276894,2401,0.055203016508024096
+ai_to_neuro,unrestricted,all,strict35,2020-2023,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,3590,0.03738726541834163,2381,0.05474318296776567
+ai_to_neuro,unrestricted,all,strict35,2020-2023,https://openalex.org/subfields/2809,Sensory Systems,672,0.006998396200870634,446,0.01025428794776291
+ai_to_neuro,unrestricted,all,strict35,2020-2023,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,454,0.004728083147612005,399,0.009173679128155608
+ai_to_neuro,unrestricted,all,strict35,2020-2023,https://openalex.org/subfields/2806,Developmental Neuroscience,265,0.0027597842161171397,198,0.004552352048558422
+ai_to_neuro,unrestricted,all,strict35,2020-2023,https://openalex.org/subfields/2802,Behavioral Neuroscience,221,0.0023015558934410866,189,0.00434542695544213
+ai_to_neuro,unrestricted,all,strict35,2020-2023,https://openalex.org/subfields/2803,Biological Psychiatry,64,0.0006665139238924413,54,0.0012415505586977514
+ai_to_neuro,exclusive,all,strict35,2010-2019,https://openalex.org/subfields/2805,Cognitive Neuroscience,84239,0.9173064149053173,34528,0.8788210440581333
+ai_to_neuro,exclusive,all,strict35,2010-2019,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,4402,0.047934838238977276,2693,0.06854335819186032
+ai_to_neuro,exclusive,all,strict35,2010-2019,https://openalex.org/subfields/2808,Neurology,1482,0.016137989611577537,852,0.02168545903433531
+ai_to_neuro,exclusive,all,strict35,2010-2019,https://openalex.org/subfields/2809,Sensory Systems,772,0.008406564089161848,515,0.013107994604087658
+ai_to_neuro,exclusive,all,strict35,2010-2019,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,381,0.004148835385972363,288,0.007330296011606302
+ai_to_neuro,exclusive,all,strict35,2010-2019,https://openalex.org/subfields/2806,Developmental Neuroscience,285,0.003103459540687988,216,0.005497722008704726
+ai_to_neuro,exclusive,all,strict35,2010-2019,https://openalex.org/subfields/2802,Behavioral Neuroscience,230,0.002504546295993815,169,0.004301458423477309
+ai_to_neuro,exclusive,all,strict35,2010-2019,https://openalex.org/subfields/2803,Biological Psychiatry,42,0.000457351932311914,28,0.0007126676677950572
+ai_to_neuro,exclusive,all,strict35,2020-2025,https://openalex.org/subfields/2805,Cognitive Neuroscience,126193,0.9031203034423531,54582,0.8622748815165877
+ai_to_neuro,exclusive,all,strict35,2020-2025,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,6957,0.049788878551492166,4317,0.06819905213270142
+ai_to_neuro,exclusive,all,strict35,2020-2025,https://openalex.org/subfields/2808,Neurology,3564,0.025506333643455236,2207,0.03486571879936809
+ai_to_neuro,exclusive,all,strict35,2020-2025,https://openalex.org/subfields/2809,Sensory Systems,1350,0.009661490016460316,839,0.01325434439178515
+ai_to_neuro,exclusive,all,strict35,2020-2025,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,685,0.004902311600944679,575,0.009083728278041074
+ai_to_neuro,exclusive,all,strict35,2020-2025,https://openalex.org/subfields/2802,Behavioral Neuroscience,467,0.003342159879768124,387,0.0061137440758293835
+ai_to_neuro,exclusive,all,strict35,2020-2025,https://openalex.org/subfields/2806,Developmental Neuroscience,400,0.0028626637085808343,297,0.004691943127962085
+ai_to_neuro,exclusive,all,strict35,2020-2025,https://openalex.org/subfields/2803,Biological Psychiatry,114,0.0008158591569455378,96,0.0015165876777251184
+ai_to_neuro,exclusive,all,strict35,2020-2023,https://openalex.org/subfields/2805,Cognitive Neuroscience,67254,0.9123887562405035,31236,0.8741010214075836
+ai_to_neuro,exclusive,all,strict35,2020-2023,https://openalex.org/subfields/2804,Cellular and Molecular Neuroscience,3252,0.04411764705882353,2185,0.06114453616902197
+ai_to_neuro,exclusive,all,strict35,2020-2023,https://openalex.org/subfields/2808,Neurology,1570,0.02129911004992403,1040,0.02910312019028963
+ai_to_neuro,exclusive,all,strict35,2020-2023,https://openalex.org/subfields/2809,Sensory Systems,644,0.008736705014108965,437,0.012228907233804393
+ai_to_neuro,exclusive,all,strict35,2020-2023,https://openalex.org/subfields/2807,Endocrine and Autonomic Systems,453,0.006145539396570436,398,0.011137540226668532
+ai_to_neuro,exclusive,all,strict35,2020-2023,https://openalex.org/subfields/2806,Developmental Neuroscience,254,0.0034458432819622314,196,0.005484818805093046
+ai_to_neuro,exclusive,all,strict35,2020-2023,https://openalex.org/subfields/2802,Behavioral Neuroscience,221,0.0029981549815498157,189,0.005288932419196866
+ai_to_neuro,exclusive,all,strict35,2020-2023,https://openalex.org/subfields/2803,Biological Psychiatry,64,0.0008682439765574126,54,0.0015111235483419617
+neuro_to_ai,exclusive,all,extended,2010-2019,https://openalex.org/subfields/1702,Artificial Intelligence,180056,0.5753782734433668,39430,0.5257263236490181
+neuro_to_ai,exclusive,all,extended,2010-2019,https://openalex.org/subfields/1707,Computer Vision and Pattern Recognition,131431,0.41999456756195375,34968,0.4662337835495527
+neuro_to_ai,exclusive,all,extended,2010-2019,https://openalex.org/subfields/2208,Electrical and Electronic Engineering,1448,0.004627158994679407,603,0.008039892801429313
+neuro_to_ai,exclusive,all,extended,2020-2025,https://openalex.org/subfields/1702,Artificial Intelligence,261382,0.5433809603994769,66109,0.5035303257649039
+neuro_to_ai,exclusive,all,extended,2020-2025,https://openalex.org/subfields/1707,Computer Vision and Pattern Recognition,214933,0.4468192146419447,63086,0.4805051374427798
+neuro_to_ai,exclusive,all,extended,2020-2025,https://openalex.org/subfields/2208,Electrical and Electronic Engineering,4714,0.00979982495857838,2096,0.015964536792316304
+neuro_to_ai,exclusive,all,extended,2020-2023,https://openalex.org/subfields/1702,Artificial Intelligence,166391,0.5572315080558468,43637,0.512339736063495
+neuro_to_ai,exclusive,all,extended,2020-2023,https://openalex.org/subfields/1707,Computer Vision and Pattern Recognition,130049,0.43552476030046583,40537,0.4759427981026628
+neuro_to_ai,exclusive,all,extended,2020-2023,https://openalex.org/subfields/2208,Electrical and Electronic Engineering,2163,0.007243731643687438,998,0.011717465833842108
+neuro_to_ai,unrestricted,all,extended,2010-2019,https://openalex.org/subfields/1702,Artificial Intelligence,211065,0.5181340154557684,43515,0.4999138376701706
+neuro_to_ai,unrestricted,all,extended,2010-2019,https://openalex.org/subfields/1707,Computer Vision and Pattern Recognition,173988,0.4271153487367315,40337,0.46340398644379344
+neuro_to_ai,unrestricted,all,extended,2010-2019,https://openalex.org/subfields/2208,Electrical and Electronic Engineering,22303,0.05475063580750007,3193,0.03668217588603596
+neuro_to_ai,unrestricted,all,extended,2020-2025,https://openalex.org/subfields/1702,Artificial Intelligence,296638,0.49404424843611555,72031,0.4784332739977151
+neuro_to_ai,unrestricted,all,extended,2020-2025,https://openalex.org/subfields/1707,Computer Vision and Pattern Recognition,272206,0.45335327466407294,71119,0.472375727304126
+neuro_to_ai,unrestricted,all,extended,2020-2025,https://openalex.org/subfields/2208,Electrical and Electronic Engineering,31584,0.05260247689981147,7406,0.04919099869815882
+neuro_to_ai,unrestricted,all,extended,2020-2023,https://openalex.org/subfields/1702,Artificial Intelligence,189218,0.5060306049860133,47811,0.4842159632971774
+neuro_to_ai,unrestricted,all,extended,2020-2023,https://openalex.org/subfields/1707,Computer Vision and Pattern Recognition,167056,0.44676219358910585,46567,0.4716170915241191
+neuro_to_ai,unrestricted,all,extended,2020-2023,https://openalex.org/subfields/2208,Electrical and Electronic Engineering,17652,0.04720720142488086,4361,0.044166945178703454
+neuro_to_ai,exclusive,article_review,extended,2010-2019,https://openalex.org/subfields/1702,Artificial Intelligence,139333,0.5673560466318923,32842,0.5211444167631984
+neuro_to_ai,exclusive,article_review,extended,2010-2019,https://openalex.org/subfields/1707,Computer Vision and Pattern Recognition,105151,0.42816888791162255,29654,0.47055649883368506
+neuro_to_ai,exclusive,article_review,extended,2010-2019,https://openalex.org/subfields/2208,Electrical and Electronic Engineering,1099,0.00447506545648518,523,0.008299084403116521
+neuro_to_ai,exclusive,article_review,extended,2020-2025,https://openalex.org/subfields/1702,Artificial Intelligence,194558,0.5280230143975683,56752,0.4955727483888996
+neuro_to_ai,exclusive,article_review,extended,2020-2025,https://openalex.org/subfields/1707,Computer Vision and Pattern Recognition,170187,0.4618810470465309,55832,0.48753907682635045
+neuro_to_ai,exclusive,article_review,extended,2020-2025,https://openalex.org/subfields/2208,Electrical and Electronic Engineering,3720,0.010095938555900831,1934,0.016888174784749996
+neuro_to_ai,exclusive,article_review,extended,2020-2023,https://openalex.org/subfields/1702,Artificial Intelligence,118741,0.5411757735412214,36476,0.5052917382390425
+neuro_to_ai,exclusive,article_review,extended,2020-2023,https://openalex.org/subfields/1707,Computer Vision and Pattern Recognition,99171,0.4519832462069248,34838,0.4826009863135147
+neuro_to_ai,exclusive,article_review,extended,2020-2023,https://openalex.org/subfields/2208,Electrical and Electronic Engineering,1501,0.00684098025185381,874,0.012107275447442788
+neuro_to_ai,unrestricted,article_review,extended,2010-2019,https://openalex.org/subfields/1702,Artificial Intelligence,163467,0.5094397835924157,36490,0.49426361629214244
+neuro_to_ai,unrestricted,article_review,extended,2010-2019,https://openalex.org/subfields/1707,Computer Vision and Pattern Recognition,140298,0.4372343210461362,34488,0.4671461660368158
+neuro_to_ai,unrestricted,article_review,extended,2010-2019,https://openalex.org/subfields/2208,Electrical and Electronic Engineering,17111,0.053325895361448036,2849,0.03859021767104176
+neuro_to_ai,unrestricted,article_review,extended,2020-2025,https://openalex.org/subfields/1702,Artificial Intelligence,219868,0.4799060565581428,62039,0.46968286053888725
+neuro_to_ai,unrestricted,article_review,extended,2020-2025,https://openalex.org/subfields/1707,Computer Vision and Pattern Recognition,214756,0.4687480901368117,63186,0.4783665311499239
+neuro_to_ai,unrestricted,article_review,extended,2020-2025,https://openalex.org/subfields/2208,Electrical and Electronic Engineering,23524,0.051345853305045534,6862,0.05195060831118884
+neuro_to_ai,unrestricted,article_review,extended,2020-2023,https://openalex.org/subfields/1702,Artificial Intelligence,134475,0.49068617613252813,40096,0.4762730587857983
+neuro_to_ai,unrestricted,article_review,extended,2020-2023,https://openalex.org/subfields/1707,Computer Vision and Pattern Recognition,127291,0.46447245990768277,40258,0.4781973463836459
+neuro_to_ai,unrestricted,article_review,extended,2020-2023,https://openalex.org/subfields/2208,Electrical and Electronic Engineering,12289,0.04484136395978909,3833,0.045529594830555783

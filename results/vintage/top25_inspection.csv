@@ -1,0 +1,51 @@
+period,rank,id,title,year,sf_name,topic_name,dual,cited_by_count,n_2010-2019,n_2020-2025
+2010-2019,1,https://openalex.org/W2113606819,Efficient sparse coding algorithms,2007,Cognitive Neuroscience,Neural dynamics and brain function,False,2384,1188,195
+2010-2019,2,https://openalex.org/W2145889472,Emergence of simple-cell receptive field properties by learning a sparse code for natural images,1996,Cognitive Neuroscience,Neural dynamics and brain function,False,5785,1110,345
+2010-2019,3,https://openalex.org/W2125127226,Comprehensive database for facial expression analysis,2002,Cognitive Neuroscience,Face Recognition and Perception,True,2588,959,161
+2010-2019,4,https://openalex.org/W2164653071,Simple model of spiking neurons,2003,Cognitive Neuroscience,Neural dynamics and brain function,True,4751,939,1128
+2010-2019,5,https://openalex.org/W2147101007,"Synaptic Modifications in Cultured Hippocampal Neurons: Dependence on Spike Timing, Synaptic Strength, and Postsynaptic Cell Type",1998,Cellular and Molecular Neuroscience,Neuroscience and Neuropharmacology Research,False,4726,923,904
+2010-2019,6,https://openalex.org/W2105464873,Sparse coding with an overcomplete basis set: A strategy employed by V1?,1997,Cognitive Neuroscience,Neural dynamics and brain function,False,3692,919,319
+2010-2019,7,https://openalex.org/W2149194912,Hierarchical models of object recognition in cortex,1999,Cognitive Neuroscience,Visual perception and processing mechanisms,False,3382,761,234
+2010-2019,8,https://openalex.org/W2054802006,A saliency-based search mechanism for overt and covert shifts of visual attention,2000,Cognitive Neuroscience,Visual perception and processing mechanisms,True,3163,722,233
+2010-2019,9,https://openalex.org/W2046863527,Modeling attention to salient proto-objects,2006,Cognitive Neuroscience,Neural dynamics and brain function,True,1254,676,102
+2010-2019,10,https://openalex.org/W4238614602,Spiking Neuron Models,2002,Cognitive Neuroscience,Neural dynamics and brain function,True,2951,603,601
+2010-2019,11,https://openalex.org/W345956458,"Spiking Neuron Models: Single Neurons, Populations, Plasticity",2002,Cognitive Neuroscience,Neural dynamics and brain function,True,2045,553,207
+2010-2019,12,https://openalex.org/W1576452626,Neuro-dynamic Programming,2012,Cognitive Neuroscience,EEG and Brain-Computer Interfaces,False,3613,523,121
+2010-2019,13,https://openalex.org/W1924619199,A Neural Algorithm of Artistic Style,2016,Cognitive Neuroscience,Aesthetic Perception and Analysis,True,937,437,263
+2010-2019,14,https://openalex.org/W2166761907,Contextual Priming for Object Detection,2003,Cognitive Neuroscience,Visual perception and processing mechanisms,True,788,424,76
+2010-2019,15,https://openalex.org/W1986246844,Regulation of Synaptic Efficacy by Coincidence of Postsynaptic APs and EPSPs,1997,Cellular and Molecular Neuroscience,Neuroscience and Neuropharmacology Research,False,3851,423,275
+2010-2019,16,https://openalex.org/W1969258103,Modeling the role of salience in the allocation of overt visual attention,2002,Cognitive Neuroscience,Visual perception and processing mechanisms,True,1375,410,100
+2010-2019,17,https://openalex.org/W2136518234,An Integrated Theory of the Mind.,2004,Cognitive Neuroscience,Neural and Behavioral Psychology Studies,False,2898,398,155
+2010-2019,18,https://openalex.org/W2144468361,Image quality assessment based on a degradation model,2000,Cognitive Neuroscience,Visual perception and processing mechanisms,True,798,376,136
+2010-2019,19,https://openalex.org/W2030031014,What attributes guide the deployment of visual attention and how do they do it?,2004,Cognitive Neuroscience,Visual perception and processing mechanisms,False,1748,338,99
+2010-2019,20,https://openalex.org/W2105557003,The Plenoptic Function and the Elements of Early Vision,1991,Cognitive Neuroscience,Visual perception and processing mechanisms,False,1491,337,216
+2010-2019,21,https://openalex.org/W2055111849,Components of bottom-up gaze allocation in natural images,2005,Cognitive Neuroscience,Visual perception and processing mechanisms,True,729,336,154
+2010-2019,22,https://openalex.org/W2039546655,Bayesian surprise attracts human attention,2008,Cognitive Neuroscience,Face Recognition and Perception,True,1244,330,69
+2010-2019,23,https://openalex.org/W2118615399,Neural Mechanisms of Selective Visual Attention,1995,Cognitive Neuroscience,Visual perception and processing mechanisms,False,8259,321,140
+2010-2019,24,https://openalex.org/W2119228922,Visual correlates of fixation selection: effects of scale and time,2004,Cognitive Neuroscience,Visual perception and processing mechanisms,True,685,316,60
+2010-2019,25,https://openalex.org/W2003856922,Affective image classification using features inspired by psychology and art theory,2010,Cognitive Neuroscience,Aesthetic Perception and Analysis,True,846,312,220
+2020-2025,1,https://openalex.org/W2164653071,Simple model of spiking neurons,2003,Cognitive Neuroscience,Neural dynamics and brain function,True,4751,939,1128
+2020-2025,2,https://openalex.org/W2147101007,"Synaptic Modifications in Cultured Hippocampal Neurons: Dependence on Spike Timing, Synaptic Strength, and Postsynaptic Cell Type",1998,Cellular and Molecular Neuroscience,Neuroscience and Neuropharmacology Research,False,4726,923,904
+2020-2025,3,https://openalex.org/W2112927743,Short-Term Synaptic Plasticity,2002,Cellular and Molecular Neuroscience,Neuroscience and Neuropharmacology Research,False,4976,214,765
+2020-2025,4,https://openalex.org/W2893425640,Semantics derived automatically from language corpora contain human-like biases,2017,Cognitive Neuroscience,Psychology of Moral and Emotional Judgment,True,2712,150,756
+2020-2025,5,https://openalex.org/W4238614602,Spiking Neuron Models,2002,Cognitive Neuroscience,Neural dynamics and brain function,True,2951,603,601
+2020-2025,6,https://openalex.org/W4312820606,MetaFormer is Actually What You Need for Vision,2022,Cognitive Neuroscience,Visual perception and processing mechanisms,False,1097,0,513
+2020-2025,7,https://openalex.org/W4247763225,Synaptic computation,2004,Cellular and Molecular Neuroscience,Neuroscience and Neuropharmacology Research,False,1628,196,488
+2020-2025,8,https://openalex.org/W2545656684,A Learned Representation For Artistic Style,2016,Cognitive Neuroscience,Aesthetic Perception and Analysis,False,749,206,444
+2020-2025,9,https://openalex.org/W4241074797,FreeSurfer,2012,Cognitive Neuroscience,Functional Brain Connectivity Studies,False,9561,98,415
+2020-2025,10,https://openalex.org/W2145889472,Emergence of simple-cell receptive field properties by learning a sparse code for natural images,1996,Cognitive Neuroscience,Neural dynamics and brain function,False,5785,1110,345
+2020-2025,11,https://openalex.org/W2047057213,Why there are complementary learning systems in the hippocampus and neocortex: Insights from the successes and failures of connectionist models of learning and memory.,1995,Cognitive Neuroscience,Memory and Neural Mechanisms,False,5292,176,342
+2020-2025,12,https://openalex.org/W2109596721,A Review of the Integrate-and-fire Neuron Model: I. Homogeneous Synaptic Input,2006,Cognitive Neuroscience,Neural dynamics and brain function,False,1201,110,330
+2020-2025,13,https://openalex.org/W2105464873,Sparse coding with an overcomplete basis set: A strategy employed by V1?,1997,Cognitive Neuroscience,Neural dynamics and brain function,False,3692,919,319
+2020-2025,14,https://openalex.org/W2148764920,The free-energy principle: a unified brain theory?,2010,Cognitive Neuroscience,Neural dynamics and brain function,False,7439,185,315
+2020-2025,15,https://openalex.org/W2119885245,Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects,1999,Cognitive Neuroscience,Visual perception and processing mechanisms,False,5608,143,286
+2020-2025,16,https://openalex.org/W2036963181,Connectionist models of recognition memory: Constraints imposed by learning and forgetting functions.,1990,Cognitive Neuroscience,Memory Processes and Influences,True,865,133,283
+2020-2025,17,https://openalex.org/W2964122153,PixelCNN++: Improving the PixelCNN with Discretized Logistic Mixture\n Likelihood and Other Modifications,2017,Neurology,Brain Tumor Detection and Classification,True,567,148,280
+2020-2025,18,https://openalex.org/W2115831804,The tempotron: a neuron that learns spike timing–based decisions,2006,Cognitive Neuroscience,Neural dynamics and brain function,True,838,237,277
+2020-2025,19,https://openalex.org/W1572063013,Digital selection and analogue amplification coexist in a cortex-inspired silicon circuit,2000,Cognitive Neuroscience,Neural dynamics and brain function,True,1305,171,275
+2020-2025,20,https://openalex.org/W1986246844,Regulation of Synaptic Efficacy by Coincidence of Postsynaptic APs and EPSPs,1997,Cellular and Molecular Neuroscience,Neuroscience and Neuropharmacology Research,False,3851,423,275
+2020-2025,21,https://openalex.org/W2141114982,"Synaptic Plasticity: Multiple Forms, Functions, and Mechanisms",2007,Cellular and Molecular Neuroscience,Neuroscience and Neuropharmacology Research,False,2228,23,272
+2020-2025,22,https://openalex.org/W2076964542,Lapicque’s introduction of the integrate-and-fire model neuron (1907),1999,Cognitive Neuroscience,Neural dynamics and brain function,False,673,101,270
+2020-2025,23,https://openalex.org/W1924619199,A Neural Algorithm of Artistic Style,2016,Cognitive Neuroscience,Aesthetic Perception and Analysis,True,937,437,263
+2020-2025,24,https://openalex.org/W2065125569,Nengo: a Python tool for building large-scale functional brain models,2014,Cognitive Neuroscience,Neural dynamics and brain function,True,495,70,253
+2020-2025,25,https://openalex.org/W2058616551,Performance-optimized hierarchical models predict neural responses in higher visual cortex,2014,Cognitive Neuroscience,Neural dynamics and brain function,False,2097,118,253
