@@ -9,8 +9,6 @@ Palette extracted from production CSS at
 `stateofneuroscience.thetransmitter.org/_app/immutable/assets/0.BxYzz2Ml.css`
 and visually verified from "By the Numbers" 2022 chart PNGs.
 
-Reference: ``Assets/claude/outputs/research/transmitter-figure-style-spec-20260522.md``
-
 Usage:
     from neuroai_cn.figures.style import TRANSMITTER, apply_style, finalize
     apply_style()
@@ -31,13 +29,11 @@ import matplotlib.pyplot as plt
 # ---------------------------------------------------------------------------
 
 TRANSMITTER: dict[str, str] = {
-    "bg": "#FFFFFF",  # background (kept WHITE per user preference 2026-05-22; the
-    # Transmitter's native cream #FBF5E9 is reserved for editorial
-    # publication; switch back via finalize_for_publication())
-    "cream": "#FBF5E9",  # editorial cream — kept available for the published version
+    "bg": "#FFFFFF",  # background (white; the outlet's cream #FBF5E9 is available as "cream")
+    "cream": "#FBF5E9",  # cream background, available for publication
     "navy": "#0F3047",  # body text + spines + dark accents
-    "teal": "#277E8A",  # primary categorical (AI -> Neuro in our piece)
-    "mustard": "#D4A521",  # secondary categorical (Neuro -> AI)
+    "teal": "#277E8A",  # AI papers citing neuroscience
+    "mustard": "#D4A521",  # gold: neuroscience papers citing AI
     "coral": "#FD6760",  # highlight overlay
     "crimson": "#DC143C",  # trend / change-point / inflection
     "purple": "#59278A",  # tertiary categorical (rarely needed)
@@ -46,43 +42,14 @@ TRANSMITTER: dict[str, str] = {
     "muted": "#9C978D",  # connecting / annotation leader lines
 }
 
-# Directional convention for the NeuroAI piece
+# Line colors: teal = AI papers citing neuroscience, gold = neuroscience papers citing AI
 DIRECTION_COLORS: dict[str, str] = {
     "ai_to_neuro": TRANSMITTER["teal"],
     "neuro_to_ai": TRANSMITTER["mustard"],
 }
-DIRECTION_LABELS: dict[str, str] = {
-    "ai_to_neuro": "AI → Neuro",  # AI → Neuro
-    "neuro_to_ai": "Neuro → AI",  # Neuro → AI
-}
-# DEPRECATED — uses the citation-link convention (X→Y = X cites Y). Kept for the
-# original figure1_main.py and any pre-2026-05-28 supplementaries. Any NEW figure
-# (including figure1_main_v2.py and onward) MUST use DISPLAY_LABELS_INFLUENCE
-# below, which uses the intellectual-influence convention (X→Y = X influences Y).
 
-DISPLAY_LABELS_INFLUENCE: dict[str, str] = {
-    # Data 'direction' value -> display label under the new (influence) convention.
-    # Data column 'neuro_to_ai' means "neuroscience papers cite AI papers" (rising,
-    # headline); under influence convention this is "AI -> Neuro" (AI influences
-    # neuroscience).
-    # Data column 'ai_to_neuro' means "AI papers cite neuroscience papers" (flat);
-    # under influence convention this is "Neuro -> AI" (neuroscience influences AI).
-    # Capital N on "Neuro" per user style preference.
-    "neuro_to_ai": "AI → Neuro",
-    "ai_to_neuro": "Neuro → AI",
-}
-
-# Editor's request (2026-08-31, comment [186]): "I still think the
-# label AI->neuroscience is ambiguous... For figures, the reader should understand
-# immediately what it shows rather than having to interpret it." These say what is
-# counted, so no arrow convention has to be learned at all. Use these on anything
-# that goes to the outlet.
-#
-# ⚠ The comment on DISPLAY_LABELS_INFLUENCE above states which series is rising and
-# has it BACKWARDS. Measured on q1_or_by_year.parquet: `ai_to_neuro` (AI papers
-# citing neuroscience) is the steep one, OR 0.0137 (1995) -> 0.0527 (2025);
-# `neuro_to_ai` (neuroscience papers citing AI) is flat in OR, 0.0331 -> 0.0208,
-# and only rises in raw counts. Corrected 2026-09-14.
+# Plain labels: they say what is counted, so that the reader does not have to learn an arrow
+# convention. Use these on everything that is published.
 DISPLAY_LABELS_PLAIN: dict[str, str] = {
     "ai_to_neuro": "AI papers citing neuroscience",
     "neuro_to_ai": "Neuroscience papers citing AI",
@@ -118,14 +85,9 @@ def apply_style() -> None:
         {
             # Fonts ---------------------------------------------------------------
             "font.family": "sans-serif",
-            "font.sans-serif": [
-                "Inter",
-                "Source Sans 3",
-                "Source Sans Pro",
-                "Helvetica Neue",
-                "Arial",
-                "DejaVu Sans",
-            ],
+            # Pinned to the font that ships with matplotlib, so that every machine redraws
+            # the committed figures identically (an installed Inter would change the metrics).
+            "font.sans-serif": ["DejaVu Sans"],
             "font.size": 10,
             "axes.titlesize": 14,
             "axes.titleweight": "bold",
@@ -350,8 +312,9 @@ CANONICAL_ERAS: list[tuple[str, int, int]] = [
     ("NeuroAI era", 2020, 2025),
 ]
 
-# Data-driven change-points from `q1_v3_extended_changepoints.parquet`
-# (PELT/L2 optimal 2 breakpoints per direction).
+# Data-driven change points from `q1_v3_extended_changepoints.parquet`: the breakpoints of the
+# exhaustive piecewise-linear OLS search (up to two breakpoints, segments of at least 3 years)
+# for each direction. They are not the output of `ruptures` PELT (see analysis/changepoints.py).
 CANONICAL_CHANGEPOINTS: dict[str, list[int]] = {
     "ai_to_neuro": [2005, 2022],
     "neuro_to_ai": [1993, 2005],
@@ -359,13 +322,11 @@ CANONICAL_CHANGEPOINTS: dict[str, list[int]] = {
 
 # Tier-1 canonical bridge papers (vertical markers for the headline panel).
 TIER1_BRIDGES: dict[str, int] = {
-    # Editor's request [185], 2026-08-31: "Is there a specific paper in 2011/2012
-    # that marks the emergence of DL? If so, can you add it to the graph, similar
-    # to Hassabis 2017". AlexNet is the canonical marker.
+    # AlexNet is the canonical marker of the emergence of deep learning.
     "AlexNet 2012": 2012,
     "Hassabis 2017": 2017,
     "Kriegeskorte 2018": 2018,
     "Richards 2019": 2019,
-    "GPT-3 2020": 2020,  # Brown et al. 2020; reviewer comment 4 (2026-09-26)
+    "GPT-3 2020": 2020,  # Brown et al. 2020
     "Zador 2023": 2023,
 }

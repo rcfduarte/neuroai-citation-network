@@ -5,7 +5,7 @@ Companion to extended_classifier (Scheme 1, Topics-based) and scheme3_s2fos
 locked E1 spec: "3-scheme triangulation: Topics + venue whitelist + S2FOS;
 report each separately + agreement."
 
-Pool 3 venue lists are sourced from definitional-foundation-v1 sec. 1.3.
+Pool 3 venue lists are described in docs/METHODS.md, section 2.3.
 A work is assigned by venue ONLY if its primary_location.source.display_name
 matches one of the curated venue patterns; otherwise unassigned.
 
@@ -47,7 +47,7 @@ SENTINEL_FAIL = AUDITS_DIR / "_scheme2.failed"
 YEAR_MIN = 1990
 YEAR_MAX = 2025
 
-# CORE-NEURO from definitional-foundation-v1 sec. 1.3
+# CORE-NEURO venue list (docs/METHODS.md, section 2.3)
 CORE_NEURO = [
     "Neuron",
     "Nature Neuroscience",
@@ -245,7 +245,7 @@ def main() -> int:
             )
 
             summary = {
-                "scheme": "venue_whitelist (Pool 3 from definitional-foundation-v1)",
+                "scheme": "venue_whitelist (Pool 3)",
                 "venue_lists": {
                     "core_neuro_n": len(CORE_NEURO),
                     "core_ai_n": len(CORE_AI),

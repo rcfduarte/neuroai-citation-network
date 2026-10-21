@@ -48,8 +48,10 @@ figures() {
   $PY -m neuroai_cn.figures.figure2_bridges_v3   # Figure 3: bridge papers, authors, institutions
   # Supplement figures that can be drawn from results/.
   $PY -m neuroai_cn.figures.figure_s1_field_sizes
+  $PY -m neuroai_cn.figures.figure_s2             # Figures S2.1 to S2.4
   $PY -m neuroai_cn.figures.figure_s3_dilution
-  $PY -m neuroai_cn.figures.figure_s4_vintage
+  $PY -m neuroai_cn.figures.figure_s4             # Figures S4.1 to S4.4
+  $PY -m neuroai_cn.figures.figure_s6             # Figure S6.1
   echo "Figures written to figures/."
 }
 
@@ -66,21 +68,39 @@ heavy() {
   cat <<'EOF'
 Rebuilding results/ from the raw OpenAlex snapshot needs about 364 GB of parquet and a 494 GB
 DuckDB index, days of download and conversion, and is not run by this script. Stages, in order
-(each script documents its own arguments; set NEUROAI_DATA to the data root first):
+(each script documents its own arguments; set NEUROAI_DATA to the data root first, and run
+everything from the repository root with `.venv/bin/python -m ...`):
 
-  1. scripts/download_snapshot.sh           aws s3 sync of the works snapshot (pip install -e ".[snapshot]")
+  1. scripts/download_snapshot.sh works     aws s3 sync of the works snapshot (uv sync --extra snapshot)
   2. scripts/convert_to_parquet.py          gzipped JSON lines to parquet
   3. scripts/build_duckdb_index.py          build openalex.duckdb
   4. scripts/verify_index.py                sanity queries on the index
-  5. python -m neuroai_cn.audits.q1_v3_extended        yearly cross-citation table (feeds results/flow/or_by_year.csv)
-  6. python -m neuroai_cn.analysis.export_flow_inputs  export the committed flow inputs
-  7. python -m neuroai_cn.analysis.citation_age.extract_counts, then citing_volume, rankings,
-     check_counts_by_year, tables_and_figure          citation-age analysis (about 45 minutes)
-  8. python -m neuroai_cn.analysis.export_bridge_tables  bridge tables
-  9. cross-source samples: scripts/api_crosscite/ (needs OPENALEX_EMAIL; see docs/reproducing-cross-source.md)
+     neuroai_cn.corpus.pool1 to pool4, then neuroai_cn.corpus.build_corpus   the four pools and their union
+     (feeds the pool counts of results/corpus/pool_sizes.csv)
+  5. cross-source samples (need OPENALEX_EMAIL): scripts/api_crosscite/openalex_crosscite_sample.py,
+     scripts/api_crosscite/s2_crosscite_sample.py, scripts/fresh_recheck_20261006/run_fresh.sh
+     (docs/METHODS.md, section 6)
+  6. neuroai_cn.audits.q1_v3_extended       yearly cross-citation table (feeds results/flow/or_by_year.csv)
+     neuroai_cn.audits.q1_strict            same table under the 35-topic core definition
+     neuroai_cn.audits.bootstrap_sensitivity   leave-one-topic-out sweep
+  7. neuroai_cn.analysis.export_flow_inputs      flow inputs and cross-source tables -> results/flow, results/crosssource
+     neuroai_cn.analysis.export_field_sizes      field sizes, corpus totals, pools, anchor labels -> results/corpus, results/flow
+     neuroai_cn.analysis.export_flow_sensitivity sensitivity tables -> results/flow
+  8. neuroai_cn.audits.flow_composition --classifier extended, then --classifier strict;
+     neuroai_cn.audits.flow_concentration; neuroai_cn.analysis.export_flow_composition
+  9. neuroai_cn.analysis.changepoints       change points and segment slopes (reads results/flow only)
+ 10. neuroai_cn.analysis.citation_age.extract_counts, citing_volume, rankings,
+     check_counts_by_year, tables_and_figure       citation-age analysis (about 45 minutes)
+ 11. bridge works: neuroai_cn.audits.q4_v3_extended, filter_by_era_books_only, author_inst_bridge,
+     author_inst_top1000, institution_consolidation, affiliations_overrides, then
+     scripts/concentration_filtered.py; export with neuroai_cn.analysis.export_bridge_tables
+     and neuroai_cn.analysis.export_bridge_pool
+ 12. neuroai_cn.analysis.cited_vintage.build --stage labels, edges, cross, refage (one at a time),
+     then cited_vintage.vintage, robustness, reference_age
+ 13. neuroai_cn.analysis.manifesto_citations --recompute   citations of the six NeuroAI papers
 
 With the index built, `NEUROAI_HEAVY=1 .venv/bin/python -m pytest -m heavy` runs the checks that
-read it. docs/methods/ documents every definition used.
+read it. docs/METHODS.md documents every definition used.
 EOF
 }
 

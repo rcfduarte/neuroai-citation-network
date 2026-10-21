@@ -38,7 +38,7 @@ AI_SUBFIELD_ID = "https://openalex.org/subfields/1702"
 # Excluded: applied-domain buckets, crypto/security, quantum, control theory,
 # signal processing, software engineering, programming languages, and the
 # T12157 classification artifact. Documented choices and the full subfield
-# listing are in docs/methods/01-corpus-and-pools.md.
+# listing are in docs/METHODS.md, section 3.
 AI_CORE_TOPIC_IDS = (
     "https://openalex.org/T10028",  # Topic Modeling
     "https://openalex.org/T10100",  # Metaheuristic Optimization Algorithms Research

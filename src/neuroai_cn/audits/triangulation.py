@@ -146,7 +146,7 @@ def main() -> int:
             for k, v in counts.items():
                 report_lines.append(f"- `{k}`: {v}")
         report_lines.append("")
-        report_lines.append("## Per-anchor full table (sortable in Obsidian dataview)")
+        report_lines.append("## Per-anchor full table")
         report_lines.append("")
         report_lines.append("```")
         # Truncate display

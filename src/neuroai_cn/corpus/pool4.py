@@ -1,4 +1,4 @@
-"""Pool 4 — Seed authors (foundation §1.4 / METHODS §2.4).
+"""Pool 4 — Seed authors (docs/METHODS.md, section 2.3).
 
 Six sub-tiers (4a–4f) of named authors whose entire publication output enters
 the corpus. The hard rule (cross-pool): seed authors from classical
@@ -68,7 +68,7 @@ SEED_4A_NAMES: tuple[str, ...] = (
     "Caswell Barry",
     # 2026-07-31: was "Yamins Daniel", a name-order error that resolved to nothing.
     "Daniel Yamins",
-    # 2026-07-31: three Zador-2023 signatories were on the foundation roster but
+    # 2026-07-31: three Zador-2023 signatories were on the seed roster but
     # absent from this list, so their output never entered the pool.
     "G. Sean Escola",
     "Jeff Hawkins",
@@ -190,7 +190,7 @@ SEED_4F_NAMES: tuple[str, ...] = (
     "Jack Lindsey",
     "Catherine Olsson",
     "Yann LeCun",  # filtered (also 4a; partial only here)
-    # 2026-07-31: "Anders Sandberg" removed — never on the foundation 4f roster,
+    # 2026-07-31: "Anders Sandberg" removed — never on the seed roster,
     # and the resolved author (221 works) is the FHI philosopher, not a
     # neuroscience-facing interpretability researcher. Contributed 9 works.
     "Emily Mackevicius",
@@ -214,7 +214,7 @@ SUB_TIERS: dict[str, tuple[str, ...]] = {
     "4f": SEED_4F_NAMES,
 }
 
-# Surnames known to have OpenAlex collisions (METHODS §2.4 hard rule).
+# Surnames known to have OpenAlex collisions (hard rule).
 KNOWN_AMBIGUOUS_SURNAMES = ("Aertsen", "Engel", "Wang", "Anderson", "Wilson", "Smith")
 
 MIN_WORKS_COUNT = 5  # ORCID-less authors below this threshold are filtered.

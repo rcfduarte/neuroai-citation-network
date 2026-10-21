@@ -1,4 +1,4 @@
-"""How concentrated is the AI->Neuro flow?
+"""How concentrated are the citations that neuroscience papers send to AI?
 
 The article claims that neuroscience's rising references to AI are carried
 substantially by tools rather than theory. Testing that means classifying the
@@ -7,7 +7,7 @@ AI works neuroscience actually cites. Whether that is feasible from abstracts
 distinct AI works carry the citation mass.
 
 This module measures exactly that: over the edges where a neuroscience paper
-cites an AI paper (the article's `AI->Neuro` gold line), how many distinct
+cites an AI paper (the article's gold line, neuroscience papers citing AI), how many distinct
 cited AI works account for 50%, 80%, 90% and 95% of the citations.
 
 Field assignment reuses the published extended classifier so the edge set is

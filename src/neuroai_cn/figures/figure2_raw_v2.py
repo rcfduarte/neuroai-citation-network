@@ -150,7 +150,6 @@ def build() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     fig.savefig(FIG_DIR / "figure2_raw_v2.png")
     fig.savefig(FIG_DIR / "figure2_raw_v2.svg")
-    fig.savefig(FIG_DIR / "figure2_raw_v2-onwhite.png", facecolor="white", transparent=False)
     t.to_csv(DATA_DIR / "figure2_raw_v2_data.csv", index=False)
     plt.close(fig)
     logger.info("wrote %s and %s", FIG_DIR, DATA_DIR)

@@ -3,7 +3,7 @@
 Reads results/citation_age: ranking_<name>_top100.csv, classification.csv,
 table_s1_reference.csv, checks.json and summary.json. Recomputes
 
-    Table S1: the top 15 of the published ranking against the printed table
+    Table S5.1: the top 15 of the published ranking against the printed table
     the number of conceptual works in the top 15, 25 and 50 of every ranking
     the most recent conceptual work (and concept or method) per ranking and head size
     the publication-year table of the top 100 (median, IQR, bins, classes)
@@ -102,7 +102,7 @@ def main() -> int:
         if "pass" in c:
             expect(f"checks.json: {name} passes", bool(c["pass"]), True)
 
-    # Table S1 reproduction from the committed top 15 of the published ranking.
+    # Table S5.1 reproduction from the committed top 15 of the published ranking.
     top15 = R["orig"].head(15)
     rows = []
     for (_, r), (_, t) in zip(ref.iterrows(), top15.iterrows(), strict=True):
@@ -113,7 +113,7 @@ def main() -> int:
             and int(t["c_ai"]) == int(r["c_ai"])
             and round(float(t["B_harmonic"])) == int(r["B"])
         )
-    expect("Table S1: all 15 rows reproduced", all(rows) and len(rows) == len(ref) == 15, True)
+    expect("Table S5.1: all 15 rows reproduced", all(rows) and len(rows) == len(ref) == 15, True)
 
     # Concept counts and most recent concept per ranking.
     for name in [*PRIMARY, *SENS]:

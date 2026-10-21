@@ -1,11 +1,9 @@
 """Hand-verified CURRENT + PAST affiliations for the top-15 bridge authors.
 
-REWRITTEN 2026-05-27 (v3). Adds past-affiliation edges (faded in the figure)
+Adds past-affiliation edges (faded in the figure)
 alongside current ones (solid). Every row is hand-verified against ORCID
 employment records, official university/lab pages, Google Scholar, LinkedIn,
-and the researchers' own CVs (research-assistant verification, May 2026; full
-source table in the piece supplement / vault note
-`bridge-author-affiliations-verified-20260527.md`).
+and the researchers' own CVs (see supplement S5).
 
 Why this replaces OpenAlex `last_known_institutions`: that field carried
 extensive name-collision junk for this set — Brian Avants -> "California
@@ -19,7 +17,7 @@ Edge semantics in figure2_v3:
     affiliation_status == "current"  -> SOLID curve  (active 2025-2026)
     affiliation_status == "past"     -> FADED curve  (former affiliation)
 
-Policy (applied uniformly, flagged for the editor):
+Policy (applied uniformly):
     * Include research affiliations only: PhD, postdoc, faculty, director,
       visiting researcher, industry research. EXCLUDE undergraduate / MS-only
       education (e.g. Olshausen's Stanford BS/MS) and non-research clinical

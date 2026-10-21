@@ -1,7 +1,7 @@
 [project]
 name = "neuroai-cn"
 version = "0.1.0"
-description = "NeuroAI cross-pollination citation-network analysis (Phase 1: corpus + factions)"
+description = "Citation-network analysis of neuroscience and AI: code behind the Transmitter article"
 authors = [
     { name = "Renato Duarte", email = "rcfduarte@gmail.com" },
 ]
@@ -50,7 +50,7 @@ markers = [
 [tool.ruff]
 line-length = 100
 target-version = "py311"
-extend-exclude = ["docs", "notebooks", "_archive", "deprecated"]
+extend-exclude = ["docs"]
 
 [tool.ruff.lint]
 select = [

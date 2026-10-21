@@ -1,4 +1,4 @@
-"""Pool 3 — Venue whitelist (foundation §1.3 / METHODS §2.3).
+"""Pool 3 — Venue whitelist (docs/METHODS.md, section 2.3).
 
 Four sub-pools — works whose `primary_location.source.id` is in the curated
 list:

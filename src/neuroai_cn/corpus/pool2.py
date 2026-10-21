@@ -1,15 +1,15 @@
 """Pool 2 — Thematic keywords (operational NeuroAI).
 
-Boolean templates A-E from Prep-2 §5. Each template fires on a title-substring
+Boolean templates A-E. Each template fires on a title-substring
 regex against the works table. Title-only matching is a known limitation:
 OpenAlex abstracts (`abstract_inverted_index`) were dropped from our parquet
 projection, so any phrase that requires abstract-only context is missed
 (reduces recall ~30-50% vs title+abstract).
 
-Exclusion logic (Prep-2 §4 T1-T10) is applied as an `excluded` flag rather
+Exclusion logic (T1-T10) is applied as an `excluded` flag rather
 than a hard filter, so downstream code can choose strict vs permissive
-modes. Per A3 (foundation): memristor + optical implementations are NOT
-excluded — they are real neuromorphic hardware.
+modes. Memristor + optical implementations are NOT excluded:
+they are real neuromorphic hardware.
 
 Output: data/derived/pool2.parquet with columns
     work_id, in_pool=true, source_tag='pool2',
@@ -43,7 +43,7 @@ def _re_or(*phrases: str) -> str:
     return "(" + "|".join(escaped) + ")"
 
 
-# Template A — High-precision core (Prep-2 §5)
+# Template A — High-precision core
 TEMPLATE_A_PHRASES = (
     "predictive coding",
     "free energy principle",
@@ -185,7 +185,7 @@ TEMPLATE_E_RL = (
 )
 
 
-# Exclusion logic (Prep-2 §4). We implement T1, T2, T6 — title-tractable.
+# Exclusion logic. We implement T1, T2, T6 — title-tractable.
 # T3, T4, T5, T7, T8, T9, T10 are abstract-dependent and marked but not enforced
 # at this stage.
 T1_NEURO_TOKENS = (

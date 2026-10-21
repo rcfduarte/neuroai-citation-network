@@ -19,7 +19,7 @@ DUCKDB_PATH = config.DUCKDB_PATH
 REPO_ROOT = config.REPO_ROOT
 STATUS_MD = REPO_ROOT / "logs" / "build-status.md"
 
-# Tier 1 canonical bridges — must surface (foundation §5).
+# Tier 1 canonical bridges — must surface.
 TIER1_DOIS = [
     ("Zador 2023 Nat Commun", "10.1038/s41467-023-37180-x"),
     ("Richards 2019 Nat Neurosci", "10.1038/s41593-019-0520-2"),

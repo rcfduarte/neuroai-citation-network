@@ -1,5 +1,4 @@
-# Canonical .gitignore (from ~/.claude/templates/python-project/gitignore)
-# Plus project-specific data exclusions.
+# Python template plus project-specific data exclusions.
 
 # Python
 __pycache__/

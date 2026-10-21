@@ -1,6 +1,6 @@
 """Do the NeuroAI "manifesto" papers follow the same citation curve as the overall flow?
 
-Question (reviewer comment on the Transmitter piece): "do citations of the manifestos follow the
+Question (raised by a reviewer of the article): "do citations of the manifestos follow the
 same curve? It would be interesting to see if AI researchers are influenced by our neuro
 manifestos." The six manifesto and review papers listed in the article sidebar are identified by
 DOI in ``MANIFESTOS`` below.

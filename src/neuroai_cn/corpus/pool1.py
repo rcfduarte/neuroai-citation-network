@@ -1,4 +1,4 @@
-"""Pool 1 — Self-proclaimed NeuroAI (foundation §1.1).
+"""Pool 1 — Self-proclaimed NeuroAI.
 
 Two components:
   - 1a "anchor-signatory": papers by any author who signed one of the 5 anchor

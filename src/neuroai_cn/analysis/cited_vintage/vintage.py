@@ -251,11 +251,19 @@ def claims(summary: pd.DataFrame, sub: pd.DataFrame) -> dict:
         ]
         return float(r["share_edges"].iloc[0]) if len(r) else 0.0
 
+    def pct(x, digits=1):
+        return f"{100 * x:.{digits}f}"
+
+    a = cell("ai_to_neuro", "exclusive", "all", "extended", "2010-2019")
+    b = cell("ai_to_neuro", "exclusive", "all", "extended", "2020-2025")
+    cog = share("exclusive", "2020-2025", COGNITIVE_SUBFIELD, "strict35")
+    cel = share("exclusive", "2020-2025", CELLULAR_SUBFIELD, "strict35")
     out = {
-        "claim1_text": "about 90 percent cognitive neuroscience, under 5 percent cellular and "
-        "molecular (AI papers 2020-2025)",
-        "claim2_text": "median cited year 2008 -> 2015; share published in 2005 or earlier "
-        "35% -> 15% (AI papers 2010-2019 -> 2020-2025)",
+        "claim1_text": f"{pct(cog)} percent cognitive neuroscience, {pct(cel, 2)} percent cellular and "
+        "molecular (AI papers 2020-2025; 35-topic core definition, exclusive cited set)",
+        "claim2_text": f"median cited year {a['median_cited_year']:.0f} -> {b['median_cited_year']:.0f}; "
+        f"share published in 2005 or earlier {pct(a['share_le2005'])}% -> {pct(b['share_le2005'])}% "
+        "(AI papers 2010-2019 -> 2020-2025; extended definition, exclusive cited set)",
         "claim1": {},
         "claim2": {},
     }

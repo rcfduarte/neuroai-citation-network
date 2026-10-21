@@ -24,7 +24,7 @@ Spec (LOCKED 2026-05-22 evening):
           Edge weight: last_author = 2.0, first_author = 1.5, middle = 1.0.
         * Author -> Institution: curves from author bar's right edge to inst
           bar's left edge. Uses CURRENT affiliations only
-          (`author_current_affiliations.parquet`). Edge weight = 1.0 (single
+          (`author_institution_edges.csv`). Edge weight = 1.0 (single
           current affiliation per author-institution pair); only drawn when
           the institution is in the top-15 set.
 
@@ -37,7 +37,7 @@ Data sources (results/bridge/, written by ``python -m neuroai_cn.analysis.export
     author_institution_edges.csv              hand-verified author->institution edges (current/past)
 
 Output (config.FIGURES_DIR):
-    figure2_v3.{png,svg}  and  figure2_v3_openalex_separated.{png,svg}
+    figure2_v3.{png,svg}  and  figure_s5_institutions_separated.{png,svg} (Figure S5.1)
 """
 
 from __future__ import annotations
@@ -588,12 +588,12 @@ def _load(use_consolidated: bool = True) -> tuple:
     return papers, authors, insts, pa_top, cur_top, venues
 
 
-def build(use_consolidated: bool = True, suffix: str = "") -> Path:
+def build(use_consolidated: bool = True, name: str = "figure2_v3") -> Path:
     """Build Figure 2 v3.
 
     use_consolidated=True   -> Alphabet / Microsoft / Meta corporate groups
                                merged in the institutions column (main figure).
-    use_consolidated=False  -> raw OpenAlex separated entities (supplementary).
+    use_consolidated=False  -> raw OpenAlex separated entities (Figure S5.1 of the supplements).
     """
     apply_style()
     papers, authors, insts, pa_top, cur_top, venues = _load(use_consolidated=use_consolidated)
@@ -806,7 +806,6 @@ def build(use_consolidated: bool = True, suffix: str = "") -> Path:
     )
     fig.subplots_adjust(top=0.92, bottom=0.04, left=0.02, right=0.99)
 
-    name = "figure2_v3" + suffix
     out_png = FIGURES_DIR / f"{name}.png"
     out_svg = FIGURES_DIR / f"{name}.svg"
     fig.savefig(out_png)
@@ -819,6 +818,6 @@ def build(use_consolidated: bool = True, suffix: str = "") -> Path:
 if __name__ == "__main__":
     # Main: consolidated corporate groups
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
-    build(use_consolidated=True, suffix="")
+    build(use_consolidated=True)
     # Supplementary: OpenAlex's separated entities, no consolidation
-    build(use_consolidated=False, suffix="_openalex_separated")
+    build(use_consolidated=False, name="figure_s5_institutions_separated")

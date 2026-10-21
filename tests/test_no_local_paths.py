@@ -1,7 +1,7 @@
 """Tripwire: no machine-specific paths in tracked code.
 
 Every tracked text file under src/, scripts/ and tests/ must be free of '/home/', '/media/' and
-'Desktop' (the author's home directory and Obsidian vault). Paths come from
+'Desktop' (the author's home directory and notes folder). Paths come from
 neuroai_cn.config, which is overridable with the NEUROAI_DATA environment variable.
 """
 

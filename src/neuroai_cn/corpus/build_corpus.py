@@ -2,8 +2,7 @@
 
 C = P1 ∪ P2 ∪ P3 ∪ P4 (set union, deduplicated by work_id).
 
-Pool overlap structure is reported separately as `pool_overlap.json` —
-foundation §1.5 says "Pool overlap is reported, not collapsed" because the
+Pool overlap is reported, not collapsed, in `pool_overlap.json`, because the
 overlap is itself evidence about where NeuroAI work appears.
 
 Output:

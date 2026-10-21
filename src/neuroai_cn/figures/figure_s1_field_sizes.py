@@ -1,8 +1,8 @@
 """Supplement S1 figure: how many works each field holds per year, and how many carry references.
 
 A: works per publication year, 1990-2025, for neuroscience (OpenAlex field 28) and for three
-definitions of AI (the extended definition used in the article, whole subfield 1702, and the
-curated 35-topic core used as a sensitivity check). B: the share of those works whose reference
+definitions of AI (the extended definition used in the article, the subfield 1702 definition, and
+the 35-topic core definition used as a sensitivity check). B: the share of those works whose reference
 list is present in the snapshot, which is the part of each field that can cite at all. Reads
 results/flow/field_sizes_by_year.csv (written by neuroai_cn.analysis.export_field_sizes); writes
 figures/figure_s1_field_sizes.png and .svg.
@@ -28,8 +28,8 @@ SRC = config.RESULTS_DIR / "flow" / "field_sizes_by_year.csv"
 SERIES = (
     ("neuroscience", "Neuroscience (field 28)", GOLD, "-"),
     ("ai_extended", "AI, extended definition (article)", TEAL, "-"),
-    ("ai_subfield_1702_whole", "AI, whole subfield 1702", TEAL, (0, (4, 2))),
-    ("ai_strict_core35", "AI, curated 35-topic core", TEAL, (0, (1, 1.6))),
+    ("ai_subfield_1702_whole", "AI, subfield 1702 definition", TEAL, (0, (4, 2))),
+    ("ai_strict_core35", "AI, 35-topic core definition", TEAL, (0, (1, 1.6))),
 )
 
 

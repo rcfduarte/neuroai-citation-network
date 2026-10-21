@@ -63,7 +63,7 @@ BAD_1702_TOPIC_IDS: frozenset[str] = frozenset(
         # NB: T11017 (Chaos-based Image/Signal Encryption) removed 2026-05-14 —
         # it is a topic of subfield 1707, not 1702. Under the SQL logic, the
         # 1707 branch was already classifying T11017 as `ai`, so the BAD entry
-        # was a dead row. Fix B in methodology-and-topics-20260514.md §5.
+        # was a dead row.
         "https://openalex.org/T10126",  # Logic, programming, and type systems
         "https://openalex.org/T10639",  # Advanced Software Engineering Methodologies
         # Education

@@ -1,11 +1,11 @@
-"""Step 2: reproduce Table S1, then re-rank the same eligible set with citation age controlled.
+"""Step 2: reproduce Table S5.1, then re-rank the same eligible set with citation age controlled.
 
 Inputs
     q4_v3_extended_full.parquet    the 133,763-paper candidate pool (published pipeline output)
     pool_counts_by_year.parquet    per-work, per-citing-field, per-citing-year counts (step 1)
     pool_metadata.parquet          type, venue, source type, first author (step 1)
     citing_volume.parquet          references made per field and year (step 1b)
-    table_s1_reference.csv         Table S1 as printed in the supplement (results/citation_age)
+    table_s1_reference.csv         Table S5.1 as printed in the supplement (results/citation_age)
 
 Scores (harmonic mean H(a, b) = 2ab / (a + b), as in the published metric)
     orig   H(c_neuro, c_ai), all citing years 1990-2026            -> the published ranking
@@ -218,7 +218,7 @@ def main() -> None:
             flush=True,
         )
 
-    # ------------------------------------------------ check B: reproduce Table S1 exactly
+    # ------------------------------------------------ check B: reproduce Table S5.1 exactly
     ref = pd.read_csv(RESULTS / "table_s1_reference.csv")
     top15 = ranked["orig"].head(15)
     rows = []
@@ -244,7 +244,7 @@ def main() -> None:
         ].to_dict("records"),
     )
     if not all_ok:
-        sys.exit("Top-15 does not match Table S1; stopping as instructed.")
+        sys.exit("Top-15 does not match Table S5.1; stopping as instructed.")
 
     # Also match the pipeline's own figure input (independent file) for ranks 1-15.
     nb = pd.read_parquet(POOL.parent / "q4_v3_extended_filtered_by_era_no_books.parquet")

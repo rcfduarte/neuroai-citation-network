@@ -2,7 +2,7 @@
 
 Build a bibliographic-coupling graph from the top-N bridge papers (default
 1000): two papers are linked with weight = #shared references. Apply disparity
-filter (alpha=0.05) to extract the multiscale backbone, then run Leiden
+filter (alpha=0.20, loosened from 0.05) to extract the multiscale backbone, then run Leiden
 community detection. Label each cluster via TF-IDF on cleaned titles.
 
 Per-era variant: re-cluster within four era windows

@@ -21,22 +21,22 @@
   expr: mod('analysis.s4_numbers').vintage('n_edges','2020-2025', classifier='strict35')
 - id: s4-core-unres-cog
   file: docs/supplements/S4-what-ai-cites.md
-  context: '| Unrestricted set | 88.3 | 4.3 | 5.7 | 179,242 |'
+  context: '| All-neuroscience set | 88.3 | 4.3 | 5.7 | 179,242 |'
   shown: '88.3'
   expr: mod('analysis.s4_numbers').subfield_share('Cognitive Neuroscience', classifier='strict35', cited_set='unrestricted')
 - id: s4-core-unres-cell
   file: docs/supplements/S4-what-ai-cites.md
-  context: '| Unrestricted set | 88.3 | 4.3 | 5.7 | 179,242 |'
+  context: '| All-neuroscience set | 88.3 | 4.3 | 5.7 | 179,242 |'
   shown: '4.3'
   expr: mod('analysis.s4_numbers').subfield_share('Cellular and Molecular Neuroscience', classifier='strict35', cited_set='unrestricted')
 - id: s4-core-unres-neur
   file: docs/supplements/S4-what-ai-cites.md
-  context: '| Unrestricted set | 88.3 | 4.3 | 5.7 | 179,242 |'
+  context: '| All-neuroscience set | 88.3 | 4.3 | 5.7 | 179,242 |'
   shown: '5.7'
   expr: mod('analysis.s4_numbers').subfield_share('Neurology', classifier='strict35', cited_set='unrestricted')
 - id: s4-core-unres-n
   file: docs/supplements/S4-what-ai-cites.md
-  context: '| Unrestricted set | 88.3 | 4.3 | 5.7 | 179,242 |'
+  context: '| All-neuroscience set | 88.3 | 4.3 | 5.7 | 179,242 |'
   shown: 179,242
   expr: mod('analysis.s4_numbers').matrix_edges((2020, 2025), citing='strict')
 - id: s4-core-cell-exact
@@ -86,12 +86,12 @@
   expr: mod('analysis.s4_numbers').category_share('Neuroimaging and medical image processing', 'strict')
 - id: s4-cat-stat-ext
   file: docs/supplements/S4-what-ai-cites.md
-  context: '| General statistics and ML software | 14.5 | 21.8 |'
+  context: '| General statistics and machine-learning software | 14.5 | 21.8 |'
   shown: '14.5'
   expr: mod('analysis.s4_numbers').category_share('General statistics and ML software')
 - id: s4-cat-stat-core
   file: docs/supplements/S4-what-ai-cites.md
-  context: '| General statistics and ML software | 14.5 | 21.8 |'
+  context: '| General statistics and machine-learning software | 14.5 | 21.8 |'
   shown: '21.8'
   expr: mod('analysis.s4_numbers').category_share('General statistics and ML software', 'strict')
 - id: s4-cat-cv-ext
@@ -214,26 +214,6 @@
   context: collects 1,680 citations from neuroscience papers
   shown: 1,680
   expr: mod('analysis.s4_numbers').head(34)
-- id: s4-neuro-ai-sf-1
-  file: docs/supplements/S4-what-ai-cites.md
-  context: 57.5 percent went to the AI subfield and 42.0 percent to computer vision in 2010-2019
-  shown: '57.5'
-  expr: mod('analysis.s4_numbers').subfield_share('Artificial Intelligence', period='2010-2019', direction='neuro_to_ai')
-- id: s4-neuro-ai-sf-2
-  file: docs/supplements/S4-what-ai-cites.md
-  context: 57.5 percent went to the AI subfield and 42.0 percent to computer vision in 2010-2019
-  shown: '42.0'
-  expr: mod('analysis.s4_numbers').subfield_share('Computer Vision and Pattern Recognition', period='2010-2019', direction='neuro_to_ai')
-- id: s4-neuro-ai-sf-3
-  file: docs/supplements/S4-what-ai-cites.md
-  context: and 54.3 and 44.7 percent in 2020-2025
-  shown: '54.3'
-  expr: mod('analysis.s4_numbers').subfield_share('Artificial Intelligence', direction='neuro_to_ai')
-- id: s4-neuro-ai-sf-4
-  file: docs/supplements/S4-what-ai-cites.md
-  context: and 54.3 and 44.7 percent in 2020-2025
-  shown: '44.7'
-  expr: mod('analysis.s4_numbers').subfield_share('Computer Vision and Pattern Recognition', direction='neuro_to_ai')
 - id: s4-vt-n-2010
   file: docs/supplements/S4-what-ai-cites.md
   context: '| Citations, exclusive set | 224,890 | 315,457 | 179,925 |'
@@ -421,12 +401,12 @@
   expr: mod('analysis.s4_numbers').robustness('share_le2005', 'regex_plus_clear_plus_borderline', 'exclusive', '2020-2023')
 - id: s4-rb-cog-excl-max
   file: docs/supplements/S4-what-ai-cites.md
-  context: Exclusive, the cognitive share holds within 0.7 points
+  context: In the exclusive set the cognitive share holds within 0.7 points
   shown: '0.7'
   expr: np.ceil(10*pd.read_csv(RESULTS/'vintage/robustness.csv').query("cited_set=='exclusive'").d_cognitive_share_pp.abs().max())/10
 - id: s4-rb-cog-unres
   file: docs/supplements/S4-what-ai-cites.md
-  context: Unrestricted, it moves by up to 2.2 points for 2020-2025
+  context: In the all-neuroscience set it moves by up to 2.2 points for 2020-2025
   shown: '2.2'
   expr: pd.read_csv(RESULTS/'vintage/robustness.csv').query("cited_set=='unrestricted' and period=='2020-2025'").d_cognitive_share_pp.max()
 - id: s4-rb-old-lo
@@ -724,16 +704,6 @@
   context: account for 0.25 to 0.32 percent of the flow in 2020-2023
   shown: '0.32'
   expr: mod('analysis.s4_numbers').manifesto_share_extreme('max')
-- id: s4-man-share4-lo
-  file: docs/supplements/S4-what-ai-cites.md
-  context: the share is 0.24 to 0.31 percent
-  shown: '0.24'
-  expr: mod('analysis.s4_numbers').manifesto_share_extreme('min', col='share_of_ai_to_neuro_neuro_labelled')
-- id: s4-man-share4-hi
-  file: docs/supplements/S4-what-ai-cites.md
-  context: the share is 0.24 to 0.31 percent
-  shown: '0.31'
-  expr: mod('analysis.s4_numbers').manifesto_share_extreme('max', col='share_of_ai_to_neuro_neuro_labelled')
 - id: s4-man-share-late
   file: docs/supplements/S4-what-ai-cites.md
   context: and for about 0.2 percent in 2024-2025
@@ -781,7 +751,7 @@
   expr: json.load(open(RESULTS/'manifestos/curve_comparison.json'))['exact_p_vs_flow_or_restricted']
 - id: s4-man-rho-lvl
   file: docs/supplements/S4-what-ai-cites.md
-  context: Levels correlate at 0.98
+  context: levels correlate at 0.98
   shown: '0.98'
   expr: json.load(open(RESULTS/'manifestos/curve_comparison.json'))['spearman_levels_vs_flow_ai_to_neuro_edges']
 - id: s4-ra-ai-n_refs
@@ -939,26 +909,6 @@
   context: 80.6 percent of AI references and 91.1 percent of neuroscience references resolve to a dated work
   shown: '91.1'
   expr: mod('analysis.s4_numbers').dated_share('neuro')
-- id: s4x-ra-ai-with-future
-  file: docs/supplements/S4-what-ai-cites.md
-  context: against 12,261,289 and 14,335,868 if the 87,989 and 15,325 dropped references were kept
-  shown: 12,261,289
-  expr: pd.read_csv(RESULTS/'vintage/reference_age_by_field.csv').query("citing_field=='ai' and types=='article_review' and scope=='all_references' and citing_year>=2020 and citing_year<=2023").eval('n_refs+n_dropped_future_dated').sum()
-- id: s4x-ra-neuro-with-future
-  file: docs/supplements/S4-what-ai-cites.md
-  context: against 12,261,289 and 14,335,868 if the 87,989 and 15,325 dropped references were kept
-  shown: 14,335,868
-  expr: pd.read_csv(RESULTS/'vintage/reference_age_by_field.csv').query("citing_field=='neuro' and types=='article_review' and scope=='all_references' and citing_year>=2020 and citing_year<=2023").eval('n_refs+n_dropped_future_dated').sum()
-- id: s4x-ra-ai-dropped
-  file: docs/supplements/S4-what-ai-cites.md
-  context: against 12,261,289 and 14,335,868 if the 87,989 and 15,325 dropped references were kept
-  shown: 87,989
-  expr: pd.read_csv(RESULTS/'vintage/reference_age_by_field.csv').query("citing_field=='ai' and types=='article_review' and scope=='all_references' and citing_year>=2020 and citing_year<=2023").n_dropped_future_dated.sum()
-- id: s4x-ra-neuro-dropped
-  file: docs/supplements/S4-what-ai-cites.md
-  context: against 12,261,289 and 14,335,868 if the 87,989 and 15,325 dropped references were kept
-  shown: 15,325
-  expr: pd.read_csv(RESULTS/'vintage/reference_age_by_field.csv').query("citing_field=='neuro' and types=='article_review' and scope=='all_references' and citing_year>=2020 and citing_year<=2023").n_dropped_future_dated.sum()
 - id: s4-core-excl-cog-text
   file: docs/supplements/S4-what-ai-cites.md
   context: AI papers of 2020-2025, under the 35-topic core definition, send 90.3 percent of their citations
@@ -966,17 +916,17 @@
   expr: mod('analysis.s4_numbers').subfield_share('Cognitive Neuroscience', classifier='strict35')
 - id: s4-core-unres-text-cog
   file: docs/supplements/S4-what-ai-cites.md
-  context: Counting the unrestricted cited set instead, the shares are 88.3 and 4.3 percent, and neurology takes 5.7 percent
+  context: Counting the all-neuroscience cited set instead, the shares are 88.3 and 4.3 percent, and neurology takes 5.7 percent
   shown: '88.3'
   expr: mod('analysis.s4_numbers').subfield_share('Cognitive Neuroscience', classifier='strict35', cited_set='unrestricted')
 - id: s4-core-unres-text-cell
   file: docs/supplements/S4-what-ai-cites.md
-  context: Counting the unrestricted cited set instead, the shares are 88.3 and 4.3 percent, and neurology takes 5.7 percent
+  context: Counting the all-neuroscience cited set instead, the shares are 88.3 and 4.3 percent, and neurology takes 5.7 percent
   shown: '4.3'
   expr: mod('analysis.s4_numbers').subfield_share('Cellular and Molecular Neuroscience', classifier='strict35', cited_set='unrestricted')
 - id: s4-core-unres-text-neur
   file: docs/supplements/S4-what-ai-cites.md
-  context: Counting the unrestricted cited set instead, the shares are 88.3 and 4.3 percent, and neurology takes 5.7 percent
+  context: Counting the all-neuroscience cited set instead, the shares are 88.3 and 4.3 percent, and neurology takes 5.7 percent
   shown: '5.7'
   expr: mod('analysis.s4_numbers').subfield_share('Neurology', classifier='strict35', cited_set='unrestricted')
 - id: s4-core-2023-cog
@@ -1013,12 +963,12 @@
   file: docs/supplements/S4-what-ai-cites.md
   context: it lies between 90.1 percent (2015) and 92.5 percent (2021)
   shown: '2015'
-  expr: "mod('analysis.s4_numbers').matrix_share_extreme('min', 'Cognitive Neuroscience', (2010, 2024), citing='strict', cited_set='exclusive', what='year')"
+  expr: mod('analysis.s4_numbers').matrix_share_extreme('min', 'Cognitive Neuroscience', (2010, 2024), citing='strict', cited_set='exclusive', what='year')
 - id: s4-core-cog-2021
   file: docs/supplements/S4-what-ai-cites.md
   context: it lies between 90.1 percent (2015) and 92.5 percent (2021)
   shown: '2021'
-  expr: "mod('analysis.s4_numbers').matrix_share_extreme('max', 'Cognitive Neuroscience', (2010, 2024), citing='strict', cited_set='exclusive', what='year')"
+  expr: mod('analysis.s4_numbers').matrix_share_extreme('max', 'Cognitive Neuroscience', (2010, 2024), citing='strict', cited_set='exclusive', what='year')
 - id: s4-med-article-2007
   file: docs/supplements/S4-what-ai-cites.md
   context: rests on the median cited year, 2007 in 2010-2019 and 2015 in 2020-2025

@@ -1,4 +1,4 @@
-"""Export the bridge-builders tables (article Figure 3, supplement S3 Tables S1-S5) to results/bridge/.
+"""Export the bridge-builders tables (article Figure 3, supplement S5 Tables S5.1 to S5.3 and the concentration tables) to results/bridge/.
 
 Everything is recomputed from the pipeline outputs under ``<NEUROAI_DATA>/data/derived``, never copied
 from the supplement text:
@@ -8,11 +8,11 @@ from the supplement text:
     corrections/20260508/author_inst_top_authors.parquet         top-200 authors (top-5,000 E2 papers)
     corrections/20260508/author_inst_top_institutions(_consolidated).parquet
     corrections/20260508/author_current_affiliations_curated.parquet   the 26 hand-verified edges
-    corrections/20260508/bridge_links_paper_author.parquet       pipeline's paper-author links (checked)
+    corrections/20260508/bridge_links_paper_author.parquet       earlier paper-author links (optional cross-check)
     corrections/20260508/author_inst_top_{authors,institutions}_1000.parquet + population_totals.json
     corrections/20260729/concentration_{authors,insts}_{v1,v2}.parquet   full distributions, clean pools
 
-Table S1 is rebuilt from the full parquet (eligibility filters, then the book filters of
+Table S5.1 is rebuilt from the full parquet (eligibility filters, then the book filters of
 ``audits/filter_by_era_books_only.py``) and must equal the figure's input, otherwise the script stops.
 The only step that touches the OpenAlex DuckDB is a read-only lookup for the ~40 best candidates
 (work type, source, authorships); it is capped at DUCKDB_MEMORY_LIMIT.
@@ -40,7 +40,7 @@ CONC = config.DERIVED_DIR / "corrections" / "20260729"
 OUT = config.RESULTS_DIR / "bridge"
 
 N_TOP = 15
-N_CANDIDATES = 40  # eligible papers looked up in DuckDB to rebuild Table S1
+N_CANDIDATES = 40  # eligible papers looked up in DuckDB to rebuild Table S5.1
 CEILING = 10_000  # E2: all-time classified citations must stay below this
 MIN_SIDE = 5  # admission gate: citations from each side
 DUCKDB_MEMORY_LIMIT = "4GB"
@@ -56,7 +56,7 @@ KNOWN_BOOK_TITLES = (
     "advances in neural information processing systems",
 )
 
-# Hand coding of the 15 papers of Table S1: a tool is software, a benchmark, an analysis method or a
+# Hand coding of the 15 papers of Table S5.1: a tool is software, a benchmark, an analysis method or a
 # methods survey that both fields cite because they run it; a concept is a claim about brains or minds.
 # Source: supplement S3 section 5 (seven tools); the same split is in the citation-age hand coding
 # (results/citation_age/classification.csv) for the 14 papers it covers.
@@ -201,12 +201,12 @@ def build_s1(full: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFra
         ]
     ].rename(columns={"work_id": "openalex_id", "publication_year": "year", "B_harmonic": "B"})
 
-    # The figure's input is a pre-built file; Table S1 must be its top 15, work for work.
+    # The figure's input is a pre-built file; Table S5.1 must be its top 15, work for work.
     fig_in = pd.read_parquet(CORR / "q4_v3_extended_filtered_by_era_no_books.parquet")
     fig_top = fig_in.sort_values("B_harmonic", ascending=False).head(N_TOP)["work_id"].tolist()
     if fig_top != s1["openalex_id"].tolist():
         raise RuntimeError(
-            "Table S1 rebuilt from the full parquet differs from the figure input:\n"
+            "Table S5.1 rebuilt from the full parquet differs from the figure input:\n"
             f"  figure input: {fig_top}\n  rebuilt:      {s1['openalex_id'].tolist()}"
         )
     return s1, check, kept[["work_id", "rank", "title", "authorships"]]
@@ -272,7 +272,7 @@ def build_edges(s2: pd.DataFrame, cons: pd.DataFrame, sep: pd.DataFrame) -> pd.D
     cur = pd.read_parquet(CORR / "author_current_affiliations_curated.parquet")
     rank_of = dict(zip(s2["author_id"], s2["rank"], strict=True))
     if not set(cur["author_id"]) <= set(s2["author_id"]):
-        raise RuntimeError("curated affiliations name authors outside the top 15 of Table S2")
+        raise RuntimeError("curated affiliations name authors outside the top 15 of Table S5.2")
     cur["author_rank"] = cur["author_id"].map(rank_of)  # recomputed, not trusted
     r_cons = dict(zip(cons["inst_id"].head(N_TOP), cons["rank"].head(N_TOP), strict=True))
     r_sep = dict(zip(sep["inst_id"].head(N_TOP), sep["rank"].head(N_TOP), strict=True))
@@ -317,9 +317,13 @@ def build_links(papers: pd.DataFrame, s2: pd.DataFrame) -> tuple[pd.DataFrame, d
                 )
     links = pd.DataFrame(rows).sort_values(["paper_rank", "author_rank"]).reset_index(drop=True)
 
-    # Cross-check with the links file the figure used to read.
-    pipe = pd.read_parquet(CORR / "bridge_links_paper_author.parquet")
-    pipe = pipe[pipe["paper_rank"].notna() & pipe["author_rank"].notna()]
+    # Cross-check with the links file an earlier version of the figure read (an earlier pipeline
+    # output kept under CORR; the check is skipped when the file is absent).
+    legacy = CORR / "bridge_links_paper_author.parquet"
+    if not legacy.exists():
+        return links, {"links_drawn_recomputed": len(links)}
+    pipe_all = pd.read_parquet(legacy)
+    pipe = pipe_all[pipe_all["paper_rank"].notna() & pipe_all["author_rank"].notna()]
     got = {
         (int(r), int(a), p)
         for r, a, p in zip(links.paper_rank, links.author_rank, links.author_position, strict=True)
@@ -333,12 +337,8 @@ def build_links(papers: pd.DataFrame, s2: pd.DataFrame) -> tuple[pd.DataFrame, d
         "links_drawn_in_pipeline_file": len(old),
         "links_only_in_recomputed": sorted(got - old),
         "links_only_in_pipeline_file": sorted(old - got),
-        "pipeline_links_file_rows": len(
-            pd.read_parquet(CORR / "bridge_links_paper_author.parquet")
-        ),
-        "pipeline_links_file_papers": int(
-            pd.read_parquet(CORR / "bridge_links_paper_author.parquet")["paper_rank"].nunique()
-        ),
+        "pipeline_links_file_rows": len(pipe_all),
+        "pipeline_links_file_papers": int(pipe_all["paper_rank"].nunique()),
     }
     return links, check
 

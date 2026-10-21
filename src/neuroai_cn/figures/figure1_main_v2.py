@@ -1,9 +1,8 @@
-"""Figure 1 of the article (metric "or") and its per-1,000 and combined variants.
+"""Figure 1 of the article (metric "or").
 
 `python -m neuroai_cn.figures.figure1_main_v2` (default argument `or`) draws the article's
 Figure 1, "Three decades of asymmetric citation", to `figures/figure1_article.png/.svg` and
 writes the plotted values to `results/flow/figure1_article_*.csv` (see `write_article_bundle`).
-Other arguments: `per1000` (raw-share variant, `figures/figure1_main_v2.*`) and `combined`.
 
 Layout of the article figure:
 
@@ -32,7 +31,6 @@ from .cross_source import (
     CROSS_DIR,
     consensus_changepoints,
     detect_all_changepoints,
-    load_all_sources,
     load_all_sources_or,
     load_snapshot_table,
     rolling_mean,
@@ -630,18 +628,8 @@ MAIN_TITLE = "Three decades of asymmetric citation"
 MAIN_SUBTITLE_OR = (
     "The odds a paper cites the other field, relative to chance. AI and neuroscience, 1995–2025."
 )
-MAIN_SUBTITLE_PER1000 = "Cross-field references per 1,000, AI and neuroscience, 1995–2025."
 
 METRIC_CONFIG = {
-    "per1000": {
-        "loader": load_all_sources,
-        "ylabel": "cross-field references per 1,000",
-        "subtitle": MAIN_SUBTITLE_PER1000,
-        "ylim": (0.3, 40),
-        "yscale": "log",
-        "panel_b_ylabel": "OLS slope per year\n(per-1,000 / yr)",
-        "out_stem": "figure1_main_v2",
-    },
     "or": {
         "loader": load_all_sources_or,
         "ylabel": "likelihood of cross-field citation\n(odds ratio vs chance)",
@@ -1072,7 +1060,7 @@ def panel_c_segments(
     )
 
 
-def build(metric: str = "per1000") -> Path:
+def build(metric: str = "or") -> Path:
     apply_style()
     cfg = METRIC_CONFIG[metric]
 
@@ -1148,104 +1136,10 @@ def build(metric: str = "per1000") -> Path:
     return out_png
 
 
-def build_combined() -> Path:
-    """4-panel combined figure: raw per-1000 (left) + OR (right), A/B per metric."""
-    apply_style()
-
-    logger.info("loading both metrics for combined figure...")
-    df_p = load_all_sources()
-    df_o = load_all_sources_or()
-
-    logger.info("detecting per-series changepoints (per-1000)...")
-    seg_p = detect_all_changepoints(df_p, *CP_DETECTION_WINDOW, max_breakpoints=2)
-    cp_p = seg_p.attrs["changepoints"]
-    logger.info("detecting per-series changepoints (OR)...")
-    seg_o = detect_all_changepoints(df_o, *CP_DETECTION_WINDOW, max_breakpoints=2)
-    cp_o = seg_o.attrs["changepoints"]
-
-    cfg_p = METRIC_CONFIG["per1000"]
-    cfg_o = METRIC_CONFIG["or"]
-
-    fig = plt.figure(figsize=(16.5, 9.4))
-    gs = fig.add_gridspec(
-        2,
-        2,
-        height_ratios=[2.0, 1.2],
-        width_ratios=[1.0, 1.0],
-        hspace=0.42,
-        wspace=0.20,
-    )
-    ax_a_l = fig.add_subplot(gs[0, 0])
-    ax_a_r = fig.add_subplot(gs[0, 1])
-    ax_b_l = fig.add_subplot(gs[1, 0])
-    ax_b_r = fig.add_subplot(gs[1, 1])
-
-    panel_a(
-        ax_a_l,
-        df_p,
-        cp_p,
-        ylabel=cfg_p["ylabel"],
-        ylim=cfg_p["ylim"],
-        yscale=cfg_p["yscale"],
-        title="A  ·  Raw share — cross-field references per 1,000",
-        with_legend=True,
-    )
-    panel_a(
-        ax_a_r,
-        df_o,
-        cp_o,
-        ylabel=cfg_o["ylabel"],
-        ylim=cfg_o["ylim"],
-        yscale=cfg_o["yscale"],
-        title="A'  ·  Likelihood vs chance — odds ratio",
-        with_legend=False,
-    )
-    panel_b(
-        ax_b_l, df_p, cp_p, ylabel=cfg_p["panel_b_ylabel"], title="B  ·  Slope by era (raw share)"
-    )
-    panel_b(
-        ax_b_r, df_o, cp_o, ylabel=cfg_o["panel_b_ylabel"], title="B'  ·  Slope by era (odds ratio)"
-    )
-
-    finalize(
-        fig,
-        title=MAIN_TITLE,
-        subtitle=(
-            "Raw share (left) and odds ratio (right). AI and neuroscience, "
-            "1995–2025. Snapshot only; ○ = May 2026 re-download."
-        ),
-        source=(
-            "(A/A') OpenAlex March 2026 snapshot (~458M works), 5-year "
-            "centered rolling mean ± Wilson 95% CI. Open circles in 2024–25 "
-            "= same query against a fresh May 2026 re-download. Vertical "
-            "dashed lines = snapshot changepoints (piecewise-linear OLS, "
-            "0–2 breakpoints). (B/B') OLS slope per era ± 95% bootstrap CI "
-            "(B=500); * = 95% CI excludes 0, ** = 99% CI excludes 0. "
-            "OR = (rho_obs / rho_null) of cross-field citation under a "
-            "size-blind null."
-        ),
-        byline="R. Duarte // The Transmitter",
-        subtitle_y=0.955,
-    )
-    fig.subplots_adjust(top=0.88, bottom=0.12, left=0.06, right=0.98)
-
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    out_png = OUT_DIR / "figure1_main_v2_combined.png"
-    out_svg = OUT_DIR / "figure1_main_v2_combined.svg"
-    fig.savefig(out_png)
-    fig.savefig(out_svg)
-    plt.close(fig)
-    logger.info("Wrote %s and %s", out_png, out_svg)
-    return out_png
-
-
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
     import sys
 
     args = sys.argv[1:] or ["or"]
     for a in args:
-        if a == "combined":
-            build_combined()
-        else:
-            build(a)
+        build(a)

@@ -1,11 +1,10 @@
-"""Step 3: tables, summary numbers and the figure for REPORT.md.
+"""Step 3: tables and summary numbers (the figure is drawn by neuroai_cn.figures.figure_s6).
 
 Reads rankings.parquet (step 2, config.DERIVED_DIR / citation_age) and classification.csv
 (hand coding, results/citation_age) and writes
 
     results/citation_age/tables.md     top-25 tables for the three primary rankings
     results/citation_age/summary.json  every number quoted in the report
-    figures/fig_top100_years.svg / .png / -onwhite.png
 
 Classes (classification.csv header has the rules):
     concept   a claim about brains or minds (the article's "genuine bridge works")
@@ -22,13 +21,10 @@ true_year >= 2006.
 import json
 import sys
 
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
 from neuroai_cn.analysis.citation_age.paths import RESULTS, WORK_DIR
-from neuroai_cn.config import FIGURES_DIR
-from neuroai_cn.figures.style import TRANSMITTER, apply_style
 
 PRIMARY = {
     "orig": "Published ranking (all-time counts)",
@@ -274,102 +270,6 @@ def main() -> None:
         )
     print(json.dumps(dist, indent=1, default=str))
     print(pd.DataFrame(land).to_string())
-
-    # ------------------------------------------------------------------------- figure
-    apply_style()
-    colors = {
-        "concept": TRANSMITTER["mustard"],
-        "method": TRANSMITTER["purple"],
-        "tool": TRANSMITTER["teal"],
-        "book": TRANSMITTER["muted"],
-        "artefact": TRANSMITTER["grid"],
-    }
-    labels = {
-        "concept": "Concept (claim about brains or minds)",
-        "method": "ML method (model, algorithm, ML review)",
-        "tool": "Tool (software, data, benchmark, analysis method)",
-        "book": "Textbook typed as article",
-        "artefact": "Merged or generic record",
-    }
-    years = np.arange(1988, 2027)  # 1988 = "before 1990" bin (Miller 1956, Ebbinghaus 1885)
-    fig, axes = plt.subplots(4, 1, figsize=(9.5, 10.8), sharex=True, sharey=True)
-    for ax, (name, label) in zip(axes, FIG.items(), strict=True):
-        g = R[name].head(100).copy()
-        g["plot_year"] = g["true_year"].where(g["true_year"] >= 1990, 1988)
-        bottom = np.zeros(len(years))
-        for c in CLASSES:
-            h = g[g["cls"] == c]["plot_year"].value_counts().reindex(years, fill_value=0)
-            ax.bar(
-                years,
-                h.values,
-                bottom=bottom,
-                width=0.82,
-                color=colors[c],
-                label=labels[c],
-                edgecolor="none",
-            )
-            bottom += h.values
-        ax.axvline(2005.5, color=TRANSMITTER["crimson"], lw=1.1, ls="--")
-        d = dist[name]
-        ax.set_title(
-            f"{label}\ntop 100: median year {d['median_year']:.0f}; "
-            f"{d['concepts_after_2005']} concepts published after 2005",
-            loc="left",
-            fontsize=10,
-            color=TRANSMITTER["navy"],
-        )
-        if name in ("win8", "win8_share"):
-            ax.axvspan(2015.5, 2026.7, color=TRANSMITTER["grid"], alpha=0.7, lw=0)
-        if name == "rate":
-            ax.axvspan(2023.5, 2026.7, color=TRANSMITTER["grid"], alpha=0.7, lw=0)
-        ax.set_ylabel("works")
-    ymax = max(ax.get_ylim()[1] for ax in axes) + 3
-    for ax in axes:
-        ax.set_ylim(0, ymax)
-    for ax in axes[2:]:
-        ax.text(
-            2021.1,
-            ymax * 0.93,
-            "not eligible:\nwindow would close\nafter 2023",
-            ha="center",
-            va="top",
-            fontsize=8,
-            color=TRANSMITTER["gray"],
-        )
-    axes[0].text(
-        2005.8, ymax * 0.97, "after 2005", fontsize=8.5, color=TRANSMITTER["crimson"], va="top"
-    )
-    axes[0].legend(loc="upper left", fontsize=8, frameon=False, ncol=1)
-    axes[-1].set_xlabel("first publication year")
-    axes[-1].set_xticks([1988, 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025])
-    axes[-1].set_xticklabels(
-        ["<1990", "1990", "1995", "2000", "2005", "2010", "2015", "2020", "2025"]
-    )
-    axes[-1].set_xlim(1987.2, 2026.8)
-    fig.suptitle(
-        "Publication year of the 100 strongest bridge works, with citation age controlled",
-        x=0.02,
-        ha="left",
-        fontsize=13,
-        fontweight="bold",
-        color=TRANSMITTER["navy"],
-    )
-    fig.text(
-        0.02,
-        0.004,
-        "Source: OpenAlex snapshot 2026-03-30; extended classifier; published "
-        "eligibility rules (Supplement S3). Score = harmonic mean of neuroscience and AI "
-        "citations.",
-        fontsize=7.5,
-        style="italic",
-        color=TRANSMITTER["gray"],
-    )
-    fig.tight_layout(rect=(0, 0.02, 1, 0.97))
-    FIGURES_DIR.mkdir(parents=True, exist_ok=True)
-    fig.savefig(FIGURES_DIR / "fig_top100_years.svg")
-    fig.savefig(FIGURES_DIR / "fig_top100_years.png", dpi=200, transparent=True)
-    fig.savefig(FIGURES_DIR / "fig_top100_years-onwhite.png", dpi=200, facecolor="white")
-    print("figure written")
 
 
 if __name__ == "__main__":

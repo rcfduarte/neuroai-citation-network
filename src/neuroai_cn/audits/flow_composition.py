@@ -1,4 +1,4 @@
-"""What is the AI->Neuro citation flow actually made of?
+"""What do neuroscience papers cite when they cite AI?
 
 Figure 1's gold line says neuroscience's chance-corrected propensity to cite AI
 has risen since 2006. It does not say *what kind* of AI is being cited. This
@@ -8,7 +8,7 @@ citing-year, under both field classifiers:
 * ``extended`` — the published classifier: subfield 1702 minus 26 topics,
   union all of subfield 1707 (Computer Vision and Pattern Recognition), union
   topic T10502.
-* ``strict`` — the 35-topic curated AI core (``AI_CORE_TOPIC_IDS``), which
+* ``strict`` — code name of the 35-topic core definition (``AI_CORE_TOPIC_IDS``), which
   excludes subfield 1707 entirely.
 
 The contrast matters because 1707 carries medical image segmentation and
@@ -102,7 +102,7 @@ def build_field_table(con: duckdb.DuckDBPyConnection, classifier: str) -> dict[s
 
 
 def decompose(con: duckdb.DuckDBPyConnection, classifier: str) -> None:
-    """Neuro->AI citations by cited-work topic and citing year."""
+    """Citations of AI works by neuroscience papers (gold line), by cited-work topic and citing year."""
     con.execute(
         f"""
         CREATE OR REPLACE TEMP TABLE flow AS
@@ -134,7 +134,11 @@ def decompose(con: duckdb.DuckDBPyConnection, classifier: str) -> None:
         """
     )
     total = con.execute("SELECT SUM(n_cites) FROM flow").fetchone()[0]
-    logger.info("[%s] total neuro->AI edges: %s", classifier, f"{int(total or 0):,}")
+    logger.info(
+        "[%s] total citations by neuroscience papers citing AI: %s",
+        classifier,
+        f"{int(total or 0):,}",
+    )
 
 
 def main() -> None:

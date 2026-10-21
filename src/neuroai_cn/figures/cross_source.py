@@ -1,11 +1,9 @@
-"""Cross-source data loading + per-1000 / slope helpers for figure1_main_v2.
+"""Cross-source data loading and series helpers for Figure 1 (figure1_main_v2).
 
-Loads the OpenAlex snapshot (March 2026) and the three cross-source cell files
-(OpenAlex re-downloaded May 2026 strict + extended, Semantic Scholar) and
-returns a unified long-format DataFrame with `per1000` and Wilson CIs.
-
-See `ContentLab/commissioned-pieces/TheTransmitter/neuroai-cross-pollination/
-fig1-construction-brief-20260528.md` for spec.
+Loads the OpenAlex snapshot (March 2026) and the cross-source cell files (OpenAlex re-downloaded
+May 2026 under the subfield 1702 and extended definitions, Semantic Scholar) and returns a unified
+long-format DataFrame of odds ratios with Wilson intervals. The odds ratio is stored in the
+column `per1000` for historical reasons.
 """
 
 from __future__ import annotations
@@ -84,100 +82,6 @@ def wilson_ci(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
     centre = (p + z * z / (2 * n)) / denom
     half = (z / denom) * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))
     return (max(0.0, centre - half), min(1.0, centre + half))
-
-
-def load_snapshot_per1000() -> pd.DataFrame:
-    """Snapshot parquet -> long-format per-1000 + Wilson CIs.
-
-    Uses the POPULATION (full-classified) denominator: within + target + other.
-    This matches `rho_population * 1000` and is the metric the verification
-    verdict (openalex-spike-verification-20260528) uses for its cross-source
-    diff tables ("snapshot extended" / "OA-live extended" columns).
-
-    "Population per-1000" reads as: "of every 1,000 references in this paper's
-    bibliography, how many cross to the other field". The restricted version
-    (target/(within+target)) is sensitive to within-field growth (e.g. AI's
-    internal citation boom mechanically depresses ai_to_neuro restricted shares)
-    and so is reserved for the OR analysis where the within-rate confound is
-    explicitly modelled by the null.
-
-    Returns columns: source, direction, year, per1000, ci_lo, ci_hi, n_target,
-                     n_classified  (n_classified = within + target + other)
-    """
-    df = load_snapshot_table()
-    needed = {
-        "year",
-        "direction",
-        "n_to_within",
-        "n_to_target",
-        "n_to_other",
-    }
-    missing = needed - set(df.columns)
-    assert not missing, f"snapshot parquet missing columns: {missing}"
-
-    df = df[["year", "direction", "n_to_within", "n_to_target", "n_to_other"]].copy()
-    # POPULATION denominator: within + target + other (matches verdict, matches
-    # cells per1000 convention)
-    df["n_classified"] = df["n_to_within"] + df["n_to_target"] + df["n_to_other"]
-    df["per1000"] = df["n_to_target"] / df["n_classified"] * 1000.0
-    cis = df.apply(
-        lambda r: wilson_ci(int(r["n_to_target"]), int(r["n_classified"])),
-        axis=1,
-    )
-    df["ci_lo"] = cis.map(lambda t: t[0] * 1000.0)
-    df["ci_hi"] = cis.map(lambda t: t[1] * 1000.0)
-    df["source"] = "snapshot"
-    df["n_target"] = df["n_to_target"]
-    return (
-        df[["source", "direction", "year", "per1000", "ci_lo", "ci_hi", "n_target", "n_classified"]]
-        .sort_values(["direction", "year"])
-        .reset_index(drop=True)
-    )
-
-
-def load_cells_per1000(source: str) -> pd.DataFrame:
-    """Cross-source cells -> long-format per-1000 + Wilson CIs.
-
-    Uses the cells file's existing per1000 field (target / n_refs_classified) which
-    is the POPULATION metric (within + target + other), matching the snapshot
-    loader convention.
-    """
-    p = _cells_path(source)
-    if p is None or not p.exists():
-        return pd.DataFrame(
-            columns=[
-                "source",
-                "direction",
-                "year",
-                "per1000",
-                "ci_lo",
-                "ci_hi",
-                "n_target",
-                "n_classified",
-            ]
-        )
-    rows = []
-    for c in _read_cells(p):
-        n_target = int(c.get("target", 0))
-        n_classified = int(c.get("n_refs_classified", 0))
-        if n_classified == 0:
-            continue
-        per1000 = float(c.get("per1000", n_target / n_classified * 1000.0))
-        ci_lo = float(c.get("ci_lo", 0.0))
-        ci_hi = float(c.get("ci_hi", 0.0))
-        rows.append(
-            {
-                "source": source,
-                "direction": c["direction"],
-                "year": int(c["year"]),
-                "per1000": per1000,
-                "ci_lo": ci_lo,
-                "ci_hi": ci_hi,
-                "n_target": n_target,
-                "n_classified": n_classified,
-            }
-        )
-    return pd.DataFrame(rows).sort_values(["direction", "year"]).reset_index(drop=True)
 
 
 def load_snapshot_or() -> pd.DataFrame:
@@ -282,7 +186,7 @@ def load_all_sources_or() -> pd.DataFrame:
     snap = load_snapshot_or()
     frames = [snap[["source", "direction", "year", "value", "ci_lo", "ci_hi"]]]
     null_df = snap[["year", "direction", "rho_null"]].copy()
-    # Use same source-precedence as load_all_sources
+    # Extended definition where present, subfield 1702 definition for the other years
     extended = load_cells_or_implied("oa_live_extended", null_df)
     strict = load_cells_or_implied("oa_live_strict", null_df)
     if not extended.empty and not strict.empty:
@@ -304,94 +208,6 @@ def load_all_sources_or() -> pd.DataFrame:
     # agnostic (treat OR as the y-axis quantity)
     out = out.rename(columns={"value": "per1000"})
     return out
-
-
-def load_all_sources(include_strict_as_fallback: bool = True) -> pd.DataFrame:
-    """Load snapshot + all available cross-source cells.
-
-    If `include_strict_as_fallback`, use oa_live_extended where present and
-    fall back to oa_live_strict for years not covered by extended (extended
-    only covers 2010-2025).
-    """
-    frames = [load_snapshot_per1000()]
-    s2 = load_cells_per1000("s2")
-    if not s2.empty:
-        frames.append(s2)
-    extended = load_cells_per1000("oa_live_extended")
-    strict = load_cells_per1000("oa_live_strict")
-    if not extended.empty and include_strict_as_fallback and not strict.empty:
-        # Use extended where available, fall back to strict elsewhere
-        covered = set(zip(extended["direction"], extended["year"], strict=False))
-        fill = strict[
-            ~strict.apply(lambda r: (r["direction"], r["year"]) in covered, axis=1)
-        ].assign(source="oa_live_extended_fallback")
-        oa_live = pd.concat([extended, fill], ignore_index=True)
-    elif not extended.empty:
-        oa_live = extended
-    else:
-        oa_live = strict
-    if not oa_live.empty:
-        # Unify label to a single "May download" source for plotting
-        oa_live = oa_live.assign(source="oa_live")
-        frames.append(oa_live)
-    out = pd.concat(frames, ignore_index=True)
-    return out
-
-
-def slope_per_decade(
-    df: pd.DataFrame,
-    year_min: int = 1990,
-    year_max: int = 2023,
-) -> pd.DataFrame:
-    """OLS slope per decade for per-1000 ~ year, per source × direction.
-
-    Returns columns: source, direction, slope_per_decade, se_per_decade,
-                     ci_lo, ci_hi, n_years, r2
-    """
-    out = []
-    for (src, dirn), sub in df.groupby(["source", "direction"], observed=True):
-        sub = (
-            sub[(sub["year"] >= year_min) & (sub["year"] <= year_max)]
-            .dropna(subset=["per1000"])
-            .sort_values("year")
-        )
-        if len(sub) < 5:
-            continue
-        x = sub["year"].to_numpy(dtype=float)
-        y = sub["per1000"].to_numpy(dtype=float)
-        # OLS via numpy
-        n = len(x)
-        xbar, ybar = x.mean(), y.mean()
-        sxx = ((x - xbar) ** 2).sum()
-        sxy = ((x - xbar) * (y - ybar)).sum()
-        slope = sxy / sxx
-        intercept = ybar - slope * xbar
-        y_hat = intercept + slope * x
-        resid = y - y_hat
-        sse = (resid**2).sum()
-        sst = ((y - ybar) ** 2).sum()
-        r2 = 1 - sse / sst if sst > 0 else float("nan")
-        # SE on slope
-        if n > 2:
-            sigma2 = sse / (n - 2)
-            se_slope = math.sqrt(sigma2 / sxx)
-        else:
-            se_slope = float("nan")
-        slope_dec = slope * 10
-        se_dec = se_slope * 10
-        out.append(
-            {
-                "source": src,
-                "direction": dirn,
-                "slope_per_decade": slope_dec,
-                "se_per_decade": se_dec,
-                "ci_lo": slope_dec - 1.96 * se_dec,
-                "ci_hi": slope_dec + 1.96 * se_dec,
-                "n_years": n,
-                "r2": r2,
-            }
-        )
-    return pd.DataFrame(out)
 
 
 def rolling_mean(y: np.ndarray, window: int = 5) -> np.ndarray:

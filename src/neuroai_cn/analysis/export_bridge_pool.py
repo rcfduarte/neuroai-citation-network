@@ -15,7 +15,7 @@ Nothing is edited by hand and the export is deterministic. Run from the reposito
 
     python -m neuroai_cn.analysis.export_bridge_pool
 
-The paper-type and book filters that Table S1 applies after the eligibility step need a database
+The paper-type and book filters that Table S5.1 applies after the eligibility step need a database
 lookup and are not repeated here, so the "no ceiling" table is a ranking of eligible works before
 those filters.
 """

@@ -1,6 +1,6 @@
 {
- "claim1_text": "about 90 percent cognitive neuroscience, under 5 percent cellular and molecular (AI papers 2020-2025)",
- "claim2_text": "median cited year 2008 -> 2015; share published in 2005 or earlier 35% -> 15% (AI papers 2010-2019 -> 2020-2025)",
+ "claim1_text": "90.3 percent cognitive neuroscience, 4.98 percent cellular and molecular (AI papers 2020-2025; 35-topic core definition, exclusive cited set)",
+ "claim2_text": "median cited year 2007 -> 2015; share published in 2005 or earlier 43.8% -> 19.9% (AI papers 2010-2019 -> 2020-2025; extended definition, exclusive cited set)",
  "claim1": {
   "extended_exclusive_2020-2025": {
    "cognitive_neuroscience_share": 0.8269526433079627,

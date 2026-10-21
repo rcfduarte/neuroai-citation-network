@@ -11,8 +11,7 @@ Strict scheme:
     * No 1707, no T10502, no BAD_1702 inclusion at all
 
 This is the "before" classifier; the extended scheme is the "after". Re-running
-Q1, Q2, Q4 under both gives the editor a clean apples-to-apples comparison for the
-methodology disclosure.
+Q1, Q2, Q4 under both gives a clean apples-to-apples comparison of the two schemes.
 """
 
 from __future__ import annotations

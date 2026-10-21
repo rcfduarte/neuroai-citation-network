@@ -1,6 +1,6 @@
 """Step 1: per-year citation counts for every paper in the bridge candidate pool.
 
-Question (reviewer comment, 2026-09-26): is "the most recent bridge work is from 2003"
+Question: is "the most recent bridge work is from 2003"
 an artefact of citation age? To control for age we need, for each candidate paper,
 the number of citations it received from neuroscience and from AI papers *in each
 citing year*. The published pipeline (q4_v3_extended.py) only stored all-time totals.

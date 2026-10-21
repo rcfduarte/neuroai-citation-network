@@ -12,7 +12,7 @@ supplemental parquet alongside the snapshot-derived ones. The DuckDB build
 reads every `*.parquet` in the works directory, so the supplement is included
 automatically.
 
-Tier 1 papers (foundation §5):
+Tier 1 papers:
   1. Zador 2023 Nat Commun           — 10.1038/s41467-023-37180-x
   2. Richards 2019 Nat Neurosci       — 10.1038/s41593-019-0520-2
   3. Hassabis 2017 Neuron             — 10.1016/j.neuron.2017.06.011

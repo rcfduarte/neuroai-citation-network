@@ -1,6 +1,6 @@
 """Reference-age profile of AI and neuroscience papers (test of the "short citation memory" claim).
 
-A reviewer argues that machine-learning papers have a short citation memory: in a small spot
+A commentator argues that machine-learning papers have a short citation memory: in a small spot
 check, about two-thirds of the references of contemporary AI conference papers were five years old
 or younger, median age three years, against eight years for neuroscience journal papers. This
 module measures the same quantities on the whole classified corpus.
@@ -8,8 +8,7 @@ module measures the same quantities on the whole classified corpus.
 Definitions, fixed in advance
     * Citing papers: AI (extended classifier) or neuroscience (field 28), citing years 2000-2023;
       2024-2025 are written out but flagged provisional. Two type definitions: article and review
-      only (the reviewer's comparison is between conference and journal papers, and the brief asks
-      for this one first) and every OpenAlex type.
+      only (the comparison of the claim is between conference and journal papers) and every OpenAlex type.
     * References: every reference of the citing paper that resolves to a work with a publication
       year in the mirror, not only cross-field ones; and, separately, only those whose cited work
       is in the other field (AI paper citing neuroscience, neuroscience paper citing AI).

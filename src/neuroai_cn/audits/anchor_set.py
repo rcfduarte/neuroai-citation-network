@@ -4,9 +4,8 @@ Each anchor has a DOI, an expected_label in {neuro, ai, bridge}, an era tag,
 an HBAI track tag (track1 = bio-plausible AI, track2 = applied ML for brain,
 None for non-bridge anchors), and a source tier label.
 
-Tier 1 + Tier 2 papers come from definitional-foundation-v1 sec. 5. Per D2,
-pre-DOI works (McCulloch-Pitts 1943) and books (Marr 1982, Hebb 1949) are
-excluded — they enter the citation graph via citing works only.
+Tier 1 + Tier 2 papers are described in docs/METHODS.md, section 3.5.
+Pre-DOI works (McCulloch-Pitts 1943) and books (Marr 1982, Hebb 1949) are excluded — they enter the citation graph via citing works only.
 
 DOIs are stored without the doi.org prefix (matching the OpenAlex `doi`
 column convention which stores fully qualified URLs `https://doi.org/...`).
