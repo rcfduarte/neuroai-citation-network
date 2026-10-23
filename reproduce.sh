@@ -48,10 +48,12 @@ figures() {
   $PY -m neuroai_cn.figures.figure2_bridges_v3   # Figure 3: bridge papers, authors, institutions
   # Supplement figures that can be drawn from results/.
   $PY -m neuroai_cn.figures.figure_s1_field_sizes
-  $PY -m neuroai_cn.figures.figure_s2             # Figures S2.1 to S2.4
+  $PY -m neuroai_cn.figures.figure_s2             # Figures S2.1 and S2.2
   $PY -m neuroai_cn.figures.figure_s3_dilution
   $PY -m neuroai_cn.figures.figure_s4             # Figures S4.1 to S4.4
-  $PY -m neuroai_cn.figures.figure_s6             # Figure S6.1
+  $PY -m neuroai_cn.figures.figure_s5_concentration  # Figure S5.1
+  $PY -m neuroai_cn.figures.figure_s5_eras            # Figure S5.2
+  $PY -m neuroai_cn.figures.figure_s6             # Figures S6.1 and S6.2
   echo "Figures written to figures/."
 }
 

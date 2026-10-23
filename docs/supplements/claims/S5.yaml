@@ -19,41 +19,6 @@
   context: the arithmetic mean would give 501 and 100
   shown: '501'
   expr: (1000+2)/2
-- id: s5-ex-roadmap-b
-  file: docs/supplements/S5-bridge-builders.md
-  context: scores 11.98, and
-  shown: '11.98'
-  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['ai_skew_example_B'])
-- id: s5-ex-adi-b
-  file: docs/supplements/S5-bridge-builders.md
-  context: by AI scores 13.99
-  shown: '13.99'
-  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['neuro_skew_example_B'])
-- id: s5-ex-roadmap-ai
-  file: docs/supplements/S5-bridge-builders.md
-  context: cited 4,790 times by AI
-  shown: 4,790
-  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['ai_skew_example_c_ai'])
-- id: s5-ex-adi-neuro
-  file: docs/supplements/S5-bridge-builders.md
-  context: cited 7,379 times by neuroscience
-  shown: 7,379
-  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['neuro_skew_example_c_neuro'])
-- id: s5-gate
-  file: docs/supplements/S5-bridge-builders.md
-  context: 133,763 papers, which I call the 5-and-5 gate
-  shown: 133,763
-  expr: pd.read_csv(RESULTS/'bridge/eligibility_funnel.csv').n_remaining[0]
-- id: s5-n-other
-  file: docs/supplements/S5-bridge-builders.md
-  context: removes 74,485 papers labeled as another field
-  shown: 74,485
-  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_field_other'])
-- id: s5-n-unknown
-  file: docs/supplements/S5-bridge-builders.md
-  context: and 240 with no label
-  shown: '240'
-  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_field_unknown'])
 - id: s5-n-after-label
   file: docs/supplements/S5-bridge-builders.md
   context: '| 59,038 | 74,725 |'
@@ -64,36 +29,16 @@
   context: '| 59,038 | 74,725 |'
   shown: 74,725
   expr: pd.read_csv(RESULTS/'bridge/eligibility_funnel.csv').n_removed[1]
-- id: s5-ceil-removed
-  file: docs/supplements/S5-bridge-builders.md
-  context: 67 papers, 66 labeled AI and one neuroscience
-  shown: '67'
-  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['n_dropped_by_ceiling'])
 - id: s5-ceil-ai
   file: docs/supplements/S5-bridge-builders.md
-  context: 67 papers, 66 labeled AI and one neuroscience
+  context: 66 labeled AI and one neuroscience
   shown: '66'
   expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['n_dropped_by_ceiling_ai'])
 - id: s5-eligible
   file: docs/supplements/S5-bridge-builders.md
-  context: the 58,971 papers that remain are the article
+  context: give the 58,971 papers I rank
   shown: 58,971
   expr: pd.read_csv(RESULTS/'bridge/eligibility_funnel.csv').n_remaining[2]
-- id: s5-cand-removed
-  file: docs/supplements/S5-bridge-builders.md
-  context: Of the 40 best eligible candidates, 7 are removed
-  shown: '7'
-  expr: (~pd.read_csv(RESULTS/'bridge/s1_eligibility_check.csv').included).sum()
-- id: s5-tools
-  file: docs/supplements/S5-bridge-builders.md
-  context: Of the 15 papers, 7 are tools
-  shown: '7'
-  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_tools_top15'])
-- id: s5-concepts
-  file: docs/supplements/S5-bridge-builders.md
-  context: 7 are tools and 8 are concepts
-  shown: '8'
-  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_concepts_top15'])
 - id: s5-recent-concept
   file: docs/supplements/S5-bridge-builders.md
   context: Izhikevich's spiking-neuron model of 2003
@@ -116,12 +61,12 @@
   expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').B.max()
 - id: s5-share-min
   file: docs/supplements/S5-bridge-builders.md
-  context: from 0.10 (the Itti, Koch and Niebur saliency model)
+  context: runs from 0.10 to 0.90
   shown: '0.10'
   expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').neuro_share.min()
 - id: s5-share-max
   file: docs/supplements/S5-bridge-builders.md
-  context: to 0.90 (lme4)
+  context: runs from 0.10 to 0.90
   shown: '0.90'
   expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').neuro_share.max()
 - id: s5-n-b1000
@@ -129,21 +74,6 @@
   context: 48 have a B of at least 1,000
   shown: '48'
   expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['n_eligible_B_ge_1000'])
-- id: s5-ceil-19
-  file: docs/supplements/S5-bridge-builders.md
-  context: All 19 highest-scoring papers of the label-filtered pool fall to it
-  shown: '19'
-  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').removed_by_ceiling.head(19).sum()
-- id: s5-ceil-brats-rank
-  file: docs/supplements/S5-bridge-builders.md
-  context: BRATS would rank 20th
-  shown: '20'
-  expr: pd.read_csv(RESULTS/'bridge/ceiling_effect_top40.csv').query("work_id=='https://openalex.org/W1641498739'").rank_no_ceiling.iloc[0]
-- id: s5-ceil-26
-  file: docs/supplements/S5-bridge-builders.md
-  context: 26 of the 67 would score above
-  shown: '26'
-  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['n_dropped_above_table_s1_rank15'])
 - id: s5-ceil-share-lo
   file: docs/supplements/S5-bridge-builders.md
   context: between 0.03 and 0.25 for the first 19
@@ -161,7 +91,7 @@
   expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[13]
 - id: s5-oliva-rank
   file: docs/supplements/S5-bridge-builders.md
-  context: ranks 6th of 15
+  context: ranks 6th with 32 bridge papers
   shown: '6'
   expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['oliva_rank'])
 - id: s5-oliva-papers
@@ -184,51 +114,6 @@
   context: behind Karl Friston (7,909)
   shown: 7,909
   expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[4]
-- id: s5-oliva-neuro
-  file: docs/supplements/S5-bridge-builders.md
-  context: cited 8,303 times by neuroscience papers
-  shown: 8,303
-  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_c_neuro[5]
-- id: s5-oliva-ai
-  file: docs/supplements/S5-bridge-builders.md
-  context: and 23,659 times by AI papers
-  shown: 23,659
-  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_c_ai[5]
-- id: s5-oliva-share
-  file: docs/supplements/S5-bridge-builders.md
-  context: a neuroscience share of 0.26
-  shown: '0.26'
-  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').neuro_share[5]
-- id: s5-oliva-from-ai-end
-  file: docs/supplements/S5-bridge-builders.md
-  context: 5th from the AI-leaning end
-  shown: '5'
-  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').neuro_share.rank()[5]
-- id: s5-rank-deepmind
-  file: docs/supplements/S5-bridge-builders.md
-  context: DeepMind (United Kingdom) is at rank 26
-  shown: '26'
-  expr: pd.read_csv(RESULTS/'bridge/institution_ranks_top100.csv').query("variant=='separated' and inst_name=='DeepMind (United Kingdom)'")['rank'].iloc[0]
-- id: s5-rank-msr
-  file: docs/supplements/S5-bridge-builders.md
-  context: Microsoft Research (United Kingdom) at 49
-  shown: '49'
-  expr: pd.read_csv(RESULTS/'bridge/institution_ranks_top100.csv').query("variant=='separated' and inst_name=='Microsoft Research (United Kingdom)'")['rank'].iloc[0]
-- id: s5-rank-msus
-  file: docs/supplements/S5-bridge-builders.md
-  context: Microsoft (United States) at 64
-  shown: '64'
-  expr: pd.read_csv(RESULTS/'bridge/institution_ranks_top100.csv').query("variant=='separated' and inst_name=='Microsoft (United States)'")['rank'].iloc[0]
-- id: s5-rank-meta-il
-  file: docs/supplements/S5-bridge-builders.md
-  context: Meta (Israel) at 76
-  shown: '76'
-  expr: pd.read_csv(RESULTS/'bridge/institution_ranks_top100.csv').query("variant=='separated' and inst_name=='Meta (Israel)'")['rank'].iloc[0]
-- id: s5-rank-meta
-  file: docs/supplements/S5-bridge-builders.md
-  context: while consolidated Meta (Facebook) is 19th
-  shown: '19'
-  expr: pd.read_csv(RESULTS/'bridge/institution_ranks_top100.csv').query("variant=='consolidated' and inst_name=='Meta (Facebook)'")['rank'].iloc[0]
 - id: s5-edges-total
   file: docs/supplements/S5-bridge-builders.md
   context: That gives 26 edges, 10 current and 16 past
@@ -244,11 +129,6 @@
   context: That gives 26 edges, 10 current and 16 past
   shown: '16'
   expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_edges_past'])
-- id: s5-edges-sep
-  file: docs/supplements/S5-bridge-builders.md
-  context: 25 of the 26 author-to-institution lines are drawn
-  shown: '25'
-  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_edges_drawn_separated'])
 - id: s5-era-701
   file: docs/supplements/S5-bridge-builders.md
   context: 701 (70.1 percent) were published before 2012
@@ -864,29 +744,19 @@
   context: 51 (5.1 percent)
   shown: '5.1'
   expr: 100*pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n_2020_onward']/pd.read_csv(RESULTS/'bridge/era_composition.csv').set_index('tier').loc['top_1000','n']
-- id: s5-b11-gate
-  file: docs/supplements/S5-bridge-builders.md
-  context: at least five classified citations from each side, 133,763 papers
-  shown: 133,763
-  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_papers_with_ge5_citations_each_side'])
-- id: s5-b11-eligible
-  file: docs/supplements/S5-bridge-builders.md
-  context: the 58,971 papers that remain are the article
-  shown: 58,971
-  expr: pd.read_csv(RESULTS/'bridge/eligibility_funnel.csv').iloc[-1,1]
 - id: s5-basis-corp-gate
   file: docs/supplements/S5-bridge-builders.md
-  context: every paper that passes the 5-and-5 gate, 133,763 papers
+  context: company rows are summed over all 133,763 papers passing the gate
   shown: 133,763
   expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_papers_with_ge5_citations_each_side'])
 - id: s5-bound-drop-auth
   file: docs/supplements/S5-bridge-builders.md
-  context: '(298 authors and 17 institutions)'
+  context: (298 authors and 17 institutions)
   shown: '298'
   expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_dropped_mean_B_gt_400_authors'])
 - id: s5-bound-drop-inst
   file: docs/supplements/S5-bridge-builders.md
-  context: '(298 authors and 17 institutions)'
+  context: (298 authors and 17 institutions)
   shown: '17'
   expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_dropped_mean_B_gt_400_institutions'])
 - id: s5-inst-alph-b
@@ -1006,19 +876,14 @@
   expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_minus_mean_B_gt_400' and entity=='authors' and top_n==100").share_pct.iloc[0]
 - id: s5-bound-gini-auth
   file: docs/supplements/S5-bridge-builders.md
-  context: is 0.311 for authors and 0.568 for institutions
+  context: is 0.311 for the top 1,000 authors
   shown: '0.311'
   expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['gini_adjusted_authors_top1000'])
 - id: s5-bound-gini-inst
   file: docs/supplements/S5-bridge-builders.md
-  context: is 0.311 for authors and 0.568 for institutions
+  context: and 0.568 for the top 1,000 institutions
   shown: '0.568'
   expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['gini_adjusted_institutions_top1000'])
-- id: s5-fusion-top1
-  file: docs/supplements/S5-bridge-builders.md
-  context: one institute alone holds 3.03 percent of all weight
-  shown: '3.03'
-  expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_unfiltered' and entity=='institutions' and top_n==1").share_pct.iloc[0]
 - id: s5-limit-c-inst
   file: docs/supplements/S5-bridge-builders.md
   context: The concentration figures of 39.64 and 6.63 percent
@@ -1106,7 +971,7 @@
   expr: pd.read_csv(RESULTS/'bridge/concentration_tiers.csv').query("pool=='all_133763_unfiltered' and entity=='institutions' and top_n==100").share_pct.iloc[0]
 - id: s5-pool-bound-ratio
   file: docs/supplements/S5-bridge-builders.md
-  context: '| Sensitivity bound (headline) | 133,763 minus entities above 400 B per paper | 6.63 | 39.64 | 6.0 |'
+  context: '| Pool of the article | 133,763 minus entities above 400 B per paper | 6.63 | 39.64 | 6.0 |'
   shown: '6.0'
   expr: '(lambda d: d.query("pool==''all_133763_minus_mean_B_gt_400'' and entity==''institutions'' and top_n==100").share_pct.iloc[0]/d.query("pool==''all_133763_minus_mean_B_gt_400'' and entity==''authors'' and top_n==100").share_pct.iloc[0])(pd.read_csv(RESULTS/''bridge/concentration_tiers.csv''))'
 - id: s5-pool-elig-ratio
@@ -1136,67 +1001,37 @@
   expr: 'max((lambda d: d.query("pool==''all_133763_minus_mean_B_gt_400'' and entity==''institutions'' and top_n==100").share_pct.iloc[0]/d.query("pool==''all_133763_minus_mean_B_gt_400'' and entity==''authors'' and top_n==100").share_pct.iloc[0])(pd.read_csv(RESULTS/''bridge/concentration_tiers.csv'')),(lambda d: d.query("pool==''e2_58971'' and entity==''institutions'' and top_n==100").share_pct.iloc[0]/d.query("pool==''e2_58971'' and entity==''authors'' and top_n==100").share_pct.iloc[0])(pd.read_csv(RESULTS/''bridge/concentration_tiers.csv'')),(lambda d: d.query("pool==''neuro_ai_59038'' and entity==''institutions'' and top_n==100").share_pct.iloc[0]/d.query("pool==''neuro_ai_59038'' and entity==''authors'' and top_n==100").share_pct.iloc[0])(pd.read_csv(RESULTS/''bridge/concentration_tiers.csv'')),(lambda d: d.query("pool==''all_133763_unfiltered'' and entity==''institutions'' and top_n==100").share_pct.iloc[0]/d.query("pool==''all_133763_unfiltered'' and entity==''authors'' and top_n==100").share_pct.iloc[0])(pd.read_csv(RESULTS/''bridge/concentration_tiers.csv'')))'
 - id: s5f3-floor-pct
   file: docs/supplements/S5-bridge-builders.md
-  context: at least 55 percent of the longest author bar, 5,465
+  context: at least 55 percent of the longest bar
   shown: '55'
   expr: 100*float(__import__('re').search(r'X_AUTHORS_BAR_MAX \* ([0-9.]+)',(RESULTS.parent/'src/neuroai_cn/figures/figure2_bridges_v3.py').read_text()).group(1))
-- id: s5f3-floor-val
-  file: docs/supplements/S5-bridge-builders.md
-  context: at least 55 percent of the longest author bar, 5,465
-  shown: 5,465
-  expr: 0.55*pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B.max()
-- id: s5f3-floor-itti
-  file: docs/supplements/S5-bridge-builders.md
-  context: Itti 5,386, Markram 5,378, Fischl 5,338, Avants 5,226, Olshausen 5,076
-  shown: 5,386
-  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[10]
-- id: s5f3-floor-markram
-  file: docs/supplements/S5-bridge-builders.md
-  context: Itti 5,386, Markram 5,378, Fischl 5,338, Avants 5,226, Olshausen 5,076
-  shown: 5,378
-  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[11]
-- id: s5f3-floor-fischl
-  file: docs/supplements/S5-bridge-builders.md
-  context: Itti 5,386, Markram 5,378, Fischl 5,338, Avants 5,226, Olshausen 5,076
-  shown: 5,338
-  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[12]
-- id: s5f3-floor-avants
-  file: docs/supplements/S5-bridge-builders.md
-  context: Itti 5,386, Markram 5,378, Fischl 5,338, Avants 5,226, Olshausen 5,076
-  shown: 5,226
-  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[13]
-- id: s5f3-floor-olshausen
-  file: docs/supplements/S5-bridge-builders.md
-  context: Itti 5,386, Markram 5,378, Fischl 5,338, Avants 5,226, Olshausen 5,076
-  shown: 5,076
-  expr: pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[14]
 - id: s5f3-floor-first
   file: docs/supplements/S5-bridge-builders.md
-  context: Ranks 11 to 15 (Itti 5,386
+  context: the bars of ranks 11 to 15
   shown: '11'
   expr: 1+(pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[:15]>0.55*pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B.max()).sum()
 - id: s5f3-floor-last
   file: docs/supplements/S5-bridge-builders.md
-  context: Ranks 11 to 15 (Itti 5,386
+  context: the bars of ranks 11 to 15
   shown: '15'
   expr: 10+(pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[:15]<=0.55*pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B.max()).sum()
 - id: s5f3-floor-scale
   file: docs/supplements/S5-bridge-builders.md
-  context: Ranks 1 to 10 are to scale
+  context: ranks 1 to 10 are to scale
   shown: '10'
   expr: (pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B[:15]>0.55*pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').total_B.max()).sum()
 - id: s5f3-badge-edu
   file: docs/supplements/S5-bridge-builders.md
-  context: 12 EDU, 2 IND (Alphabet and Microsoft) and 1 FAC (HHMI)
+  context: (12 education, 2 industry, 1 facility)
   shown: '12'
   expr: (pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').head(15).inst_type=='education').sum()
 - id: s5f3-badge-ind
   file: docs/supplements/S5-bridge-builders.md
-  context: 12 EDU, 2 IND (Alphabet and Microsoft) and 1 FAC (HHMI)
+  context: (12 education, 2 industry, 1 facility)
   shown: '2'
   expr: (pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').head(15).inst_type=='company').sum()
 - id: s5f3-badge-fac
   file: docs/supplements/S5-bridge-builders.md
-  context: 12 EDU, 2 IND (Alphabet and Microsoft) and 1 FAC (HHMI)
+  context: (12 education, 2 industry, 1 facility)
   shown: '1'
   expr: (pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').head(15).inst_type=='facility').sum()
 - id: s5f3-ms-share
@@ -1214,21 +1049,11 @@
   context: Alphabet 0.09, against 0.18
   shown: '0.09'
   expr: np.sort(pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').head(15).neuro_share.values)[1]
-- id: s5f3-within
-  file: docs/supplements/S5-bridge-builders.md
-  context: lie within 0.0055 of one another
-  shown: '0.0055'
-  expr: max(pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').neuro_share[[0,2]].max(),pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').head(15).neuro_share[0])-min(pd.read_csv(RESULTS/'bridge/table_s2_authors.csv').neuro_share[[0,2]].min(),pd.read_csv(RESULTS/'bridge/table_s3_institutions_consolidated.csv').head(15).neuro_share[0])
 - id: s5f3-links-papers
   file: docs/supplements/S5-bridge-builders.md
-  context: 'come from 6 papers: only papers 1'
+  context: come from 6 papers
   shown: '6'
   expr: pd.read_csv(RESULTS/'bridge/paper_author_links.csv').paper_rank.nunique()
-- id: s5f3-links-nolines
-  file: docs/supplements/S5-bridge-builders.md
-  context: so the other 9 papers
-  shown: '9'
-  expr: 15-pd.read_csv(RESULTS/'bridge/paper_author_links.csv').paper_rank.nunique()
 - id: s5f3-tools-recode
   file: docs/supplements/S5-bridge-builders.md
   context: would give 10 tools
@@ -2046,61 +1871,41 @@
   expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').B.min()
 - id: s5t-share-lo
   file: docs/supplements/S5-bridge-builders.md
-  context: from 0.10 (the Itti, Koch and Niebur saliency model) to 0.90 (lme4)
+  context: runs from 0.10 to 0.90
   shown: '0.10'
   expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').neuro_share.min()
 - id: s5t-share-hi
   file: docs/supplements/S5-bridge-builders.md
-  context: from 0.10 (the Itti, Koch and Niebur saliency model) to 0.90 (lme4)
+  context: runs from 0.10 to 0.90
   shown: '0.90'
   expr: pd.read_csv(RESULTS/'bridge/table_s1_papers.csv').neuro_share.max()
 - id: s5t-edges-cur
   file: docs/supplements/S5-bridge-builders.md
-  context: 10 current and 16 past edges
+  context: That gives 26 edges, 10 current and 16 past
   shown: '10'
   expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_edges_current'])
 - id: s5t-edges-past
   file: docs/supplements/S5-bridge-builders.md
-  context: 10 current and 16 past edges
+  context: That gives 26 edges, 10 current and 16 past
   shown: '16'
   expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_edges_past'])
-- id: s5t-lines-8
+- id: s5-gini-elig-auth
   file: docs/supplements/S5-bridge-builders.md
-  context: 8 lines in all
+  context: over every entity of the eligible papers it is 0.64 and 0.75
+  shown: '0.64'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['gini_e2_58971_authors_all'])
+- id: s5-gini-elig-inst
+  file: docs/supplements/S5-bridge-builders.md
+  context: over every entity of the eligible papers it is 0.64 and 0.75
+  shown: '0.75'
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['gini_e2_58971_institutions_all'])
+- id: s5-ceil-removed
+  file: docs/supplements/S5-bridge-builders.md
+  context: My ceiling drops 67 papers
+  shown: '67'
+  expr: float(pd.read_csv(RESULTS/'bridge/pool_numbers.csv').set_index('key')['value']['n_dropped_by_ceiling'])
+- id: s5-concepts
+  file: docs/supplements/S5-bridge-builders.md
+  context: 7 of the 15 papers are tools and 8 are concepts
   shown: '8'
-  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_paper_author_links_drawn'])
-- id: s5t-w-last
-  file: docs/supplements/S5-bridge-builders.md
-  context: (last 2.0, first 1.5, middle 1.0)
-  shown: '2.0'
-  expr: mod('figures.figure2_bridges_v3').POSITION_WEIGHT['last']
-- id: s5t-w-first
-  file: docs/supplements/S5-bridge-builders.md
-  context: (last 2.0, first 1.5, middle 1.0)
-  shown: '1.5'
-  expr: mod('figures.figure2_bridges_v3').POSITION_WEIGHT['first']
-- id: s5t-w-mid
-  file: docs/supplements/S5-bridge-builders.md
-  context: (last 2.0, first 1.5, middle 1.0)
-  shown: '1.0'
-  expr: mod('figures.figure2_bridges_v3').POSITION_WEIGHT['middle']
-- id: s5t-lw-solid
-  file: docs/supplements/S5-bridge-builders.md
-  context: a solid dark line (1.5 pt)
-  shown: '1.5'
-  expr: float(__import__('re').search(r'color=TRANSMITTER\["navy"\], lw=([0-9.]+), alpha=0.62, zorder=3',(RESULTS.parent/'src/neuroai_cn/figures/figure2_bridges_v3.py').read_text()).group(1))
-- id: s5t-lw-faded
-  file: docs/supplements/S5-bridge-builders.md
-  context: a faded thin line (0.9 pt)
-  shown: '0.9'
-  expr: float(__import__('re').search(r'color=TRANSMITTER\["muted"\], lw=([0-9.]+), alpha=0.22, zorder=2',(RESULTS.parent/'src/neuroai_cn/figures/figure2_bridges_v3.py').read_text()).group(1))
-- id: s5t-40
-  file: docs/supplements/S5-bridge-builders.md
-  context: Of the 40 best eligible candidates, 7 are removed
-  shown: '40'
-  expr: len(pd.read_csv(RESULTS/'bridge/s1_eligibility_check.csv'))
-- id: s5t-snap
-  file: docs/supplements/S5-bridge-builders.md
-  context: OpenAlex snapshot of 30 March 2026 (458,112,708 records)
-  shown: 458,112,708
-  expr: pd.read_csv(RESULTS/'corpus/corpus_totals.csv').set_index('quantity').value.loc['parquet_work_records']
+  expr: float(pd.read_csv(RESULTS/'bridge/headline_numbers.csv').set_index('key')['value']['n_concepts_top15'])

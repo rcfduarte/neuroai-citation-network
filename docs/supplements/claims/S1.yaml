@@ -114,36 +114,6 @@
   context: '| 51 + 35 + 1 = 87 | 5,480,569 |'
   shown: '51'
   expr: ((pd.read_csv(RESULTS/'corpus/classification_topics.csv').label_extended=='ai')&(pd.read_csv(RESULTS/'corpus/classification_topics.csv').subfield_id==1702)).sum()
-- id: s1-psych-3205
-  file: docs/supplements/S1-data-and-classification.md
-  context: Experimental and Cognitive Psychology holds 1,144,610 works
-  shown: 1,144,610
-  expr: pd.read_csv(RESULTS/'corpus/classification_topics.csv').query('subfield_id==3205').n_works_1990_2025.sum()
-- id: s1-psych-3206
-  file: docs/supplements/S1-data-and-classification.md
-  context: Neuropsychology and Physiological Psychology 103,407
-  shown: 103,407
-  expr: pd.read_csv(RESULTS/'corpus/classification_topics.csv').query('subfield_id==3206').n_works_1990_2025.sum()
-- id: s1-hw-1708
-  file: docs/supplements/S1-data-and-classification.md
-  context: hardware (subfield 1708, 396,086 works)
-  shown: 396,086
-  expr: pd.read_csv(RESULTS/'corpus/classification_topics.csv').query('subfield_id==1708').n_works_1990_2025.sum()
-- id: s1-anchor-1702
-  file: docs/supplements/S1-data-and-classification.md
-  context: 'labels only 4 as AI'
-  shown: '4'
-  expr: ((pd.read_csv(RESULTS/'corpus/anchor_labels.csv').expected=='ai')&(pd.read_csv(RESULTS/'corpus/anchor_labels.csv').label_whole_1702=='ai')).sum()
-- id: s1-anchor-ext
-  file: docs/supplements/S1-data-and-classification.md
-  context: the extended definition labels 10
-  shown: '10'
-  expr: ((pd.read_csv(RESULTS/'corpus/anchor_labels.csv').expected=='ai')&(pd.read_csv(RESULTS/'corpus/anchor_labels.csv').label_extended=='ai')).sum()
-- id: s1-anchor-n-ai
-  file: docs/supplements/S1-data-and-classification.md
-  context: In the 15 plainly AI papers of the audit set
-  shown: '15'
-  expr: (pd.read_csv(RESULTS/'corpus/anchor_labels.csv').expected=='ai').sum()
 - id: s1-ext-2023
   file: docs/supplements/S1-data-and-classification.md
   context: In 2023 the extended AI side holds 346,525 works
@@ -169,31 +139,11 @@
   context: together make up 45.9 percent of extended AI in 2023
   shown: '45.9'
   expr: ((pd.read_csv(RESULTS/'flow/field_sizes_by_year.csv').pivot(index='year',columns='definition',values='n_works').ai_subfield_1707+pd.read_csv(RESULTS/'flow/field_sizes_by_year.csv').pivot(index='year',columns='definition',values='n_works').ai_topic_T10502)/pd.read_csv(RESULTS/'flow/field_sizes_by_year.csv').pivot(index='year',columns='definition',values='n_works').ai_extended*100).loc[2023]
-- id: s1-ext-share-window
-  file: docs/supplements/S1-data-and-classification.md
-  context: and 42.6 percent over 1995 to 2023
-  shown: '42.6'
-  expr: '(lambda n: (n.ai_subfield_1707+n.ai_topic_T10502).sum()/n.ai_extended.sum()*100)(pd.read_csv(RESULTS/''flow/field_sizes_by_year.csv'').pivot(index=''year'',columns=''definition'',values=''n_works'').loc[1995:2023])'
 - id: s1-core-2023
   file: docs/supplements/S1-data-and-classification.md
   context: 'The core is much smaller: 124,748 works in 2023'
   shown: 124,748
   expr: pd.read_csv(RESULTS/'flow/field_sizes_by_year.csv').pivot(index='year',columns='definition',values='n_works').loc[2023,'ai_strict_core35']
-- id: s1-excl-t12157
-  file: docs/supplements/S1-data-and-classification.md
-  context: The largest is T12157 Geochemistry and Geologic Mapping with 591,088 works
-  shown: 591,088
-  expr: pd.read_csv(RESULTS/'flow/ai_topic_sizes_by_year.csv').query('1995<=year<=2023').query("topic_id=='https://openalex.org/T12157'").n_works.sum()
-- id: s1-excl-t14335
-  file: docs/supplements/S1-data-and-classification.md
-  context: then T14335 Educational Robotics and Engineering with 179,489
-  shown: 179,489
-  expr: pd.read_csv(RESULTS/'flow/ai_topic_sizes_by_year.csv').query('1995<=year<=2023').query("topic_id=='https://openalex.org/T14335'").n_works.sum()
-- id: s1-excl-t13567
-  file: docs/supplements/S1-data-and-classification.md
-  context: T13567 AI and Multimedia in Education, has 3,171
-  shown: 3,171
-  expr: pd.read_csv(RESULTS/'flow/ai_topic_sizes_by_year.csv').query('1995<=year<=2023').query("topic_id=='https://openalex.org/T13567'").n_works.sum()
 - id: s1-excl-share
   file: docs/supplements/S1-data-and-classification.md
   context: Together they hold 41.8 percent of all subfield 1702 works
@@ -244,11 +194,6 @@
   context: from 0.671 to 0.922
   shown: '0.922'
   expr: '(lambda n: (n.ai_extended+n.excluded_T12157)/(n.ai_extended+n.excluded_T12157+n.neuroscience))(pd.read_csv(RESULTS/''flow/field_sizes_by_year.csv'').pivot(index=''year'',columns=''definition'',values=''n_works'').loc[2025])'
-- id: s1-t12157-2016
-  file: docs/supplements/S1-data-and-classification.md
-  context: (46,229 works in 2015, 70,878 in 2016, 33,102 in 2017)
-  shown: 70,878
-  expr: pd.read_csv(RESULTS/'flow/field_sizes_by_year.csv').pivot(index='year',columns='definition',values='n_works').loc[2016,'excluded_T12157']
 - id: s1-size-2002-ai
   file: docs/supplements/S1-data-and-classification.md
   context: '| 2002 | 60,118 | 100,726 | 91,808 | 42,133 |'
@@ -329,41 +274,16 @@
   context: against a total increase of 45,576
   shown: 45,576
   expr: pd.read_csv(RESULTS/'flow/field_sizes_by_year.csv').pivot(index='year',columns='definition',values='n_works').loc[2002,'ai_extended']-pd.read_csv(RESULTS/'flow/field_sizes_by_year.csv').pivot(index='year',columns='definition',values='n_works').loc[2001,'ai_extended']
-- id: s1-novenue-2001
-  file: docs/supplements/S1-data-and-classification.md
-  context: works without a venue go from 15,797 to 54,146
-  shown: 15,797
-  expr: pd.read_csv(RESULTS/'flow/ai_works_2000_2004_breakdown.csv').set_index(['dimension','key']).loc[('venue_recorded','no'),'n_2001']
-- id: s1-novenue-2002
-  file: docs/supplements/S1-data-and-classification.md
-  context: works without a venue go from 15,797 to 54,146
-  shown: 54,146
-  expr: pd.read_csv(RESULTS/'flow/ai_works_2000_2004_breakdown.csv').set_index(['dimension','key']).loc[('venue_recorded','no'),'n_2002']
 - id: s1-cs-ratio
   file: docs/supplements/S1-data-and-classification.md
   context: works in computer science grow by a factor of 1.755
   shown: '1.755'
   expr: pd.read_csv(RESULTS/'flow/subfield_sizes_2000_2004.csv').set_index(['level','id']).ratio_2002_to_2001.loc[('field',17)]
-- id: s1-eng-ratio
-  file: docs/supplements/S1-data-and-classification.md
-  context: and in engineering by 1.243
-  shown: '1.243'
-  expr: pd.read_csv(RESULTS/'flow/subfield_sizes_2000_2004.csv').set_index(['level','id']).ratio_2002_to_2001.loc[('field',22)]
 - id: s1-neuro-ratio
   file: docs/supplements/S1-data-and-classification.md
   context: against 1.112 in neuroscience
   shown: '1.112'
   expr: pd.read_csv(RESULTS/'flow/subfield_sizes_2000_2004.csv').set_index(['level','id']).ratio_2002_to_2001.loc[('field',28)]
-- id: s1-fresh-2001
-  file: docs/supplements/S1-data-and-classification.md
-  context: (52,230 AI works in 2001 against 101,606 in 2002)
-  shown: 52,230
-  expr: pd.read_csv(RESULTS/'flow/fresh_recheck_field_sizes_20261006.csv').set_index('year').loc[2001,'ai_extended']
-- id: s1-fresh-2002
-  file: docs/supplements/S1-data-and-classification.md
-  context: (52,230 AI works in 2001 against 101,606 in 2002)
-  shown: 101,606
-  expr: pd.read_csv(RESULTS/'flow/fresh_recheck_field_sizes_20261006.csv').set_index('year').loc[2002,'ai_extended']
 - id: s1-null-2001
   file: docs/supplements/S1-data-and-classification.md
   context: jumps from 0.505 to 0.626
@@ -404,28 +324,3 @@
   context: Teal barely moves (0.0428 to 0.0441)
   shown: '0.0441'
   expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2002,'ai_to_neuro'),'or_restricted']
-- id: s1-2006-works
-  file: docs/supplements/S1-data-and-classification.md
-  context: (10,744,114 against 6,653,425 in 2005)
-  shown: 10,744,114
-  expr: pd.read_csv(RESULTS/'flow/field_sizes_by_year.csv').pivot(index='year',columns='definition',values='n_works').loc[2006,'all_works']
-- id: s1-miss-2019-ai
-  file: docs/supplements/S1-data-and-classification.md
-  context: references pointing to works not in the index were 10.2 percent of neuroscience references and 18.3 percent
-  shown: '18.3'
-  expr: '(lambda o: o.n_to_missing/(o.n_to_within+o.n_to_target+o.n_to_other+o.n_to_unknown+o.n_to_missing))(pd.read_csv(RESULTS/''flow/or_by_year.csv'').set_index([''year'',''direction''])).loc[(2019,''ai_to_neuro'')]*100'
-- id: s1-core-teal-slope
-  file: docs/supplements/S1-data-and-classification.md
-  context: under the 35-topic core teal is above gold in 5 of the 31 years, and the teal slope from 2006 to 2019 is +0.00011 per year (p = 0.29, not significant)
-  shown: '+0.00011'
-  expr: '(lambda d: __import__(''scipy.stats'',fromlist=[''x'']).linregress(d.index,d.values).slope)(pd.read_csv(RESULTS/''flow/sensitivity_strict_or_by_year.csv'').query("direction==''ai_to_neuro''").set_index(''year'').loc[2006:2019,''or_restricted''])'
-- id: s1-core-teal-p
-  file: docs/supplements/S1-data-and-classification.md
-  context: under the 35-topic core teal is above gold in 5 of the 31 years, and the teal slope from 2006 to 2019 is +0.00011 per year (p = 0.29, not significant)
-  shown: '0.29'
-  expr: '(lambda d: __import__(''scipy.stats'',fromlist=[''x'']).linregress(d.index,d.values).pvalue)(pd.read_csv(RESULTS/''flow/sensitivity_strict_or_by_year.csv'').query("direction==''ai_to_neuro''").set_index(''year'').loc[2006:2019,''or_restricted''])'
-- id: s1-core-teal-above
-  file: docs/supplements/S1-data-and-classification.md
-  context: under the 35-topic core teal is above gold in 5 of the 31 years, and the teal slope from 2006 to 2019 is +0.00011 per year (p = 0.29, not significant)
-  shown: '5'
-  expr: '(lambda p: int((p.ai_to_neuro>p.neuro_to_ai).loc[1995:2025].sum()))(pd.read_csv(RESULTS/''flow/sensitivity_strict_or_by_year.csv'').pivot(index=''year'',columns=''direction'',values=''or_restricted''))'

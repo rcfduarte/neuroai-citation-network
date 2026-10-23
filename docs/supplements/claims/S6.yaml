@@ -1,94 +1,29 @@
 # Headline numbers quoted in docs/supplements/S6-*.md, checked by tests/test_supplement_claims.py
-- id: s6-prepub-share
-  file: docs/supplements/S6-citation-age.md
-  context: they make up 2.16 percent of all classified citations in the pool
-  shown: '2.16'
-  expr: json.load(open(RESULTS/'citation_age/checks.json'))['info_prepublication_citation_share']['share']*100
 - id: s6-n-coded
   file: docs/supplements/S6-citation-age.md
   context: I coded by hand every work in the heads of the 11 rankings, 271 works in all
   shown: '271'
   expr: len(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#'))
-- id: s6-n-concept
-  file: docs/supplements/S6-citation-age.md
-  context: The coding gives 112 concepts, 69 methods, 64 tools, 21 books and 5 artifacts
-  shown: '112'
-  expr: int(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')['class'].eq('concept').sum())
-- id: s6-n-method
-  file: docs/supplements/S6-citation-age.md
-  context: The coding gives 112 concepts, 69 methods, 64 tools, 21 books and 5 artifacts
-  shown: '69'
-  expr: int(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')['class'].eq('method').sum())
-- id: s6-n-tool
-  file: docs/supplements/S6-citation-age.md
-  context: The coding gives 112 concepts, 69 methods, 64 tools, 21 books and 5 artifacts
-  shown: '64'
-  expr: int(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')['class'].eq('tool').sum())
-- id: s6-n-book
-  file: docs/supplements/S6-citation-age.md
-  context: The coding gives 112 concepts, 69 methods, 64 tools, 21 books and 5 artifacts
-  shown: '21'
-  expr: int(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')['class'].eq('book').sum())
-- id: s6-n-artefact
-  file: docs/supplements/S6-citation-age.md
-  context: The coding gives 112 concepts, 69 methods, 64 tools, 21 books and 5 artifacts
-  shown: '5'
-  expr: int(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')['class'].eq('artefact').sum())
 - id: s6-n-borderline
   file: docs/supplements/S6-citation-age.md
-  context: For 11 works the file records a borderline call in its notes
+  context: For 11 works the file records a borderline call
   shown: '11'
   expr: int(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')['note'].fillna('').str.contains('borderline').sum())
-- id: s6-n-reprint-years
-  file: docs/supplements/S6-citation-age.md
-  context: which differs from OpenAlex's year for 24 of the 271 works
-  shown: '24'
-  expr: int((pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')['true_year']!=pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')['openalex_year']).sum())
 - id: s6-vol-ai-14-98
   file: docs/supplements/S6-citation-age.md
-  context: In 2014 the AI literature made 7.28 times as many references as in 1998, and the neuroscience literature 3.25 times as many
+  context: in 2014 the AI literature made 7.28 times as many references as in 1998, and the neuroscience literature 3.25 times as many
   shown: '7.28'
   expr: pd.read_csv(RESULTS/'citation_age/citing_volume.csv').pivot(index='citing_year',columns='citing_field',values='n_refs').loc[2014,'ai']/pd.read_csv(RESULTS/'citation_age/citing_volume.csv').pivot(index='citing_year',columns='citing_field',values='n_refs').loc[1998,'ai']
 - id: s6-vol-neuro-14-98
   file: docs/supplements/S6-citation-age.md
-  context: In 2014 the AI literature made 7.28 times as many references as in 1998, and the neuroscience literature 3.25 times as many
+  context: in 2014 the AI literature made 7.28 times as many references as in 1998, and the neuroscience literature 3.25 times as many
   shown: '3.25'
   expr: pd.read_csv(RESULTS/'citation_age/citing_volume.csv').pivot(index='citing_year',columns='citing_field',values='n_refs').loc[2014,'neuro']/pd.read_csv(RESULTS/'citation_age/citing_volume.csv').pivot(index='citing_year',columns='citing_field',values='n_refs').loc[1998,'neuro']
-- id: s6-w-ai-1990
-  file: docs/supplements/S6-citation-age.md
-  context: a citation from an AI paper of 1990 weighs 16.72 times as much as one from 2014, and for neuroscience the factor is 5.11
-  shown: '16.72'
-  expr: pd.read_csv(RESULTS/'citation_age/citing_volume.csv').pivot(index='citing_year',columns='citing_field',values='n_refs').loc[2014,'ai']/pd.read_csv(RESULTS/'citation_age/citing_volume.csv').pivot(index='citing_year',columns='citing_field',values='n_refs').loc[1990,'ai']
-- id: s6-w-neuro-1990
-  file: docs/supplements/S6-citation-age.md
-  context: a citation from an AI paper of 1990 weighs 16.72 times as much as one from 2014, and for neuroscience the factor is 5.11
-  shown: '5.11'
-  expr: pd.read_csv(RESULTS/'citation_age/citing_volume.csv').pivot(index='citing_year',columns='citing_field',values='n_refs').loc[2014,'neuro']/pd.read_csv(RESULTS/'citation_age/citing_volume.csv').pivot(index='citing_year',columns='citing_field',values='n_refs').loc[1990,'neuro']
-- id: s6-ai-refs-2001
-  file: docs/supplements/S6-citation-age.md
-  context: References counted rise from 348,524 to 803,567, so a citation from an AI paper of 2001 weighs 2.31 times one of 2002
-  shown: 348,524
-  expr: pd.read_csv(RESULTS/'citation_age/citing_volume.csv').pivot(index='citing_year',columns='citing_field',values='n_refs').loc[2001,'ai']
-- id: s6-ai-refs-2002
-  file: docs/supplements/S6-citation-age.md
-  context: References counted rise from 348,524 to 803,567, so a citation from an AI paper of 2001 weighs 2.31 times one of 2002
-  shown: 803,567
-  expr: pd.read_csv(RESULTS/'citation_age/citing_volume.csv').pivot(index='citing_year',columns='citing_field',values='n_refs').loc[2002,'ai']
 - id: s6-ai-step-weight
   file: docs/supplements/S6-citation-age.md
-  context: References counted rise from 348,524 to 803,567, so a citation from an AI paper of 2001 weighs 2.31 times one of 2002
+  context: so a citation from an AI paper of 2001 weighs 2.31 times one of 2002
   shown: '2.31'
   expr: pd.read_csv(RESULTS/'citation_age/citing_volume.csv').pivot(index='citing_year',columns='citing_field',values='n_refs').loc[2002,'ai']/pd.read_csv(RESULTS/'citation_age/citing_volume.csv').pivot(index='citing_year',columns='citing_field',values='n_refs').loc[2001,'ai']
-- id: s6-tab-vol-1990-refs
-  file: docs/supplements/S6-citation-age.md
-  context: in 1990 AI papers made 119,184 references and neuroscience papers 657,528
-  shown: 119,184
-  expr: pd.read_csv(RESULTS/'citation_age/citing_volume.csv').pivot(index='citing_year',columns='citing_field',values='n_refs').loc[1990,'ai']
-- id: s6-tab-vol-2023-refs
-  file: docs/supplements/S6-citation-age.md
-  context: in 2023 5,491,223 and 5,077,910
-  shown: 5,491,223
-  expr: pd.read_csv(RESULTS/'citation_age/citing_volume.csv').pivot(index='citing_year',columns='citing_field',values='n_refs').loc[2023,'ai']
 - id: s6-orig-top15-concepts
   file: docs/supplements/S6-citation-age.md
   context: In the published ranking the top 15 holds 8 concepts and 7 tools.
@@ -121,14 +56,9 @@
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['orig']['top50']['most_recent_concept']['rank']
 - id: s6-orig-top100-post2005
   file: docs/supplements/S6-citation-age.md
-  context: and 6 are in the top 100 (the first is Friston's free-energy principle at rank 51)
+  context: and 6 are in the top 100
   shown: '6'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['orig']['concepts_after_2005']
-- id: s6-orig-friston-rank
-  file: docs/supplements/S6-citation-age.md
-  context: and 6 are in the top 100 (the first is Friston's free-energy principle at rank 51)
-  shown: '51'
-  expr: 'int(pd.read_csv(RESULTS/''citation_age/ranking_orig_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d.short.str.startswith(''Friston, free''),''rank''].iloc[0])'
 - id: s6-land-bipoo-win8
   file: docs/supplements/S6-citation-age.md
   context: '| 2 | Bi & Poo, spike-timing plasticity | 1998 | concept | 15 | 48 |'
@@ -141,19 +71,14 @@
   expr: '[r for r in json.load(open(RESULTS/''citation_age/summary.json''))[''published_top15_landing''] if r[''work''].startswith(''Zucker'')][0][''win8'']'
 - id: s6-slow-bipoo
   file: docs/supplements/S6-citation-age.md
-  context: In their first 8 years Bi and Poo rank 48th and Olshausen and Field 60th, against 2nd and 4th overall, and Zucker and Regehr rank 823rd against 12th.
+  context: in their first 8 years Bi and Poo rank 48th and Olshausen and Field 60th, against 2nd and 4th overall
   shown: '48'
   expr: '[r for r in json.load(open(RESULTS/''citation_age/summary.json''))[''published_top15_landing''] if r[''work''].startswith(''Bi & Poo'')][0][''win8'']'
 - id: s6-slow-olshausen
   file: docs/supplements/S6-citation-age.md
-  context: In their first 8 years Bi and Poo rank 48th and Olshausen and Field 60th, against 2nd and 4th overall, and Zucker and Regehr rank 823rd against 12th.
+  context: in their first 8 years Bi and Poo rank 48th and Olshausen and Field 60th, against 2nd and 4th overall
   shown: '60'
   expr: '[r for r in json.load(open(RESULTS/''citation_age/summary.json''))[''published_top15_landing''] if r[''work''].startswith(''Olshausen'')][0][''win8'']'
-- id: s6-slow-zucker
-  file: docs/supplements/S6-citation-age.md
-  context: In their first 8 years Bi and Poo rank 48th and Olshausen and Field 60th, against 2nd and 4th overall, and Zucker and Regehr rank 823rd against 12th.
-  shown: '823'
-  expr: '[r for r in json.load(open(RESULTS/''citation_age/summary.json''))[''published_top15_landing''] if r[''work''].startswith(''Zucker'')][0][''win8'']'
 - id: s6-rate-concepts-min
   file: docs/supplements/S6-citation-age.md
   context: though they fall to ranks 13 to 42, where they were 2 to 14
@@ -166,37 +91,37 @@
   expr: max(r['rate'] for r in json.load(open(RESULTS/'citation_age/summary.json'))['published_top15_landing'] if r['class']=='concept')
 - id: s6-rate-top15-tools
   file: docs/supplements/S6-citation-age.md
-  context: Under the per-year rate the top 15 holds 8 tools, 5 methods and 2 concepts, with a median first publication year of 2016.
+  context: Under the per-year rate the top 15 holds 8 tools, 5 methods and 2 concepts, with a median first publication year of 2016
   shown: '8'
   expr: 'int(pd.read_csv(RESULTS/''citation_age/ranking_rate_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d[''rank'']<=15][''class''].eq(''tool'').sum())'
 - id: s6-rate-top15-methods
   file: docs/supplements/S6-citation-age.md
-  context: Under the per-year rate the top 15 holds 8 tools, 5 methods and 2 concepts, with a median first publication year of 2016.
+  context: Under the per-year rate the top 15 holds 8 tools, 5 methods and 2 concepts, with a median first publication year of 2016
   shown: '5'
   expr: 'int(pd.read_csv(RESULTS/''citation_age/ranking_rate_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d[''rank'']<=15][''class''].eq(''method'').sum())'
 - id: s6-rate-top15-concepts
   file: docs/supplements/S6-citation-age.md
-  context: Under the per-year rate the top 15 holds 8 tools, 5 methods and 2 concepts, with a median first publication year of 2016.
+  context: Under the per-year rate the top 15 holds 8 tools, 5 methods and 2 concepts, with a median first publication year of 2016
   shown: '2'
   expr: 'int(pd.read_csv(RESULTS/''citation_age/ranking_rate_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d[''rank'']<=15][''class''].eq(''concept'').sum())'
 - id: s6-rate-top15-median
   file: docs/supplements/S6-citation-age.md
-  context: Under the per-year rate the top 15 holds 8 tools, 5 methods and 2 concepts, with a median first publication year of 2016.
+  context: Under the per-year rate the top 15 holds 8 tools, 5 methods and 2 concepts, with a median first publication year of 2016
   shown: '2016'
   expr: 'float(pd.read_csv(RESULTS/''citation_age/ranking_rate_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d[''rank'']<=15][''true_year''].median())'
 - id: s6-win8-top15-tools
   file: docs/supplements/S6-citation-age.md
-  context: Under the 8-year window it holds 5 tools, 5 methods, 3 books and 2 concepts, with a median of 2013
+  context: under the 8-year window it holds 5 tools, 5 methods, 3 books and 2 concepts, with a median of 2013
   shown: '5'
   expr: 'int(pd.read_csv(RESULTS/''citation_age/ranking_win8_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d[''rank'']<=15][''class''].eq(''tool'').sum())'
 - id: s6-win8-top15-books
   file: docs/supplements/S6-citation-age.md
-  context: Under the 8-year window it holds 5 tools, 5 methods, 3 books and 2 concepts, with a median of 2013
+  context: under the 8-year window it holds 5 tools, 5 methods, 3 books and 2 concepts, with a median of 2013
   shown: '3'
   expr: 'int(pd.read_csv(RESULTS/''citation_age/ranking_win8_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d[''rank'']<=15][''class''].eq(''book'').sum())'
 - id: s6-win8-top15-median
   file: docs/supplements/S6-citation-age.md
-  context: Under the 8-year window it holds 5 tools, 5 methods, 3 books and 2 concepts, with a median of 2013
+  context: under the 8-year window it holds 5 tools, 5 methods, 3 books and 2 concepts, with a median of 2013
   shown: '2013'
   expr: 'float(pd.read_csv(RESULTS/''citation_age/ranking_win8_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d[''rank'']<=15][''true_year''].median())'
 - id: s6-rate-post2005-n
@@ -211,54 +136,14 @@
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['rate']['top50']['most_recent_concept']['rank']
 - id: s6-yamins-win8-rank
   file: docs/supplements/S6-citation-age.md
-  context: Yamins et al. 2014 is in the top 15 at rank 9 under both the 8-year and the 7-year window, with 12 and 14 post-2005 concepts in the top 50.
+  context: Yamins et al. 2014 is in the top 15 at rank 9 under both the 8-year and the 7-year window
   shown: '9'
   expr: 'int(pd.read_csv(RESULTS/''citation_age/ranking_win8_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d.short.str.startswith(''Yamins et al., perf''),''rank''].iloc[0])'
-- id: s6-post2005-win8
-  file: docs/supplements/S6-citation-age.md
-  context: Yamins et al. 2014 is in the top 15 at rank 9 under both the 8-year and the 7-year window, with 12 and 14 post-2005 concepts in the top 50.
-  shown: '12'
-  expr: len(json.load(open(RESULTS/'citation_age/summary.json'))['win8']['top50']['concepts_after_2005'])
-- id: s6-post2005-win7
-  file: docs/supplements/S6-citation-age.md
-  context: Yamins et al. 2014 is in the top 15 at rank 9 under both the 8-year and the 7-year window, with 12 and 14 post-2005 concepts in the top 50.
-  shown: '14'
-  expr: len(json.load(open(RESULTS/'citation_age/summary.json'))['win7']['top50']['concepts_after_2005'])
 - id: s6-win5-hassabis-rank
   file: docs/supplements/S6-citation-age.md
-  context: Hassabis et al. 2017, "Neuroscience-inspired artificial intelligence", at rank 15, with 11 in the top 50
+  context: Hassabis et al. 2017, "Neuroscience-inspired artificial intelligence", at rank 15
   shown: '15'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['win5_to2018']['top15']['most_recent_concept']['rank']
-- id: s6-win5-post2005
-  file: docs/supplements/S6-citation-age.md
-  context: Hassabis et al. 2017, "Neuroscience-inspired artificial intelligence", at rank 15, with 11 in the top 50
-  shown: '11'
-  expr: len(json.load(open(RESULTS/'citation_age/summary.json'))['win5_to2018']['top50']['concepts_after_2005'])
-- id: s6-ceil-rate15
-  file: docs/supplements/S6-citation-age.md
-  context: Of the top 15, 11 (per year) and 7 (8-year window) are works that the ceiling removes, such as ResNet, AlexNet and dropout, and the top 50 holds 20 and 9 of them.
-  shown: '11'
-  expr: json.load(open(RESULTS/'citation_age/checks.json'))['D_ceiling_effect_rate_top50_info']['n_ceiling_works_in_noceil_top15']
-- id: s6-ceil-win15
-  file: docs/supplements/S6-citation-age.md
-  context: Of the top 15, 11 (per year) and 7 (8-year window) are works that the ceiling removes, such as ResNet, AlexNet and dropout, and the top 50 holds 20 and 9 of them.
-  shown: '7'
-  expr: json.load(open(RESULTS/'citation_age/checks.json'))['D_ceiling_effect_win8_top50_info']['n_ceiling_works_in_noceil_top15']
-- id: s6-ceil-rate50
-  file: docs/supplements/S6-citation-age.md
-  context: Of the top 15, 11 (per year) and 7 (8-year window) are works that the ceiling removes, such as ResNet, AlexNet and dropout, and the top 50 holds 20 and 9 of them.
-  shown: '20'
-  expr: json.load(open(RESULTS/'citation_age/checks.json'))['D_ceiling_effect_rate_top50_info']['n_ceiling_works_in_noceil_top50']
-- id: s6-ceil-win50
-  file: docs/supplements/S6-citation-age.md
-  context: Of the top 15, 11 (per year) and 7 (8-year window) are works that the ceiling removes, such as ResNet, AlexNet and dropout, and the top 50 holds 20 and 9 of them.
-  shown: '9'
-  expr: json.load(open(RESULTS/'citation_age/checks.json'))['D_ceiling_effect_win8_top50_info']['n_ceiling_works_in_noceil_top50']
-- id: s6-rate-methods-post2005
-  file: docs/supplements/S6-citation-age.md
-  context: the top 15 of the per-year rate would hold five methods published after 2005 (PReLU, Xception, Schmidhuber's overview, AlphaGo and a data-augmentation survey), and the most recent bridge work in it would be from 2019
-  shown: '2019'
-  expr: json.load(open(RESULTS/'citation_age/summary.json'))['rate']['top15']['most_recent_concept_or_method']['year']
 - id: s6-yamins-cn
   file: docs/supplements/S6-citation-age.md
   context: All-time it has 1,432 citations from neuroscience papers and 376 from AI papers, and ranks 91st in the published ranking.
@@ -299,26 +184,6 @@
   context: Its AI side is smaller than its neuroscience side by a factor of 3.7 in the window
   shown: '3.7'
   expr: 'float(pd.read_csv(RESULTS/''citation_age/ranking_win8_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d.short.str.startswith(''Yamins et al., perf''),''w8_neuro''].iloc[0])/float(pd.read_csv(RESULTS/''citation_age/ranking_win8_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d.short.str.startswith(''Yamins et al., perf''),''w8_ai''].iloc[0])'
-- id: s6-median-rate
-  file: docs/supplements/S6-citation-age.md
-  context: Controlling age moves the median year of the top 100 from 2002 to 2011 for the per-year rate and to 2010 for the 8-year window, and the number of concepts published after 2005 from 6 to 11 and 24.
-  shown: '2011'
-  expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['rate']['median_year']
-- id: s6-median-win8
-  file: docs/supplements/S6-citation-age.md
-  context: Controlling age moves the median year of the top 100 from 2002 to 2011 for the per-year rate and to 2010 for the 8-year window, and the number of concepts published after 2005 from 6 to 11 and 24.
-  shown: '2010'
-  expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['win8']['median_year']
-- id: s6-post2005-rate
-  file: docs/supplements/S6-citation-age.md
-  context: Controlling age moves the median year of the top 100 from 2002 to 2011 for the per-year rate and to 2010 for the 8-year window, and the number of concepts published after 2005 from 6 to 11 and 24.
-  shown: '11'
-  expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['rate']['concepts_after_2005']
-- id: s6-post2005-win8-100
-  file: docs/supplements/S6-citation-age.md
-  context: Controlling age moves the median year of the top 100 from 2002 to 2011 for the per-year rate and to 2010 for the 8-year window, and the number of concepts published after 2005 from 6 to 11 and 24.
-  shown: '24'
-  expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['win8']['concepts_after_2005']
 - id: s6-share-bin-1990
   file: docs/supplements/S6-citation-age.md
   context: with 49 of the 100 works first published from 1990 to 1995 and 16 of them in 1990 alone
@@ -346,59 +211,44 @@
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['orig']['by_class']['concept']
 - id: s6-share-top15-concepts
   file: docs/supplements/S6-citation-age.md
-  context: In the growth-normalized 8-year window the top 15 holds 8 concepts, 4 tools and 3 books, and the most recent concept in it is Itti and Koch 2001, at rank 9.
+  context: In the growth-normalized 8-year window the top 15 holds 8 concepts, 4 tools and 3 books, and the most recent concept in it is Itti and Koch 2001, at rank 9
   shown: '8'
   expr: 'int(pd.read_csv(RESULTS/''citation_age/ranking_win8_share_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d[''rank'']<=15][''class''].eq(''concept'').sum())'
 - id: s6-share-top15-tools
   file: docs/supplements/S6-citation-age.md
-  context: In the growth-normalized 8-year window the top 15 holds 8 concepts, 4 tools and 3 books, and the most recent concept in it is Itti and Koch 2001, at rank 9.
+  context: In the growth-normalized 8-year window the top 15 holds 8 concepts, 4 tools and 3 books, and the most recent concept in it is Itti and Koch 2001, at rank 9
   shown: '4'
   expr: 'int(pd.read_csv(RESULTS/''citation_age/ranking_win8_share_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d[''rank'']<=15][''class''].eq(''tool'').sum())'
 - id: s6-share-top15-books
   file: docs/supplements/S6-citation-age.md
-  context: In the growth-normalized 8-year window the top 15 holds 8 concepts, 4 tools and 3 books, and the most recent concept in it is Itti and Koch 2001, at rank 9.
+  context: In the growth-normalized 8-year window the top 15 holds 8 concepts, 4 tools and 3 books, and the most recent concept in it is Itti and Koch 2001, at rank 9
   shown: '3'
   expr: 'int(pd.read_csv(RESULTS/''citation_age/ranking_win8_share_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d[''rank'']<=15][''class''].eq(''book'').sum())'
 - id: s6-share-top15-recent-rank
   file: docs/supplements/S6-citation-age.md
-  context: In the growth-normalized 8-year window the top 15 holds 8 concepts, 4 tools and 3 books, and the most recent concept in it is Itti and Koch 2001, at rank 9.
+  context: In the growth-normalized 8-year window the top 15 holds 8 concepts, 4 tools and 3 books, and the most recent concept in it is Itti and Koch 2001, at rank 9
   shown: '9'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['win8_share']['top15']['most_recent_concept']['rank']
-- id: s6-share-top50-rank
-  file: docs/supplements/S6-citation-age.md
-  context: Among the top 50 the most recent is Izhikevich's 2004 paper, at rank 50.
-  shown: '50'
-  expr: json.load(open(RESULTS/'citation_age/summary.json'))['win8_share']['top50']['most_recent_concept']['rank']
 - id: s6-rshare-concepts
   file: docs/supplements/S6-citation-age.md
-  context: In the growth-normalized per-year rate, 7 of the top 15 are concepts, the most recent being Izhikevich 2003 at rank 12
+  context: In the growth-normalized per-year rate, 7 of the top 15 are concepts
   shown: '7'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['rate_share']['top15']['n_concepts']
-- id: s6-rshare-recent-rank
-  file: docs/supplements/S6-citation-age.md
-  context: In the growth-normalized per-year rate, 7 of the top 15 are concepts, the most recent being Izhikevich 2003 at rank 12
-  shown: '12'
-  expr: json.load(open(RESULTS/'citation_age/summary.json'))['rate_share']['top15']['most_recent_concept']['rank']
 - id: s6-share-yamins87
   file: docs/supplements/S6-citation-age.md
-  context: Yamins et al. 2014 at rank 87 and 69, Hassabis et al. 2017 at rank 85 in the per-year version, and Lillicrap et al. 2020 at rank 97
+  context: Yamins et al. 2014 at rank 87 and 69, Hassabis et al. 2017 at rank 85 in the per-year version
   shown: '87'
   expr: 'int(pd.read_csv(RESULTS/''citation_age/ranking_win8_share_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d.short.str.startswith(''Yamins et al., perf''),''rank''].iloc[0])'
 - id: s6-rshare-yamins69
   file: docs/supplements/S6-citation-age.md
-  context: Yamins et al. 2014 at rank 87 and 69, Hassabis et al. 2017 at rank 85 in the per-year version, and Lillicrap et al. 2020 at rank 97
+  context: Yamins et al. 2014 at rank 87 and 69, Hassabis et al. 2017 at rank 85 in the per-year version
   shown: '69'
   expr: 'int(pd.read_csv(RESULTS/''citation_age/ranking_rate_share_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d.short.str.startswith(''Yamins et al., perf''),''rank''].iloc[0])'
 - id: s6-rshare-hassabis
   file: docs/supplements/S6-citation-age.md
-  context: Yamins et al. 2014 at rank 87 and 69, Hassabis et al. 2017 at rank 85 in the per-year version, and Lillicrap et al. 2020 at rank 97
+  context: Yamins et al. 2014 at rank 87 and 69, Hassabis et al. 2017 at rank 85 in the per-year version
   shown: '85'
   expr: 'int(pd.read_csv(RESULTS/''citation_age/ranking_rate_share_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d.short.str.startswith(''Hassabis''),''rank''].iloc[0])'
-- id: s6-rshare-lillicrap
-  file: docs/supplements/S6-citation-age.md
-  context: Yamins et al. 2014 at rank 87 and 69, Hassabis et al. 2017 at rank 85 in the per-year version, and Lillicrap et al. 2020 at rank 97
-  shown: '97'
-  expr: 'int(pd.read_csv(RESULTS/''citation_age/ranking_rate_share_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d.short.str.startswith(''Lillicrap et al., backprop''),''rank''].iloc[0])'
 - id: s6-from1996-itti-rank
   file: docs/supplements/S6-citation-age.md
   context: Again Itti and Koch 2001 is the most recent concept in its top 15, now at rank 6.
@@ -419,16 +269,6 @@
   context: 0 mismatches across 133,763 works
   shown: 133,763
   expr: json.load(open(RESULTS/'citation_age/checks.json'))['A_per_year_counts_resum_to_published_totals']['n_works']
-- id: s6-chk-gate-min
-  file: docs/supplements/S6-citation-age.md
-  context: score at rank 100 is between 32.15 and 160.28 in the six controlled rankings
-  shown: '32.15'
-  expr: '(lambda c: min(c[k][''score_at_rank100''] for k in c if k.startswith(''C_gate'')))(json.load(open(RESULTS/''citation_age/checks.json'')))'
-- id: s6-chk-gate-max
-  file: docs/supplements/S6-citation-age.md
-  context: score at rank 100 is between 32.15 and 160.28 in the six controlled rankings
-  shown: '160.28'
-  expr: '(lambda c: max(c[k][''score_at_rank100''] for k in c if k.startswith(''C_gate'')))(json.load(open(RESULTS/''citation_age/checks.json'')))'
 - id: s6-sum-yamins-win7
   file: docs/supplements/S6-citation-age.md
   context: Yamins et al. 2014 ranks 9th in the first-8-years ranking and 9th in the 7-year one; Hassabis et al. 2017 ranks 15th in the 5-year one; per year, five concepts published after 2005 sit in the top 50.
@@ -439,31 +279,11 @@
   context: Yamins et al. 2014 ranks 9th in the first-8-years ranking and 9th in the 7-year one; Hassabis et al. 2017 ranks 15th in the 5-year one; per year, five concepts published after 2005 sit in the top 50.
   shown: '15'
   expr: 'int(pd.read_csv(RESULTS/''citation_age/ranking_win5_to2018_top100.csv'').merge(pd.read_csv(RESULTS/''citation_age/classification.csv'', comment=''#'')[[''title_norm'',''short'',''class'',''true_year'']], on=''title_norm'').loc[lambda d: d.short.str.startswith(''Hassabis''),''rank''].iloc[0])'
-- id: s6-adj-9
-  file: docs/supplements/S6-citation-age.md
-  context: in the 8-year window, ranks 9 and 10 score 408 and 362
-  shown: '408'
-  expr: 'float(pd.read_csv(RESULTS/''citation_age/ranking_win8_top100.csv'').loc[lambda d: d[''rank'']==9,''score''].iloc[0])'
-- id: s6-adj-10
-  file: docs/supplements/S6-citation-age.md
-  context: in the 8-year window, ranks 9 and 10 score 408 and 362
-  shown: '362'
-  expr: 'float(pd.read_csv(RESULTS/''citation_age/ranking_win8_top100.csv'').loc[lambda d: d[''rank'']==10,''score''].iloc[0])'
 - id: s6-line-top15
   file: docs/supplements/S6-citation-age.md
   context: the equal-window ranking has one post-2005 concept in its top 15 and twelve in its top 50
   shown: '1'
   expr: len(json.load(open(RESULTS/'citation_age/summary.json'))['win8']['top15']['concepts_after_2005'])
-- id: s6x-vol-1990-neuro-n
-  file: docs/supplements/S6-citation-age.md
-  context: in 1990 AI papers made 119,184 references and neuroscience papers 657,528
-  shown: 657,528
-  expr: pd.read_csv(RESULTS/'citation_age/citing_volume.csv').query("citing_field=='neuro' and citing_year==1990").n_refs.iloc[0]
-- id: s6x-vol-2023-neuro-n
-  file: docs/supplements/S6-citation-age.md
-  context: in 2023 5,491,223 and 5,077,910
-  shown: 5,077,910
-  expr: pd.read_csv(RESULTS/'citation_age/citing_volume.csv').query("citing_field=='neuro' and citing_year==2023").n_refs.iloc[0]
 - id: s6-e15-miller
   file: docs/supplements/S6-citation-age.md
   context: (dated 1994 in Figure 3 and Table S5.1, a reprint)
@@ -711,112 +531,112 @@
   expr: int(pd.read_csv(RESULTS/'citation_age/ranking_rate_share_top100.csv').query("title_norm.str.contains('performance-optimized hierarchical models')", engine='python')['rank'].iloc[0])
 - id: s6y-t25-orig-median
   file: docs/supplements/S6-citation-age.md
-  context: '| Published (all-time counts) | 2002 (1998-2010) | 39 | 42 | 6 | 1 | 13 | 24 | 23 | 19 | 8 | 12 | 0 |'
+  context: '| Published (all-time counts) | 2002 (1998-2010) | 39 | 42 | 6 |'
   shown: '2002'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['orig']['median_year']
 - id: s6y-t25-orig-after2005
   file: docs/supplements/S6-citation-age.md
-  context: '| Published (all-time counts) | 2002 (1998-2010) | 39 | 42 | 6 | 1 | 13 | 24 | 23 | 19 | 8 | 12 | 0 |'
+  context: '| Published (all-time counts) | 2002 (1998-2010) | 39 | 42 | 6 |'
   shown: '39'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['orig']['n_after_2005']
 - id: s6y-t25-orig-concepts
   file: docs/supplements/S6-citation-age.md
-  context: '| Published (all-time counts) | 2002 (1998-2010) | 39 | 42 | 6 | 1 | 13 | 24 | 23 | 19 | 8 | 12 | 0 |'
+  context: '| Published (all-time counts) | 2002 (1998-2010) | 39 | 42 | 6 |'
   shown: '42'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['orig']['by_class']['concept']
 - id: s6y-t25-orig-cafter
   file: docs/supplements/S6-citation-age.md
-  context: '| Published (all-time counts) | 2002 (1998-2010) | 39 | 42 | 6 | 1 | 13 | 24 | 23 | 19 | 8 | 12 | 0 |'
+  context: '| Published (all-time counts) | 2002 (1998-2010) | 39 | 42 | 6 |'
   shown: '6'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['orig']['concepts_after_2005']
 - id: s6y-t25-rate-median
   file: docs/supplements/S6-citation-age.md
-  context: '| Citations per year to 2023 | 2011 (2002-2017) | 67 | 30 | 11 | 1 | 4 | 14 | 14 | 17 | 13 | 32 | 5 |'
+  context: '| Citations per year to 2023 | 2011 (2002-2017) | 67 | 30 | 11 |'
   shown: '2011'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['rate']['median_year']
 - id: s6y-t25-rate-after2005
   file: docs/supplements/S6-citation-age.md
-  context: '| Citations per year to 2023 | 2011 (2002-2017) | 67 | 30 | 11 | 1 | 4 | 14 | 14 | 17 | 13 | 32 | 5 |'
+  context: '| Citations per year to 2023 | 2011 (2002-2017) | 67 | 30 | 11 |'
   shown: '67'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['rate']['n_after_2005']
 - id: s6y-t25-rate-concepts
   file: docs/supplements/S6-citation-age.md
-  context: '| Citations per year to 2023 | 2011 (2002-2017) | 67 | 30 | 11 | 1 | 4 | 14 | 14 | 17 | 13 | 32 | 5 |'
+  context: '| Citations per year to 2023 | 2011 (2002-2017) | 67 | 30 | 11 |'
   shown: '30'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['rate']['by_class']['concept']
 - id: s6y-t25-rate-cafter
   file: docs/supplements/S6-citation-age.md
-  context: '| Citations per year to 2023 | 2011 (2002-2017) | 67 | 30 | 11 | 1 | 4 | 14 | 14 | 17 | 13 | 32 | 5 |'
+  context: '| Citations per year to 2023 | 2011 (2002-2017) | 67 | 30 | 11 |'
   shown: '11'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['rate']['concepts_after_2005']
 - id: s6y-t25-win8-median
   file: docs/supplements/S6-citation-age.md
-  context: '| Equal 8-year window | 2010 (2005-2014) | 73 | 43 | 24 | 2 | 2 | 9 | 14 | 24 | 49 | 0 | 0 |'
+  context: '| Equal 8-year window | 2010 (2005-2014) | 73 | 43 | 24 |'
   shown: '2010'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['win8']['median_year']
 - id: s6y-t25-win8-after2005
   file: docs/supplements/S6-citation-age.md
-  context: '| Equal 8-year window | 2010 (2005-2014) | 73 | 43 | 24 | 2 | 2 | 9 | 14 | 24 | 49 | 0 | 0 |'
+  context: '| Equal 8-year window | 2010 (2005-2014) | 73 | 43 | 24 |'
   shown: '73'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['win8']['n_after_2005']
 - id: s6y-t25-win8-concepts
   file: docs/supplements/S6-citation-age.md
-  context: '| Equal 8-year window | 2010 (2005-2014) | 73 | 43 | 24 | 2 | 2 | 9 | 14 | 24 | 49 | 0 | 0 |'
+  context: '| Equal 8-year window | 2010 (2005-2014) | 73 | 43 | 24 |'
   shown: '43'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['win8']['by_class']['concept']
 - id: s6y-t25-win8-cafter
   file: docs/supplements/S6-citation-age.md
-  context: '| Equal 8-year window | 2010 (2005-2014) | 73 | 43 | 24 | 2 | 2 | 9 | 14 | 24 | 49 | 0 | 0 |'
+  context: '| Equal 8-year window | 2010 (2005-2014) | 73 | 43 | 24 |'
   shown: '24'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['win8']['concepts_after_2005']
 - id: s6y-t25-win8_share-median
   file: docs/supplements/S6-citation-age.md
-  context: '| 8-year window, growth-normalized | 1995 (1991-2000) | 12 | 66 | 4 | 2 | 49 | 25 | 12 | 6 | 6 | 0 | 0 |'
+  context: '| 8-year window, growth-normalized | 1995 (1991-2000) | 12 | 66 | 4 |'
   shown: '1995'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['win8_share']['median_year']
 - id: s6y-t25-win8_share-after2005
   file: docs/supplements/S6-citation-age.md
-  context: '| 8-year window, growth-normalized | 1995 (1991-2000) | 12 | 66 | 4 | 2 | 49 | 25 | 12 | 6 | 6 | 0 | 0 |'
+  context: '| 8-year window, growth-normalized | 1995 (1991-2000) | 12 | 66 | 4 |'
   shown: '12'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['win8_share']['n_after_2005']
 - id: s6y-t25-win8_share-concepts
   file: docs/supplements/S6-citation-age.md
-  context: '| 8-year window, growth-normalized | 1995 (1991-2000) | 12 | 66 | 4 | 2 | 49 | 25 | 12 | 6 | 6 | 0 | 0 |'
+  context: '| 8-year window, growth-normalized | 1995 (1991-2000) | 12 | 66 | 4 |'
   shown: '66'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['win8_share']['by_class']['concept']
 - id: s6y-t25-win8_share-cafter
   file: docs/supplements/S6-citation-age.md
-  context: '| 8-year window, growth-normalized | 1995 (1991-2000) | 12 | 66 | 4 | 2 | 49 | 25 | 12 | 6 | 6 | 0 | 0 |'
+  context: '| 8-year window, growth-normalized | 1995 (1991-2000) | 12 | 66 | 4 |'
   shown: '4'
   expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['win8_share']['concepts_after_2005']
 - id: s6-from1996-n
   file: docs/supplements/S6-citation-age.md
-  context: "The committed top-100 file holds 49 works from 1996 on, so only ranks 1 to 49 of this re-rank can be read (rank 50 cannot), and 4 of them are concepts published after 2004: Torralba and colleagues' contextual guidance of eye movements (2006, rank 43), Yamins et al. 2014 (rank 44), Friston's free-energy principle (2010, rank 45) and the Blue Brain Project (2006, rank 46)."
+  context: The committed top-100 file holds 49 such works
   shown: '49'
   expr: len(pd.read_csv(RESULTS/'citation_age/ranking_win8_share_top100.csv').merge(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')[['title_norm','class','true_year']], on='title_norm').query('true_year>=1996').sort_values('rank').reset_index(drop=True))
 - id: s6-from1996-late-concepts
   file: docs/supplements/S6-citation-age.md
-  context: "The committed top-100 file holds 49 works from 1996 on, so only ranks 1 to 49 of this re-rank can be read (rank 50 cannot), and 4 of them are concepts published after 2004: Torralba and colleagues' contextual guidance of eye movements (2006, rank 43), Yamins et al. 2014 (rank 44), Friston's free-energy principle (2010, rank 45) and the Blue Brain Project (2006, rank 46)."
+  context: and 4 of them are concepts published after 2004
   shown: '4'
   expr: int(((pd.read_csv(RESULTS/'citation_age/ranking_win8_share_top100.csv').merge(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')[['title_norm','class','true_year']], on='title_norm').query('true_year>=1996').sort_values('rank').reset_index(drop=True))['class'].eq('concept') & (pd.read_csv(RESULTS/'citation_age/ranking_win8_share_top100.csv').merge(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')[['title_norm','class','true_year']], on='title_norm').query('true_year>=1996').sort_values('rank').reset_index(drop=True)).true_year.gt(2004) & (pd.read_csv(RESULTS/'citation_age/ranking_win8_share_top100.csv').merge(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')[['title_norm','class','true_year']], on='title_norm').query('true_year>=1996').sort_values('rank').reset_index(drop=True)).index.to_series().lt(49)).sum())
 - id: s6-from1996-rank43
   file: docs/supplements/S6-citation-age.md
-  context: "The committed top-100 file holds 49 works from 1996 on, so only ranks 1 to 49 of this re-rank can be read (rank 50 cannot), and 4 of them are concepts published after 2004: Torralba and colleagues' contextual guidance of eye movements (2006, rank 43), Yamins et al. 2014 (rank 44), Friston's free-energy principle (2010, rank 45) and the Blue Brain Project (2006, rank 46)."
+  context: contextual guidance of eye movements (2006, rank 43)
   shown: '43'
   expr: int((pd.read_csv(RESULTS/'citation_age/ranking_win8_share_top100.csv').merge(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')[['title_norm','class','true_year']], on='title_norm').query('true_year>=1996').sort_values('rank').reset_index(drop=True))[(pd.read_csv(RESULTS/'citation_age/ranking_win8_share_top100.csv').merge(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')[['title_norm','class','true_year']], on='title_norm').query('true_year>=1996').sort_values('rank').reset_index(drop=True)).title_norm.str.contains('contextual guidance')].index[0])+1
 - id: s6-from1996-rank44
   file: docs/supplements/S6-citation-age.md
-  context: "The committed top-100 file holds 49 works from 1996 on, so only ranks 1 to 49 of this re-rank can be read (rank 50 cannot), and 4 of them are concepts published after 2004: Torralba and colleagues' contextual guidance of eye movements (2006, rank 43), Yamins et al. 2014 (rank 44), Friston's free-energy principle (2010, rank 45) and the Blue Brain Project (2006, rank 46)."
+  context: Yamins et al. 2014 (rank 44)
   shown: '44'
   expr: int((pd.read_csv(RESULTS/'citation_age/ranking_win8_share_top100.csv').merge(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')[['title_norm','class','true_year']], on='title_norm').query('true_year>=1996').sort_values('rank').reset_index(drop=True))[(pd.read_csv(RESULTS/'citation_age/ranking_win8_share_top100.csv').merge(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')[['title_norm','class','true_year']], on='title_norm').query('true_year>=1996').sort_values('rank').reset_index(drop=True)).title_norm.str.contains('performance-optimized hierarchical')].index[0])+1
 - id: s6-from1996-rank45
   file: docs/supplements/S6-citation-age.md
-  context: "The committed top-100 file holds 49 works from 1996 on, so only ranks 1 to 49 of this re-rank can be read (rank 50 cannot), and 4 of them are concepts published after 2004: Torralba and colleagues' contextual guidance of eye movements (2006, rank 43), Yamins et al. 2014 (rank 44), Friston's free-energy principle (2010, rank 45) and the Blue Brain Project (2006, rank 46)."
+  context: free-energy principle (2010, rank 45)
   shown: '45'
   expr: int((pd.read_csv(RESULTS/'citation_age/ranking_win8_share_top100.csv').merge(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')[['title_norm','class','true_year']], on='title_norm').query('true_year>=1996').sort_values('rank').reset_index(drop=True))[(pd.read_csv(RESULTS/'citation_age/ranking_win8_share_top100.csv').merge(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')[['title_norm','class','true_year']], on='title_norm').query('true_year>=1996').sort_values('rank').reset_index(drop=True)).title_norm.str.contains('free-energy principle')].index[0])+1
 - id: s6-from1996-rank46
   file: docs/supplements/S6-citation-age.md
-  context: "The committed top-100 file holds 49 works from 1996 on, so only ranks 1 to 49 of this re-rank can be read (rank 50 cannot), and 4 of them are concepts published after 2004: Torralba and colleagues' contextual guidance of eye movements (2006, rank 43), Yamins et al. 2014 (rank 44), Friston's free-energy principle (2010, rank 45) and the Blue Brain Project (2006, rank 46)."
+  context: the Blue Brain Project (2006, rank 46)
   shown: '46'
   expr: int((pd.read_csv(RESULTS/'citation_age/ranking_win8_share_top100.csv').merge(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')[['title_norm','class','true_year']], on='title_norm').query('true_year>=1996').sort_values('rank').reset_index(drop=True))[(pd.read_csv(RESULTS/'citation_age/ranking_win8_share_top100.csv').merge(pd.read_csv(RESULTS/'citation_age/classification.csv', comment='#')[['title_norm','class','true_year']], on='title_norm').query('true_year>=1996').sort_values('rank').reset_index(drop=True)).title_norm.str.contains('blue brain project')].index[0])+1
 - id: s6-share-win8-post2004-n
@@ -839,3 +659,23 @@
   context: 7 works published after 2004 are in the top 50 of the growth-normalized 8-year window (lme4 at rank 6 and the BRATS benchmark at rank 7 among them) and 21 in that of the growth-normalized per-year rate
   shown: '7'
   expr: int(pd.read_csv(RESULTS/'citation_age/ranking_win8_share_top100.csv')[pd.read_csv(RESULTS/'citation_age/ranking_win8_share_top100.csv').title.str.contains('BRATS')]['rank'].iloc[0])
+- id: s6-median-rate
+  file: docs/supplements/S6-citation-age.md
+  context: from 2002 to 2011 for the per-year rate
+  shown: '2011'
+  expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['rate']['median_year']
+- id: s6-median-win8
+  file: docs/supplements/S6-citation-age.md
+  context: to 2010 for the 8-year window
+  shown: '2010'
+  expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['win8']['median_year']
+- id: s6-post2005-rate
+  file: docs/supplements/S6-citation-age.md
+  context: published after 2005 from 6 to 11 and 24
+  shown: '11'
+  expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['rate']['concepts_after_2005']
+- id: s6-post2005-win8-100
+  file: docs/supplements/S6-citation-age.md
+  context: published after 2005 from 6 to 11 and 24
+  shown: '24'
+  expr: json.load(open(RESULTS/'citation_age/summary.json'))['top100_year_distribution']['win8']['concepts_after_2005']

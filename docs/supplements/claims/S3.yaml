@@ -119,36 +119,6 @@
   context: '| 2023 | 22.19 | 16.51 |'
   shown: '16.51'
   expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'ai_to_neuro']
-- id: s3-rpp-1995-neuro
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: neuroscience from 9.56 in 1995 to 30.78 and AI from 2.78 to 15.84
-  shown: '9.56'
-  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[1995,'refs_per_neuroscience_paper']
-- id: s3-rpp-1995-ai
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: neuroscience from 9.56 in 1995 to 30.78 and AI from 2.78 to 15.84
-  shown: '2.78'
-  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[1995,'refs_per_ai_paper']
-- id: s3-rpp-2021-neuro
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: neuroscience from 9.56 in 1995 to 30.78 and AI from 2.78 to 15.84
-  shown: '30.78'
-  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2021,'refs_per_neuroscience_paper']
-- id: s3-rpp-2021-ai
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: neuroscience from 9.56 in 1995 to 30.78 and AI from 2.78 to 15.84
-  shown: '15.84'
-  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2021,'refs_per_ai_paper']
-- id: s3-rpp-2025-neuro
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: by 2025 are 16.04 and 7.76
-  shown: '16.04'
-  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2025,'refs_per_neuroscience_paper']
-- id: s3-rpp-2025-ai
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: by 2025 are 16.04 and 7.76
-  shown: '7.76'
-  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2025,'refs_per_ai_paper']
 - id: s3-ratio-min
   file: docs/supplements/S3-counts-and-field-sizes.md
   context: never falls below 1.15 (in 2025)
@@ -161,49 +131,19 @@
   expr: (mod('analysis.flow_numbers').cross_field_citations_per_year().neuro_to_ai/mod('analysis.flow_numbers').cross_field_citations_per_year().ai_to_neuro).loc[1995:].max()
 - id: s3-dominance
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'in every year, 1990 to 2025.'
+  context: in every year, 1990 to 2025.
   shown: '1990'
   expr: 1990 if mod('analysis.flow_numbers').count_dominance()['neuro_exceeds_ai_every_year'] else -1
 - id: s3-growth-gold
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'the gold count grew 23.2-fold and the teal count 38.6-fold'
+  context: the gold count grew 23.2-fold and the teal count 38.6-fold
   shown: '23.2'
   expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2023,'neuro_to_ai']/mod('analysis.flow_numbers').cross_field_citations_per_year().loc[1995,'neuro_to_ai']
 - id: s3-growth-teal
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'the gold count grew 23.2-fold and the teal count 38.6-fold'
+  context: the gold count grew 23.2-fold and the teal count 38.6-fold
   shown: '38.6'
   expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2023,'ai_to_neuro']/mod('analysis.flow_numbers').cross_field_citations_per_year().loc[1995,'ai_to_neuro']
-- id: s3-fac-papers-gold
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: For gold they grew by x 3.90, x 2.96 and x 2.01; for teal by x 9.86, x 4.58 and x 0.85
-  shown: '3.90'
-  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'neuroscience_papers']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[1995,'neuroscience_papers']
-- id: s3-fac-papers-teal
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: For gold they grew by x 3.90, x 2.96 and x 2.01; for teal by x 9.86, x 4.58 and x 0.85
-  shown: '9.86'
-  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'ai_papers']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[1995,'ai_papers']
-- id: s3-fac-rpp-gold
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: For gold they grew by x 3.90, x 2.96 and x 2.01; for teal by x 9.86, x 4.58 and x 0.85
-  shown: '2.96'
-  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_neuroscience_paper']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[1995,'refs_per_neuroscience_paper']
-- id: s3-fac-rpp-teal
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: For gold they grew by x 3.90, x 2.96 and x 2.01; for teal by x 9.86, x 4.58 and x 0.85
-  shown: '4.58'
-  expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_ai_paper']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[1995,'refs_per_ai_paper']
-- id: s3-fac-share-gold
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: For gold they grew by x 3.90, x 2.96 and x 2.01; for teal by x 9.86, x 4.58 and x 0.85
-  shown: '2.01'
-  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'neuro_to_ai']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[1995,'neuro_to_ai']
-- id: s3-fac-share-teal
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: For gold they grew by x 3.90, x 2.96 and x 2.01; for teal by x 9.86, x 4.58 and x 0.85
-  shown: '0.85'
-  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'ai_to_neuro']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[1995,'ai_to_neuro']
 - id: s3-2023-size
   file: docs/supplements/S3-counts-and-field-sizes.md
   context: In 2023 AI published 2.11 times as many papers as neuroscience
@@ -219,16 +159,6 @@
   context: a neuroscience paper recorded 2.22 times as many references
   shown: '2.22'
   expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_neuroscience_paper']/pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'refs_per_ai_paper']
-- id: s3-2023-shareratio
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'its cross-field share was 1.34 times the AI one'
-  shown: '1.34'
-  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'neuro_to_ai']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'ai_to_neuro']
-- id: s3-gold-1995
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: The gold share falls from 11.05 per 1,000 in 1995 to its lowest value, 8.30, in 2000
-  shown: '11.05'
-  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[1995,'neuro_to_ai']
 - id: s3-gold-2000
   file: docs/supplements/S3-counts-and-field-sizes.md
   context: to its lowest value, 8.30, in 2000
@@ -256,14 +186,9 @@
   expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2002:2019,'ai_to_neuro'].max()
 - id: s3-teal-2020
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'falls to 15.26 in 2020 (lowest value, 15.19, in 2021)'
+  context: falls to 15.26 in 2020
   shown: '15.26'
   expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2020,'ai_to_neuro']
-- id: s3-teal-min
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: '(lowest value, 15.19, in 2021)'
-  shown: '15.19'
-  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[:,'ai_to_neuro'].min()
 - id: s3-teal-2023
   file: docs/supplements/S3-counts-and-field-sizes.md
   context: and is back at 16.51 in 2023
@@ -271,22 +196,22 @@
   expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'ai_to_neuro']
 - id: s3-cross-2017
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: Teal was higher in 2017 (17.78 against 15.23)
+  context: teal was higher in 2017 (17.78 against 15.23)
   shown: '17.78'
   expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2017,'ai_to_neuro']
 - id: s3-cross-2017g
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: Teal was higher in 2017 (17.78 against 15.23)
+  context: teal was higher in 2017 (17.78 against 15.23)
   shown: '15.23'
   expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2017,'neuro_to_ai']
 - id: s3-cross-interp
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'I put the crossing by linear interpolation at 2017.87'
+  context: the crossing by linear interpolation is at 2017.87
   shown: '2017.87'
   expr: mod('analysis.flow_numbers').share_crossing(smoothed=False)['crossing_year_interpolated']
 - id: s3-cross-interp-sm
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: the interpolated crossing at 2018.04
+  context: The thick 5-year means cross later (2018.04)
   shown: '2018.04'
   expr: mod('analysis.flow_numbers').share_crossing(smoothed=True)['crossing_year_interpolated']
 - id: s3-size-2019
@@ -304,39 +229,19 @@
   context: while the gold share went from 18.54 to 22.19
   shown: '18.54'
   expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2019,'neuro_to_ai']
-- id: s3-size-2006
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: from 2006 to 2015 the size ratio fell from 1.66 to 1.40
-  shown: '1.66'
-  expr: mod('analysis.flow_numbers').size_ratio_by_year().loc[2006]
-- id: s3-size-2015
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: from 2006 to 2015 the size ratio fell from 1.66 to 1.40
-  shown: '1.40'
-  expr: mod('analysis.flow_numbers').size_ratio_by_year().loc[2015]
-- id: s3-gold-2006
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: while the gold share rose from 10.58 to 13.24
-  shown: '10.58'
-  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2006,'neuro_to_ai']
-- id: s3-gold-2015
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: while the gold share rose from 10.58 to 13.24
-  shown: '13.24'
-  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2015,'neuro_to_ai']
 - id: s3-third-ai
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: "34.2 percent of AI papers' recorded references in 2023"
+  context: 34.2 percent of AI papers' recorded references in 2023
   shown: '34.2'
   expr: (lambda o:(o.n_to_other/(o.n_to_within+o.n_to_target+o.n_to_other)))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction'])).loc[(2023,'ai_to_neuro')]*100
 - id: s3-third-neuro
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: "44.0 percent of neuroscience papers'"
+  context: 44.0 percent of neuroscience papers'
   shown: '44.0'
   expr: (lambda o:(o.n_to_other/(o.n_to_within+o.n_to_target+o.n_to_other)))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction'])).loc[(2023,'neuro_to_ai')]*100
 - id: s3-obs-ai-2023
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'In 2023 it is 25.10 per 1,000 for AI papers citing neuroscience against 16.51 in panel B'
+  context: in 2023, 25.10 per 1,000 for AI papers citing neuroscience against 16.51 in panel B
   shown: '25.10'
   expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'rho_restricted']*1000
 - id: s3-obs-gold-2023
@@ -354,16 +259,6 @@
   context: (8.5 percent of the references of neuroscience papers in 2023 and 19.6 percent
   shown: '19.6'
   expr: (lambda o:(o.n_to_missing/(o.n_to_within+o.n_to_target+o.n_to_other+o.n_to_unknown+o.n_to_missing)))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction'])).loc[(2023,'ai_to_neuro')]*100
-- id: s3-w23-odds-of-the-observed-share-gold
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: I get observed odds of 0.0413 for gold and 0.0257 for teal
-  shown: '0.0413'
-  expr: (lambda p:p/(1-p))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'rho_restricted'])
-- id: s3-w23-odds-of-the-observed-share-teal
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: I get observed odds of 0.0413 for gold and 0.0257 for teal
-  shown: '0.0257'
-  expr: (lambda p:p/(1-p))(pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'rho_restricted'])
 - id: s3-w23-odds-of-the-expected-share-gold
   file: docs/supplements/S3-counts-and-field-sizes.md
   context: the expected odds from field sizes are 2.113 and 0.473
@@ -404,49 +299,29 @@
   context: the squared AI-to-neuroscience size ratio is 4.46
   shown: '4.46'
   expr: mod('analysis.flow_numbers').size_ratio_by_year().loc[2023]**2
-- id: s3-flat-share-drop
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: the teal share fell by 15 percent
-  shown: '15'
-  expr: (1-mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'ai_to_neuro']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[1995,'ai_to_neuro'])*100
-- id: s3-flat-exp-1995
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: from 0.545 to 0.321
-  shown: '0.545'
-  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(1995,'ai_to_neuro'),'rho_null_restricted']
-- id: s3-flat-exp-2023
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: from 0.545 to 0.321
-  shown: '0.321'
-  expr: pd.read_csv(RESULTS/'flow/or_by_year.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'rho_null_restricted']
-- id: s3-flat-or-growth
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'the teal odds ratio rose 1.88-fold'
-  shown: '1.88'
-  expr: mod('analysis.flow_numbers').odds_ratio_growth()['ai_to_neuro']
 - id: s3-dil-n20
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'neuroscience went from 152,180 to 164,016 papers per year'
+  context: neuroscience went from 152,180 to 164,016 papers per year
   shown: 152,180
   expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2020,'neuroscience_papers']
 - id: s3-dil-n23
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'neuroscience went from 152,180 to 164,016 papers per year'
+  context: neuroscience went from 152,180 to 164,016 papers per year
   shown: 164,016
   expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'neuroscience_papers']
 - id: s3-dil-a20
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'AI from 261,340 to 346,525'
+  context: AI from 261,340 to 346,525
   shown: 261,340
   expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2020,'ai_papers']
 - id: s3-dil-a23
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'AI from 261,340 to 346,525'
+  context: AI from 261,340 to 346,525
   shown: 346,525
   expr: pd.read_csv(RESULTS/'flow/companion_counts_shares_sizes.csv').set_index('year').loc[2023,'ai_papers']
 - id: s3-dil-r20
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'so AI went from 1.72 to 2.11 times its size'
+  context: so AI went from 1.72 to 2.11 times its size
   shown: '1.72'
   expr: mod('analysis.flow_numbers').size_ratio_by_year().loc[2020]
 - id: s3-dil-exp-t20
@@ -539,11 +414,6 @@
   context: '| of which, field-size factor | x 1.23 | x 0.81 |'
   shown: '0.81'
   expr: pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'size_factor_citing_over_cited_papers']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'neuro_to_ai'),'size_factor_citing_over_cited_papers']
-- id: s3-dil-37
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'between 2020 and 2023 the teal odds ratio rose by 37.8 percent'
-  shown: '37.8'
-  expr: (pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'odds_ratio']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'odds_ratio']-1)*100
 - id: s3-dil-12
   file: docs/supplements/S3-counts-and-field-sizes.md
   context: Its observed odds rose by 12.0 percent
@@ -589,21 +459,6 @@
   context: its odds ratio fell by 4.7 percent
   shown: '4.7'
   expr: (1-pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'neuro_to_ai'),'odds_ratio']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'neuro_to_ai'),'odds_ratio'])*100
-- id: s3-v-gold2000
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: By 2023 the gold share is 2.68 times its value of 2000
-  shown: '2.68'
-  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'neuro_to_ai']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[2000,'neuro_to_ai']
-- id: s3-v-gold1995
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: (2.01 times its 1995 value)
-  shown: '2.01'
-  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'neuro_to_ai']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[1995,'neuro_to_ai']
-- id: s3-v-teal2000
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: the teal share is 0.79 of its 2000 value
-  shown: '0.79'
-  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'ai_to_neuro']/mod('analysis.flow_numbers').cross_refs_per_1000().loc[2000,'ai_to_neuro']
 - id: s3-v-or-min
   file: docs/supplements/S3-counts-and-field-sizes.md
   context: (smallest ratio 1.25, in 1995)
@@ -644,46 +499,16 @@
   context: (90,282 in 2024, 97,295 in 2025)
   shown: 97,295
   expr: mod('analysis.flow_numbers').cross_field_citations_per_year().loc[2025,'ai_to_neuro']
-- id: s3-e9-or-year
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: is also highest in 2023 among the solid years, 0.0544
-  shown: '2023'
-  expr: mod('analysis.flow_numbers').odds_ratio_at(tuple(range(1990,2024))).ai_to_neuro.idxmax()
-- id: s3-e9-or-val
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: is also highest in 2023 among the solid years, 0.0544
-  shown: '0.0544'
-  expr: mod('analysis.flow_numbers').odds_ratio_at(tuple(range(1990,2024))).ai_to_neuro.max()
 - id: s3-e9-share23
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'The teal share, however, is 16.51 per 1,000 in 2023, below its value in 2000, 20.95'
+  context: The teal share, however, is 16.51 per 1,000 in 2023, below its value in 2000, 20.95
   shown: '16.51'
   expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2023,'ai_to_neuro']
 - id: s3-e9-share00
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'The teal share, however, is 16.51 per 1,000 in 2023, below its value in 2000, 20.95'
+  context: The teal share, however, is 16.51 per 1,000 in 2023, below its value in 2000, 20.95
   shown: '20.95'
   expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[2000,'ai_to_neuro']
-- id: s3-e11-thick20
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: (the thick 5-year line of the figure rises from 15.89 to 17.66, or 11.2 percent)
-  shown: '15.89'
-  expr: pd.read_csv(RESULTS/'flow/figure2_raw_v2_data.csv')[lambda d:d.colour=='teal'].set_index('year')['B_per_1000_5yr_centred_mean_PLOTTED'][2020]
-- id: s3-e11-thick23
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: (the thick 5-year line of the figure rises from 15.89 to 17.66, or 11.2 percent)
-  shown: '17.66'
-  expr: pd.read_csv(RESULTS/'flow/figure2_raw_v2_data.csv')[lambda d:d.colour=='teal'].set_index('year')['B_per_1000_5yr_centred_mean_PLOTTED'][2023]
-- id: s3-e11-thick-pct
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: (the thick 5-year line of the figure rises from 15.89 to 17.66, or 11.2 percent)
-  shown: '11.2'
-  expr: 100*(pd.read_csv(RESULTS/'flow/figure2_raw_v2_data.csv')[lambda d:d.colour=='teal'].set_index('year')['B_per_1000_5yr_centred_mean_PLOTTED'][2023]/pd.read_csv(RESULTS/'flow/figure2_raw_v2_data.csv')[lambda d:d.colour=='teal'].set_index('year')['B_per_1000_5yr_centred_mean_PLOTTED'][2020]-1)
-- id: s3-e11-thick95
-  file: docs/supplements/S3-counts-and-field-sizes.md
-  context: so the thick line at 1995 averages 1993 to 1997
-  shown: '1995'
-  expr: 1995 if abs(pd.read_csv(RESULTS/'flow/figure2_raw_v2_data.csv').query('colour=="teal" and year==1995').B_per_1000_5yr_centred_mean_PLOTTED.iloc[0]-mod('analysis.flow_numbers').cross_refs_per_1000().loc[1993:1997,'ai_to_neuro'].mean())<1e-9 else 0
 - id: s3-e10-share-last
   file: docs/supplements/S3-counts-and-field-sizes.md
   context: teal above gold in every year from 1995 to 2017, gold above teal from 2018
@@ -716,12 +541,12 @@
   expr: '(lambda r: 2025 if (r>0).all() and r.index.max()==2025 else 0)(mod(''analysis.flow_numbers'').cross_field_citations_per_year()[''neuro_to_ai'']-mod(''analysis.flow_numbers'').cross_field_citations_per_year()[''ai_to_neuro''])'
 - id: s3-e13-yearly
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: 'I put the crossing by linear interpolation at 2017.87'
+  context: the crossing by linear interpolation is at 2017.87
   shown: '2017.87'
   expr: mod('analysis.flow_numbers').share_crossing()['crossing_year_interpolated']
 - id: s3-e13-thick
   file: docs/supplements/S3-counts-and-field-sizes.md
-  context: the interpolated crossing at 2018.04
+  context: The thick 5-year means cross later (2018.04)
   shown: '2018.04'
   expr: mod('analysis.flow_numbers').share_crossing(smoothed=True)['crossing_year_interpolated']
 - id: s3-e10-share-start
@@ -729,3 +554,23 @@
   context: teal above gold in every year from 1995 to 2017, gold above teal from 2018
   shown: '1995'
   expr: '(lambda d: d.index.min() if (d.loc[:2017]>0).all() else 0)((mod(''analysis.flow_numbers'').cross_refs_per_1000()[''ai_to_neuro'']-mod(''analysis.flow_numbers'').cross_refs_per_1000()[''neuro_to_ai'']).loc[1995:])'
+- id: s3-gold-1995
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the gold share falls from 11.05 per 1,000 in 1995
+  shown: '11.05'
+  expr: mod('analysis.flow_numbers').cross_refs_per_1000().loc[1995,'neuro_to_ai']
+- id: s3-dil-37
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: that between 2020 and 2023 the teal odds ratio rose by 37.8 percent
+  shown: '37.8'
+  expr: (pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2023,'ai_to_neuro'),'odds_ratio']/pd.read_csv(RESULTS/'flow/figure_s3_dilution_data.csv').set_index(['year','direction']).loc[(2020,'ai_to_neuro'),'odds_ratio']-1)*100
+- id: s3-e9-or-year
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the teal odds ratio highest in 2023 among the solid years, 0.0544
+  shown: '2023'
+  expr: mod('analysis.flow_numbers').odds_ratio_at(tuple(range(1990,2024))).ai_to_neuro.idxmax()
+- id: s3-e9-or-val
+  file: docs/supplements/S3-counts-and-field-sizes.md
+  context: the teal odds ratio highest in 2023 among the solid years, 0.0544
+  shown: '0.0544'
+  expr: mod('analysis.flow_numbers').odds_ratio_at(tuple(range(1990,2024))).ai_to_neuro.max()

@@ -37,7 +37,7 @@ Data sources (results/bridge/, written by ``python -m neuroai_cn.analysis.export
     author_institution_edges.csv              hand-verified author->institution edges (current/past)
 
 Output (config.FIGURES_DIR):
-    figure2_v3.{png,svg}  and  figure_s5_institutions_separated.{png,svg} (Figure S5.1)
+    figure2_v3.{png,svg}
 """
 
 from __future__ import annotations
@@ -819,5 +819,3 @@ if __name__ == "__main__":
     # Main: consolidated corporate groups
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
     build(use_consolidated=True)
-    # Supplementary: OpenAlex's separated entities, no consolidation
-    build(use_consolidated=False, name="figure_s5_institutions_separated")

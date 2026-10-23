@@ -1,9 +1,7 @@
 """Supplement S2 figures, all drawn from the small files committed under results/.
 
     figure_s2_trends       Figure S2.1  segment fits and rolling slopes of the odds-ratio series
-    figure_s2_replication  Figure S2.2  snapshot against the May 2026 re-download, extended definition
-    figure_s2_sources      Figure S2.3  three sources side by side (shape comparison)
-    figure_s2_sensitivity  Figure S2.4  restricted against unrestricted odds ratio; leave-one-topic-out
+    figure_s2_sensitivity  Figure S2.2  restricted against unrestricted odds ratio; leave-one-topic-out
 
 Colors follow Figure 1: gold = neuroscience papers citing AI, teal = AI papers citing neuroscience.
 Long notes live in the captions of docs/supplements/S2-citation-flow.md, not in the images.
@@ -22,7 +20,6 @@ import numpy as np
 import pandas as pd
 
 from .. import config
-from ..analysis import flow_numbers as fn
 from .style import DIRECTION_COLORS, TRANSMITTER, apply_style
 
 logger = logging.getLogger(__name__)
@@ -100,7 +97,11 @@ def figure_trends() -> None:
             ax_b.plot(rs.index, rs.values, ls, color=COLORS[d], lw=1.8)
     ax_a.set_yscale("log")
     ax_a.set_ylabel("Odds ratio (log scale)")
-    ax_a.set_title("A  Yearly odds ratio and the segment fits of Figure 1C", fontsize=11, pad=8)
+    ax_a.set_title(
+        "A  Yearly odds ratio, segment fits and change points (dashed) of Figure 1C",
+        fontsize=11,
+        pad=8,
+    )
     ax_b.axhline(0, color=GRAY, lw=0.8, ls=":")
     ax_b.set_ylabel("Slope (odds ratio per year)")
     ax_b.set_xlabel("Year")
@@ -111,7 +112,7 @@ def figure_trends() -> None:
         plt.Line2D([], [], color=GOLD, lw=3, label=LABELS["neuro_to_ai"]),
         plt.Line2D([], [], color=TEAL, lw=3, label=LABELS["ai_to_neuro"]),
     ]
-    ax_a.legend(handles=handles, loc="upper left", fontsize=9, frameon=False)
+    ax_a.legend(handles=handles, loc="lower left", fontsize=9, frameon=False)
     for ax in (ax_a, ax_b):
         _shade_provisional(ax)
         ax.set_xlim(1994.5, 2025.5)
@@ -125,6 +126,26 @@ def figure_trends() -> None:
         fontsize=8,
         color=GRAY,
     )
+    cps = pd.read_csv(FLOW / "changepoints.csv")
+    cps = cps[
+        cps.setting.str.startswith("figure")
+        & (cps.series == "or_restricted")
+        & cps.breakpoint_year_first_of_new_segment.notna()
+    ]
+    for d in ("neuro_to_ai", "ai_to_neuro"):
+        for yr in sorted(cps[cps.direction == d].breakpoint_year_first_of_new_segment.astype(int)):
+            for ax in (ax_a, ax_b):
+                ax.axvline(yr - 0.5, color=COLORS[d], lw=1.1, ls="--", alpha=0.9)
+            ax_b.text(
+                yr - 0.3,
+                0.97 if d == "ai_to_neuro" else 0.89,
+                str(yr),
+                transform=ax_b.get_xaxis_transform(),
+                fontsize=8.5,
+                color=COLORS[d],
+                fontweight="bold",
+                va="top",
+            )
     fig.align_ylabels([ax_a, ax_b])
     ax_a.yaxis.set_major_formatter(mticker.FuncFormatter(lambda v, _: f"{v:g}"))
     ax_a.yaxis.set_minor_formatter(mticker.NullFormatter())
@@ -136,93 +157,6 @@ def figure_trends() -> None:
 
 # ---------------------------------------------------------------------------
 # Figure S2.2
-# ---------------------------------------------------------------------------
-
-
-def _snapshot_per1000(path=None) -> pd.DataFrame:
-    if path is None:
-        return fn.cross_refs_per_1000()
-    d = pd.read_csv(path)
-    d["per1000"] = d.n_to_target / (d.n_to_within + d.n_to_target + d.n_to_other) * 1000
-    return d.pivot(index="year", columns="direction", values="per1000")
-
-
-def figure_replication() -> None:
-    snap = _snapshot_per1000()
-    live = pd.read_csv(CROSS / "openalex_live_extended.csv")
-    fig, axes = plt.subplots(1, 2, figsize=(11, 4.4), sharex=True)
-    for ax, d in zip(axes, ("neuro_to_ai", "ai_to_neuro"), strict=True):
-        s = live[live.direction == d].sort_values("year")
-        ax.fill_between(s.year, s.ci_lo, s.ci_hi, color=COLORS[d], alpha=0.2, lw=0)
-        ax.plot(
-            s.year,
-            s.per1000,
-            "--o",
-            color=COLORS[d],
-            lw=1.8,
-            ms=3.5,
-            label="OpenAlex re-download, May 2026",
-        )
-        t = snap[d].loc[2010:2025]
-        ax.plot(
-            t.index, t.values, "-", color=COLORS[d], lw=2.8, label="OpenAlex snapshot, March 2026"
-        )
-        ax.set_title(LABELS[d], fontsize=11, color=COLORS[d], fontweight="bold", pad=8)
-        ax.set_xlabel("Year")
-        ax.set_xlim(2009.5, 2025.5)
-        ax.legend(fontsize=8.5, frameon=False, loc="upper left")
-        _shade_provisional(ax)
-    axes[0].set_ylabel("Cross-field references per 1,000")
-    _source(
-        fig,
-        "Extended AI definition; re-download: 1,500 papers per field and year, 95% bootstrap band",
-    )
-    _save(fig, "figure_s2_replication")
-
-
-# ---------------------------------------------------------------------------
-# Figure S2.3
-# ---------------------------------------------------------------------------
-
-SOURCE_TITLES = [
-    "OpenAlex snapshot, March 2026\n(35-topic core definition)",
-    "OpenAlex re-download, May 2026\n(subfield 1702 only)",
-    "Semantic Scholar\n(venue lists)",
-]
-
-
-def figure_sources() -> None:
-    snap = _snapshot_per1000(FLOW / "sensitivity_strict_or_by_year.csv")
-    oa = pd.read_csv(CROSS / "openalex_live.csv")
-    s2 = pd.read_csv(CROSS / "s2.csv")
-    fig, axes = plt.subplots(2, 3, figsize=(12.5, 6.2), sharex=True)
-    for r, d in enumerate(("neuro_to_ai", "ai_to_neuro")):
-        for c in range(3):
-            ax = axes[r, c]
-            if c == 0:
-                t = snap[d].loc[1995:2025]
-                ax.plot(t.index, t.values, "-", color=COLORS[d], lw=2.2)
-            else:
-                s = oa if c == 1 else s2
-                s = s[(s.direction == d) & (s.year >= 1995)].sort_values("year")
-                ax.fill_between(s.year, s.ci_lo, s.ci_hi, color=COLORS[d], alpha=0.2, lw=0)
-                ax.plot(s.year, s.per1000, "-", color=COLORS[d], lw=2.2)
-            ax.axvline(2014, color=GRAY, lw=0.8, ls=":")
-            ax.set_xlim(1994, 2026)
-            ax.grid(axis="y", alpha=0.3)
-            if r == 0:
-                ax.set_title(SOURCE_TITLES[c], fontsize=10, pad=8)
-            if c == 0:
-                ax.set_ylabel(LABELS[d], fontsize=9.5, color=COLORS[d], fontweight="bold")
-            if r == 1:
-                ax.set_xlabel("Year")
-    fig.subplots_adjust(hspace=0.18, wspace=0.28)
-    _source(fig, "Cross-field references per 1,000, own y-axis per panel; dotted line 2014")
-    _save(fig, "figure_s2_sources")
-
-
-# ---------------------------------------------------------------------------
-# Figure S2.4
 # ---------------------------------------------------------------------------
 
 
@@ -286,8 +220,6 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     apply_style()
     figure_trends()
-    figure_replication()
-    figure_sources()
     figure_sensitivity()
 
 

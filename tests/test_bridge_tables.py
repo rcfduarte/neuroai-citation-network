@@ -412,7 +412,7 @@ def test_gini():
         assert float(h[key]) == pytest.approx(v, rel=RTOL)
 
 
-@pytest.mark.parametrize("name", ["figure2_v3.svg", "figure_s5_institutions_separated.svg"])
+@pytest.mark.parametrize("name", ["figure2_v3.svg"])
 def test_committed_figure_draws_the_tables(name):
     """Paper labels and author names in the committed SVG are the table rows, in the same order."""
     svg = (config.FIGURES_DIR / name).read_text(encoding="utf-8")
