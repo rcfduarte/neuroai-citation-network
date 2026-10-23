@@ -4,6 +4,10 @@ This repository contains code, data and supplements for the article "Examining t
 
 >**The central question:** How do neuroscience and AI influence each other? Is there a genuine intellectual exchange?
 
+I measured how often neuroscience papers cite AI papers, and AI papers cite neuroscience papers, across 458 million OpenAlex records, and who and what carries the exchange: the papers that both fields cite, the authors and institutions behind them, and the age of what is cited. Everything is open: the code, the small result tables behind every figure and number, and six supplements that explain each analysis in plain terms.
+
+**Start here:** the supplements (below) for what was done and found; [docs/METHODS.md](docs/METHODS.md) for the exact definitions and equations; [Reproduce](#reproduce) to redraw every figure from the committed tables in a few minutes, with no data download.
+
 
 ## Repository structure
 
